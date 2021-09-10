@@ -86,7 +86,7 @@ var respecConfig = {
     // format: "markdown",                
   
     // The specification's "short name", which is the name used in NL_Respec URLs
-    shortName: "Contract-als-data",
+    shortName: "COINS-3.0-Contract-als-data",
   
     // A YYYY-MM-DD date. The publication date of the present document. 
     // Als er geen publishDate is opgegeven, genereert ReSpec de dataum o.b.v. de laatste wijzigingen
@@ -218,7 +218,7 @@ var respecConfig = {
   
     // nl_organisationPublishURL points to organisation specific publication page, used in header
     // defaults to  https://docs.geostandaarden.nl/"
-    nl_organisationPublishURL: "https://bimloket.github.io/",
+    nl_organisationPublishURL: "https://bimloket.github.io",
   
     // nl_logo refers to company logo
     // defaults to https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg
