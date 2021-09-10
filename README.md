@@ -5,3 +5,5 @@ Het is nadrukkelijk de bedoeling, om steeds met zowel opdrachtnemers als opdrach
 
 In contracten zitten nu veel documenten opgenomen met lappen tekst. Bij het opstellen van een contract gaat grote aandacht uit naar het samenstellen van contractteksten op basis van individuele wensen van opdrachtgevers. Dit leidt voor opdrachtnemers tot veel werk bij aanbestedingen, omdat de contractdocumenten allemaal moeten worden doorzocht op eisen, risico’s, uit te voeren werkzaamheden, enzovoorts. Bijvoorbeeld eisen aan het bouwwerk, eisen aan het werkproces van het project of eisen aan informatieleveringen. Een contract in datavorm bevat standaard documenten met achtergrondinformatie, waarbij de eisen als data worden aangeboden. Hiermee zijn individuele aanpassingen beter terug te vinden voor de opdrachtnemers. Ook kunnen deze eisen zo beter worden ingelezen in de projectbeheersingsomgevingen van opdrachtnemers.
 
+Voor een Handleiding in concept, zie https://bimloket.github.io/COINS-3.0-Contract-als-data/
+
