@@ -21,7 +21,7 @@ Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis. Dit
 <td> Met URI wordt bedoeld: de unieke naam van het concept. Zie <href> https://www.w3.org/wiki/URI </href> </td>
 <td> skos:Notation </td>
 <td> skos:prefLabel </td>
-<td> rdfs:Class </td>
+<td> rdfs:Class 1. FysiekObject  2. Functie  3.  Activiteit   4. Informatieproduct </td>
 <td> skos:definition </td>
 <td> nen2660:heeftDeel </td>
 </td></tr>
@@ -31,23 +31,27 @@ Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis. Dit
 
 ## Functies
 
-De functies in het contract (Vraagspecificatie Eisendeel) zijn “FysiekObject” uit NEN 2660. Dit kan in de kolom Type worden ingevuld.
+De functies in het contract (Vraagspecificatie Eisendeel) zijn ánders dan de activiteiten (Vraagspecificatie Procesdeel / ontwerp- en uitvoeringswerkzaamheden).
+De functies geven weer, welke diensten het "systeem" moet vervullen tijdens het gebruik; een voorbeeld is een weg, die als functie "het verkeer moet geleiden".
+de objecten in het contract zijn de functievervullers. De activiteiten zijn door mensen uit te voeren werkzaamheden tijdens het ontwerpen, bouwen, beheren en slopen van het object.
 
+De taalbinding van functies naar NEN 2660 is nog niet bekend. 
 
+De taalbinding van de relatie tussen functies en objecten naar NEN 2660 is nog niet bekend.
+
+[Issue 13] https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/13
 
 ## Objecten
 
 De objecten en objectenbomen in het contract (Vraagspecificatie Eisendeel) zijn “FysiekObject” uit NEN 2660. Dit kan in de kolom Type worden ingevuld.
 
-## Doelen
-Bij het functioneel specificeren begin je met het vaststellen van de doelstellingen van het systeem.
-
-De taalbinding van doelen naar NEN 2660 is nog niet bekend:
 
 
 ## Activiteiten
 
+De taalbinding van activiteiten naar NEN 2660 is nog niet bekend. 
 
+[Issue 13] https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/13
 
 ## Informatieproducten
 De informatieproducten in het contract staan vaak zowel in de Vraagspecificatie Procesdeel als in een separate Informatieleveringsspecificatie. 
@@ -63,7 +67,7 @@ Procesdeel
 een V&G plan
 een voortgangsrapportage
 
-De taalbinding naar NEN 2660 is nog niet bekend:
+De taalbinding van informatieproducten naar NEN 2660 is nog niet bekend:
 
 [Issue 12](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/12)
 
