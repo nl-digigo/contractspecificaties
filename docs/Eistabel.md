@@ -21,7 +21,7 @@ Voorstel is om de volgende tabel te gebruiken voor de eisen. Op de tweede regel 
 <th> Bron
 </th></tr>
 <tr>
-<td> Met URI wordt bedoeld: de unieke naam van het concept. Zie <href> https://www.w3.org/wiki/URI </href> </td>
+<td> Met URI wordt bedoeld: de unieke naam van de eis.Zie <href> https://www.w3.org/wiki/URI </href> </td>
 <td> skos:Notation </td>
 <td> skos:prefLabel </td>
 <td> nen2660:heeftVoorwaardeSpecificatie </td>
@@ -31,10 +31,17 @@ Voorstel is om de volgende tabel te gebruiken voor de eisen. Op de tweede regel 
 </td></tr>
 </table>
 
+Over unieke naam van de eis: gebruikers geven de voorkeur aan een unieke identifier over projecten heen, zodat een eis uit een bron (eisenbibliotheek) herkend kan worden
 
 ## Eisen
 Een eis heeft een vertaling / binding naar de NEN 2660 als InformationObject
 
 
 ## Verificatiemethoden
-Een verificatiemethode heeft een vertaling / binding naar de NEN 2660 als InformationObject? 
+Gebruikelijk is in contracten het aangeven van een of meer verificatiemethodes, eventueel met een of meer verificatiemomenten. 
+
+De taalbinding van een verificatiemethode- en moment naar NEN 2660 is nog niet bekend. 
+
+[issue 15](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/15)
+
+

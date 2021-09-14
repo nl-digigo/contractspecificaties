@@ -22,13 +22,17 @@ Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis. Dit
 <td> skos:Notation </td>
 <td> skos:prefLabel </td>
 <td> rdfs:Class 
-***
-1. FysiekObject  2. Functie  3.  Activiteit   4. Informatieproduct </td>
+</td>
 <td> skos:definition </td>
 <td> nen2660:heeftDeel </td>
 </td></tr>
 </table>
 
+De onderwerpen van de eisen zijn:
+1. FysiekObject  
+2. Functie  
+3.  Activiteit   
+4. Informatieproduct 
 
 
 ## Functies
