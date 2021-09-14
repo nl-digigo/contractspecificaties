@@ -37,4 +37,4 @@ Een eis heeft een vertaling / binding naar de NEN 2660 als InformationObject
 
 
 ## Verificatiemethoden
-Een verificatiemethode heeft een vertaling / binding naar de NEN 2660 als InformationObject???
+Een verificatiemethode heeft een vertaling / binding naar de NEN 2660 als InformationObject? 

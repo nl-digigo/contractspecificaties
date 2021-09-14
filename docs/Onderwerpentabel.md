@@ -22,6 +22,7 @@ Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis. Dit
 <td> skos:Notation </td>
 <td> skos:prefLabel </td>
 <td> rdfs:Class 
+***
 1. FysiekObject  2. Functie  3.  Activiteit   4. Informatieproduct </td>
 <td> skos:definition </td>
 <td> nen2660:heeftDeel </td>
@@ -40,7 +41,7 @@ De taalbinding van functies naar NEN 2660 is nog niet bekend.
 
 De taalbinding van de relatie tussen functies en objecten naar NEN 2660 is nog niet bekend.
 
-[Issue 13] https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/13
+[Issue 13](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/13)
 
 ## Objecten
 
@@ -52,7 +53,7 @@ De objecten en objectenbomen in het contract (Vraagspecificatie Eisendeel) zijn 
 
 De taalbinding van activiteiten naar NEN 2660 is nog niet bekend. 
 
-[Issue 13] https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/13
+[Issue 13](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/13)
 
 ## Informatieproducten
 De informatieproducten in het contract staan vaak zowel in de Vraagspecificatie Procesdeel als in een separate Informatieleveringsspecificatie. 
