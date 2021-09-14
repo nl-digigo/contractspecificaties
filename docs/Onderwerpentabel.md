@@ -18,10 +18,11 @@ Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis. Dit
 <th> heeftDeel
 </th></tr>
 <tr>
-<td> Met URI wordt bedoeld: de unieke naam van het concept. Zie <href> https://www.w3.org/wiki/URI </href> </td>
+<td> Met URI wordt bedoeld: de unieke naam van het concept. Zie [W3C](https://www.w3.org/wiki/URI) > </td>
 <td> skos:Notation </td>
 <td> skos:prefLabel </td>
-<td> rdfs:Class 1. FysiekObject  2. Functie  3.  Activiteit   4. Informatieproduct </td>
+<td> rdfs:Class 
+1. FysiekObject  2. Functie  3.  Activiteit   4. Informatieproduct </td>
 <td> skos:definition </td>
 <td> nen2660:heeftDeel </td>
 </td></tr>
