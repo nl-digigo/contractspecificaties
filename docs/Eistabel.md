@@ -28,6 +28,8 @@ Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode i
 <th> Toelichting
 </th>
 <th> Eistype
+</th>
+<th> Initiator
 </th></tr>
 <tr>
 <td> [URI](https://www.w3.org/wiki/URI) </td>
@@ -39,10 +41,63 @@ Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode i
 <td> nen2660:voorwaardeBronType </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
+<td> ONBEKEND </td>
 </td></tr>
 </table>
 
-Over unieke naam van de eis: gebruikers geven de voorkeur aan een unieke identifier over projecten heen, zodat een eis uit een bron (eisenbibliotheek) herkend kan worden
+
+## Voorbeeld eisentabel
+<table class="wikitable" style="text-align:left; valign:top">
+<tr>
+<th> URI
+</th>
+<th> Code
+</th>
+<th> Naam
+</th>
+<th> Tekst
+</th>
+<th> heeftDeel
+</th>
+<th> Ernst
+</th>
+<th> Bron
+</th>
+<th> Specificeert
+</th>
+<th> Toelichting
+</th>
+<th> Eistype
+</th>
+<th> Initiator
+</th></tr>
+<tr>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
+<td> EIS1099 </td>
+<td> Voorbeeldeis </td>
+<td> Dit is de tekst van de voorbeeldeis </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
+<td> wens </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldtabel </td>
+<td> Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kuynnen verduidelijken </td>
+<td> Veiligheid </td>
+<td> BIM loket </td>
+</td></tr>
+<tr>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
+<td> VER1099 </td>
+<td> Voorbeeld verificatiemethode </td>
+<td> Dit is het verificatievoorschrift </td>
+<td>  </td>
+<td>  </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
+<td>  </td>
+<td> </td>
+<td> BIM loket </td>
+</td></tr>
+</table>
 
 
 ## Eisen en Verificatiemethoden
@@ -63,8 +118,8 @@ De vertaling / binding van een verificatiemethode- en moment naar NEN 2660 is no
 ### URI
 Met URI wordt bedoeld: de unieke naam van de eis. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
 
-De URI is unieke naam voor de eis binnen het project.
-Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder "Bron".
+De URI is unieke naam voor de eis binnen het project. 
+Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder "Bron". 
 
 Bij de eisen kan de URI ook de verwijzing zijn naar de eis in een bibliotheek; dan mogen de overige kolommen niet zijn aangepast en ook geen
 
@@ -128,7 +183,7 @@ Een contractuele eis kan onderbouwd worden met een toelichting.
 
 De vertaling / binding van toelichting naar NEN 2660 is nog niet bekend. 
 
-[Issue 17]https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/17
+[Issue 17](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/17)
 
 
 ### Type
@@ -158,6 +213,14 @@ Bij verificatiemethoden: voorstel om toe te passen de lijst uit NEN-EN-ISO 9001:
 * <a>Keuren</a>
 * <a>Beproeven</a>
 * <a>Evalueren</a>
+
+### Initiator
+Initiator van de eis (naam natuurlijk persoon en/of organisatie).
+
+
+De vertaling / binding van initiator naar NEN 2660 is nog niet bekend. 
+
+[Issue 21](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/21)
 
 
 
