@@ -30,6 +30,10 @@ Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode i
 <th> Eistype
 </th>
 <th> Initiator
+</th>
+<th> Status
+</th>
+<th> Reden vervallen
 </th></tr>
 <tr>
 <td> [URI](https://www.w3.org/wiki/URI) </td>
@@ -39,6 +43,8 @@ Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode i
 <td> nen2660:heeftDeel </td>
 <td> nen2660:voorwaardeErnstType </td>
 <td> nen2660:voorwaardeBronType </td>
+<td> ONBEKEND </td>
+<td> ONBEKEND </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
@@ -221,6 +227,19 @@ Initiator van de eis (naam natuurlijk persoon en/of organisatie).
 De vertaling / binding van initiator naar NEN 2660 is nog niet bekend. 
 
 [Issue 21](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/21)
+
+
+### Status
+Gebruikers willen de status toevoegen aan de eis, zoals "actueel" of vervallen"
+
+De vertaling / binding van status naar NEN 2660 is nog niet bekend. 
+
+### Reden vervallen
+Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status onderbouwd is.
+
+De vertaling / binding van de reden van vervallen naar NEN 2660 is nog niet bekend. 
+
+[Issue 22](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/22)
 
 
 
