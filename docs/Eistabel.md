@@ -1,7 +1,10 @@
 # Eisentabel
 
 
-Voorstel is om de volgende tabel te gebruiken voor de eisen. Op de tweede regel staat de vertaling / binding naar de NEN 2660.
+Voorstel is om de volgende tabel te gebruiken voor de eisen en verificatiemethoden. Op de tweede regel staat de vertaling / binding naar de NEN 2660.
+
+
+Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode is een andere eis. In de eisentabel is het verschil niet meteen duidelijk, voor leesbaarheid kan de verificatiemethode direct onder de eis worden gezet in de Eisentabel.
 
 
 <table class="wikitable" style="text-align:left; valign:top">
@@ -39,14 +42,11 @@ Voorstel is om de volgende tabel te gebruiken voor de eisen. Op de tweede regel 
 
 Over unieke naam van de eis: gebruikers geven de voorkeur aan een unieke identifier over projecten heen, zodat een eis uit een bron (eisenbibliotheek) herkend kan worden
 
-## Eisen
-Een eis heeft een vertaling / binding naar de NEN 2660 als InformationObject
+## Eisen en Verificatiemethoden
 
 
-## Verificatiemethode
-Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode is een andere eis. In de eisentabel is het verschil niet meteen duidelijk, voor leesbaarheid kan de verificatiemethode direct onder de eis worden gezet in de Eisentabel.
 
-Een verificatiemethode heeft een vertaling / binding naar de NEN 2660 als InformationObject
+Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als InformationObject
 
 ## Verificatiemethoden
 Gebruikelijk is in contracten het aangeven van een of meer verificatiemethodes, eventueel met een of meer verificatiemomenten. 
@@ -68,22 +68,13 @@ Bij de eisen kan de URI ook de verwijzing zijn naar de eis in een bibliotheek; d
 
 
 ### Code
-In de code kan een in het project gebruikte code staan, die heeft mogelijk maakt in een gesprek naar de eis of het concept te verwijzen, zonder de volledige URI te hoeven benoemen. 
+In de code kan een in het project gebruikte code staan, die heeft mogelijk maakt in een gesprek naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen. 
 
 
 
 ### Naam
 De naam is de voor mensen leesbare naam van de eis. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.
 
-
-
-### Type
-Bij "Type" staat welk concept bedoeld wordt:
-1. FysiekObject  
-2. Functie  
-3. Activiteit   
-4. Informatieproducten
-5. Eis 
 
 
 ### Tekst
@@ -117,6 +108,8 @@ Hier staat de URI van het concept waar de eis aan gesteld wordt. Een eis kan aan
 De taalbinding van specificeert naar NEN 2660 is nog niet bekend. 
 
 [Issue 18](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/18)
+
+Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voor de mens. Indien hier ook de naam van het concept zou worden toegevoegd, creeert dit dubbelingen met de odnerwerpentabel en daarom mogelijk fouten. Daarom wordt alleen de URI gebruikt.
 
 
 
