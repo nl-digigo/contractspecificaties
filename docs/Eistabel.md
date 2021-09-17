@@ -51,7 +51,7 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 ## Verificatiemethoden
 Gebruikelijk is in contracten het aangeven van een of meer verificatiemethodes, eventueel met een of meer verificatiemomenten. 
 
-De taalbinding van een verificatiemethode- en moment naar NEN 2660 is nog niet bekend. 
+De vertaling / binding van een verificatiemethode- en moment naar NEN 2660 is nog niet bekend. 
 
 [issue 15](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/15)
 
@@ -84,7 +84,7 @@ Bij "Tekst" staat de eistekst
 ### Toelichting op de eistekst
 Een contractuele eis kan onderbouwd worden met een toelichting.
 
-De taalbinding van toelichting naar NEN 2660 is nog niet bekend. 
+De vertaling / binding van toelichting naar NEN 2660 is nog niet bekend. 
 
 [Issue 17]https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/17
 
@@ -105,7 +105,7 @@ Bij HeeftDeel kan een hiërarchie worden aangegeven van de eisenboom zoals gebru
 Hier staat de URI van het concept waar de eis aan gesteld wordt. Een eis kan aan meerdere concepten gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel. 
 
 
-De taalbinding van specificeert naar NEN 2660 is nog niet bekend. 
+De vertaling / binding van specificeert naar NEN 2660 is nog niet bekend. 
 
 [Issue 18](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/18)
 

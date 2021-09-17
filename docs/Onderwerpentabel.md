@@ -70,9 +70,9 @@ De functies in het contract (Vraagspecificatie Eisendeel) zijn ánders dan de ac
 De functies geven weer, welke diensten het "systeem" moet vervullen tijdens het gebruik; een voorbeeld is een weg, die als functie "het verkeer moet geleiden".
 de objecten in het contract zijn de functievervullers. De activiteiten zijn door mensen uit te voeren werkzaamheden tijdens het ontwerpen, bouwen, beheren en slopen van het object.
 
-De taalbinding van functies naar NEN 2660 is nog niet bekend. 
+De vertaling / binding van functies naar NEN 2660 is nog niet bekend. 
 
-De taalbinding van de relatie tussen functies en objecten naar NEN 2660 is nog niet bekend.
+De vertaling / binding van de relatie tussen functies en objecten naar NEN 2660 is nog niet bekend.
 
 [Issue 13](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/13)
 
@@ -83,7 +83,7 @@ De objecten en objectenbomen in het contract (Vraagspecificatie Eisendeel) zijn 
 
 ### Activiteiten
 
-De taalbinding van activiteiten naar NEN 2660 is nog niet bekend. 
+De vertaling / binding van activiteiten naar NEN 2660 is nog niet bekend. 
 
 [Issue 13](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/13)
 
@@ -103,7 +103,7 @@ Procesdeel
 *een V&G plan
 *een voortgangsrapportage
 
-De taalbinding van informatieproducten naar NEN 2660 is nog niet bekend:
+De vertaling / binding van informatieproducten naar NEN 2660 is nog niet bekend:
 
 [Issue 12](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/12)
 
@@ -150,7 +150,7 @@ Vooral bij objecten is het voor de opdrachtgever handig, te weten wie de eigenaa
 
 
 
-De taalbinding van eigenaar naar NEN 2660 is nog niet bekend. 
+De vertaling / binding van eigenaar naar NEN 2660 is nog niet bekend. 
 
 [Issue 16](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/16)
 
