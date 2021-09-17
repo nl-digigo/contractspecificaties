@@ -107,7 +107,7 @@ De vertaling / binding van informatieproducten naar NEN 2660 is nog niet bekend:
 
 [Issue 12](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/12)
 
-## Toelichting op de kolommen in de Onderwerpentabel
+## Details onderwerpentabel
 
 ### URI 
 Met URI wordt bedoeld: de unieke naam van het onderwerp. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
