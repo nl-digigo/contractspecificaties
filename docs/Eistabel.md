@@ -48,6 +48,7 @@ Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode i
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
+<td> ONBEKEND </td>
 </td></tr>
 </table>
 
@@ -76,6 +77,10 @@ Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode i
 <th> Eistype
 </th>
 <th> Initiator
+</th>
+<th> Status
+</th>
+<th> Reden vervallen
 </th></tr>
 <tr>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
@@ -86,9 +91,11 @@ Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode i
 <td> wens </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldtabel </td>
-<td> Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kuynnen verduidelijken </td>
+<td> Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kunnen verduidelijken </td>
 <td> Veiligheid </td>
 <td> BIM loket </td>
+<td> Vervallen </td>\
+<td> Reden van vervallen van eis </td>
 </td></tr>
 <tr>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
@@ -99,9 +106,11 @@ Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode i
 <td>  </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
-<td>  </td>
+<td> </td>
 <td> </td>
 <td> BIM loket </td>
+<td> </td>
+<td> </td>
 </td></tr>
 </table>
 
