@@ -31,9 +31,36 @@ Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis, bes
 </table>
 
 
-### Voorbeeldtabel
+## Voorbeeldtabel 
 
+<table class="wikitable" style="text-align:left; valign:top">
+<tr>
+<th> URI
+</th>
+<th> Code
+</th>
+<th> Naam
+</th>
+<th> Type
+</th>
+<th> Definitie
+</th>
+<th> heeftDeel
+</th>
+<th> Eigenaar
+</th></tr>
+<tr>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldtabel </td>
+<td> OBJ-0109 </td>
+<td> Voorbeeld onderwerp </td>
+<td> InformationObject </td>
+<td> Onderwerp van een eis als voorbeeld in de documentatie </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#onderligeendvoorbeeldobject </td>
+<td> BIM loket </td></tr>
+</table>
 
+### Onderliggend voorbeeldobject
+heeftDeel uit de voorbeeldtabel
 
 ## Typen concepten in de tabel
 
@@ -79,3 +106,52 @@ Procesdeel
 De taalbinding van informatieproducten naar NEN 2660 is nog niet bekend:
 
 [Issue 12](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/12)
+
+## Toelichting op de kolommen in de Onderwerpentabel
+
+### URI 
+Met URI wordt bedoeld: de unieke naam van het onderwerp. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
+
+De URI is unieke naam voor het onderwerp binnen het project; bij de definitie kan worden verwezen naar het type uit een ontologie ofwel objecttypenbiblkiotheek.
+
+
+
+### Code
+In de code kan een in het project gebruikte code staan, die heeft mogelijk maakt in een gesprek naar het concept te verwijzen, zonder de volledige URI te hoeven benoemen. 
+
+
+
+### Naam
+De naam is de voor mensen leesbare naam van het concept. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.
+
+
+
+### Type
+Bij "Type" staat welk concept bedoeld wordt:
+1. FysiekObject  
+2. Functie  
+3. Activiteit   
+4. Informatieproducten
+
+
+
+### Definitie
+Bij "definitie" staat ofwel een tekst die het concept definieert, ofwel een URI die verwijst naar de definitie in een ontologie (objecttypenbibliotheek).
+
+
+
+### HeeftDeel
+Bij HeeftDeel kan een hiërarchie worden aangegeven zoals een objectenboom of functieboom zoals gebruikelijk in contracten. Een concept kan uit meerdere delen bestaan, er komen dan meerdere regels voor in de Onderwerpentabel. 
+
+
+
+### Eigenaar
+Vooral bij objecten is het voor de opdrachtgever handig, te weten wie de eigenaar is. De eigenaar is de persoon of rol bij de opdrachtgever die verantwoordelijk is voor beheer van dit objecttype, en die geconsulteerd moet worden bij afwijking van de eisen.
+
+
+
+De taalbinding van eigenaar naar NEN 2660 is nog niet bekend. 
+
+[Issue 16](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/16)
+
+
