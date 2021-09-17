@@ -56,7 +56,7 @@ De vertaling / binding van een verificatiemethode- en moment naar NEN 2660 is no
 [issue 15](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/15)
 
 
-## Toelichting op de kolommen in de Eistabel
+## Details Eisentabel
 
 ### URI
 Met URI wordt bedoeld: de unieke naam van de eis. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
