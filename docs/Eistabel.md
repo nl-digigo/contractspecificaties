@@ -33,7 +33,7 @@ Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode i
 </th>
 <th> Status
 </th>
-<th> Reden vervallen
+<th> Onderbouwing status
 </th></tr>
 <tr>
 <td> [URI](https://www.w3.org/wiki/URI) </td>
@@ -80,9 +80,24 @@ Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode i
 </th>
 <th> Status
 </th>
-<th> Reden vervallen
+<th> Onderbouwing status
 </th></tr>
 <tr>
+<td> In deze kolom staat de unieke naam (URI) van de eis. Zie [URI conform W3C](https://www.w3.org/wiki/URI).  </td>
+<td> In deze kolom staat de naam (spreektaal/projectnummer) van de eis.  </td>
+<td> In deze kolom staat de de naam oftewel de titel van de eis. </td>
+<td> In deze kolom staat de eistekst. </td>
+<td> In deze kolom staat de URI van een onderliggende eis. </td>
+<td> In deze kolom wordt aangegeven, of het een 'wens' of een 'eis' betreft. </td>
+<td> In deze kolom wordt aangegeven wat de bron van de eis is. </td>
+<td> In deze kolom staat de URI van het Onderwerp van de eis. </td>
+<td> In deze kolom staat de toelichting op de eis. </td>
+<td> In deze kolom staat het eistype of het type verificatiemethode. </td>
+<td> In deze kolom staat de initiator van de eis. </td>
+<td> In deze kolom staat de status van de eis. </td>\
+<td> Reden van vervallen van eis </td>
+<td> In deze kolom staat een toelichting op de status van de eis. 
+</td></tr><tr>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
 <td> EIS1099 </td>
 <td> Voorbeeldeis </td>
@@ -131,35 +146,41 @@ De vertaling / binding van een verificatiemethode- en moment naar NEN 2660 is no
 ## Details Eisentabel
 
 ### URI
-Met URI wordt bedoeld: de unieke naam van de eis. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
+In deze kolom staat de unieke naam (URI) van de eis. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
 
 De URI is unieke naam voor de eis binnen het project. 
 Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder "Bron". 
 
-Bij de eisen kan de URI ook de verwijzing zijn naar de eis in een bibliotheek; dan mogen de overige kolommen niet zijn aangepast en ook geen
+Bij de eisen kan de URI ook de verwijzing zijn naar de eis in een bibliotheek; dan mogen de overige kolommen niet zijn aangepast en er ook geen extra informatie zijn toegevoegd. 
+
+[Issue 23](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/23)
 
 
 ### Code
-In de code kan een in het project gebruikte code staan, die heeft mogelijk maakt in een gesprek naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen. 
+In deze kolom staat de de naam (spreektaal/projectnummer) van de eis.
+Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen. 
 
 
 
 ### Naam
-De naam is de voor mensen leesbare naam van de eis. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.
+In deze kolom staat de de naam oftewel de titel van de eis
+De naam is de voor mensen leesbare naam van de eis. Deze naam hoeft niet uniek te zijn in het project, daarvoor heeft de eis een URI, maar een unieke naam is voor de menselijke lezer vaak wel handig.
 
 
 
 ### Tekst
-Bij "Tekst" staat de eistekst
+In deze kolom staat de eistekst.
 
 
 
 ### HeeftDeel
-Bij HeeftDeel kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelijk in contracten. Een eis kan meerdere onderliggende eisen hebben, er komen dan meerdere regels met dezelfde eis voor in de eisentabel. 
+In deze kolom staat de URI van een onderliggende eis. 
+Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelijk in contracten. Een eis kan meerdere onderliggende eisen hebben, er komen dan meerdere regels met dezelfde eis voor in de eisentabel. 
 
 
 
 ### Ernst
+In deze kolom wordt aangegeven, of het een 'wens' of een 'eis' betreft.
 De ernst van een eis (nen2660:voorwaardeErnstType) kan conform NEN 2660 de volgende lijst zijn:
 * Wens
 * Eis
@@ -167,7 +188,7 @@ De ernst van een eis (nen2660:voorwaardeErnstType) kan conform NEN 2660 de volge
 Wordt door partijen het onderscheid maken tussen klanteis en systeemeis gewenst?
 
 ### Bron
-De bron van een eis (nen2660:voorwaardeBronType) kan conform NEN 2660 de volgende lijst zijn:
+In deze kolom wordt aangegeven wat de bron van de eis is. Volgens de NEN 2660 kan dit uitsluitend de volgende lijst zijn:
 * PerDefinitie
 * DoorKlant
 * DoorWetOfRegelgeving
@@ -183,7 +204,7 @@ Gebruikers geven aan, hier liever een verwijzing te plaatsen naar één van deze
 
 
 ### Specificeert
-Hier staat de URI van het concept waar de eis aan gesteld wordt. Een eis kan aan meerdere concepten gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel. 
+In deze kolom staat de URI van het Onderwerp van de eis. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel. 
 
 
 De vertaling / binding van specificeert naar NEN 2660 is nog niet bekend. 
@@ -194,7 +215,8 @@ Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voo
 
 
 ### Toelichting op de eistekst
-Een contractuele eis kan onderbouwd worden met een toelichting.
+In deze kolom staat de toelichting op de eis. 
+In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld wordt. 
 
 De vertaling / binding van toelichting naar NEN 2660 is nog niet bekend. 
 
@@ -202,7 +224,7 @@ De vertaling / binding van toelichting naar NEN 2660 is nog niet bekend.
 
 
 ### Type
-
+In deze kolom staat het eistype of het type verificatiemethode.
 Bij eisen: voorstel om toe te passen de lijst uit de [Leidraad Systems Engineering versie 3](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V3/Leidraad_V3_SE_web.pdf):
 
 * <a>Topeis</a> (systeemeis?)
@@ -229,9 +251,10 @@ Bij verificatiemethoden: voorstel om toe te passen de lijst uit NEN-EN-ISO 9000:
 * <a>Beproeven</a>
 * <a>Evalueren</a>
 
-### Initiator
-Initiator van de eis (naam natuurlijk persoon en/of organisatie).
+[Issue 24](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/24)
 
+### Initiator
+In deze kolom staat de initiator van de eis (naam natuurlijk persoon en/of organisatie).
 
 De vertaling / binding van initiator naar NEN 2660 is nog niet bekend. 
 
@@ -239,14 +262,16 @@ De vertaling / binding van initiator naar NEN 2660 is nog niet bekend.
 
 
 ### Status
-Gebruikers willen de status toevoegen aan de eis, zoals "actueel" of vervallen"
+In deze kolom staat de status van de eis.
+Gebruikers willen de status toevoegen aan de eis, zoals "actueel" of vervallen", bijvoorbeeld om wijzigingen door een Nota van Inlichtingen of een contractuele wijziging in de eisenset te kunnen opnemen en met elkaar uit te wisselen.
 
 De vertaling / binding van status naar NEN 2660 is nog niet bekend. 
 
-### Reden vervallen
+### Onderbouwing status
+In deze kolom staat een toelichting op de status van de eis.
 Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status onderbouwd is.
 
-De vertaling / binding van de reden van vervallen naar NEN 2660 is nog niet bekend. 
+De vertaling / binding van de onderbouwing van de status naar NEN 2660 is nog niet bekend. 
 
 [Issue 22](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/22)
 
