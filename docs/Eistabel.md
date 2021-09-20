@@ -166,6 +166,7 @@ De naam is de voor mensen leesbare naam van de eis. Deze naam hoeft niet uniek t
 
 ### Tekst
 In deze kolom staat de eistekst.
+De eistekst kan een link of URI bevatten van een van toepassing zijnd document. Dit document wordt dan opgenomen in de Documententabel.
 
 
 
@@ -193,7 +194,9 @@ In deze kolom wordt aangegeven wat de bron van de eis is. Volgens de NEN 2660 ka
 Gebruikers geven aan, hier liever een verwijzing te plaatsen naar één van deze zaken:
 1. De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is)
 2. De URI van een brondocument met herkomst van de eis - reden dat ook een documententabel gewenst wordt door gebruikers.
-3. De URI van een van toepassing zijnd document - Strikt genomen niet de bron; moet dit in een andere kolom worden opgenomen?
+
+
+Deze plek is niet de locatie voor de URI van een van toepassing zijnd document. Daar wordt naar verwezen in de eistekst zelf.
 
 
 [Issue 20](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/20)
