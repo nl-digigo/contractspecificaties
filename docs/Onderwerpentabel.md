@@ -72,7 +72,7 @@ Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis, bes
 heeftDeel uit de voorbeeldtabel
 
 
-## Typen Onderwerpen in de tabel
+## Typen Onderwerpen
 
 ### Functies
 
