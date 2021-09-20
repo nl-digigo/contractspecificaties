@@ -184,6 +184,8 @@ De ernst van een eis (nen2660:voorwaardeErnstType) kan conform NEN 2660 de volge
 
 Wordt door partijen het onderscheid maken tussen klanteis en systeemeis gewenst?
 
+[Issue 26](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/26)
+
 ### Bron
 In deze kolom wordt aangegeven wat de bron van de eis is. Volgens de NEN 2660 kan dit uitsluitend de volgende lijst zijn:
 * PerDefinitie
