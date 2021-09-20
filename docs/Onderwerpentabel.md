@@ -1,7 +1,7 @@
 # Onderwerpentabel
 
 
-Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis, bestaande uit de functies, objecten, activiteiten en informatieproducten. Op de tweede regel staat de vertaling / binding naar de NEN 2660.
+Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis, bestaande uit de functies, objecten, activiteiten en informatieproducten. Op de tweede regel staat een korte toelichting, op de derde de vertaling / binding naar de NEN 2660.
 
 
 <table class="wikitable" style="text-align:left; valign:top">
@@ -20,6 +20,15 @@ Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis, bes
 </th>
 <th> Eigenaar
 </th></tr>
+<tr>
+<td> In deze kolom staat de unieke naam (URI) van het onderwerp. </td>
+<td> In deze kolom staat de code ofwel het nummer van het onderwerp. </td>
+<td> In deze kolom staat de naam van het onderwerp. </td>
+<td> In deze kolom staat het type van het onderwerp: FysiekObject, Functie, Activiteit of Informatieproduct. </td>
+<td> In deze kolom staat de definitie van het onderwerp. </td>
+<td> In deze kolom staat de URI van een onderliggend onderwerp. </td>
+<td> In deze kolom wordt aangegeven wie de eigenaar is van het onderwerp. </td>
+</td></tr>
 <tr>
 <td> <href>[unieke naam conform W3C](https://www.w3.org/wiki/URI)</href> </td>
 <td> skos:Notation </td>
@@ -61,6 +70,7 @@ Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis, bes
 
 ### Onderliggend voorbeeldobject
 heeftDeel uit de voorbeeldtabel
+
 
 ## Typen concepten in de tabel
 
@@ -110,44 +120,45 @@ De vertaling / binding van informatieproducten naar NEN 2660 is nog niet bekend:
 ## Details onderwerpentabel
 
 ### URI 
-Met URI wordt bedoeld: de unieke naam van het onderwerp. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
+In deze kolom staat de unieke naam (URI) van het onderwerp. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
 
-De URI is unieke naam voor het onderwerp binnen het project; bij de definitie kan worden verwezen naar het type uit een ontologie ofwel objecttypenbiblkiotheek.
+De URI is unieke naam voor het onderwerp binnen het project; bij de definitie kan worden verwezen naar het type uit een ontologie ofwel objecttypenbibliotheek.
 
 
 
 ### Code
-In de code kan een in het project gebruikte code staan, die heeft mogelijk maakt in een gesprek naar het concept te verwijzen, zonder de volledige URI te hoeven benoemen. 
-
+In deze kolom staat de code ofwel het nummer van het onderwerp.
+Deze code maakt het mogelijk in een gesprek naar het concept te verwijzen, zonder de volledige URI te hoeven benoemen. 
 
 
 ### Naam
-De naam is de voor mensen leesbare naam van het concept. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.
-
+In deze kolom staat de naam van het onderwerp.
+De naam is de voor mensen leesbare naam van het onderwerp. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.
 
 
 ### Type
-Bij "Type" staat welk concept bedoeld wordt:
+In deze kolom staat het type van het onderwerp:
 1. FysiekObject  
 2. Functie  
 3. Activiteit   
-4. Informatieproducten
+4. Informatieproduct
 
 
 
 ### Definitie
-Bij "definitie" staat ofwel een tekst die het concept definieert, ofwel een URI die verwijst naar de definitie in een ontologie (objecttypenbibliotheek).
+In deze kolom staat de definitie van het onderwerp. Hier staat ofwel een tekst die het onderwerp definieert, ofwel een URI die verwijst naar de definitie in een ontologie (objecttypenbibliotheek).
 
 
 
 ### HeeftDeel
-Bij HeeftDeel kan een hiërarchie worden aangegeven zoals een objectenboom of functieboom zoals gebruikelijk in contracten. Een concept kan uit meerdere delen bestaan, er komen dan meerdere regels voor in de Onderwerpentabel. 
+In deze kolom staat de URI van een onderliggend onderwerp.
+Hiermee kan een hiërarchie worden aangegeven zoals een objectenboom of functieboom zoals gebruikelijk in contracten. Een concept kan uit meerdere delen bestaan, er komen dan meerdere regels voor in de Onderwerpentabel. 
 
 
 
 ### Eigenaar
-Vooral bij objecten is het voor de opdrachtgever handig, te weten wie de eigenaar is. De eigenaar is de persoon of rol bij de opdrachtgever die verantwoordelijk is voor beheer van dit objecttype, en die geconsulteerd moet worden bij afwijking van de eisen.
-
+In deze kolom wordt aangegeven wie de eigenaar is van het onderwerp.
+Vooral bij objecttypen of individuele objecten is het voor de opdrachtgever handig, te weten wie de eigenaar is. De eigenaar is de persoon of rol bij de opdrachtgever die verantwoordelijk is voor beheer van dit objecttype, en die geconsulteerd moet worden bij afwijking van de eisen.
 
 
 De vertaling / binding van eigenaar naar NEN 2660 is nog niet bekend. 
