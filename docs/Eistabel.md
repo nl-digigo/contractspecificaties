@@ -226,7 +226,7 @@ De vertaling / binding van toelichting naar NEN 2660 is nog niet bekend.
 
 ### Type
 In deze kolom staat het eistype of het type verificatiemethode.
-Bij eisen: voorstel om toe te passen de lijst uit de [Leidraad Systems Engineering versie 3](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V3/Leidraad_V3_SE_web.pdf):
+Bij eisen: voorstel om toe te passen de lijst uit de [Leidraad Systems Engineering versie 3](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V3/Leidraad_V3_SE_web.pdf). Het staat gebruikers vrij om deze lijst aan te vullen.
 
 * <a>Topeis</a> (systeemeis?)
 * <a>Proceseis</a>
