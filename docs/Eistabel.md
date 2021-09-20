@@ -36,6 +36,21 @@ Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode i
 <th> Onderbouwing status
 </th></tr>
 <tr>
+<td> In deze kolom staat de unieke naam (URI) van de eis. </td>
+<td> In deze kolom staat de naam (spreektaal / projectnummer) van de eis. </td>
+<td> In deze kolom staat de de naam oftewel de titel van de eis. </td>
+<td> In deze kolom staat de eistekst. </td>
+<td> In deze kolom staat de URI van een onderliggende eis. </td>
+<td> In deze kolom wordt aangegeven, of het een 'wens' of een 'eis' betreft. </td>
+<td> In deze kolom wordt aangegeven wat de bron van de eis is. </td>
+<td> In deze kolom staat de URI van het Onderwerp van de eis. </td>
+<td> In deze kolom staat de toelichting op de eis. </td>
+<td> In deze kolom staat het eistype of het type verificatiemethode. </td>
+<td> In deze kolom staat de initiator van de eis. </td>
+<td> In deze kolom staat de status van de eis. </td>
+<td> In deze kolom staat een toelichting op de status van de eis. 
+</td></tr>
+<tr>
 <td> [URI](https://www.w3.org/wiki/URI) </td>
 <td> skos:Notation </td>
 <td> skos:prefLabel </td>
@@ -83,20 +98,6 @@ Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode i
 <th> Onderbouwing status
 </th></tr>
 <tr>
-<td> In deze kolom staat de unieke naam (URI) van de eis. Zie [URI conform W3C](https://www.w3.org/wiki/URI).  </td>
-<td> In deze kolom staat de naam (spreektaal / projectnummer) van de eis.  </td>
-<td> In deze kolom staat de de naam oftewel de titel van de eis. </td>
-<td> In deze kolom staat de eistekst. </td>
-<td> In deze kolom staat de URI van een onderliggende eis. </td>
-<td> In deze kolom wordt aangegeven, of het een 'wens' of een 'eis' betreft. </td>
-<td> In deze kolom wordt aangegeven wat de bron van de eis is. </td>
-<td> In deze kolom staat de URI van het Onderwerp van de eis. </td>
-<td> In deze kolom staat de toelichting op de eis. </td>
-<td> In deze kolom staat het eistype of het type verificatiemethode. </td>
-<td> In deze kolom staat de initiator van de eis. </td>
-<td> In deze kolom staat de status van de eis. </td>
-<td> In deze kolom staat een toelichting op de status van de eis. 
-</td></tr><tr>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
 <td> EIS1099 </td>
 <td> Voorbeeldeis </td>
