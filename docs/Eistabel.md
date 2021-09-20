@@ -1,7 +1,7 @@
 # Eisentabel
 
 
-Voorstel is om de volgende tabel te gebruiken voor de eisen en verificatiemethoden. Op de tweede regel staat de vertaling / binding naar de NEN 2660.
+Voorstel is om de volgende tabel te gebruiken voor de eisen en verificatiemethoden. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN 2660.
 
 
 Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode is een andere eis. In de eisentabel is het verschil niet meteen duidelijk, voor leesbaarheid kan de verificatiemethode direct onder de eis worden gezet in de Eisentabel.
