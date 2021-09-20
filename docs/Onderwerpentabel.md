@@ -92,16 +92,16 @@ De informatieproducten in het contract staan vaak zowel in de Vraagspecificatie 
 
 Voorbeelden:
 
-Informatieleveringsspecificatie
+Informatieleveringsspecificatie:
 
-*een rapport over het ontwerp van een weg
-*een sterkteberekening van een kunstwerk
-*een 3D model van een gebouw
-*een linked dataset met attributen van een voetpad
+* een rapport over het ontwerp van een weg
+* een sterkteberekening van een kunstwerk
+* een 3D model van een gebouw
+* een linked dataset met attributen van een voetpad
 
-Procesdeel
-*een V&G plan
-*een voortgangsrapportage
+Procesdeel:
+* een V&G plan
+* een voortgangsrapportage
 
 De vertaling / binding van informatieproducten naar NEN 2660 is nog niet bekend:
 
