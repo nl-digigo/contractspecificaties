@@ -94,8 +94,7 @@ Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode i
 <td> In deze kolom staat de toelichting op de eis. </td>
 <td> In deze kolom staat het eistype of het type verificatiemethode. </td>
 <td> In deze kolom staat de initiator van de eis. </td>
-<td> In deze kolom staat de status van de eis. </td>\
-<td> Reden van vervallen van eis </td>
+<td> In deze kolom staat de status van de eis. </td>
 <td> In deze kolom staat een toelichting op de status van de eis. 
 </td></tr><tr>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
