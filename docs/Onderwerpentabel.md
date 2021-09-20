@@ -36,6 +36,7 @@ Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis, bes
 <td> rdfs:Class </td>
 <td> skos:definition </td>
 <td> nen2660:heeftDeel </td>
+  <td> ONBEKEND </td>
 </td></tr>
 </table>
 
