@@ -37,7 +37,7 @@ Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode i
 </th></tr>
 <tr>
 <td> In deze kolom staat de unieke naam (URI) van de eis. </td>
-<td> In deze kolom staat de naam (spreektaal / projectnummer) van de eis. </td>
+<td> In deze kolom staat de code of het nummer van de eis. </td>
 <td> In deze kolom staat de de naam oftewel de titel van de eis. </td>
 <td> In deze kolom staat de eistekst. </td>
 <td> In deze kolom staat de URI van een onderliggende eis. </td>
