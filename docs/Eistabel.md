@@ -220,7 +220,7 @@ Bij eisen: voorstel om toe te passen de lijst uit de [Leidraad Systems Engineeri
 * <a>Toekomstvastheid</a>
 * <a>Sloopbaarheid</a>
 
-Bij verificatiemethoden: voorstel om toe te passen de lijst uit NEN-EN-ISO 9001:2015
+Bij verificatiemethoden: voorstel om toe te passen de lijst uit NEN-EN-ISO 9000:2015 Kwaliteitsmanagementsystemen - Grondbeginselen en verklarende woordenlijst
 * <a>Vaststellen</a>
 * <a>Beoordelen</a>
 * <a>Monitoren</a>
