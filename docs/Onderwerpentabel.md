@@ -123,8 +123,8 @@ De vertaling / binding van informatieproducten naar NEN 2660 is nog niet bekend:
 ### URI 
 In deze kolom staat de unieke naam (URI) van het onderwerp. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
 
-De URI is unieke naam voor het onderwerp binnen het project; bij de definitie kan worden verwezen naar het type uit een ontologie ofwel objecttypenbibliotheek.
-
+De URI is unieke naam voor het onderwerp binnen het project; bij de definitie kan worden verwezen naar het type uit een ontologie ofwel objecttypenbibliotheek. 
+Als de URI uit een ontologie direct als onderwerp wordt gebruikt, suggereer je daarmee dat de projecteis altijd geldt voor dit onderwerp; dat hoeft echter niet zo te zijn. Vandaar de project-URI.
 
 
 ### Code
@@ -141,7 +141,7 @@ De naam is de voor mensen leesbare naam van het onderwerp. Deze naam hoeft niet 
 In deze kolom staat het type van het onderwerp:
 1. FysiekObject  
 2. Functie  
-3. Activiteit   
+3. Werkzaamheid   
 4. Informatieproduct
 
 
