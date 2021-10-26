@@ -64,7 +64,7 @@ var respecConfig = {
     // EO: Einde ondersteuning, verouderde versie, vervangen door nieuwe versie
     // TG: Versie teruggetrokken
     // BASIS, GN-BASIS: 'geen status'
-    specStatus: "WV",
+    specStatus: "WW",
     postProcess:[changeSOTD],       //-- Deze roept de postprocessor aan
   
     // SpecType currently supported
@@ -86,7 +86,7 @@ var respecConfig = {
     // format: "markdown",                
   
     // The specification's "short name", which is the name used in NL_Respec URLs
-    shortName: "COINS-3.0-Contract-als-data",
+    shortName: "contractspecificaties",
   
     // A YYYY-MM-DD date. The publication date of the present document. 
     // Als er geen publishDate is opgegeven, genereert ReSpec de dataum o.b.v. de laatste wijzigingen
@@ -132,7 +132,7 @@ var respecConfig = {
         },
       ],
     // The github option allows you associate your specification with a repository on GitHub.
-    github: "https://github.com/bimloket/COINS-3.0-Contract-als-data",
+    github: "https://github.com/bimloket/contractspecificaties",
   
     // The URL of your test suite, gets included in the specification's headers.
     // testSuiteURI: "https://portaal.digikoppeling.nl/CV/home.html",
