@@ -28,7 +28,7 @@ Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis, bes
 <td> In deze kolom staat de definitie van het onderwerp. </td>
 <td> In deze kolom staat de URI van een onderliggend onderwerp. </td>
 <td> In deze kolom wordt aangegeven wie de eigenaar is van het onderwerp. </td>
-</td></tr>
+</tr>
 <tr>
 <td> <href>[unieke naam conform W3C](https://www.w3.org/wiki/URI)</href> </td>
 <td> skos:Notation </td>
@@ -36,8 +36,17 @@ Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis, bes
 <td> rdfs:Class </td>
 <td> skos:definition </td>
 <td> nen2660:heeftDeel </td>
-  <td> ONBEKEND </td>
-</td></tr>
+<td> ONBEKEND </td>
+</tr>
+<tr>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 0:n </td>
+<td> 0:n </td>
+</tr>
 </table>
 
 
