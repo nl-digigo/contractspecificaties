@@ -1,7 +1,6 @@
 # Onderwerpentabel
 
-
-Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis, bestaande uit de functies, objecttypen, werkzaamheden en informatieproducten. Op de tweede regel staat een korte toelichting, op de derde de vertaling / binding naar de NEN 2660.
+De onderwerpentabel wordt gebruikt voor de onderwerpen van de eisen, bestaande uit de functies, objecttypen, werkzaamheden en informatieproducten. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN 2660. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (cardinaliteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling. 
 
 
 <table class="wikitable" style="text-align:left; valign:top">
