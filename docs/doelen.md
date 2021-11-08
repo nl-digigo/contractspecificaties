@@ -1,5 +1,8 @@
 # Doelentabel
 
+De doelentabel wordt gebruikt voor de doelen van het project. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN 2660. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (cardinaliteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling. 
+
+
 Bij het functioneel specificeren begin je met het vaststellen van de doelstellingen van het systeem. Vanuit die doelstellingen bedenk je welke functies het systeem nodig heeft.
 
 De vertaling / binding van doelen naar NEN 2660 is nog niet bekend. 
