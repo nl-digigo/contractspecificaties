@@ -73,7 +73,7 @@ De vertaling / binding van de relatie tussen doelen en functies naar NEN 2660 is
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldfunctie0001 </td>
 </tr>
 <tr>
-<td>  </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeelddoel0001  </td>
 <td>  </td>
 <td>  </td>
 <td>  </td>
