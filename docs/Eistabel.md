@@ -88,7 +88,7 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 <td> 0:n </td>
 <td> 1:1 </td>
 <td> 1:1 </td>
-</td></tr>
+</tr>
 </table>
 
 
