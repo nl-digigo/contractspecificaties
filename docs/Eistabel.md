@@ -20,9 +20,11 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 </th>
 <th> heeftDeel
 </th>
-<th> Ernst
-</th>
 <th> Bron
+</th>
+<th> Gerefereerd document
+</th>
+<th> Locatie in document
 </th>
 <th> Specificeert
 </th>
@@ -44,8 +46,9 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 <td> In deze kolom staat de de naam oftewel de titel van de eis of verificatiemethode. </td>
 <td> In deze kolom staat de eistekst of een nadere detaillering van de verificatiemethode. </td>
 <td> In deze kolom staat de URI van een onderliggende eis. </td>
-<td> In deze kolom wordt aangegeven, of het een 'wens' of een 'eis' betreft. </td>
 <td> In deze kolom wordt aangegeven wat de bron van de eis of verificatiemethode is. </td>
+<td> In deze kolom wordt aangegeven in welk gerefereerd document meer eisen staan. </td>
+<td> In deze kolom wordt aangegeven op welke locatie in een document de eis voorkomt. </td>
 <td> In deze kolom staat de URI van het Onderwerp van de eis of de verificatiemethode. </td>
 <td> In deze kolom staat de toelichting op de eis of de verificatiemethode. </td>
 <td> In deze kolom staat het eistype of het type verificatiemethode. </td>
@@ -60,8 +63,6 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 <td> skos:prefLabel </td>
 <td> nen2660:heeftVoorwaardeSpecificatie </td>
 <td> nen2660:heeftDeel </td>
-<td> nen2660:voorwaardeErnstType </td>
-<td> nen2660:voorwaardeBronType </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
@@ -69,6 +70,24 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
+<td> ONBEKEND </td>
+<td> ONBEKEND </td>
+<td> ONBEKEND </td>
+</td></tr>
+<tr>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 0:n </td>
+<td> 1:1 </td>
+<td> 1:n </td>
+<td> 1:1 </td>
+<td> 0:n </td>
+<td> 0:n </td>
+<td> 0:n </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
 </td></tr>
 </table>
 
@@ -86,9 +105,11 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 </th>
 <th> heeftDeel
 </th>
-<th> Ernst
-</th>
 <th> Bron
+</th>
+<th> Gerefereerd document
+</th>
+<th> Locatie in document
 </th>
 <th> Specificeert
 </th>
@@ -110,8 +131,9 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 <td> Voorbeeldeis </td>
 <td> Dit is de tekst van de voorbeeldeis </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
-<td> wens </td>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldbrondocument </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldgerefereerddocument </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldlocatieindocument </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldtabel </td>
 <td> Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kunnen verduidelijken </td>
 <td> Veiligheid </td>
@@ -126,9 +148,10 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 <td> Voorbeeld verificatiemethode </td>
 <td> Dit is het verificatievoorschrift </td>
 <td>  </td>
-<td>  </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldbrondocument </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldgerefereerddocument </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldlocatieindocument </td>
 <td> </td>
 <td> </td>
 <td> Ontwerp </td>
@@ -175,33 +198,19 @@ In deze kolom staat de URI van een onderliggende eis.
 Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelijk in contracten. Een eis kan meerdere onderliggende eisen hebben, er komen dan meerdere regels met dezelfde eis voor in de eisentabel. 
 
 
-
-### Ernst
-In deze kolom wordt aangegeven, of het een 'wens' of een 'eis' betreft.
-De ernst van een eis (nen2660:voorwaardeErnstType) kan conform NEN 2660 de volgende lijst zijn:
-* Wens
-* Eis
-
-Wordt door partijen het onderscheid maken tussen klanteis en systeemeis gewenst?
-
-[Issue 26](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/26)
-
 ### Bron
-In deze kolom wordt aangegeven wat de bron van de eis is. Volgens de NEN 2660 kan dit uitsluitend de volgende lijst zijn:
-* PerDefinitie
-* DoorKlant
-* DoorWetOfRegelgeving
-* DoorSector
 
-Gebruikers geven aan, hier liever een verwijzing te plaatsen naar één van deze zaken:
-1. De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is)
-2. De URI van een brondocument met herkomst van de eis - reden dat ook een documententabel gewenst wordt door gebruikers.
+De bron van de eis kan naart twee zaken verwijzen: 
+1. De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is). Deze uri verwijst naar een openbaar gepubliceerde eis in een bibliotheek uit komen.
+2. De URI van een brondocument met herkomst van de eis. Deze uri verwijst naar een document in de documententabel.
 
 
-Deze plek is niet de locatie voor de URI van een van toepassing zijnd document. Daar wordt naar verwezen in de eistekst zelf.
+### Gerefereerd document
+Als in de eistekst wordt verwezen naar een gerefereerd document, staat in deze kolom de URI van het gerefereerde document. Deze uri verwijst naar een document in de documententabel.
 
 
-[Issue 20](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/20)
+### Locatie in document
+Als zowel een pdf (voor mensen leesbare versie) als een dataset met eisen worden meegenomen, dan staat in deze kolom de URI die verwijst naar een paragraaf in een document in de documententabel.
 
 
 ### Specificeert
@@ -242,6 +251,17 @@ Bij eisen: voorstel om toe te passen de lijst uit de [Leidraad Systems Engineeri
 * <a>Vormgeving</a>
 * <a>Toekomstvastheid</a>
 * <a>Sloopbaarheid</a>
+
+Wordt door partijen het onderscheid maken tussen klanteis en systeemeis gewenst?
+
+[Issue 26](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/26)
+
+
+> De ernst van een eis (nen2660:voorwaardeErnstType) kan conform NEN 2660 de volgende lijst zijn:
+> * Wens
+> * Eis
+> Dit wordt in de praktijk, bij het uitwisselen van contractuele eisen, niet gebruikt.
+
 
 Bij verificatiemethoden: voorstel om toe te passen de lijst uit NEN-EN-ISO 9000:2015 Kwaliteitsmanagementsystemen - Grondbeginselen en verklarende woordenlijst
 * <a>Vaststellen</a>
