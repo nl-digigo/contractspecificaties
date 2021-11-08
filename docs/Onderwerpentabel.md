@@ -1,7 +1,7 @@
 # Onderwerpentabel
 
 
-Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis, bestaande uit de functies, objecten, werkzaamheden en informatieproducten. Op de tweede regel staat een korte toelichting, op de derde de vertaling / binding naar de NEN 2660.
+Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis, bestaande uit de functies, objecttypen, werkzaamheden en informatieproducten. Op de tweede regel staat een korte toelichting, op de derde de vertaling / binding naar de NEN 2660.
 
 
 <table class="wikitable" style="text-align:left; valign:top">
@@ -24,7 +24,7 @@ Voorstel is om de volgende tabel te gebruiken voor het onderwerp van de eis, bes
 <td> In deze kolom staat de unieke naam (URI) van het onderwerp. </td>
 <td> In deze kolom staat de code ofwel het nummer van het onderwerp. </td>
 <td> In deze kolom staat de naam van het onderwerp. </td>
-<td> In deze kolom staat het type van het onderwerp: FysiekObject, Functie, Werkzaamheid of Informatieproduct. </td>
+<td> In deze kolom staat het type van het onderwerp: Object, Functie, Werkzaamheid of Informatieproduct. </td>
 <td> In deze kolom staat de definitie van het onderwerp. </td>
 <td> In deze kolom staat de URI van een onderliggend onderwerp. </td>
 <td> In deze kolom wordt aangegeven wie de eigenaar is van het onderwerp. </td>
@@ -96,10 +96,11 @@ De vertaling / binding van de relatie tussen functies en objecten naar NEN 2660 
 
 [Issue 13](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/13)
 
-### Objecten
+### Objecttypen
 
-De objecten en objectenbomen in het contract (Vraagspecificatie Eisendeel) zijn “FysiekObject” uit NEN 2660. Dit kan in de kolom Type worden ingevuld.
+De objecttypen en objecttypenboom ("decompositie") in het contract (Vraagspecificatie Eisendeel) zijn “FysiekObject” uit NEN 2660. Dit kan in de kolom Type worden ingevuld.
 
+[Issue 18](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/18)
 
 ### Werkzaamheden
 De werkzaamheden zijn door mensen uit te voeren activiteiten tijdens het ontwerpen, bouwen, beheren en slopen van het object. 
