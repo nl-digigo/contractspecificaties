@@ -1,9 +1,11 @@
 # Documententabel
-Voorstel is om de onderstaande tabel te gebruiken voor de volgende soorten documenten:
+De documententabel wordt gebruikt voor de definitie van de documenten. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN 2660. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (cardinaliteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling.
 
-* Brondocumenten voor eisen
-* Van toepassing zijnde documenten, waarnaar verwezen wordt in een eistekst.
-* Overige contractuele documenten, zodat ook teksten in paragraven kunnen worden toegevoegd als data.
+De volgende documenten worden opgenomen in de documententabel
+
+* Brondocumenten voor eisen: dit kan een beleidsstuk zijn, of een norm of wet of ander document waarin eisen beschreven staan. Dit document wordt toegevoegd om een relatie te behouden met het bronddocument en om de context van de eis te kunnen opzoeken. De eisen in de eisentabel zijn de eisen die contractueel gelden, een opdrachtnemer hoeft het brondocument niet zelf te scannen op eisen.
+* Van toepassing zijnde documenten, waarnaar verwezen wordt in een eistekst. Dit kan een beleidsstuk zijn, of een norm of wet of ander document waarin eisen beschreven staan. Een opdrachtnemer wordt door deze verwijzing verplicht om zelf de eisen in dit document te scannen en mee te nemen in de verificatie en validatie.
+* Overige contractuele documenten, zodat ook teksten in paragraven kunnen worden toegevoegd als data. Dit betreft een document, waarvan hele paragraven niet zijn vertaald naar eisen, maar een context bieden voor de eisen, bijvoorbeeld inleidende hoofdstukken van de Vraagspecificatie Eisen, Proces en informatieleveringsspecificatie. Dank zij de documententabel kan een opdrachtnemer wel de teksten per paragraaf inlezen en deze als context oproepen in eigen projectbeheersingssystemen.
 
 De vertaling / binding van documenten naar NEN 2660 is NEN2660:InformatieProduct. Merk op: ook een eis wordt gezien als InformatieProduct; maar deze wordt opgenomen in de Eisentabel. In de onderwerpentabel zijn te leveren documenten/datasets (informatieleveringen) óók Informatieproduct. De informatieleveringen die gevráágd worden in het contract, staan niet in de Documententabel.
 
@@ -63,6 +65,20 @@ In de tabel staat op de tweede regel een korte toelichting op de inhoud; op de d
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
+</td></tr>
+<tr>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 1:n </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
 </td></tr>
 </table>
 
