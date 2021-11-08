@@ -68,7 +68,7 @@ De vertaling / binding van de relatie tussen doelen en functies naar NEN 2660 is
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeelddoel0001 </td>
 <td> DOEL-0001 </td>
 <td> Veilig verkeer </td>
-<td> De inrichting van de openbare ruimte dient te zorgen voor veilige afwikkeling van verkeer </td>
+<td> De nieuwe inrichting van de openbare ruimte dient te zorgen voor veilig verkeer, zodat de kans op ernstige verkeersongevallen halveert </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeelddoel0002 </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldfunctie0001 </td>
 </tr>
