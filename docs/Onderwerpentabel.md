@@ -23,7 +23,7 @@ De onderwerpentabel wordt gebruikt voor de onderwerpen van de eisen, bestaande u
 <td> In deze kolom staat de unieke naam (URI) van het onderwerp. </td>
 <td> In deze kolom staat de code ofwel het nummer van het onderwerp. </td>
 <td> In deze kolom staat de naam van het onderwerp. </td>
-<td> In deze kolom staat het type van het onderwerp: Object, Functie, Werkzaamheid of Informatieproduct. </td>
+<td> In deze kolom staat het type van het onderwerp: Objecttype, Functie, Werkzaamheid of Informatieproduct. </td>
 <td> In deze kolom staat de definitie van het onderwerp. </td>
 <td> In deze kolom staat de URI van een onderliggend onderwerp. </td>
 <td> In deze kolom wordt aangegeven wie de eigenaar is van het onderwerp. </td>
