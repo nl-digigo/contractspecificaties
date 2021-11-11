@@ -235,26 +235,25 @@ De vertaling / binding van toelichting naar NEN 2660 is nog niet bekend.
 
 ### Type
 In deze kolom staat het eistype of het type verificatiemethode.
-Bij eisen: voorstel om toe te passen de lijst uit de [Leidraad Systems Engineering versie 3](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V3/Leidraad_V3_SE_web.pdf). Het staat gebruikers vrij om deze lijst aan te vullen.
 
-* <a>Topeis</a> (systeemeis?)
+Voorstel om uitsluitend de onderstaande lijst toe te passen, bron voor de aspecteisen is [Leidraad Systems Engineering versie 3](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V3/Leidraad_V3_SE_web.pdf). Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt. 
+
+Eistypen:
+* <a>Functie-eis</a> 
 * <a>Proceseis</a>
-* <a>Functieeis</a>
-* <a>Aspecteis</a>
-* <a>Betrouwbaarheid</a>
-* <a>Beschikbaarheid</a>
-* <a>Onderhoudbaarheid</a>
-* <a>Veiligheid</a>
-* <a>Gezondheid</a>
-* <a>Omgeving</a>
-* <a>Duurzaamheid</a>
-* <a>Vormgeving</a>
-* <a>Toekomstvastheid</a>
-* <a>Sloopbaarheid</a>
+* <a>Systeemeis</a>
+* <a>Informatie-eis</a>
+* <a>Aspecteis: Betrouwbaarheid</a>
+* <a>Aspecteis: Beschikbaarheid</a>
+* <a>Aspecteis: Onderhoudbaarheid</a>
+* <a>Aspecteis: Veiligheid</a>
+* <a>Aspecteis: Gezondheid</a>
+* <a>Aspecteis: Omgeving</a>
+* <a>Aspecteis: Duurzaamheid</a>
+* <a>Aspecteis: Vormgeving</a>
+* <a>Aspecteis: Toekomstvastheid</a>
+* <a>Aspecteis: Sloopbaarheid</a>
 
-Wordt door partijen het onderscheid maken tussen klanteis en systeemeis gewenst?
-
-[Issue 26](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/26)
 
 
 > De ernst van een eis (nen2660:voorwaardeErnstType) kan conform NEN 2660 de volgende lijst zijn:
