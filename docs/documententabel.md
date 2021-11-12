@@ -117,7 +117,7 @@ In deze kolom staat de auteur van het document.
 
 
 ### Documenttype
-In deze kolom staat het documenttype.
+In deze kolom staat het documenttype. Voor documenttypen is nog geen nationale afspraak gemaakt.
 
 
 ### Hoofdstuknummer
