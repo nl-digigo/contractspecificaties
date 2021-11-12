@@ -168,11 +168,7 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 In deze kolom staat de unieke naam (URI) van de eis. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
 
 De URI is unieke naam voor de eis binnen het project. 
-Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder "Bron". 
-
-Bij de eisen kan de URI ook de verwijzing zijn naar de eis in een bibliotheek; dan mogen de overige kolommen niet zijn aangepast en er ook geen extra informatie zijn toegevoegd. 
-
-[Issue 23](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/23)
+Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder "Bron". Daar staat de URI van de eis uit de bibliotheek. De interpretatie is hierbij dat de eis in het project een nadere detaillering (verbijzondering) is van de eis uit de bibliotheek, en dus ook een andere URI heeft. De velden die in de bibliotheek zijn ingevuld (bijvoorbeeld titel en tekst van de eis) mogen in dat geval niet worden gewijzigd. Aanvullingen met nieuwe velden en relaties mogen wel worden gedaan.
 
 
 ### Code
@@ -201,9 +197,10 @@ Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelij
 ### Bron
 
 De bron van de eis kan naart twee zaken verwijzen: 
-1. De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is). Deze uri verwijst naar een openbaar gepubliceerde eis in een bibliotheek uit komen.
+1. De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is). Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet. De interpretatie is hierbij dat de eis in het project een nadere detaillering (verbijzondering) is van de eis uit de bibliotheek, en dus ook een andere URI heeft. De velden die in de bibliotheek zijn ingevuld (bijvoorbeeld titel en tekst van de eis) mogen in dat geval niet worden gewijzigd. Aanvullingen met nieuwe velden en relaties mogen wel worden gedaan.
 2. De URI van een brondocument met herkomst van de eis. Deze uri verwijst naar een document in de documententabel.
 
+[issue 23](https://github.com/bimloket/contractspecificaties/issues/23)
 
 ### Gerefereerd document
 Als in de eistekst wordt verwezen naar een gerefereerd document, staat in deze kolom de URI van het gerefereerde document. Deze uri verwijst naar een document in de documententabel.
@@ -236,7 +233,7 @@ De vertaling / binding van toelichting naar NEN 2660 is nog niet bekend.
 ### Type
 In deze kolom staat het eistype of het type verificatiemethode.
 
-Voorstel om uitsluitend de onderstaande lijst toe te passen, bron voor de aspecteisen is [Leidraad Systems Engineering versie 3](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V3/Leidraad_V3_SE_web.pdf). Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt. 
+Bij uitwisseling mag je uitsluitend de onderstaande lijst gebruiken, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt. 
 
 Eistypen:
 * <a>Functie-eis</a> 
@@ -253,13 +250,6 @@ Eistypen:
 * <a>Aspecteis: Vormgeving</a>
 * <a>Aspecteis: Toekomstvastheid</a>
 * <a>Aspecteis: Sloopbaarheid</a>
-
-
-
-> De ernst van een eis (nen2660:voorwaardeErnstType) kan conform NEN 2660 de volgende lijst zijn:
-> * Wens
-> * Eis
-> Dit wordt in de praktijk, bij het uitwisselen van contractuele eisen, niet gebruikt.
 
 
 Bij verificatiemethoden: voorstel om toe te passen de lijst uit NEN-EN-ISO 9000:2015 Kwaliteitsmanagementsystemen - Grondbeginselen en verklarende woordenlijst
