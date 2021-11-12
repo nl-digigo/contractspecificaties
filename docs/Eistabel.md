@@ -22,7 +22,7 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 </th>
 <th> Bron
 </th>
-<th> Gerefereerd document
+<th> Referentiedocument
 </th>
 <th> Locatie in document
 </th>
@@ -202,8 +202,8 @@ De bron van de eis kan naart twee zaken verwijzen:
 
 [issue 23](https://github.com/bimloket/contractspecificaties/issues/23)
 
-### Gerefereerd document
-Als in de eistekst wordt verwezen naar een gerefereerd document, staat in deze kolom de URI van het gerefereerde document. Deze uri verwijst naar een document in de documententabel.
+### Referentiedocument
+Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kolom de URI van het gerefereerde document. Deze uri verwijst naar een document in de documententabel.
 
 
 ### Locatie in document
