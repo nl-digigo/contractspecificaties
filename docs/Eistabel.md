@@ -283,7 +283,11 @@ De vertaling / binding van eigenaar naar NEN 2660 is nog niet bekend.
 
 
 ### Fase
-In deze kolom staat de fase van de eis of verificatiemethode.
+In deze kolom staat de fase van de eis of verificatiemethode. Hierbij worden de volgende fasen onderscheiden:
+* Ontwerpfase
+* Bouwfase
+* Beheerfase
+* Sloopfase
 
 De vertaling / binding van fase naar NEN 2660 is nog niet bekend. 
 
