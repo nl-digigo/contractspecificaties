@@ -1,5 +1,5 @@
 # Documententabel
-De documententabel wordt gebruikt voor de definitie van de documenten. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN 2660. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (cardinaliteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling.
+De documententabel wordt gebruikt voor de definitie van de documenten. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN2660-2. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (multipliciteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling.
 
 De volgende documenten worden opgenomen in de documententabel
 
@@ -7,9 +7,9 @@ De volgende documenten worden opgenomen in de documententabel
 * Van toepassing zijnde documenten, waarnaar verwezen wordt in een eistekst. Dit kan een beleidsstuk zijn, of een norm of wet of ander document waarin eisen beschreven staan. Een opdrachtnemer wordt door deze verwijzing verplicht om zelf de eisen in dit document te scannen en mee te nemen in de verificatie en validatie.
 * Overige contractuele documenten, zodat ook teksten in paragraven kunnen worden toegevoegd als data. Dit betreft een document, waarvan hele paragraven niet zijn vertaald naar eisen, maar een context bieden voor de eisen, bijvoorbeeld inleidende hoofdstukken van de Vraagspecificatie Eisen, Proces en informatieleveringsspecificatie. Dank zij de documententabel kan een opdrachtnemer wel de teksten per paragraaf inlezen en deze als context oproepen in eigen projectbeheersingssystemen.
 
-De vertaling / binding van documenten naar NEN 2660 is NEN2660:InformatieProduct. Merk op: ook een eis wordt gezien als InformatieProduct; maar deze wordt opgenomen in de Eisentabel. In de onderwerpentabel zijn te leveren documenten/datasets (informatieleveringen) óók Informatieproduct. De informatieleveringen die gevráágd worden in het contract, staan niet in de Documententabel.
+De vertaling / binding van documenten naar NEN2660-2 is nen2660:InformatieObject. Merk op: ook een eis wordt gezien als InformatieObject; maar deze wordt opgenomen in de Eisentabel. In de onderwerpentabel zijn te leveren documenten/datasets (informatieleveringen) óók InformatieObject. De informatieleveringen die gevráágd worden in het contract, staan niet in de Documententabel.
 
-In de tabel staat op de tweede regel een korte toelichting op de inhoud; op de derde regel de vertaling / binding naar NEN 2660 (of andere standaard?)
+In de tabel staat op de tweede regel een korte toelichting op de inhoud; op de derde regel de vertaling / binding naar NEN2660-2 (of andere standaard?)
 [Issue 25](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/25)
 
 <table class="wikitable" style="text-align:left; valign:top">
@@ -54,7 +54,7 @@ In de tabel staat op de tweede regel een korte toelichting op de inhoud; op de d
 </td></tr>
 <tr>
 <td> [URI](https://www.w3.org/wiki/URI) </td>
-<td> skos:Notation </td>
+<td> skos:notation </td>
 <td> skos:prefLabel </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
@@ -85,7 +85,7 @@ In de tabel staat op de tweede regel een korte toelichting op de inhoud; op de d
 
 ## Informatiemodel
 
-Onbekend is of de informatie in de tabel een vertaling / binding naar NEN 2660 moet hebben of een ander informatiemodel?
+Onbekend is of de informatie in de tabel een vertaling / binding naar NEN2660-2 moet hebben of een ander informatiemodel?
 
 [Issue19](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/19)
 

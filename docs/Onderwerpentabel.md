@@ -1,6 +1,11 @@
 # Onderwerpentabel
 
-De onderwerpentabel wordt gebruikt voor de onderwerpen van de eisen, bestaande uit de functies, objecttypen, werkzaamheden en informatieproducten. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN 2660. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (cardinaliteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling. 
+De onderwerpentabel wordt gebruikt voor de onderwerpen van de eisen, bestaande uit de functies, objecttypen, werkzaamheden en informatieproducten. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN2660-2. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (multipliciteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling. 
+
+<p class="note">
+De vertaling / binding van Eigenaren naar NEN2660-2 is nog niet bekend. Mogelijk wordt hier de DCTerms ontologie betrokken.
+</p>
+
 
 
 <table class="wikitable" style="text-align:left; valign:top">
@@ -30,7 +35,7 @@ De onderwerpentabel wordt gebruikt voor de onderwerpen van de eisen, bestaande u
 </tr>
 <tr>
 <td> <href>[unieke naam conform W3C](https://www.w3.org/wiki/URI)</href> </td>
-<td> skos:Notation </td>
+<td> skos:notation </td>
 <td> skos:prefLabel </td>
 <td> rdfs:Class </td>
 <td> skos:definition </td>
@@ -89,21 +94,28 @@ De functies in het contract (Vraagspecificatie Eisendeel) zijn ánders dan de we
 De functies geven weer, welke diensten het "systeem" moet vervullen tijdens het gebruik; een voorbeeld is een weg, die als functie "het verkeer moet geleiden".
 de objecten in het contract zijn de functievervullers. De activiteiten zijn door mensen uit te voeren werkzaamheden tijdens het ontwerpen, bouwen, beheren en slopen van het object.
 
-De vertaling / binding van functies naar NEN 2660 is nog niet bekend. 
+<p class="note">
+De vertaling / binding van functies naar NEN2660-2 is nog niet bekend. 
+</p>
 
-De vertaling / binding van de relatie tussen functies en objecten naar NEN 2660 is nog niet bekend.
+<p class="note">
+De vertaling / binding van de relatie tussen functies en objecten naar NEN2660-2 is nog niet bekend.
+</p>
 
 [Issue 13](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/13)
 
 ### Objecttypen
 
-De objecttypen en objecttypenboom ("decompositie") in het contract (Vraagspecificatie Eisendeel) zijn “FysiekObject” uit NEN 2660. Dit kan in de kolom Type worden ingevuld.
+De objecttypen en objecttypenboom ("decompositie") in het contract (Vraagspecificatie Eisendeel) zijn “FysiekObject” uit NEN2660-2. Dit kan in de kolom Type worden ingevuld.
 
 [Issue 18](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/18)
 
 ### Werkzaamheden
 De werkzaamheden zijn door mensen uit te voeren activiteiten tijdens het ontwerpen, bouwen, beheren en slopen van het object. 
-De vertaling / binding van activiteiten naar NEN 2660 is nog niet bekend. 
+
+<p class="note">
+De vertaling / binding van activiteiten naar NEN2660-2 is nog niet bekend. 
+</p>
 
 [Issue 13](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/13)
 
@@ -123,7 +135,9 @@ Procesdeel:
 * een V&G plan
 * een voortgangsrapportage
 
-De vertaling / binding van informatieproducten naar NEN 2660 is nog niet bekend:
+<p class="note">
+De vertaling / binding van informatieproducten naar NEN2660-2 is nog niet bekend. 
+</p>
 
 [Issue 12](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/12)
 
@@ -160,7 +174,7 @@ In deze kolom staat de definitie van het onderwerp. Hier staat ofwel een tekst d
 
 
 
-### HeeftDeel
+### heeftDeel
 In deze kolom staat de URI van een onderliggend onderwerp.
 Hiermee kan een hiërarchie worden aangegeven zoals een objectenboom of functieboom zoals gebruikelijk in contracten. Een concept kan uit meerdere delen bestaan, er komen dan meerdere regels voor in de Onderwerpentabel. 
 
@@ -171,7 +185,9 @@ In deze kolom wordt aangegeven wie de eigenaar is van het onderwerp.
 Vooral bij objecttypen of individuele objecten is het voor de opdrachtgever handig, te weten wie de eigenaar is. De eigenaar is de persoon of rol bij de opdrachtgever die verantwoordelijk is voor beheer van dit objecttype, en die geconsulteerd moet worden bij afwijking van de eisen.
 
 
-De vertaling / binding van eigenaar naar NEN 2660 is nog niet bekend. 
+<p class="note">
+De vertaling / binding van eigenaar naar NEN2660-2 is nog niet bekend. 
+</p>
 
 [Issue 16](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/16)
 

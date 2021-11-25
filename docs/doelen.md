@@ -1,13 +1,17 @@
 # Doelentabel
 
-De doelentabel wordt gebruikt voor de doelen van het project. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN 2660. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (cardinaliteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling. 
+De doelentabel wordt gebruikt voor de doelen van het project. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN2660-2. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (multipliciteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling. 
 
 
 Bij het functioneel specificeren begin je met het vaststellen van de doelstellingen van het systeem. Vanuit die doelstellingen bedenk je welke functies het systeem nodig heeft.
 
-De vertaling / binding van doelen naar NEN 2660 is nog niet bekend. 
+<p class="note">
+De vertaling / binding van doelen naar NEN2660-2 is nog niet bekend. 
+</p>
 
-De vertaling / binding van de relatie tussen doelen en functies naar NEN 2660 is nog niet bekend.
+<p class="note">
+De vertaling / binding van de relatie tussen doelen en functies naar NEN2660-2 is nog niet bekend.
+</p>
 
 [issue 14](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/14)
 
@@ -23,7 +27,7 @@ De vertaling / binding van de relatie tussen doelen en functies naar NEN 2660 is
 </th>
 <th> heeftDeel
 </th>
-<th> Specificeert
+<th> specificeert
 </th></tr>
 <tr>
 <td> In deze kolom staat de unieke naam (URI) van het doel. </td>
@@ -35,11 +39,11 @@ De vertaling / binding van de relatie tussen doelen en functies naar NEN 2660 is
 </tr>
 <tr>
 <td> [URI](https://www.w3.org/wiki/URI) </td>
-<td> skos:Notation </td>
+<td> skos:notation </td>
 <td> skos:prefLabel </td>
-<td> nen2660:heeftVoorwaardeSpecificatie </td>
+<td> rdf:value </td>
 <td> nen2660:heeftDeel </td>
-<td> ONBEKEND </td>
+<td> nen2660:heeftVoorwaarde </td>
 </tr>
 <tr>
 <td> 1:1 </td>
@@ -51,7 +55,7 @@ De vertaling / binding van de relatie tussen doelen en functies naar NEN 2660 is
 </tr>
 </table>
 
-## Voorbheeld doelentabel
+## Voorbeeld doelentabel
 
 <table class="wikitable" style="text-align:left; valign:top">
 <tr>
@@ -65,7 +69,7 @@ De vertaling / binding van de relatie tussen doelen en functies naar NEN 2660 is
 </th>
 <th> heeftDeel
 </th>
-<th> Specificeert
+<th> specificeert
 </th></tr>
 <tr>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeelddoel0001 </td>

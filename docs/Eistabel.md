@@ -1,11 +1,11 @@
 # Eisentabel
 
-De eisentabel wordt gebruikt voor de eisen en verificatiemethoden. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN 2660. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (cardinaliteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling. 
+De eisentabel wordt gebruikt voor de eisen en verificatiemethoden. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN2660-2. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (multipliciteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling. 
 
 
-Een verificatiemethode is ook een eis; het onderwerp van de verificatiemethode is een andere eis. In de eisentabel is het verschil niet meteen duidelijk, voor leesbaarheid kan de verificatiemethode direct onder de eis worden gezet in de Eisentabel.
+Een verificatiemethode is geen activiteit. Het gaat hier om extra informatie bij een eis. Een verificatiemethode is een eigenschap van een eis in de NEN2660-2. De eigenschap heeft een enumeratie van de verschillende mogelijke methoden. 
 
-Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als InformationObject
+Een verificatiemethode heeft een vertaling in de NEN2660-2 als 'property' van een eis.
 
 
 <table class="wikitable" style="text-align:left; valign:top">
@@ -18,7 +18,7 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 </th>
 <th> Tekst
 </th>
-<th> Pass/fail criterium
+<th> Verificatiemethode
 </th>
 <th> heeftDeel
 </th>
@@ -28,7 +28,7 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 </th>
 <th> Locatie in document
 </th>
-<th> Specificeert
+<th> specificeert
 </th>
 <th> Toelichting
 </th>
@@ -41,31 +41,32 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 <th> Status
 </th>
 <th> Onderbouwing status
-</th></tr>
+</th>
+</tr>
 <tr>
-<td> In deze kolom staat de unieke naam (URI) van de eis of verificatiemethode. </td>
-<td> In deze kolom staat de code of het nummer van de eis of verificatiemethode. </td>
-<td> In deze kolom staat de de naam oftewel de titel van de eis of verificatiemethode. </td>
-<td> In deze kolom staat de eistekst of een nadere detaillering van de verificatiemethode. </td>
-<th> In deze kolom staat het pass/fail criterium bij de eis of de verificatiemethode </th>
+<td> In deze kolom staat de unieke naam (URI) van de eis. </td>
+<td> In deze kolom staat de code of het nummer van de eis. </td>
+<td> In deze kolom staat de de naam oftewel de titel van de eis. </td>
+<td> In deze kolom staat de eistekst. </td>
+<td> In deze kolom staat de verificatiemethode bij de eis </td>
 <td> In deze kolom staat de URI van een onderliggende eis. </td>
-<td> In deze kolom wordt aangegeven wat de bron van de eis of verificatiemethode is. </td>
+<td> In deze kolom wordt aangegeven wat de bron van de eis is. </td>
 <td> In deze kolom wordt aangegeven in welk gerefereerd document meer eisen staan. </td>
 <td> In deze kolom wordt aangegeven op welke locatie in een document de eis voorkomt. </td>
-<td> In deze kolom staat de URI van het Onderwerp van de eis of de verificatiemethode. </td>
-<td> In deze kolom staat de toelichting op de eis of de verificatiemethode. </td>
-<td> In deze kolom staat het eistype of het type verificatiemethode. </td>
-<td> In deze kolom staat de initiator van de eis of de verificatiemethode. </td>
-<td> In deze kolom staat de fase van de eis of verificatiemethode. </td>
-<td> In deze kolom staat de status van de eis of de verificatiemethode. </td>
-<td> In deze kolom staat een toelichting op de status van de eis of de verificatiemethode. 
-</td></tr>
+<td> In deze kolom staat de URI van het Onderwerp van de eis. </td>
+<td> In deze kolom staat de toelichting op de eis. </td>
+<td> In deze kolom staat het eistype. </td>
+<td> In deze kolom staat de initiator. </td>
+<td> In deze kolom staat de fase van de eis. </td>
+<td> In deze kolom staat de status van de eis. </td>
+<td> In deze kolom staat een toelichting op de status van de eis. </td>
+</tr>
 <tr>
 <td> [URI](https://www.w3.org/wiki/URI) </td>
-<td> skos:Notation </td>
+<td> skos:notation </td>
 <td> skos:prefLabel </td>
-<td> nen2660:heeftVoorwaardeSpecificatie </td>
-<td> ONBEKEND </td>
+<td> rdf:value </td>
+<td> verificatieMethodeType </td>
 <td> nen2660:heeftDeel </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
@@ -77,7 +78,7 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
-</td></tr>
+</tr>
 <tr>
 <td> 1:1 </td>
 <td> 1:1 </td>
@@ -91,6 +92,8 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 <td> 0:n </td>
 <td> 0:n </td>
 <td> 0:n </td>
+<td> 1:1 </td>
+<td> 1:1 </td>
 <td> 1:1 </td>
 <td> 1:1 </td>
 </tr>
@@ -108,7 +111,8 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 </th>
 <th> Tekst
 </th>
-<td> Pass/fail criterium </td>
+<th> Verificatiemethode
+</th>
 <th> heeftDeel
 </th>
 <th> Bron
@@ -117,7 +121,7 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 </th>
 <th> Locatie in document
 </th>
-<th> Specificeert
+<th> specificeert
 </th>
 <th> Toelichting
 </th>
@@ -136,7 +140,7 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 <td> EIS1099 </td>
 <td> Voorbeeldeis </td>
 <td> Dit is de tekst van de voorbeeldeis </td>
-<td> 15 </td>
+<td> Documentinspectie </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldbrondocument </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldgerefereerddocument </td>
@@ -148,24 +152,6 @@ Een eis/verificatiemethode heeft een vertaling / binding naar de NEN 2660 als In
 <td> Ontwerp </td>
 <td> Vervallen </td>\
 <td> Reden van vervallen van eis </td>
-</td></tr>
-<tr>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
-<td> VER1099 </td>
-<td> Voorbeeld verificatiemethode </td>
-<td> Dit is het verificatievoorschrift </td>
-<td>  </td>
-<td>  </td>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldbrondocument </td>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldgerefereerddocument </td>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldlocatieindocument </td>
-<td> </td>
-<td> </td>
-<td> Ontwerp </td>
-<td> BIM loket </td>
-<td> </td>
-<td> </td>
 </td></tr>
 </table>
 
@@ -196,11 +182,11 @@ In deze kolom staat de eistekst.
 De eistekst kan een link of URI bevatten van een van toepassing zijnd document. Dit document wordt dan opgenomen in de Documententabel.
 
 
-### Pass/fail criterium
-In deze kolom staat het toetsingscriterium bij de eis, bijvoorbeeld de minimum en-of maximaumwaarde.
+### Verificatiemethode
+In deze kolom staat de methode waarmee de eis geverifieerd moet worden.
 
 
-### HeeftDeel
+### heeftDeel
 In deze kolom staat de URI van een onderliggende eis. 
 Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelijk in contracten. Een eis kan meerdere onderliggende eisen hebben, er komen dan meerdere regels met dezelfde eis voor in de eisentabel. 
 
@@ -221,11 +207,11 @@ Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kol
 Als zowel een pdf (voor mensen leesbare versie) als een dataset met eisen worden meegenomen, dan staat in deze kolom de URI die verwijst naar een paragraaf in een document in de documententabel.
 
 
-### Specificeert
+### specificeert
 In deze kolom staat de URI van het Onderwerp van de eis. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel. 
 
 
-De vertaling / binding van specificeert naar NEN 2660 is nog niet bekend. 
+De vertaling / binding van specificeert naar NEN2660-2 is nog niet bekend. 
 
 [Issue 18](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/18)
 
@@ -236,7 +222,7 @@ Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voo
 In deze kolom staat de toelichting op de eis. 
 In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld wordt. 
 
-De vertaling / binding van toelichting naar NEN 2660 is nog niet bekend. 
+De vertaling / binding van toelichting naar NEN2660-2 is nog niet bekend. 
 
 [Issue 17](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/17)
 
@@ -277,7 +263,7 @@ Bij verificatiemethoden: voorstel om toe te passen de lijst uit NEN-EN-ISO 9000:
 ### Eigenaar
 In deze kolom staat een eigenaar van de eis (naam natuurlijk persoon en/of organisatie).
 
-De vertaling / binding van eigenaar naar NEN 2660 is nog niet bekend. 
+De vertaling / binding van eigenaar naar NEN2660-2 is nog niet bekend. 
 
 [Issue 21](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/21)
 
@@ -289,7 +275,7 @@ In deze kolom staat de fase van de eis of verificatiemethode. Hierbij worden de 
 * Beheerfase
 * Sloopfase
 
-De vertaling / binding van fase naar NEN 2660 is nog niet bekend. 
+De vertaling / binding van fase naar NEN2660-2 is nog niet bekend. 
 
 [issue 15](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/15)
 
@@ -298,14 +284,14 @@ De vertaling / binding van fase naar NEN 2660 is nog niet bekend.
 In deze kolom staat de status van de eis. Voor contractspecificaties geldt dat de status één van deze twee zaken is: actueel of vervallen. 
 Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijziging in de eisenset te kunnen opnemen en met elkaar uit te wisselen.
 
-De vertaling / binding van status naar NEN 2660 is nog niet bekend. 
+De vertaling / binding van status naar NEN2660-2 is nog niet bekend. 
 
 
 ### Onderbouwing status
 In deze kolom staat een toelichting op de status van de eis.
 Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status onderbouwd is.
 
-De vertaling / binding van de onderbouwing van de status naar NEN 2660 is nog niet bekend. 
+De vertaling / binding van de onderbouwing van de status naar NEN2660-2 is nog niet bekend. 
 
 [Issue 22](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/22)
 
