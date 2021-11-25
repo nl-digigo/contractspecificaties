@@ -66,7 +66,7 @@ Een verificatiemethode heeft een vertaling in de NEN2660-2 als 'property' van ee
 <td> skos:notation </td>
 <td> skos:prefLabel </td>
 <td> rdf:value </td>
-<td> verificatieMethodeType </td>
+<td> [verificatieMethodeType](https://bimloket.github.io/nen2660/def#verificationMethodType) </td>
 <td> nen2660:heeftDeel </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
@@ -249,7 +249,7 @@ Eistypen:
 * <a>Aspecteis: Sloopbaarheid</a>
 
 
-Bij verificatiemethoden: voorstel om toe te passen de lijst uit NEN-EN-ISO 9000:2015 Kwaliteitsmanagementsystemen - Grondbeginselen en verklarende woordenlijst
+Bij typen verificatiemethoden: voorstel om toe te passen de lijst uit NEN-EN-ISO 9000:2015 Kwaliteitsmanagementsystemen - Grondbeginselen en verklarende woordenlijst
 * <a>Vaststellen</a>
 * <a>Beoordelen</a>
 * <a>Monitoren</a>
