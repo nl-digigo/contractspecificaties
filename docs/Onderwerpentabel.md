@@ -40,7 +40,7 @@ De vertaling / binding van Eigenaren naar NEN2660-2 is nog niet bekend. Mogelijk
 <td> rdfs:Class </td>
 <td> skos:definition </td>
 <td> nen2660:heeftDeel </td>
-<td> ONBEKEND </td>
+<td> [dcmi-terms:rightsHolder](https://dublincore.org/specifications/dublin-core/dcmi-terms/#rightsHolder) </td>
 </tr>
 <tr>
 <td> 1:1 </td>
