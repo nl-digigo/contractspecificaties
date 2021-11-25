@@ -56,7 +56,7 @@ Een verificatiemethode heeft een vertaling in de NEN2660-2 als 'property' van ee
 <td> In deze kolom staat de URI van het Onderwerp van de eis. </td>
 <td> In deze kolom staat de toelichting op de eis. </td>
 <td> In deze kolom staat het eistype. </td>
-<td> In deze kolom staat de initiator. </td>
+<td> In deze kolom staat de eigenaar. </td>
 <td> In deze kolom staat de fase van de eis. </td>
 <td> In deze kolom staat de status van de eis. </td>
 <td> In deze kolom staat een toelichting op de status van de eis. </td>
@@ -74,7 +74,7 @@ Een verificatiemethode heeft een vertaling in de NEN2660-2 als 'property' van ee
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
-<td> ONBEKEND </td>
+<td> [dcmi-terms:rightsHolder](https://dublincore.org/specifications/dublin-core/dcmi-terms/#rightsHolder) </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
