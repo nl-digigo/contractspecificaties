@@ -72,7 +72,7 @@ Een verificatiemethode heeft een vertaling in de NEN2660-2 als 'property' van ee
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
-<td> ONBEKEND </td>
+<td> [SKOS:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) </td>
 <td> ONBEKEND </td>
 <td> [dcmi-terms:rightsHolder](https://dublincore.org/specifications/dublin-core/dcmi-terms/#rightsHolder) </td>
 <td> ONBEKEND </td>
