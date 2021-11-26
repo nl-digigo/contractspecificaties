@@ -69,7 +69,7 @@ Een verificatiemethode heeft een vertaling in de NEN2660-2 als 'property' van ee
 <td> rdf:value </td>
 <td> [verificatieMethodeType](https://bimloket.github.io/nen2660/def#verificationMethodType) </td>
 <td> nen2660:heeftDeel </td>
-<td> ONBEKEND </td>
+<td> [rdfs:seeAlso](https://www.w3.org/TR/rdf-schema/#ch_seealso) </td>
 <td> ONBEKEND </td>
 <td> ONBEKEND </td>
 <td> [hasRequirement](https://bimloket.github.io/nen2660/def#hasRequirement) </td>
@@ -162,9 +162,9 @@ Een verificatiemethode heeft een vertaling in de NEN2660-2 als 'property' van ee
 ### URI
 In deze kolom staat de unieke naam (URI) van de eis. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
 
-De URI is unieke naam voor de eis binnen het project. 
-Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder "Bron". Daar staat de URI van de eis uit de bibliotheek. De interpretatie is hierbij dat de eis in het project een nadere detaillering (verbijzondering) is van de eis uit de bibliotheek, en dus ook een andere URI heeft. De velden die in de bibliotheek zijn ingevuld (bijvoorbeeld titel en tekst van de eis) mogen in dat geval niet worden gewijzigd. Aanvullingen met nieuwe velden en relaties mogen wel worden gedaan.
+De URI is de unieke naam voor de eis binnen het project. Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder "Bron". Daar staat de URI van de eis uit de bibliotheek. Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet. 
 
+De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context. 
 
 ### Code
 In deze kolom staat de de naam (spreektaal/projectnummer) van de eis.
@@ -195,10 +195,10 @@ Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelij
 ### Bron
 
 De bron van de eis kan naart twee zaken verwijzen: 
-1. De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is). Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet. De interpretatie is hierbij dat de eis in het project een nadere detaillering (verbijzondering) is van de eis uit de bibliotheek, en dus ook een andere URI heeft. De velden die in de bibliotheek zijn ingevuld (bijvoorbeeld titel en tekst van de eis) mogen in dat geval niet worden gewijzigd. Aanvullingen met nieuwe velden en relaties mogen wel worden gedaan.
+1. De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is). Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet. De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context. 
 2. De URI van een brondocument met herkomst van de eis. Deze uri verwijst naar een document in de documententabel.
 
-[issue 23](https://github.com/bimloket/contractspecificaties/issues/23)
+
 
 ### Referentiedocument
 Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kolom de URI van het gerefereerde document. Deze uri verwijst naar een document in de documententabel.
