@@ -1,6 +1,6 @@
 # Eisentabel
 
-De eisentabel wordt gebruikt voor de eisen en verificatiemethoden. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN2660-2. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (multipliciteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling. 
+De eisentabel wordt gebruikt voor de eisen en verificatiemethoden. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar linked data concepten. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (multipliciteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling. 
 
 
 Een verificatiemethode is geen activiteit. Het gaat hier om extra informatie bij een eis. Een verificatiemethode is een eigenschap van een eis in de NEN2660-2. De eigenschap heeft een enumeratie van de verschillende mogelijke methoden. 
