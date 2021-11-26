@@ -6,14 +6,9 @@ De doelentabel wordt gebruikt voor de doelen van het project. Op de eerste regel
 Bij het functioneel specificeren begin je met het vaststellen van de doelstellingen van het systeem. Vanuit die doelstellingen bedenk je welke functies het systeem nodig heeft.
 
 <p class="note">
-De vertaling / binding van doelen naar NEN2660-2 is nog niet bekend. 
+Een doel is net als een eis een [InformationObject](https://bimloket.github.io/nen2660/def#InformationObject) volgens NEN 2660
 </p>
 
-<p class="note">
-De vertaling / binding van de relatie tussen doelen en functies naar NEN2660-2 is nog niet bekend.
-</p>
-
-[issue 14](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/14)
 
 <table class="wikitable" style="text-align:left; valign:top">
 <tr>
