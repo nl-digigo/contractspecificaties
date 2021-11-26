@@ -76,8 +76,8 @@ Een verificatiemethode is een eigenschap ('property') van een eis in de NEN2660-
 <td> [rdfs:seeAlso](https://www.w3.org/TR/rdf-schema/#ch_seealso) </td>
 <td> [rdfs:comment](https://www.w3.org/TR/rdf-schema/#ch_comment) </td>
 <td> [nen2660:hasRequirement](https://bimloket.github.io/nen2660/def#hasRequirement) </td>
+<td> onbekend </td>
 <td> [dcmi-terms:rightsHolder](https://dublincore.org/specifications/dublin-core/dcmi-terms/#rightsHolder) </td>
-<td>  </td>
 <td> ONBEKEND </td>
 <td> [nen2660:hasState](https://bimloket.github.io/nen2660/term#hasState) </td>
 <td> [SKOS:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) </td>
