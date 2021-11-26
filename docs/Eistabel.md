@@ -67,17 +67,18 @@ Een verificatiemethode is een eigenschap ('property') van een eis in de NEN2660-
 <td> skos:notation </td>
 <td> skos:prefLabel </td>
 <td> rdf:value </td>
-<td> [rdfs:comment](https://www.w3.org/TR/rdf-schema/#ch_comment) </td>
+<td> [SKOS:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) </td>
 <td> [verificatieMethodeType](https://bimloket.github.io/nen2660/def#verificationMethodType) </td>
+<td> [SKOS:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) </td>
 <td> nen2660:heeftDeel </td>
 <td> [rdfs:seeAlso](https://www.w3.org/TR/rdf-schema/#ch_seealso) </td>
-<td> ONBEKEND </td>
+<td> [rdfs:seeAlso](https://www.w3.org/TR/rdf-schema/#ch_seealso) </td>
 <td> [rdfs:comment](https://www.w3.org/TR/rdf-schema/#ch_comment) </td>
 <td> [hasRequirement](https://bimloket.github.io/nen2660/def#hasRequirement) </td>
 <td> ONBEKEND </td>
 <td> [dcmi-terms:rightsHolder](https://dublincore.org/specifications/dublin-core/dcmi-terms/#rightsHolder) </td>
 <td> ONBEKEND </td>
-<td> ONBEKEND </td>
+<td> Toestand </td>
 <td> [SKOS:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) </td>
 </tr>
 <tr>
@@ -87,7 +88,7 @@ Een verificatiemethode is een eigenschap ('property') van een eis in de NEN2660-
 <td> 1:1 </td>
 <td> 1:1 </td>
 <td> 0:n </td>
-<td> 1:1 </td>
+<td> 0:n </td>
 <td> 1:n </td>
 <td> 1:1 </td>
 <td> 0:n </td>
