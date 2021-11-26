@@ -51,6 +51,7 @@ Een verificatiemethode is een eigenschap ('property') van een eis in de NEN2660-
 <td> In deze kolom staat de eistekst. </td>
 <td> In deze kolom staat de toelichting op de eis. </td>
 <td> In deze kolom staat de verificatiemethode bij de eis </td>
+<td> In deze kolom staat de toelichting op de verificatiemethode bij de eis. </td>
 <td> In deze kolom staat de URI van een onderliggende eis. </td>
 <td> In deze kolom wordt aangegeven wat de bron van de eis is. </td>
 <td> In deze kolom wordt aangegeven in welk gerefereerd document meer eisen staan. </td>
@@ -68,13 +69,13 @@ Een verificatiemethode is een eigenschap ('property') van een eis in de NEN2660-
 <td> [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) </td>
 <td> [rdf:value](https://www.w3.org/TR/rdf-schema/#ch_value) </td>
 <td> [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) </td>
-<td> [verificatieMethodeType](https://bimloket.github.io/nen2660/def#verificationMethodType) </td>
+<td> [nen2660:verificationMethodType](https://bimloket.github.io/nen2660/def#verificationMethodType) </td>
 <td> [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) </td>
-<td> [nen2660:heeftDeel](https://bimloket.github.io/nen2660/term#hasPart) </td>
+<td> [nen2660:hasPart](https://bimloket.github.io/nen2660/term#hasPart) </td>
 <td> [rdfs:seeAlso](https://www.w3.org/TR/rdf-schema/#ch_seealso) </td>
 <td> [rdfs:seeAlso](https://www.w3.org/TR/rdf-schema/#ch_seealso) </td>
 <td> [rdfs:comment](https://www.w3.org/TR/rdf-schema/#ch_comment) </td>
-<td> [hasRequirement](https://bimloket.github.io/nen2660/def#hasRequirement) </td>
+<td> [nen2660:hasRequirement](https://bimloket.github.io/nen2660/def#hasRequirement) </td>
 <td> [dcmi-terms:rightsHolder](https://dublincore.org/specifications/dublin-core/dcmi-terms/#rightsHolder) </td>
 <td>  </td>
 <td> ONBEKEND </td>
