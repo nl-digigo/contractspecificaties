@@ -1,11 +1,8 @@
 # Eisentabel
 
-De eisentabel wordt gebruikt voor de eisen en verificatiemethoden. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar linked data concepten. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (multipliciteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling. 
+De eisentabel wordt gebruikt voor de eisen. Bij elke kolom is aangegeven wat de vertaling/binding is naar linked data standaarden, hoe vaak deze waarde ingevuld mag worden per eis ("kardinaliteit") en een beschrijving.
 
 Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#InformationObject) volgens NEN 2660.
-
-Een verificatiemethode is een eigenschap ('property') van een eis in de NEN2660-2. De eigenschap heeft een enumeratie van de verschillende mogelijke methoden, dat wil zeggen dat de gebruiker een lijst kan opstellen met verificatiemethoden. 
-
 
 <table class="wikitable" style="text-align:left; valign:top">
 <tr>
@@ -193,23 +190,31 @@ In deze kolom staat de eistekst. In deze tekst kan verwezen worden naar een refe
 In deze kolom staat de toelichting op de eistekst 
 In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld wordt. 
 
-### Verificatiemethode
-
-In deze kolom staat de methode waarmee de eis geverifieerd moet worden. De eigenschap heeft een enumeratie van de verschillende mogelijke methoden, dat wil zeggen dat de gebruiker volgens de NEN 2660 een lijst kan opstellen met verificatiemethoden en een waarde uit deze lijst kan gebruiken. 
+#### Enum <dfn>`Verificatiemethode`
+In deze kolom staat de methode waarmee de eis geverifieerd moet worden. Een verificatiemethode is een eigenschap ('property') van een eis in de NEN2660-2. De eigenschap heeft een enumeratie van de verschillende mogelijke methoden, dat wil zeggen dat de gebruiker een lijst kan opstellen met verificatiemethoden en een waarde uit deze lijst kan gebruiken. 
 
 Bij uitwisseling mag je uitsluitend de onderstaande lijst uit uit NEN-EN-ISO 9000:2015 Kwaliteitsmanagementsystemen - Grondbeginselen en verklarende woordenlijst gebruiken, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt.
 
-* <a>Vaststellen</a>
-* <a>Beoordelen</a>
-* <a>Monitoren</a>
-* <a>Meten</a>
-* <a>Keuren</a>
-* <a>Beproeven</a>
-* <a>Evalueren</a>
+Classificatie volgens: 
+1. NEN-EN-ISO 9000:2015 Kwaliteitsmanagementsystemen - Grondbeginselen en verklarende woordenlijst
+2. ISO 29148
+3. Leidraad SE (V2 en 3)
+
+| Voertuigtype          | Omschrijving                                                                | Bron | 
+| --------------------- | --------------------------------------------------------------------------- | ---- |
+| Vaststellen           | Activiteit om een of meer kenmerken en hun karakteristieke waarden te achterhalen. | NEN-EN-ISO 9001:2015 | 
+| Beoordelen            | Vaststelling van de geschiktheid, toereikendheid of doeltreffendheid van een object voor het bereiken van vastgestelde doelstellingen. | NEN-EN-ISO 9001:2015 | 
+| Monitoren             | Vaststellen van de status van een systeem, een proces, een product, een dienst of een activiteit. | NEN-EN-ISO 9001:2015 | 
+| Meten                 | Proces om een waarde vast te stellen. | NEN-EN-ISO 9001:2015 | 
+| Keuren                | Vaststelling van conformiteit met gespecificeerde eisen. | NEN-EN-ISO 9001:2015 |
+| Beproeven             | Vaststellen volgens eisen voor een specifiek beoogd€ gebruik of toepassing. | NEN-EN-ISO 9001:2015 |
+| Evalueren             | Beoordelen van de voortgang die behaald is met betrekking tot het bereiken van de doelen. | NEN-EN-ISO 9001:2015 |
+| {.data} |
+
 
 ### ToelichtingVerificatie
 
-In deze kolom staat de toelichting op de eistekst 
+In deze kolom staat de toelichting op de verificatiemethode.
 In contracten wordt dit gebruikt om nader toe te lichten waarom deze verificatiemethode gevraagd wordt. 
 
 ### heeftDeel
