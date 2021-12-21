@@ -200,7 +200,7 @@ Classificatie volgens:
 2. ISO 29148
 3. Leidraad SE (V2 en 3)
 
-| Voertuigtype          | Omschrijving                                                                | Bron | 
+| Verificatiemethode    | Omschrijving                                                                | Bron | 
 | --------------------- | --------------------------------------------------------------------------- | ---- |
 | Vaststellen           | Activiteit om een of meer kenmerken en hun karakteristieke waarden te achterhalen. | NEN-EN-ISO 9001:2015 | 
 | Beoordelen            | Vaststelling van de geschiktheid, toereikendheid of doeltreffendheid van een object voor het bereiken van vastgestelde doelstellingen. | NEN-EN-ISO 9001:2015 | 
