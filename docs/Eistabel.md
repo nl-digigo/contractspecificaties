@@ -198,19 +198,39 @@ Bij uitwisseling mag je uitsluitend de onderstaande lijst gebruiken, zonder zelf
 Classificatie volgens: 
 1. NEN-EN-ISO 9000:2015 Kwaliteitsmanagementsystemen - Grondbeginselen en verklarende woordenlijst
 2. ISO/IEC/IEEE 29148:2018 Systems and software engineering — Life cycle processes — Requirements engineering
-3. Leidraad SE (V2 en 3)
+3. [Leidraad SE (V2 en 3)](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V2/LeidraadSE_def_lowres.pdf)
 
 | Verificatiemethode    | Omschrijving                                                                | Bron | 
 | --------------------- | --------------------------------------------------------------------------- | ---- |
 | Vaststellen           | Activiteit om een of meer kenmerken en hun karakteristieke waarden te achterhalen. | NEN-EN-ISO 9001:2015 | 
 | Beoordelen            | Vaststelling van de geschiktheid, toereikendheid of doeltreffendheid van een object voor het bereiken van vastgestelde doelstellingen. | NEN-EN-ISO 9001:2015 | 
-| Monitoren             | Vaststellen van de status van een systeem, een proces, een product, een dienst of een activiteit. | NEN-EN-ISO 9001:2015 | 
+| Monitoren             | Vaststellen van de status van een systeem, een proces, een product, een dienst of een activiteit. Bijvoorbeeld zettingen, monitoring van draaiuren t.b.v. optimale vervanging | NEN-EN-ISO 9001:2015 | 
 | Meten                 | Proces om een waarde vast te stellen. | NEN-EN-ISO 9001:2015 | 
-| Keuren                | Vaststelling van conformiteit met gespecificeerde eisen. | NEN-EN-ISO 9001:2015 |
+| Keuren                | Vaststelling van conformiteit met gespecificeerde eisen. Bijvoorbeeld keuring, ingangs- en uitgangscontrole| NEN-EN-ISO 9001:2015 |
 | Beproeven             | Vaststellen volgens eisen voor een specifiek beoogd€ gebruik of toepassing. | NEN-EN-ISO 9001:2015 |
-| Evalueren             | Beoordelen van de voortgang die behaald is met betrekking tot het bereiken van de doelen. | NEN-EN-ISO 9001:2015 |
-| {.data} |
+| Evalueren             | Beoordelen van de voortgang die behaald is met betrekking tot het bereiken van de doelen. | NEN-EN-ISO 9001:2015 | {.data} |
+| Analyse               | o.a. haalbaarheidsanalyse, kosten-batenanalyse | Leidraad SE v2 | 
+| Berekening            | o.a. sterkteberekeningen | Leidraad SE v2 | 
+| Auditen               | Audit van bestaande kwaliteitssystemen en -processen (o.a. Technical Inspection
+Services) | Leidraad SE v2 | 
+| Demonstratie          | o.a. presentatie van de functionaliteiten van een bestaand systeem | Leidraad SE v2 | 
+| Documentbeoordelingen | o.a. documentinspecties, reviews, toetsen, ontwerpateliers | Leidraad SE v2 |
+| Modellering             | o.a. prestatiemodellen van beschikbaarheid, verkeersmodellen | Leidraad SE v2 |
+| Simulaties             | o.a. dienstregelingsimulatie | Leidraad SE v2 |  
 
+| Referentie            | o.a. gebruik van gecertificeerde producten | Leidraad SE v2 | 
+| Testen            | haalbaarheidstesten, FIT, FAT, SIT, SAT | Leidraad SE v2 | 
+| Factory Integration Test | o.a. hydraulische en mechanische installaties integraal
+	 testen | Leidraad SE v2 | 
+| Factory Acceptance Test | o.a. cameratesten in fabrieksopstelling | Leidraad SE v2 | 
+| Site Integration Test | o.a. interactietesten tussen installatie- en besturingssystemen | Leidraad SE v2 |
+| Site Acceptance Test  | o.a. calamiteitenoefeningen in bijzijn van hulpdiensten) | Leidraad SE v2 |
+| Meten             | o.a. luchtsnelheidmetingen in tunnels, kalenderen van heipalen | Leidraad SE v2 | 
+| Schouw | o.a. visuele opname van projectlocatie | Leidraad SE v2 |
+| Inspecties| o.a. Arbo-inspecties, pompkelderinspecties | Leidraad SE v2 | 
+| {.data def}  
+ 
+  
 
 ### ToelichtingVerificatie
 
