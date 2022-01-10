@@ -99,8 +99,8 @@ Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#Inform
 </tr>
 </table>
 
-
 ## Voorbeeld eisentabel
+
 <table class="wikitable" style="text-align:left; valign:top">
 <tr>
 <th> URI
@@ -144,7 +144,7 @@ Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#Inform
 <td> Dit is de tekst van de voorbeeldeis </td>
 <td> Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kunnen verduidelijken </td>
 <td> Documentinspectie </td>
-<td> Dit is de toelichting bij de verificatiemethode, om deze verder te kunnen verduidelijken </td>
+<td> Dit is de toelichting bij de [=verificatiemethode=], om deze verder te kunnen verduidelijken </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldbrondocument </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldgerefereerddocument </td>
@@ -158,23 +158,20 @@ Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#Inform
 </td></tr>
 </table>
 
-
 ## Details Eisentabel
 
 ### URI
 
-In deze kolom staat de unieke naam (URI) van de eis. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
+In deze kolom staat de unieke naam (URI) van de eis. Zie [URI conform W3C](https://www.w3.org/wiki/URI).
 
-De URI is de unieke naam voor de eis binnen het project. Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder "Bron". Daar staat de URI van de eis uit de bibliotheek. Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet. 
+De URI is de unieke naam voor de eis binnen het project. Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder "Bron". Daar staat de URI van de eis uit de bibliotheek. Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet.
 
-De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context. 
+De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context.
 
 ### Code
 
 In deze kolom staat de de naam (spreektaal/projectnummer) van de eis.
-Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen. 
-
-
+Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen.
 
 ### Naam
 
@@ -187,65 +184,131 @@ In deze kolom staat de eistekst. In deze tekst kan verwezen worden naar een refe
 
 ### Toelichting
 
-In deze kolom staat de toelichting op de eistekst 
-In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld wordt. 
+In deze kolom staat de toelichting op de eistekst
+In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld wordt.
 
-#### Enum <dfn>`Verificatiemethode`
-In deze kolom staat de methode waarmee de eis geverifieerd moet worden. Een verificatiemethode is een eigenschap ('property') van een eis in de NEN2660-2. De eigenschap heeft een enumeratie van de verschillende mogelijke methoden, dat wil zeggen dat de gebruiker een lijst kan opstellen met verificatiemethoden en een waarde uit deze lijst kan gebruiken. 
+#### Enum <dfn>Verificatiemethode
+
+In deze kolom staat de methode waarmee de eis geverifieerd moet worden. Een verificatiemethode is een eigenschap ('property') van een eis in de NEN2660-2. De eigenschap heeft een enumeratie van de verschillende mogelijke methoden, dat wil zeggen dat de gebruiker een lijst kan opstellen met verificatiemethoden en een waarde uit deze lijst kan gebruiken.
 
 Bij uitwisseling mag je uitsluitend de onderstaande lijst gebruiken, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt.
 
-Classificatie volgens: 
+Classificatie volgens:
+
 1. NEN-EN-ISO 9000:2015 Kwaliteitsmanagementsystemen - Grondbeginselen en verklarende woordenlijst
 2. ISO/IEC/IEEE 29148:2018 Systems and software engineering — Life cycle processes — Requirements engineering
 3. [Leidraad SE (V2 en 3)](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V2/LeidraadSE_def_lowres.pdf)
 
-| Verificatiemethode    | Omschrijving                                                                | Bron | 
-| --------------------- | --------------------------------------------------------------------------- | ---- |
-| Vaststellen           | Activiteit om een of meer kenmerken en hun karakteristieke waarden te achterhalen. | NEN-EN-ISO 9001:2015 | 
-| Beoordelen            | Vaststelling van de geschiktheid, toereikendheid of doeltreffendheid van een object voor het bereiken van vastgestelde doelstellingen. | NEN-EN-ISO 9001:2015 | 
-| Monitoren             | Vaststellen van de status van een systeem, een proces, een product, een dienst of een activiteit. Bijvoorbeeld zettingen, monitoring van draaiuren t.b.v. optimale vervanging | NEN-EN-ISO 9001:2015 | 
-| Meten                 | Proces om een waarde vast te stellen. | NEN-EN-ISO 9001:2015 | 
-| Keuren                | Vaststelling van conformiteit met gespecificeerde eisen. Bijvoorbeeld keuring, ingangs- en uitgangscontrole| NEN-EN-ISO 9001:2015 |
-| Beproeven             | Vaststellen volgens eisen voor een specifiek beoogd€ gebruik of toepassing. | NEN-EN-ISO 9001:2015 |
-| Evalueren             | Beoordelen van de voortgang die behaald is met betrekking tot het bereiken van de doelen. | NEN-EN-ISO 9001:2015 | {.data} |
-| Analyse               | o.a. haalbaarheidsanalyse, kosten-batenanalyse | Leidraad SE v2 | 
-| Berekening            | o.a. sterkteberekeningen | Leidraad SE v2 | 
-| Auditen               | Audit van bestaande kwaliteitssystemen en -processen (o.a. Technical Inspection
-Services) | Leidraad SE v2 | 
-| Demonstratie          | o.a. presentatie van de functionaliteiten van een bestaand systeem | Leidraad SE v2 | 
-| Documentbeoordelingen | o.a. documentinspecties, reviews, toetsen, ontwerpateliers | Leidraad SE v2 |
-| Modellering             | o.a. prestatiemodellen van beschikbaarheid, verkeersmodellen | Leidraad SE v2 |
-| Simulaties             | o.a. dienstregelingsimulatie | Leidraad SE v2 |  
+<dl>
+<dt><dfn>Vaststellen
+	<dd>Activiteit om een of meer kenmerken en hun karakteristieke waarden te achterhalen
+	<dd>Bron: NEN-EN-ISO 9001:2015
 
-| Referentie            | o.a. gebruik van gecertificeerde producten | Leidraad SE v2 | 
-| Testen            | haalbaarheidstesten, FIT, FAT, SIT, SAT | Leidraad SE v2 | 
-| Factory Integration Test | o.a. hydraulische en mechanische installaties integraal
-	 testen | Leidraad SE v2 | 
-| Factory Acceptance Test | o.a. cameratesten in fabrieksopstelling | Leidraad SE v2 | 
-| Site Integration Test | o.a. interactietesten tussen installatie- en besturingssystemen | Leidraad SE v2 |
-| Site Acceptance Test  | o.a. calamiteitenoefeningen in bijzijn van hulpdiensten) | Leidraad SE v2 |
-| Meten             | o.a. luchtsnelheidmetingen in tunnels, kalenderen van heipalen | Leidraad SE v2 | 
-| Schouw | o.a. visuele opname van projectlocatie | Leidraad SE v2 |
-| Inspecties| o.a. Arbo-inspecties, pompkelderinspecties | Leidraad SE v2 | 
-| {.data def}  
- 
-  
+<dt><dfn>Beoordelen
+	<dd>Vaststelling van de geschiktheid, toereikendheid of doeltreffendheid van een object voor het bereiken van vastgestelde doelstellingen
+	<dd>Bron: NEN-EN-ISO 9001:2015
+
+<dt><dfn>Monitoren
+	<dd>Vaststellen van de status van een systeem, een proces, een product, een dienst of een activiteit. Bijvoorbeeld zettingen, monitoring van draaiuren t.b.v. optimale vervanging
+	<dd>Bron: NEN-EN-ISO 9001:2015
+
+<dt><dfn>Meten
+	<dd>Proces om een waarde vast te stellen
+	<dd>Bron: NEN-EN-ISO 9001:2015
+
+<dt><dfn>Keuren
+	<dd>Vaststelling van conformiteit met gespecificeerde eisen. Bijvoorbeeld keuring, ingangs- en uitgangscontrole
+	<dd>Bron: NEN-EN-ISO 9001:2015
+
+<dt><dfn>Beproeven
+	<dd>Vaststellen volgens eisen voor een specifiek beoogd€ gebruik of toepassing
+	<dd>Bron: NEN-EN-ISO 9001:2015
+
+<dt><dfn>Evalueren
+	<dd>Beoordelen van de voortgang die behaald is met betrekking tot het bereiken van de doelen
+	<dd>Bron: NEN-EN-ISO 9001:2015
+
+<dt><dfn>Analyse
+	<dd>o.a. haalbaarheidsanalyse, kosten-batenanalyse
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Berekening
+	<dd>o.a. sterkteberekeningen
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Auditen
+	<dd>Audit van bestaande kwaliteitssystemen en -processen (o.a. Technical Inspection Services
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Demonstratie
+	<dd>o.a. presentatie van de functionaliteiten van een bestaand systeem
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Documentbeoordelingen
+	<dd>o.a. documentinspecties, reviews, toetsen, ontwerpateliers
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Modellering
+	<dd>o.a. prestatiemodellen van beschikbaarheid, verkeersmodellen
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Simulaties
+	<dd>o.a. dienstregelingsimulatie
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Referentie
+	<dd>o.a. gebruik van gecertificeerde producten
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Testen
+	<dd>haalbaarheidstesten, FIT, FAT, SIT, SAT
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Factory Integration Test
+	<dd>o.a. hydraulische en mechanische installaties integraal testen
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Factory Acceptance Test
+	<dd>o.a. cameratesten in fabrieksopstelling
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Site Integration Test
+	<dd>o.a. interactietesten tussen installatie- en besturingssystemen
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Site Acceptance Test
+	<dd>o.a. calamiteitenoefeningen in bijzijn van hulpdiensten
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Meten
+	<dd>o.a. luchtsnelheidmetingen in tunnels, kalenderen van heipalen
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Schouw
+	<dd>o.a. visuele opname van projectlocatie
+	<dd>Bron: Leidraad SE v2
+
+<dt><dfn>Inspecties
+	<dd>o.a. Arbo-inspecties, pompkelderinspecties
+	<dd>Bron: Leidraad SE v2
+
+</dd></dl>
 
 ### ToelichtingVerificatie
 
 In deze kolom staat de toelichting op de verificatiemethode.
-In contracten wordt dit gebruikt om nader toe te lichten waarom deze verificatiemethode gevraagd wordt. 
+In contracten wordt dit gebruikt om nader toe te lichten waarom deze verificatiemethode gevraagd wordt.
 
 ### heeftDeel
 
-In deze kolom staat de URI van een onderliggende eis. 
-Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelijk in contracten. Een eis kan meerdere onderliggende eisen hebben, er komen dan meerdere regels met dezelfde eis voor in de eisentabel. 
+In deze kolom staat de URI van een onderliggende eis.
+Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelijk in contracten. Een eis kan meerdere onderliggende eisen hebben, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.
 
 ### Bron
 
-De bron van de eis kan naart twee zaken verwijzen: 
-1. De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is). Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet. De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context. 
+De bron van de eis kan naart twee zaken verwijzen:
+
+1. De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is). Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet. De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context.
 2. De URI van een brondocument met herkomst van de eis. Deze uri verwijst naar een document in de documententabel.
 
 ### Referentiedocument
@@ -258,30 +321,32 @@ Als zowel een pdf (voor mensen leesbare versie) als een dataset met eisen worden
 
 ### Specificeert
 
-In deze kolom staat de URI van het Onderwerp van de eis. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel. 
+In deze kolom staat de URI van het Onderwerp van de eis. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.
 
 Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voor de mens. Indien hier ook de naam van het concept zou worden toegevoegd, creeert dit dubbelingen met de onderwerpentabel en daarom mogelijk fouten. Daarom wordt alleen de URI gebruikt.
 
 ### Type
+
 In deze kolom staat het eistype.
 
-Bij uitwisseling mag je uitsluitend de onderstaande lijst gebruiken, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt. 
+Bij uitwisseling mag je uitsluitend de onderstaande lijst gebruiken, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt.
 
 Eistypen:
-* <a>Functie-eis</a> 
-* <a>Proceseis</a>
-* <a>Systeemeis</a>
-* <a>Informatie-eis</a>
-* <a>Aspecteis: Betrouwbaarheid</a>
-* <a>Aspecteis: Beschikbaarheid</a>
-* <a>Aspecteis: Onderhoudbaarheid</a>
-* <a>Aspecteis: Veiligheid</a>
-* <a>Aspecteis: Gezondheid</a>
-* <a>Aspecteis: Omgeving</a>
-* <a>Aspecteis: Duurzaamheid</a>
-* <a>Aspecteis: Vormgeving</a>
-* <a>Aspecteis: Toekomstvastheid</a>
-* <a>Aspecteis: Sloopbaarheid</a>
+
+- <a>Functie-eis</a>
+- <a>Proceseis</a>
+- <a>Systeemeis</a>
+- <a>Informatie-eis</a>
+- <a>Aspecteis: Betrouwbaarheid</a>
+- <a>Aspecteis: Beschikbaarheid</a>
+- <a>Aspecteis: Onderhoudbaarheid</a>
+- <a>Aspecteis: Veiligheid</a>
+- <a>Aspecteis: Gezondheid</a>
+- <a>Aspecteis: Omgeving</a>
+- <a>Aspecteis: Duurzaamheid</a>
+- <a>Aspecteis: Vormgeving</a>
+- <a>Aspecteis: Toekomstvastheid</a>
+- <a>Aspecteis: Sloopbaarheid</a>
 
 ### Eigenaar
 
@@ -289,15 +354,16 @@ In deze kolom staat een eigenaar van de eis (naam natuurlijk persoon en/of organ
 
 ### Fase
 
-In deze kolom staat de fase van de eis of verificatiemethode. Hierbij worden de volgende fasen onderscheiden:
-* Ontwerpfase
-* Bouwfase
-* Beheerfase
-* Sloopfase
+In deze kolom staat de fase van de eis of [=verificatiemethode=]. Hierbij worden de volgende fasen onderscheiden:
+
+- Ontwerpfase
+- Bouwfase
+- Beheerfase
+- Sloopfase
 
 ### Status
 
-In deze kolom staat de status van de eis. Voor contractspecificaties geldt dat de status één van deze twee zaken is: actueel of vervallen. 
+In deze kolom staat de status van de eis. Voor contractspecificaties geldt dat de status één van deze twee zaken is: actueel of vervallen.
 Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijziging in de eisenset te kunnen opnemen en met elkaar uit te wisselen.
 
 ### Onderbouwing status
