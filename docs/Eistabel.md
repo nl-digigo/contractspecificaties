@@ -329,7 +329,7 @@ Bij uitwisseling mag je uitsluitend de onderstaande lijst gebruiken, zonder zelf
 
 Eistypen:
 
-	<dl>
+<dl>
 <dt><dfn>Informatie-eis
    <dd>Verzameling van eisen die betrekking hebben op de te leveren informatieproducten
 	   
