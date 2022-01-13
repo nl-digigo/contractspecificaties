@@ -187,7 +187,7 @@ In deze kolom staat de eistekst. In deze tekst kan verwezen worden naar een refe
 In deze kolom staat de toelichting op de eistekst
 In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld wordt.
 
-#### Enum <dfn>Verificatiemethode
+### Enum <dfn>Verificatiemethode
 
 In deze kolom staat de methode waarmee de eis geverifieerd moet worden. Een verificatiemethode is een eigenschap ('property') van een eis in de NEN2660-2. De eigenschap heeft een enumeratie van de verschillende mogelijke methoden, dat wil zeggen dat de gebruiker een lijst kan opstellen met verificatiemethoden en een waarde uit deze lijst kan gebruiken.
 
