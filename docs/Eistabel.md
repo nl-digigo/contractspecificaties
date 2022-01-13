@@ -323,26 +323,69 @@ Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voo
 
 ### Type
 
-In deze kolom staat het eistype.
+In deze kolom staat het eistype. De aspecteisen zijn grotendeels overgenomen uit de [Leidraad SE v3](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V3/Leidraad_V3_SE_web.pdf); de eistypen die aanduiden aan wat voor concept de eis is gesteld zijn aangepast aan de onderwerpen uit deze richtlijn. 
 
 Bij uitwisseling mag je uitsluitend de onderstaande lijst gebruiken, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt.
 
 Eistypen:
 
-- <a>Functie-eis</a>
-- <a>Proceseis</a>
-- <a>Systeemeis</a>
-- <a>Informatie-eis</a>
-- <a>Aspecteis: Betrouwbaarheid</a>
-- <a>Aspecteis: Beschikbaarheid</a>
-- <a>Aspecteis: Onderhoudbaarheid</a>
-- <a>Aspecteis: Veiligheid</a>
-- <a>Aspecteis: Gezondheid</a>
-- <a>Aspecteis: Omgeving</a>
-- <a>Aspecteis: Duurzaamheid</a>
-- <a>Aspecteis: Vormgeving</a>
-- <a>Aspecteis: Toekomstvastheid</a>
-- <a>Aspecteis: Sloopbaarheid</a>
+	<dl>
+<dt><dfn>Informatie-eis
+   <dd>Verzameling van eisen die betrekking hebben op de te leveren informatieproducten
+	   
+<dt><dfn>Systeemeis
+   <dd>De beschrijving van het geheel aan samenhangende of elkaar beïvloedende eisen dat bijdraagt aan het tot standkomen en gebruiken danwel toepassen van het geintegreerde systeem.
+   <dd>Bron: Leidraad SE v3 
+	 
+<dt><dfn>Proceseis
+   <dd>De beschrijving van het gevraagde geheel van samenhangende of elkaar beïnvloedende activiteiten dat input omzet in output. 
+   <dd>Bron: Leidraad SE v3 
+
+<dt><dfn>Functie-eis
+   <dd>De beschrijving van de gevraagde beoogde werking en/of verrichting van een systeem.
+ <dd>Bron: Leidraad SE v3 
+
+<dt><dfn>Aspecteis: Betrouwbaarheid
+   <dd>De waarschijnlijkheid dat de vereiste functie wordt uitgevoerd onder gegeven omstandigheden gedurende een bepaald tijdsinterval. 
+ <dd>Bron: Leidraad SE v3 
+
+<dt><dfn>Aspecteis: Beschikbaarheid
+   <dd>De waarschijnlijkheid dat de vereiste functie op een willekeurig moment kan worden uitgevoerd onder gegeven omstandigheden.	
+ <dd>Bron: Leidraad SE v3 
+
+<dt><dfn>Aspecteis: Onderhoudbaarheid
+   <dd>De waarschijnlijkheid dat de activiteiten voor onderhoud kunnen worden uitgevoerd binnen de hiervoor vastgestelde tijden, onder gegeven omstandigheden teneinde de vereiste functie te kunnen (blijven) uitvoeren.
+ <dd>Bron: Leidraad SE v3 
+
+<dt><dfn>Aspecteis: Veiligheid
+   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder optredend letsel aan personen kan worden vervuld dan wel uitgevoerd en de waarschijnlijkheid dat de integriteit van de functie  en de daaraan verbonden data en datastructuren gewaarborgd blijven van ongewenste beïnvloeding.	   
+ <dd>Bron: Leidraad SE v3 
+
+<dt><dfn>Aspecteis: Gezondheid
+   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder negatieve gezondheidsrisico's voor personen kan worden vervuld dan wel uitgevoerd.
+   <dd>Bron: Leidraad SE v3 
+
+<dt><dfn>Aspecteis: Omgeving
+   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder ongewenste risico's voor de omgeving kunnen wordenvervuld en/of gerealiseerd.	    <dd>Bron: Leidraad SE v3 
+
+<dt><dfn>Aspecteis: Duurzaamheid
+   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten binnen de hieraan gestelde eisen en PPP (People/Planet/Profit)-doelstellingen kunnen worden gerealiseerd.  
+   <dd>Bron: Leidraad SE v3 
+
+<dt><dfn>Aspecteis: Vormgeving
+   <dd>De beschrijving van de gevraagde prestatie ten aanzien van het beeld en het materiaalgebruik met inachtneming van de omgevings- en de gezondheidseisen van het systeem en haar onderdelen.
+   <dd>Bron: Leidraad SE v3 
+
+<dt><dfn>Aspecteis: Toekomstvastheid
+   <dd>De beschrijving van de gevraagde prestatie van een systeem ten aanzien van de vereiste levensduur van het systeem (als functie en als object) en haar onderdelen.	    <dd>Bron: Leidraad SE v3 
+
+<dt><dfn>Aspecteis: Sloopbaarheid
+   <dd>De waarschijnlijkheid dat de vereiste functie aan het einde van de levensduur op beheerste wijze kan worden teruggebracht tot minimaal secundaire grondstoffen en met inachtneming van de overige RAMSHE-aspecten.  
+   <dd>Bron: Leidraad SE v3 
+	   
+	   
+</dd></dl>
+	
 
 ### Eigenaar
 
