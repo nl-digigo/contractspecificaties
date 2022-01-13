@@ -16,7 +16,7 @@ Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#Inform
 </th>
 <th> Toelichting
 </th>
-<th> Verificatiemethode
+<th> [=Verificatiemethode=]
 </th>
 <th> ToelichtingVerificatie
 </th>
@@ -30,7 +30,7 @@ Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#Inform
 </th>
 <th> specificeert
 </th>
-<th> Eistype
+<th> [=Eistype=]
 </th>
 <th> Eigenaar
 </th>
@@ -113,7 +113,7 @@ Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#Inform
 </th>
 <th> Toelichting
 </th>
-<th> Verificatiemethode
+<th> [=Verificatiemethode=]
 </th>
 <th> ToelichtingVerificatie
 </th>
@@ -127,7 +127,7 @@ Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#Inform
 </th>
 <th> specificeert
 </th>
-<th> Eistype
+<th> [=Eistype=]
 </th>
 <th> Eigenaar
 </th>
@@ -321,7 +321,7 @@ In deze kolom staat de URI van het Onderwerp van de eis. Een eis kan aan meerder
 
 Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voor de mens. Indien hier ook de naam van het concept zou worden toegevoegd, creeert dit dubbelingen met de onderwerpentabel en daarom mogelijk fouten. Daarom wordt alleen de URI gebruikt.
 
-### Type
+### Enum <dfn>Eistype
 
 In deze kolom staat het eistype. De aspecteisen zijn grotendeels overgenomen uit de [Leidraad SE v3](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V3/Leidraad_V3_SE_web.pdf); de eistypen die aanduiden aan wat voor concept de eis is gesteld zijn aangepast aan de onderwerpen uit deze richtlijn. 
 
