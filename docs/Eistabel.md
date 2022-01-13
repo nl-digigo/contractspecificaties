@@ -213,8 +213,8 @@ Classificatie volgens:
 	<dd>Bron: NEN-EN-ISO 9001:2015
 
 <dt><dfn>Meten
-	<dd>Proces om een waarde vast te stellen
-	<dd>Bron: NEN-EN-ISO 9001:2015
+	<dd>Proces om een waarde vast te stellen. o.a. luchtsnelheidmetingen in tunnels, kalenderen van heipalen
+	<dd>Bron: NEN-EN-ISO 9001:2015 en Leidraad SE v2
 
 <dt><dfn>Keuren
 	<dd>Vaststelling van conformiteit met gespecificeerde eisen. Bijvoorbeeld keuring, ingangs- en uitgangscontrole
@@ -278,10 +278,6 @@ Classificatie volgens:
 
 <dt><dfn>Site Acceptance Test
 	<dd>o.a. calamiteitenoefeningen in bijzijn van hulpdiensten
-	<dd>Bron: Leidraad SE v2
-
-<dt><dfn>Meten
-	<dd>o.a. luchtsnelheidmetingen in tunnels, kalenderen van heipalen
 	<dd>Bron: Leidraad SE v2
 
 <dt><dfn>Schouw
