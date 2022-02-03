@@ -1,10 +1,10 @@
 # Eisen
 
-De eisentabel wordt gebruikt voor de eisen. Bij elke kolom is aangegeven wat de vertaling/binding is naar linked data standaarden, hoe vaak deze waarde ingevuld mag worden per eis ("kardinaliteit") en een beschrijving.
+Het eisenformat wordt gebruikt om de eisen te kunnen uitwisselen als data. Bij elke kolom is aangegeven wat de vertaling/binding is naar linked data standaarden, hoe vaak deze waarde ingevuld mag worden per eis ("kardinaliteit") en een beschrijving.
 
 Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#InformationObject) volgens NEN 2660.
 
-## Eisentabel
+## Eisenformat
 
 <table class="wikitable" style="text-align:left; valign:top">
 <tr>
@@ -44,7 +44,7 @@ Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#Inform
 </th>
 </tr>
 <tr>
-<td> In deze kolom staat de unieke naam (URI) van de eis. </td>
+<td> In deze kolom staat de unieke identifier (URI) van de eis. </td>
 <td> In deze kolom staat de code of het nummer van de eis. </td>
 <td> In deze kolom staat de de naam oftewel de titel van de eis. </td>
 <td> In deze kolom staat de eistekst. </td>
@@ -57,51 +57,15 @@ Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#Inform
 <td> In deze kolom wordt aangegeven op welke locatie in een document de eis voorkomt. </td>
 <td> In deze kolom staat de URI van het Onderwerp van de eis. </td>
 <td> In deze kolom staat het eistype. </td>
-<td> In deze kolom staat de eigenaar. </td>
+<td> In deze kolom staat de eigenaar van de eis. </td>
 <td> In deze kolom staat de fase van de eis. </td>
 <td> In deze kolom staat de status van de eis. </td>
 <td> In deze kolom staat een toelichting op de status van de eis. </td>
 </tr>
-<tr>
-<td> [URI](https://www.w3.org/wiki/URI) </td>
-<td> [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation) </td>
-<td> [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) </td>
-<td> [rdf:value](https://www.w3.org/TR/rdf-schema/#ch_value) </td>
-<td> [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) </td>
-<td> [nen2660:verificationMethodType](https://bimloket.github.io/nen2660/def#verificationMethodType) </td>
-<td> [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) </td>
-<td> [nen2660:hasPart](https://bimloket.github.io/nen2660/term#hasPart) </td>
-<td> [rdfs:seeAlso](https://www.w3.org/TR/rdf-schema/#ch_seealso) </td>
-<td> [rdfs:seeAlso](https://www.w3.org/TR/rdf-schema/#ch_seealso) </td>
-<td> [rdfs:comment](https://www.w3.org/TR/rdf-schema/#ch_comment) </td>
-<td> [nen2660:hasRequirement](https://bimloket.github.io/nen2660/def#hasRequirement) </td>
-<td> onbekend </td>
-<td> [dcmi-terms:rightsHolder](https://dublincore.org/specifications/dublin-core/dcmi-terms/#rightsHolder) </td>
-<td> ONBEKEND </td>
-<td> [nen2660:hasState](https://bimloket.github.io/nen2660/term#hasState) </td>
-<td> [SKOS:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) </td>
-</tr>
-<tr>
-<td> 1:1 </td>
-<td> 1:1 </td>
-<td> 1:1 </td>
-<td> 1:1 </td>
-<td> 1:1 </td>
-<td> 0:n </td>
-<td> 0:n </td>
-<td> 0:n </td>
-<td> 0:n </td>
-<td> 0:n </td>
-<td> 0:n </td>
-<td> 0:n </td>
-<td> 0:n </td>
-<td> 1:1 </td>
-<td> 1:1 </td>
-<td> 1:1 </td>
-</tr>
 </table>
 
-## Voorbeeld eisentabel
+
+## Voorbeeld
 
 <table class="wikitable" style="text-align:left; valign:top">
 <tr>
@@ -160,34 +124,60 @@ Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#Inform
 </td></tr>
 </table>
 
-## Details Eisentabel
+## Details 
 
 ### URI
 
 In deze kolom staat de unieke naam (URI) van de eis. Zie [URI conform W3C](https://www.w3.org/wiki/URI).
 
-De URI is de unieke naam voor de eis binnen het project. Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder "Bron". Daar staat de URI van de eis uit de bibliotheek. Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet.
+De URI is de unieke identifier voor de eis binnen het project. Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder "Bron". Daar staat de URI van de eis uit de bibliotheek. Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet.
 
 De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context.
 
+[URI](https://www.w3.org/wiki/URI)
+
+Cardinaliteit: 1:1
+
+> Een URI maakt het meteen "linked data proof"
+
 ### Code
 
-In deze kolom staat de de naam (spreektaal/projectnummer) van de eis.
+In deze kolom staat de de naam (spreektaal/projectnummer) van de eis, vaak een voor mensen herkenbare code.
 Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen.
+
+[skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation)
+
+Cardinaliteit: 1:1
 
 ### Naam
 
-In deze kolom staat de de naam oftewel de titel van de eis
+In deze kolom staat de de naam oftewel de titel van de eis.
+
 De naam is de voor mensen leesbare naam van de eis. Deze naam hoeft niet uniek te zijn in het project, daarvoor heeft de eis een URI, maar een unieke naam is voor de menselijke lezer vaak wel handig.
+
+[skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel)
+
+Cardinaliteit: 1:1
 
 ### Tekst
 
-In deze kolom staat de eistekst. In deze tekst kan verwezen worden naar een referentiedocument, waar aanvullende eisen in staan die gelden binnen het contract. De URI van dit document wordt dan opgenomen in de kolom Referentiedocument.
+In deze kolom staat de eistekst. 
+
+In deze tekst kan verwezen worden naar een referentiedocument, waar aanvullende eisen in staan die gelden binnen het contract. De URI van dit document wordt dan opgenomen in de kolom Referentiedocument.
+
+[rdf:value](https://www.w3.org/TR/rdf-schema/#ch_value)
+
+Cardinaliteit: 1:1
 
 ### Toelichting
 
 In deze kolom staat de toelichting op de eistekst
+
 In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld wordt.
+
+[skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note)
+
+Cardinaliteit: 1:1
 
 ### Enum <dfn>Verificatiemethode
 
@@ -289,39 +279,75 @@ Classificatie volgens:
 <dt><dfn>Inspecties
 	<dd>o.a. Arbo-inspecties, pompkelderinspecties
 	<dd>Bron: Leidraad SE v2
-
 </dd></dl>
+
+
+[nen2660:verificationMethodType](https://bimloket.github.io/nen2660/def#verificationMethodType)
+
+Cardinaliteit: 0:1
 
 ### ToelichtingVerificatie
 
 In deze kolom staat de toelichting op de verificatiemethode.
+
 In contracten wordt dit gebruikt om nader toe te lichten waarom deze verificatiemethode gevraagd wordt.
+
+[skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note)
+
+Cardinaliteit: 0:1
 
 ### heeftDeel
 
 In deze kolom staat de URI van een onderliggende eis.
+
 Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelijk in contracten. Een eis kan meerdere onderliggende eisen hebben, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.
+
+[nen2660:hasPart](https://bimloket.github.io/nen2660/term#hasPart)
+
+Cardinaliteit: 0:n
 
 ### Bron
 
-De bron van de eis kan naart twee zaken verwijzen:
+De bron van de eis kan naar twee zaken verwijzen:
 
 1. De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is). Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet. De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context.
 2. De URI van een brondocument met herkomst van de eis. Deze uri verwijst naar een document in de documententabel.
 
+[dc:source](..)
+
+Cardinaliteit: 0:n
+
+### Locatie in brondocument
+
+Als zowel een pdf (voor mensen leesbare versie) als een dataset met eisen worden meegenomen, dan staat in deze kolom de naam van een paragraaf in een brondocument .
+
+[rdfs:comment](https://www.w3.org/TR/rdf-schema/#ch_comment)
+
+Cardinaliteit: 0:n
+
+
 ### Referentiedocument
 
-Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kolom de URI van het gerefereerde document. Deze uri verwijst naar een document in de documententabel.
+Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kolom de URI van het gerefereerde document. 
 
-### Locatie in document
+Deze uri verwijst naar een document in de documententabel.
 
-Als zowel een pdf (voor mensen leesbare versie) als een dataset met eisen worden meegenomen, dan staat in deze kolom de URI die verwijst naar een paragraaf in een document in de documententabel.
+[rdfs:seeAlso](https://www.w3.org/TR/rdf-schema/#ch_seealso)
+
+<div class="issue" data-number="35"></div>
+
+Cardinaliteit: 0:n
+
 
 ### Specificeert
 
 In deze kolom staat de URI van het Onderwerp van de eis. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.
 
 Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voor de mens. Indien hier ook de naam van het concept zou worden toegevoegd, creeert dit dubbelingen met de onderwerpentabel en daarom mogelijk fouten. Daarom wordt alleen de URI gebruikt.
+
+[nen2660:hasRequirement](https://bimloket.github.io/nen2660/def#hasRequirement)
+
+Cardinaliteit: 0:n
 
 ### Enum <dfn>Eistype
 
@@ -384,14 +410,19 @@ Eistypen:
 <dt><dfn>Aspecteis: Sloopbaarheid
    <dd>De waarschijnlijkheid dat de vereiste functie aan het einde van de levensduur op beheerste wijze kan worden teruggebracht tot minimaal secundaire grondstoffen en met inachtneming van de overige RAMSHE-aspecten.  
    <dd>Bron: Leidraad SE v3 
-	   
-	   
 </dd></dl>
-	
+
+[Onbekend]()
+
+Cardinaliteit: 0:n
 
 ### Eigenaar
 
 In deze kolom staat een eigenaar van de eis (naam natuurlijk persoon en/of organisatie).
+
+[dcmi-terms:rightsHolder](https://dublincore.org/specifications/dublin-core/dcmi-terms/#rightsHolder)
+
+Cardinaliteit: 1:1	
 
 ### Fase
 
@@ -402,12 +433,24 @@ In deze kolom staat de fase van de eis of [=verificatiemethode=]. Hierbij worden
 - Beheerfase
 - Sloopfase
 
+[Onbekend]()
+
+Cardinaliteit: 1:1
+
 ### Status
 
 In deze kolom staat de status van de eis. Voor contractspecificaties geldt dat de status één van deze twee zaken is: actueel of vervallen.
 Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijziging in de eisenset te kunnen opnemen en met elkaar uit te wisselen.
 
+[nen2660:hasState](https://bimloket.github.io/nen2660/term#hasState)
+
+Cardinaliteit: 1:1
+
 ### Onderbouwing status
 
 In deze kolom staat een toelichting op de status van de eis.
 Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status onderbouwd is.
+
+[SKOS:note](https://www.w3.org/2009/08/skos-reference/skos.html#note)
+
+Cardinaliteit: 0:1

@@ -85,6 +85,9 @@ In de tabel staat op de tweede regel een korte toelichting op de inhoud; op de d
 </table>
 
 
+<div class="issue" data-number="32"></div>
+
+
 ## Informatiemodel
 
 Onbekend is of de informatie in de tabel een vertaling / binding naar NEN2660-2 moet hebben of een ander informatiemodel?
