@@ -1,4 +1,4 @@
-# Documententabel
+# Documenten
 De documententabel wordt gebruikt voor de definitie van de documenten. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN2660-2. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (multipliciteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling.
 
 De volgende documenten worden opgenomen in de documententabel
@@ -11,6 +11,8 @@ De vertaling / binding van documenten naar NEN2660-2 is nen2660:InformatieObject
 
 In de tabel staat op de tweede regel een korte toelichting op de inhoud; op de derde regel de vertaling / binding naar NEN2660-2 (of andere standaard?)
 [Issue 25](https://github.com/bimloket/COINS-3.0-Contract-als-data/issues/25)
+
+## Documententabel
 
 <table class="wikitable" style="text-align:left; valign:top">
 <tr>

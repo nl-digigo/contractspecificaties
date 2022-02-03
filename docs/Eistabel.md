@@ -1,8 +1,10 @@
-# Eisentabel
+# Eisen
 
 De eisentabel wordt gebruikt voor de eisen. Bij elke kolom is aangegeven wat de vertaling/binding is naar linked data standaarden, hoe vaak deze waarde ingevuld mag worden per eis ("kardinaliteit") en een beschrijving.
 
 Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#InformationObject) volgens NEN 2660.
+
+## Eisentabel
 
 <table class="wikitable" style="text-align:left; valign:top">
 <tr>

@@ -1,4 +1,4 @@
-# Onderwerpentabel
+# Onderwerpen
 
 De onderwerpentabel wordt gebruikt voor de onderwerpen van de eisen, bestaande uit de functies, objecttypen, werkzaamheden en informatieproducten. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN2660-2 en andere standaarden. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (multipliciteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling. 
 
@@ -6,7 +6,7 @@ De onderwerpentabel wordt gebruikt voor de onderwerpen van de eisen, bestaande u
 De vertaling / binding van Eigenaren naar NEN2660-2 is nog niet bekend. Mogelijk wordt hier de DCTerms ontologie betrokken.
 </p>
 
-
+## Onderwerpentabel
 
 <table class="wikitable" style="text-align:left; valign:top">
 <tr>
