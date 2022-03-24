@@ -284,7 +284,7 @@ Classificatie volgens:
 
 [nen2660:verificationMethodType](https://bimloket.github.io/nen2660/def#verificationMethodType)
 
-Cardinaliteit: 0:1
+Cardinaliteit: 0:n
 
 ### ToelichtingVerificatie
 
@@ -330,11 +330,16 @@ Cardinaliteit: 0:n
 
 Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kolom de URI van het gerefereerde document. 
 
+Instructie voor gebruik: omdat nog niet alle partijen in staat zijn om de data helemaal te verwerken, moet je het document wel in de eistekst noemen. De eistekst is leidend. Een ontvanger van de eisenset kan er ook niet van uit gaan, dat de opdracthgever dit altijd in weet te vullen. Als in een eistekst naar een referentiedocument wordt verwezen, kan het zijn dat er geen relatie is gemaakt naar het referentiedocument. 
+
+Voorbeelden: 
+* De eis verwijst naar een ontwerp of berekening die van toepassing is.
+* De eis verwijst naar een richtlijn, handleiding of norm die van toepassing is.
+
 Deze uri verwijst naar een document in de documententabel.
 
 [rdfs:seeAlso](https://www.w3.org/TR/rdf-schema/#ch_seealso)
 
-<div class="issue" data-number="35"></div>
 
 Cardinaliteit: 0:n
 
@@ -412,30 +417,25 @@ Eistypen:
    <dd>Bron: Leidraad SE v3 
 </dd></dl>
 
-[Onbekend]()
+[Onbekend](#issue36)
 
 Cardinaliteit: 0:n
 
-### Eigenaar
-
-In deze kolom staat een eigenaar van de eis (naam natuurlijk persoon en/of organisatie).
-
-[dcmi-terms:rightsHolder](https://dublincore.org/specifications/dublin-core/dcmi-terms/#rightsHolder)
-
-Cardinaliteit: 1:1	
+	
 
 ### Fase
 
-In deze kolom staat de fase van de eis of [=verificatiemethode=]. Hierbij worden de volgende fasen onderscheiden:
+In deze kolom staat de fase van de verificatiemethode. Hierbij worden de volgende fasen onderscheiden:
 
 - Ontwerpfase
 - Bouwfase
 - Beheerfase
 - Sloopfase
 
-[Onbekend]()
 
-Cardinaliteit: 1:1
+[]Onbekend](#issue 39)
+
+Cardinaliteit: 0:n ten opzichte van de verificatiemethode
 
 ### Status
 
