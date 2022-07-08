@@ -20,6 +20,8 @@ De tabel wordt in 4 delen getoond in verband met de leesbaarheid van dit documen
 </th>
 <th> [=EisToelichting=]
 </th>
+<th> [=Eis.specificeert=]
+</th>
 </tr>
 <tr>
 <td> In deze kolom staat de unieke identifier (URI) van de eis. </td>
@@ -27,6 +29,7 @@ De tabel wordt in 4 delen getoond in verband met de leesbaarheid van dit documen
 <td> In deze kolom staat de de naam oftewel de titel van de eis. </td>
 <td> In deze kolom staat de eistekst. </td>
 <td> In deze kolom staat de toelichting op de eis. </td>
+<td> In deze kolom staat de URI van het Onderwerp van de eis. </td>
 </tr>
 <tr>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeis </td>
@@ -34,6 +37,7 @@ De tabel wordt in 4 delen getoond in verband met de leesbaarheid van dit documen
 <td> Voorbeeldeis </td>
 <td> Dit is de tekst van de voorbeeldeis </td>
 <td> Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kunnen verduidelijken </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldOnderwerp </td>
 </td>
 </tr>
 </table>
@@ -74,11 +78,9 @@ De tabel wordt in 4 delen getoond in verband met de leesbaarheid van dit documen
 </th>
 <th> [=EisBron=]
 </th>
+<th> [=BrondocumentLocatie=]
+</th>
 <th> [=EisReferentiedocument=]
-</th>
-<th> [=ReferentiedocumentLocatie=]
-</th>
-<th> [=Eis.specificeert=]
 </th>
 </tr>
 <tr>
@@ -86,14 +88,12 @@ De tabel wordt in 4 delen getoond in verband met de leesbaarheid van dit documen
 <td> In deze kolom staat de URI van een bron van de eis. </td>
 <td> In deze kolom staat de URI van een gerefereerd document waarin aanvullende eisen staan </td>
 <td> In deze kolom wordt aangegeven op welke locatie in een document de eis voorkomt. </td>
-<td> In deze kolom staat de URI van het Onderwerp van de eis. </td>
 </tr>
 <tr>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeis </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldbrondocument </td>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldgerefereerddocument </td>
 <td> 4.2</td>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldOnderwerp </td>
 </tr>
 </table>
 <br>
@@ -101,18 +101,15 @@ De tabel wordt in 4 delen getoond in verband met de leesbaarheid van dit documen
 <tr>
 <th> [=EisType=]
 </th>
-<th> [=EisEigenaar=]
+<th> [=EisFase=]
 </th>
-<th> [=FaseEis]
+<th> [=EisStatus=]
 </th>
-<th> [=StatusEis=]
-</th>
-<th> [=StatusEisOnderbouwing=]
+<th> [=EisStatusOnderbouwing=]
 </th>
 </tr>
 <tr>
 <td> In deze kolom staat het eistype. </td>
-<td> In deze kolom staat de eigenaar van de eis. </td>
 <td> In deze kolom staat de fase van de eis. </td>
 <td> In deze kolom staat de status van de eis. </td>
 <td> In deze kolom staat een toelichting op de status van de eis. </td>
@@ -175,6 +172,16 @@ In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld
 [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note)
 
 Cardinaliteit: 1:1
+
+### <dfn>Eis.specificeert
+
+In deze kolom staat de URI van het Onderwerp van de eis. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.
+
+Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voor de mens. Indien hier ook de naam van het concept zou worden toegevoegd, creeert dit dubbelingen met de onderwerpentabel en daarom mogelijk fouten. Daarom wordt alleen de URI gebruikt.
+
+[nen2660:hasRequirement](https://bimloket.github.io/nen2660/def#hasRequirement)
+
+Cardinaliteit: 0:n
 
 ### <dfn>VerificatieplanUri
 
@@ -355,7 +362,7 @@ De bron van de eis kan naar twee zaken verwijzen:
 
 Cardinaliteit: 0:n
 
-### Locatie in brondocument
+### <dfn>BrondocumentLocatie
 
 Als zowel een pdf (voor mensen leesbare versie) als een dataset met eisen worden meegenomen, dan staat in deze kolom de naam van een paragraaf in een brondocument .
 
@@ -364,7 +371,7 @@ Als zowel een pdf (voor mensen leesbare versie) als een dataset met eisen worden
 Cardinaliteit: 0:n
 
 
-### Referentiedocument
+### <dfn>EisReferentiedocument
 
 Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kolom de URI van het gerefereerde document. 
 
@@ -381,16 +388,6 @@ Deze uri verwijst naar een document in de documententabel.
 
 Cardinaliteit: 0:n
 
-
-### <dfn>Eis.specificeert
-
-In deze kolom staat de URI van het Onderwerp van de eis. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.
-
-Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voor de mens. Indien hier ook de naam van het concept zou worden toegevoegd, creeert dit dubbelingen met de onderwerpentabel en daarom mogelijk fouten. Daarom wordt alleen de URI gebruikt.
-
-[nen2660:hasRequirement](https://bimloket.github.io/nen2660/def#hasRequirement)
-
-Cardinaliteit: 0:n
 
 ### Enum <dfn>Eistype
 
@@ -468,7 +465,7 @@ In deze kolom staat de fase van de eis. Hierbij worden dezelfde fasen onderschei
 
 Cardinaliteit: 0:1 
 
-### Enum <dfn>Status
+### Enum <dfn>EisStatus
 
 In deze kolom staat de status van de eis. Voor contractspecificaties geldt dat de status één van deze twee zaken is: actueel of vervallen.
 Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijziging in de eisenset te kunnen opnemen en met elkaar uit te wisselen.
@@ -477,7 +474,7 @@ Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijzig
 
 Cardinaliteit: 1:1
 
-### Onderbouwing status
+### <dfn>EisStatusOnderbouwing
 
 In deze kolom staat een toelichting op de status van de eis.
 Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status onderbouwd is.
