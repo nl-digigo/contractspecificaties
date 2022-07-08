@@ -6,41 +6,19 @@ Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#Inform
 
 ## Eisenformat
 
+De tabel wordt in 4 delen getoond in verband met de leesbaarheid van dit document. De laatste rij bevat een voorbeeld uitwerking.
+
 <table class="wikitable" style="text-align:left; valign:top">
 <tr>
-<th> URI
+<th> [=EisURI=]
 </th>
-<th> Code
+<th> [=EisCode=]
 </th>
-<th> Naam
+<th> [=EisNaam=]
 </th>
-<th> Tekst
+<th> [=EisTekst=]
 </th>
-<th> Toelichting
-</th>
-<th> [=Verificatiemethode=]
-</th>
-<th> ToelichtingVerificatie
-</th>
-<th> heeftDeel
-</th>
-<th> Bron
-</th>
-<th> Referentiedocument
-</th>
-<th> Locatie in document
-</th>
-<th> specificeert
-</th>
-<th> [=Eistype=]
-</th>
-<th> Eigenaar
-</th>
-<th> Fase
-</th>
-<th> Status
-</th>
-<th> Onderbouwing status
+<th> [=EisToelichting=]
 </th>
 </tr>
 <tr>
@@ -49,13 +27,90 @@ Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#Inform
 <td> In deze kolom staat de de naam oftewel de titel van de eis. </td>
 <td> In deze kolom staat de eistekst. </td>
 <td> In deze kolom staat de toelichting op de eis. </td>
-<td> In deze kolom staat de verificatiemethode bij de eis </td>
-<td> In deze kolom staat de toelichting op de verificatiemethode bij de eis. </td>
+</tr>
+<tr>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeis </td>
+<td> EIS1099 </td>
+<td> Voorbeeldeis </td>
+<td> Dit is de tekst van de voorbeeldeis </td>
+<td> Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kunnen verduidelijken </td>
+</td>
+</tr>
+</table>
+<br>
+<br>
+<table class="wikitable" style="text-align:left; valign:top">
+<tr>
+<th> [=VerificatieplanURI=]
+</th>
+<th> [=VerificatieplanNaam=]
+</th>
+<th> [=Verificatiemethode=]
+</th>
+<th> [=VerificatieFase=]
+</th>
+<th> [=VerificatieToelichting=]
+</th>
+</tr>
+<tr>
+<td>In deze kolom staat de URI van een verificatieplan bij de eis.</td>
+<td>In deze kolom staat de naam van het verificatieplan.</td>
+<td>In deze kolom staat de verificatiemethode van het verificatieplan.</td>
+<td>In deze kolom staat de fase van het verificatieplan.
+<td>In deze kolom staat de toelichting op de verificatiemethode bij de eis.</td>
+</tr>
+<tr>
+<td>https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldverificatieplan</td>
+<td>Voorbeeldverificatieplan.</td>
+<td>Een verificatiemethode</td>
+<td>Een fase 
+<td>Een toelichting waarom een verificatiemethode wordt gevraagd bij de eis, of nadere invulling van de verificatiemethode</td>
+</tr>
+</table>
+<br>
+<table class="wikitable" style="text-align:left; valign:top">
+<tr>
+<th> [=Eis.heeftDeel=]
+</th>
+<th> [=EisBron=]
+</th>
+<th> [=EisReferentiedocument=]
+</th>
+<th> [=ReferentiedocumentLocatie=]
+</th>
+<th> [=Eis.specificeert=]
+</th>
+</tr>
+<tr>
 <td> In deze kolom staat de URI van een onderliggende eis. </td>
-<td> In deze kolom wordt aangegeven wat de bron van de eis is. </td>
-<td> In deze kolom wordt aangegeven in welk gerefereerd document meer eisen staan. </td>
+<td> In deze kolom staat de URI van een bron van de eis. </td>
+<td> In deze kolom staat de URI van een gerefereerd document waarin aanvullende eisen staan </td>
 <td> In deze kolom wordt aangegeven op welke locatie in een document de eis voorkomt. </td>
 <td> In deze kolom staat de URI van het Onderwerp van de eis. </td>
+</tr>
+<tr>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeis </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldbrondocument </td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldgerefereerddocument </td>
+<td> 4.2</td>
+<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldOnderwerp </td>
+</tr>
+</table>
+<br>
+<table class="wikitable" style="text-align:left; valign:top">
+<tr>
+<th> [=EisType=]
+</th>
+<th> [=EisEigenaar=]
+</th>
+<th> [=FaseEis]
+</th>
+<th> [=StatusEis=]
+</th>
+<th> [=StatusEisOnderbouwing=]
+</th>
+</tr>
+<tr>
 <td> In deze kolom staat het eistype. </td>
 <td> In deze kolom staat de eigenaar van de eis. </td>
 <td> In deze kolom staat de fase van de eis. </td>
@@ -65,72 +120,14 @@ Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#Inform
 </table>
 
 
-## Voorbeeld
-
-<table class="wikitable" style="text-align:left; valign:top">
-<tr>
-<th> URI
-</th>
-<th> Code
-</th>
-<th> Naam
-</th>
-<th> Tekst
-</th>
-<th> Toelichting
-</th>
-<th> [=Verificatiemethode=]
-</th>
-<th> ToelichtingVerificatie
-</th>
-<th> heeftDeel
-</th>
-<th> Bron
-</th>
-<th> Referentiedocument
-</th>
-<th> Locatie in document
-</th>
-<th> specificeert
-</th>
-<th> [=Eistype=]
-</th>
-<th> Eigenaar
-</th>
-<th> Fase
-</th>
-<th> Status
-</th>
-<th> Onderbouwing status
-</th></tr>
-<tr>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
-<td> EIS1099 </td>
-<td> Voorbeeldeis </td>
-<td> Dit is de tekst van de voorbeeldeis </td>
-<td> Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kunnen verduidelijken </td>
-<td> Documentinspectie </td>
-<td> Dit is de toelichting bij de [=verificatiemethode=], om deze verder te kunnen verduidelijken </td>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeisentabel </td>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldbrondocument </td>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldgerefereerddocument </td>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldlocatieindocument </td>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldtabel </td>
-<td> Veiligheid </td>
-<td> BIM loket </td>
-<td> Ontwerp </td>
-<td> Vervallen </td>\
-<td> Reden van vervallen van eis </td>
-</td></tr>
-</table>
 
 ## Details 
 
-### URI
+### <dfn>EisURI
 
-In deze kolom staat de unieke naam (URI) van de eis. Zie [URI conform W3C](https://www.w3.org/wiki/URI).
+De URI is de unieke identifier voor de eis binnen het project. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
 
-De URI is de unieke identifier voor de eis binnen het project. Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder "Bron". Daar staat de URI van de eis uit de bibliotheek. Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet.
+Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder [=Bron=]. Daar staat de URI van de eis uit de bibliotheek. Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet.
 
 De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context.
 
@@ -140,36 +137,36 @@ Cardinaliteit: 1:1
 
 > Een URI maakt het meteen "linked data proof"
 
-### Code
+### <dfn>EisCode
 
-In deze kolom staat de de naam (spreektaal/projectnummer) van de eis, vaak een voor mensen herkenbare code.
-Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen.
+De EisCode is de naam van de eis in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen.
 
 [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation)
 
 Cardinaliteit: 1:1
 
-### Naam
+### <dfn>EisNaam
 
-In deze kolom staat de de naam oftewel de titel van de eis.
+De EisNaam wordt ook wel eens de titel van de eis genoemd, en geeft een voor mensen leesbare  korte duiding van de inhoud van de eis. 
 
-De naam is de voor mensen leesbare naam van de eis. Deze naam hoeft niet uniek te zijn in het project, daarvoor heeft de eis een URI, maar een unieke naam is voor de menselijke lezer vaak wel handig.
+De EisNaam hoeft niet uniek te zijn in het project, daarvoor heeft de eis een URI. Een unieke naam is voor de menselijke lezer vaak wel handig. Soms wordt de EisNaam in applicaties bijvoorbeeld gebruikt bij het visualiseren van de eisenboom. Unieke namen helpen in dat geval.
 
 [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel)
 
 Cardinaliteit: 1:1
 
-### Tekst
+### <dfn>EisTekst
 
-In deze kolom staat de eistekst. 
+De EisTekst bevat de voor mensen leesbare inhoud van de eis.
+Op dit moment worden eisen in een contract meestal niet voorzien van een voor een systeem leesbare eis, zoals bijvoorbeeld een minimale waarde voor een attribuut van een object. Deze "dataficeringsslag" is buiten scope van dit document, omdat dit een verder gevorderd BIM niveau vraagt en dit document juist bedoelt is als opstap naar uitwisseling van data.
 
-In deze tekst kan verwezen worden naar een referentiedocument, waar aanvullende eisen in staan die gelden binnen het contract. De URI van dit document wordt dan opgenomen in de kolom Referentiedocument.
+In de EisTekst kan verwezen worden naar een referentiedocument, waar aanvullende eisen in staan die gelden binnen het contract. De URI van dit document wordt dan opgenomen in de kolom Referentiedocument.
 
 [rdf:value](https://www.w3.org/TR/rdf-schema/#ch_value)
 
 Cardinaliteit: 1:1
 
-### Toelichting
+### <dfn>EisToelichting
 
 In deze kolom staat de toelichting op de eistekst
 
@@ -178,6 +175,22 @@ In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld
 [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note)
 
 Cardinaliteit: 1:1
+
+### <dfn>VerificatieplanUri
+
+De URI is de unieke identifier voor het verificatieplan binnen het project. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
+
+Cardinaliteit: 0:n
+
+<figure>
+<img src="./media/verificatieplan.png">
+<figcaption>Het informatiemodel voor het verificatieplan en de toepassing ervan bij het uitvoeren van een individuele verificatie</caption>
+</figure> 
+
+### <dfn>VerificatieplanNaam
+In deze kolom staat de naam van een verificatieplan bij de eis.
+
+Cardinaliteit: 1:1 ten opzichte van een verificatieplan
 
 ### Enum <dfn>Verificatiemethode
 
@@ -284,9 +297,34 @@ Classificatie volgens:
 
 [nen2660:verificationMethodType](https://bimloket.github.io/nen2660/def#verificationMethodType)
 
-Cardinaliteit: 0:n
+Cardinaliteit: 0:n ten opzichte van een verificatieplan
 
-### ToelichtingVerificatie
+### <dfn>VerificatieFase
+
+In deze kolom staat de fase van het verificatieplan. Hierbij worden de volgende fasen onderscheiden:
+
+<dl>
+<dt><dfn>Conceptfase
+	<dd>Fase om (nieuwe) behoeften van stakeholders te inventariseren en mogelijkheden te beoordelen. De eerste klanteisen en oplossingsrichting worden hier bepaald. De conceptfase kan leiden tot het initiatief voor het ontwikkelen en realiseren van een systeem.</dd>
+<dt><dfn>Ontwikkelfase
+	<dd>De fase om een systeem te specificeren dat voldoet aan de klanteisen. Aan het eind van de ontwikkelfase ligt er een (startklaar) ontwerp voor het gehele systeem.</dd>
+<dt><dfn>Realisatiefase
+	<dd>De fase om het systeem te vervaardigen en beproeven. Systeemelementen en deelsystemen worden geïntegreerd tot één geheel.</dd>
+<dt><dfn>Gebruiksfase
+	<dd>De gebruiksfase is de periode waarin het systeem wordt geëxploiteerd. Hier vinden de  activiteiten plaats die nodig zijn om het systeem te gebruiken zoals beoogd.</dd>
+<dt><dfn>Beheer- en onderhoudsfase
+	<dd>De periode waarin de ondersteunende activiteiten worden uitgevoerd, die noodzakelijk zijn om het systeem in werking te houden.</dd>
+<dt><dfn>Sloopfase
+	<dd>De fase om een systeem met bijbehorende operationele diensten en functies buiten werking te stellen en te verwijderen.</dd>
+</dl>
+
+[Bron: Leidraad SE versie 2, Hoofdstuk 4](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V2/LeidraadSE_def_lowres.pdf)
+
+
+Cardinaliteit: 0:1 ten opzichte van een verificatieplan
+
+
+### <dfn>VerificatieToelichting
 
 In deze kolom staat de toelichting op de verificatiemethode.
 
@@ -294,9 +332,9 @@ In contracten wordt dit gebruikt om nader toe te lichten waarom deze verificatie
 
 [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note)
 
-Cardinaliteit: 0:1
+Cardinaliteit: 0:1 ten opzichte van een verificatieplan
 
-### heeftDeel
+### <dfn>Eis.heeftDeel
 
 In deze kolom staat de URI van een onderliggende eis.
 
@@ -306,7 +344,7 @@ Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelij
 
 Cardinaliteit: 0:n
 
-### Bron
+### <dfn>EisBron
 
 De bron van de eis kan naar twee zaken verwijzen:
 
@@ -344,7 +382,7 @@ Deze uri verwijst naar een document in de documententabel.
 Cardinaliteit: 0:n
 
 
-### Specificeert
+### <dfn>Eis.specificeert
 
 In deze kolom staat de URI van het Onderwerp van de eis. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.
 
@@ -423,21 +461,14 @@ Cardinaliteit: 0:n
 
 	
 
-### Fase
+### Enum <dfn>EisFase
 
-In deze kolom staat de fase van de verificatiemethode. Hierbij worden de volgende fasen onderscheiden:
-
-- Ontwerpfase
-- Bouwfase
-- Beheerfase
-- Sloopfase
+In deze kolom staat de fase van de eis. Hierbij worden dezelfde fasen onderscheiden als bij de [=VerificatieFase=]
 
 
-[]Onbekend](#issue 39)
+Cardinaliteit: 0:1 
 
-Cardinaliteit: 0:n ten opzichte van de verificatiemethode
-
-### Status
+### Enum <dfn>Status
 
 In deze kolom staat de status van de eis. Voor contractspecificaties geldt dat de status één van deze twee zaken is: actueel of vervallen.
 Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijziging in de eisenset te kunnen opnemen en met elkaar uit te wisselen.
