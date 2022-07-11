@@ -6,7 +6,7 @@ Een eis is een [InformationObject](https://bimloket.github.io/nen2660/def#Inform
 
 ## Eisenformat
 
-De tabel wordt in 4 delen getoond in verband met de leesbaarheid van dit document. De laatste rij bevat een voorbeeld uitwerking.
+Het format wordt in 4 delen getoond in verband met de leesbaarheid van dit document. De laatste rij bevat een voorbeeld uitwerking.
 
 <table class="wikitable" style="text-align:left; valign:top">
 <tr>
@@ -49,11 +49,11 @@ De tabel wordt in 4 delen getoond in verband met de leesbaarheid van dit documen
 </th>
 <th> [=VerificatieplanNaam=]
 </th>
-<th> [=Verificatiemethode=]
+<th> [=VerificatieplanMethode=]
 </th>
-<th> [=VerificatieFase=]
+<th> [=VerificatieplanFase=]
 </th>
-<th> [=VerificatieToelichting=]
+<th> [=VerificatieplanToelichting=]
 </th>
 </tr>
 <tr>
@@ -85,9 +85,9 @@ De tabel wordt in 4 delen getoond in verband met de leesbaarheid van dit documen
 </tr>
 <tr>
 <td> In deze kolom staat de URI van een onderliggende eis. </td>
-<td> In deze kolom staat de URI van een bron van de eis. </td>
+<td> In deze kolom staat de URI van een bron van de eis in een eisenbibliotheek of brondocument. </td>
+<td> In deze kolom wordt aangegeven op welke locatie in het brondocument de eis voorkomt. </td>
 <td> In deze kolom staat de URI van een gerefereerd document waarin aanvullende eisen staan </td>
-<td> In deze kolom wordt aangegeven op welke locatie in een document de eis voorkomt. </td>
 </tr>
 <tr>
 <td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldeis </td>
@@ -122,9 +122,9 @@ De tabel wordt in 4 delen getoond in verband met de leesbaarheid van dit documen
 
 ### <dfn>EisURI
 
-De URI is de unieke identifier voor de eis binnen het project. Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
+De URI is de unieke identifier voor de eis binnen het project. 
 
-Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder [=Bron=]. Daar staat de URI van de eis uit de bibliotheek. Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet.
+Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder [=EisBron=]. Daar staat de URI van de eis uit de bibliotheek. Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet.
 
 De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context.
 
@@ -136,7 +136,7 @@ Cardinaliteit: 1:1
 
 ### <dfn>EisCode
 
-De EisCode is de naam van de eis in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen.
+De EisCode is een nummer van de eis in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen.
 
 [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation)
 
@@ -190,7 +190,7 @@ De URI is de unieke identifier voor het verificatieplan binnen het project. Zie 
 Cardinaliteit: 0:n
 
 <figure>
-<img src="./media/verificatieplan.png">
+<img src="./media/verificatieplan.png" alt="UML schema voor het informatiemodel voor het verificatieplan en de toepassing ervan bij het uitvoeren van een individuele verificatie">
 <figcaption>Het informatiemodel voor het verificatieplan en de toepassing ervan bij het uitvoeren van een individuele verificatie</caption>
 </figure> 
 
@@ -199,7 +199,7 @@ In deze kolom staat de naam van een verificatieplan bij de eis.
 
 Cardinaliteit: 1:1 ten opzichte van een verificatieplan
 
-### Enum <dfn>Verificatiemethode
+### Enum <dfn>VerificatieplanMethode
 
 In deze kolom staat de methode waarmee de eis geverifieerd moet worden. Een verificatiemethode is een eigenschap ('property') van een eis in de NEN2660-2. De eigenschap heeft een enumeratie van de verschillende mogelijke methoden, dat wil zeggen dat de gebruiker een lijst kan opstellen met verificatiemethoden en een waarde uit deze lijst kan gebruiken.
 
@@ -302,11 +302,9 @@ Classificatie volgens:
 </dd></dl>
 
 
-[nen2660:verificationMethodType](https://bimloket.github.io/nen2660/def#verificationMethodType)
-
 Cardinaliteit: 0:n ten opzichte van een verificatieplan
 
-### <dfn>VerificatieFase
+### <dfn>VerificatieplanFase
 
 In deze kolom staat de fase van het verificatieplan. Hierbij worden de volgende fasen onderscheiden:
 
@@ -331,7 +329,7 @@ In deze kolom staat de fase van het verificatieplan. Hierbij worden de volgende 
 Cardinaliteit: 0:1 ten opzichte van een verificatieplan
 
 
-### <dfn>VerificatieToelichting
+### <dfn>VerificatieplanToelichting
 
 In deze kolom staat de toelichting op de verificatiemethode.
 
@@ -342,7 +340,6 @@ In contracten wordt dit gebruikt om nader toe te lichten waarom deze verificatie
 Cardinaliteit: 0:1 ten opzichte van een verificatieplan
 
 ### <dfn>Eis.heeftDeel
-
 In deze kolom staat de URI van een onderliggende eis.
 
 Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelijk in contracten. Een eis kan meerdere onderliggende eisen hebben, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.
@@ -383,13 +380,12 @@ Voorbeelden:
 
 Deze uri verwijst naar een document in de documententabel.
 
-[rdfs:seeAlso](https://www.w3.org/TR/rdf-schema/#ch_seealso)
-
+[dct:references](http://purl.org/dc/terms/references)
 
 Cardinaliteit: 0:n
 
 
-### Enum <dfn>Eistype
+### Enum <dfn>EisType
 
 In deze kolom staat het eistype. De aspecteisen zijn grotendeels overgenomen uit de [Leidraad SE v3](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V3/Leidraad_V3_SE_web.pdf); de eistypen die aanduiden aan wat voor concept de eis is gesteld zijn aangepast aan de onderwerpen uit deze richtlijn. 
 
@@ -452,7 +448,7 @@ Eistypen:
    <dd>Bron: Leidraad SE v3 
 </dd></dl>
 
-[Onbekend](#issue36)
+[nen2660:](https://w3id.org/nen2660/def#RequirementTopicType)
 
 Cardinaliteit: 0:n
 
@@ -460,7 +456,7 @@ Cardinaliteit: 0:n
 
 ### Enum <dfn>EisFase
 
-In deze kolom staat de fase van de eis. Hierbij worden dezelfde fasen onderscheiden als bij de [=VerificatieFase=]
+In deze kolom staat de fase van de eis. Hierbij worden dezelfde fasen onderscheiden als bij de [=VerificatieplanFase=]
 
 
 Cardinaliteit: 0:1 
@@ -482,3 +478,7 @@ Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status o
 [SKOS:note](https://www.w3.org/2009/08/skos-reference/skos.html#note)
 
 Cardinaliteit: 0:1
+
+<p class="note">
+De "eigenaar" van een eis is vaak een interne rolhouder. In het contract gelden hiervoor de projectafspraken en kan de eigenaar vertegenwoordigd zijn door een andere rolhouder. Een eigenaar van een eis kan intern bijvoorbeeld de objectbeheerder zijn, maar in het contract is de technisch manager eerste aanspreekpunt voor de eis. Meestal wordt de eigenaar niet benoemd in de vraagspecificaties. Daarom is "eigenaarschap" niet opgenomen in de eisentabel.
+</p>

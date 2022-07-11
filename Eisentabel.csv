@@ -1,1 +1,1 @@
-﻿URI;Code;Naam;Tekst;heeftDeel;Ernst;Bron;specificeert;Toelichting;Eistype;Initiator;Fase;Status;Onderbouwing status
+﻿EisURI,EisCode,EisNaam,EisTekst,EisToelichting,Eis.specificeert,VerificatieplanURI,VerificatieplanNaam,VerificatieplanMethode,VerificatieplanFase,VerificatieplanToelichting,Eis.heeftDeel,Eisbron,BrondocumentLocatie,EisReferentiedocument,EisType,EisFase,EisStatus,EisStatusOnderbouwing
