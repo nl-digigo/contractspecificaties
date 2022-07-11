@@ -45,8 +45,7 @@ De vertaling / binding van Eigenaren naar NEN2660-2 is nog niet bekend. Mogelijk
 ### <dfn>OnderwerpURI 
 De URI is de unieke identifier voor het onderwerp binnen het project ("Brug15"). Zie [URI conform W3C](https://www.w3.org/wiki/URI). 
 
-Bij de definitie kan worden verwezen naar het type onderwerp uit een ontologie ofwel objecttypenbibliotheek ("Een brug"). 
-Als de URI uit een ontologie direct als onderwerp wordt gebruikt, suggereer je daarmee dat de projecteis altijd geldt voor dit onderwerp; dat hoeft echter niet zo te zijn. Vandaar de project-URI.
+Als de URI uit een ontologie ("Een brug") direct als onderwerp wordt gebruikt, suggereer je daarmee dat de projecteis altijd geldt voor dit onderwerp; dat hoeft echter niet zo te zijn. Vandaar dat hier altijd een project-URI wordt gebruikt; in een project stel je de projecteisen aan de instaties van het onderwerp waarvan het type gedefinieerd is in je ontologie ("objecttypenbibliotheek"). Gezien de eenvoud van dit uitwisselformaat, is geen verwijzing naar een ontologie opgenomen.
 
 [URI](https://www.w3.org/wiki/URI)
 
@@ -81,16 +80,16 @@ Cardinaliteit: 0:n
 
 <dl>
 <dt><dfn>FysiekObject
-	<dd>De objecttypen en objecttypenboom ("decompositie") in het contract (Vraagspecificatie Eisendeel) zijn “FysiekObject” uit NEN2660-2. Dit kan in de kolom Type worden ingevuld.
+	<dd>De objecttypen en objecttypenboom ("decompositie") in het contract (Vraagspecificatie Eisendeel) zijn in NEN2660-2 een <a href="https://w3id.org/nen2660/term#FysiekObject">nen2660:FysiekObject</a>. Dit kan in de kolom Type worden ingevuld.
 	
 <dt><dfn>Functie
-	<dd>De functies in het contract (Vraagspecificatie Eisendeel) zijn ánders dan de werkzaamheden (Vraagspecificatie Procesdeel / ontwerp- en uitvoeringswerkzaamheden). De functies geven weer, welke diensten het "systeem" moet vervullen tijdens het gebruik; een voorbeeld is een weg, die als functie "het verkeer moet geleiden". De objecten in het contract zijn de functievervullers. De activiteiten zijn door mensen uit te voeren werkzaamheden tijdens het ontwerpen, bouwen, beheren en slopen van het object.
+	<dd>De functies in het contract (Vraagspecificatie Eisendeel) zijn ánders dan de werkzaamheden (Vraagspecificatie Procesdeel / ontwerp- en uitvoeringswerkzaamheden). De functies geven weer, welke diensten het "systeem" moet vervullen tijdens het gebruik; een voorbeeld is een weg, die als functie "het verkeer moet geleiden". De objecten in het contract zijn de functievervullers. De activiteiten zijn door mensen uit te voeren werkzaamheden tijdens het ontwerpen, bouwen, beheren en slopen van het object. In de NEN-2660 is een functie, bijvoorbeeld "Afwikkelen wegverkeer" ZOWEL een <a href="https://w3id.org/nen2660/term#Activity">nen2660:Activity</a>  ALS een <a href="https://w3id.org/nen2660/term#FunctionalEntity">nen2660:FuntionalEntity</a>.
 
 <dt><dfn>Werkzaamheid
-	<dd>De werkzaamheden zijn door mensen uit te voeren activiteiten tijdens het ontwerpen, bouwen, beheren en slopen van het object. 
+	<dd>De werkzaamheden zijn door mensen uit te voeren activiteiten tijdens het ontwerpen, bouwen, beheren en slopen van het object. In de NEN2660 is een werkzaamheid, zoals "Opstellen Maandrapportage" een <a href="https://w3id.org/nen2660/term#Activity">nen2660:Activity</a>.
 
 <dt><dfn>Informatieproduct
-	<dd>De informatieproducten in het contract staan vaak zowel in de Vraagspecificatie Procesdeel als in een separate Informatieleveringsspecificatie. Het betreft de gevraagde levering van 'documenten', dit kunnen alle bestandstypes zijn, ook datasets of geometrische bestanden. Voorbeelden:<ul>
+	<dd>De informatieproducten in het contract staan vaak zowel in de Vraagspecificatie Procesdeel als in een separate Informatieleveringsspecificatie. Het betreft de gevraagde levering van 'documenten', dit kunnen alle bestandstypes zijn, ook datasets of geometrische bestanden. In de NEN2660 is een informatieproduct een <a href="https://w3id.org/nen2660/term#InformationProduct">nen2660:Informatieproduct</a>.Voorbeelden:<ul>
 <li>Informatieleveringsspecificatie:</li><ul>
 <li>Een rapport over het ontwerp van een weg</li>
 <li>Een sterkteberekening van een kunstwerk</li>
@@ -102,7 +101,7 @@ Cardinaliteit: 0:n
 </dl>
 
 ### <dfn>OnderwerpDefinitie
-De definitie van het onderwerp is ofweleen tekst die het onderwerp definieert, ofwel een URI die verwijst naar de definitie in een ontologie (objecttypenbibliotheek).
+De definitie van het onderwerp is een vrij tekstveld die het onderwerp definieert.
 
 [skos:definition](https://www.w3.org/2009/08/skos-reference/skos.html#definition)
 

@@ -33,7 +33,7 @@ Het format wordt in 2 delen getoond in verband met de leesbaarheid van dit docum
 <td> In deze kolom staat de versiedatum van het document. </td>
 </tr>
 </table>
-
+<br><br>
 <table class="wikitable" style="text-align:left; valign:top">
 <tr>
 <th> [=DocumentAuteur=]
@@ -104,7 +104,7 @@ Cardinaliteit: 0:1
 ### <dfn>DocumentAuteur
 In deze kolom staat de auteur van het document.
 
-Cardinaliteit: 0:1
+Cardinaliteit: 0:n
 
 ### <dfn>DocumentType
 In deze kolom staat het documenttype. Voor documenttypen is nog geen nationale afspraak gemaakt. 
@@ -119,24 +119,24 @@ Cardinaliteit: 0:n
 ### <dfn>DocumentHoofdstukTitel
 In deze kolom staat de hoofdstuktitel.
 
-Cardinaliteit: 0:1 ten opzichte van hoofdstuknummer
+Cardinaliteit: 0:1 ten opzichte van [=DocumentHoofdstuk=]
 
 ### <dfn>DocumentParagraaf
 In deze kolom staat het paragraafnummer. 
 
-Cardinaliteit: 0:n ten opzichte van hoofdstuknummer
+Cardinaliteit: 0:n ten opzichte van [=DocumentHoofdstuk=]
 
 
 ### <dfn>DocumentParagraafTitel
 In deze kolom staat de paragraaftitel.
 
-Cardinaliteit: 0:1 ten opzichte van paragraafnummer
+Cardinaliteit: 0:1 ten opzichte van [=DocumentParagraaf=]
 
 
 ### <dfn>DocumentParagraafTekst
 In deze kolom staat de paragraaftekst.
 
-Cardinaliteit: 0:1 ten opzichte van paragraafnummer
+Cardinaliteit: 0:1 ten opzichte van [=DocumentParagraaf=]
 
 
 
