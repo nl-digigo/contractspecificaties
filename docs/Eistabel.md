@@ -182,9 +182,9 @@ Datatype: [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI)
 
 <aside class="Note" title="hasasSubject">
 Merk op, dat in de tabel een relatie niet benoemd is, omdat de "regel" de verbindende factor is: 
-[cs:hasAsSubject](https://data.crow.nl/contractspecificaties/def/hasAsSubject)
+<a href="https://data.crow.nl/contractspecificaties/def/hasAsSubject">cs:hasAsSubject</a>
 Cardinaliteit: 1:1 ten opzichte van een verificatieplan
-Datatype: [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI)
+Datatype: <a href="https://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a>
 </aside>
 
 
