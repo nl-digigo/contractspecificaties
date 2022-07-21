@@ -69,7 +69,7 @@ Het format wordt in 2 delen getoond in verband met de leesbaarheid van dit docum
 ### <dfn>DocumentURI
 De URI is de unieke identifier voor het document binnen het project.
 
-[URI](https://www.w3.org/wiki/URI)
+[URI](https://www.w3.org/wiki/URI); Voor het opstellen van URI's heeft de NEN-2660 een URI-strategie die je moet volgen.
 
 Cardinaliteit: 1:1
 
@@ -111,29 +111,19 @@ In deze kolom staat het documenttype. Voor documenttypen is nog geen nationale a
 
 Cardinaliteit: 0:1
 
-### <dfn>DocumentHoofdstuk
+### <dfn>DocumentSectie
 In deze kolom staat het hoofdstuknummer.
 
 Cardinaliteit: 0:n
 
-### <dfn>DocumentHoofdstukTitel
+### <dfn>DocumentSectieTitel
 In deze kolom staat de hoofdstuktitel.
 
 Cardinaliteit: 0:1 ten opzichte van [=DocumentHoofdstuk=]
 
-### <dfn>DocumentParagraaf
-In deze kolom staat het paragraafnummer. 
-
-Cardinaliteit: 0:n ten opzichte van [=DocumentHoofdstuk=]
 
 
-### <dfn>DocumentParagraafTitel
-In deze kolom staat de paragraaftitel.
-
-Cardinaliteit: 0:1 ten opzichte van [=DocumentParagraaf=]
-
-
-### <dfn>DocumentParagraafTekst
+### <dfn>DocumentSectieTekst
 In deze kolom staat de paragraaftekst.
 
 Cardinaliteit: 0:1 ten opzichte van [=DocumentParagraaf=]

@@ -20,7 +20,7 @@ De vertaling / binding van Eigenaren naar NEN2660-2 is nog niet bekend. Mogelijk
 </th>
 <th> [=OnderwerpDefinitie=]
 </th>
-<th> [=Onderwerp.heeftDeel=]
+<th> [=OnderwerpheeftDeel=]
 </th>
 </tr>
 <tr>
@@ -47,7 +47,7 @@ De URI is de unieke identifier voor het onderwerp binnen het project ("Brug15").
 
 Als de URI uit een ontologie ("Een brug") direct als onderwerp wordt gebruikt, suggereer je daarmee dat de projecteis altijd geldt voor dit onderwerp; dat hoeft echter niet zo te zijn. Vandaar dat hier altijd een project-URI wordt gebruikt; in een project stel je de projecteisen aan de instaties van het onderwerp waarvan het type gedefinieerd is in je ontologie ("objecttypenbibliotheek"). Gezien de eenvoud van dit uitwisselformaat, is geen verwijzing naar een ontologie opgenomen.
 
-[URI](https://www.w3.org/wiki/URI)
+[URI](https://www.w3.org/wiki/URI);  Voor het opstellen van URI's heeft de NEN-2660 een URI-strategie die je moet volgen.
 
 Cardinaliteit: 1:1
 
@@ -106,7 +106,7 @@ De definitie van het onderwerp is een vrij tekstveld die het onderwerp definieer
 [skos:definition](https://www.w3.org/2009/08/skos-reference/skos.html#definition)
 
 
-### <dfn>Onderwerp.heeftDeel
+### <dfn>OnderwerpheeftDeel
 In deze kolom staat de URI van een onderliggend onderwerp.
 Hiermee kan een hiërarchie worden aangegeven zoals een objectenboom of functieboom zoals gebruikelijk in contracten. Een concept kan uit meerdere delen bestaan, er komen dan meerdere regels voor in de Onderwerpentabel. 
 
