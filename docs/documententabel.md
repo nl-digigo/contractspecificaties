@@ -1,11 +1,11 @@
 # Documenten
 Het documentenformat wordt gebruikt voor de definitie van de documenten. De volgende documenten worden opgenomen in de documententabel:
 
-* Brondocumenten voor eisen: dit kan een beleidsstuk zijn, of een norm of wet of ander document waarin eisen beschreven staan. Dit document wordt toegevoegd om een relatie te behouden met het bronddocument en om de context van de eis te kunnen opzoeken. De eisen in de eisentabel zijn de eisen die contractueel gelden, een opdrachtnemer hoeft het brondocument niet zelf te scannen op eisen.
+* Brondocumenten voor eisen: dit kan een beleidsstuk zijn, of een norm of wet of ander document waarin eisen beschreven staan. Dit document wordt toegevoegd om een relatie te behouden met het brondocument en om de context van de eis te kunnen opzoeken. De eisen in de eisentabel zijn de eisen die contractueel gelden, een opdrachtnemer hoeft het brondocument niet zelf te scannen op eisen.
 * Van toepassing zijnde documenten, waarnaar verwezen wordt in een eistekst. Dit kan een beleidsstuk zijn, of een norm of wet of ander document waarin eisen beschreven staan. Een opdrachtnemer wordt door deze verwijzing verplicht om zelf de eisen in dit document te scannen en mee te nemen in de verificatie en validatie.
 * Overige contractuele documenten, zodat ook teksten in paragraven kunnen worden toegevoegd als data. Dit betreft een document, waarvan hele paragraven niet zijn vertaald naar eisen, maar een context bieden voor de eisen, bijvoorbeeld inleidende hoofdstukken van de Vraagspecificatie Eisen, Proces en informatieleveringsspecificatie. Dank zij de documententabel kan een opdrachtnemer wel de teksten per paragraaf inlezen en deze als context oproepen in eigen projectbeheersingssystemen.
 
-De vertaling / binding van documenten naar NEN2660-2 is nen2660:InformatieObject. Merk op: ook een eis wordt gezien als InformatieObject; maar deze wordt opgenomen in de Eisentabel. In de onderwerpentabel zijn te leveren documenten/datasets (informatieleveringen) óók InformatieObject. De informatieleveringen die gevráágd worden in het contract, staan niet in de Documententabel.
+De vertaling / binding van documenten is naar [cs:Document](https://data.crow.nl/contractspecificaties/def/Document) als specialisatie van nen2660:InformatieObject. Merk op: ook een eis wordt gezien als InformatieObject; maar deze wordt opgenomen in de Eisentabel. In de onderwerpentabel zijn te leveren documenten/datasets (informatieleveringen) óók InformatieObject. De informatieleveringen die gevráágd worden in het contract, staan niet in de Documententabel.
 
 
 ## Documentenformat
@@ -40,24 +40,18 @@ Het format wordt in 2 delen getoond in verband met de leesbaarheid van dit docum
 </th>
 <th> [=DocumentType=]
 </th>
-<th> [=DocumentHoofdstuk=]
+<th> [=DocumentSectie=]
 </th>
-<th> [=DocumentHoofdstukTitel=]
+<th> [=DocumentSectieNaam=]
 </th>
-<th> [=DocumentParagraaf=]
-</th>
-<th> [=DocumentParagraafTitel=]
-</th>
-<th> [=DocumentParagraafTekst=]
+<th> [=DocumentSectieTekst=]
 </th></tr>
 <tr>
 <td> In deze kolom staat de auteur van het document. </td>
 <td> In deze kolom staat het documenttype. </td>
-<td> In deze kolom staat het hoofdstuknummer. </td>
-<td> In deze kolom staat de hoofdstuktitel. </td>
-<td> In deze kolom staat het paragraafnummer. </td>
-<td> In deze kolom staat de paragraaftitel. </td>
-<td> In deze kolom staat de paragraaftekst. </td>
+<td> In deze kolom staat de sectie URI </td>
+<td> In deze kolom staat de sectie naam. </td>
+<td> In deze kolom staat de sectie tekst. </td>
 </td></tr>
 </table>
 
@@ -69,9 +63,13 @@ Het format wordt in 2 delen getoond in verband met de leesbaarheid van dit docum
 ### <dfn>DocumentURI
 De URI is de unieke identifier voor het document binnen het project.
 
-[URI](https://www.w3.org/wiki/URI); Voor het opstellen van URI's heeft de NEN-2660 een URI-strategie die je moet volgen.
 
-Cardinaliteit: 1:1
+[URI](https://www.w3.org/wiki/URI);  Voor het opstellen van URI's heeft de NEN 2660-2 een URI-strategie die je moet volgen.
+
+| Taalbinding | Kardinaliteit | Datatype                                                       |
+|-------------|---------------|----------------------------------------------------------------|
+| n.v.t.      | 1:1           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI)         |
+
 
 > Een URI maakt het meteen "linked data proof"
 
@@ -79,54 +77,67 @@ Cardinaliteit: 1:1
 ### <dfn>DocumentCode
 De DocumentCode is een nummer van het onderwerp in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar hetdocument te verwijzen, zonder de volledige URI te hoeven benoemen.
 
-[skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation)
-
-Cardinaliteit: 1:1
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                     |
+|-------------------------------------------------------------------------------|-----|--------------------------------------------------------|
+| [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation) | 1:1 | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 
 ### <dfn>DocumentNaam
 De DocumentNaam is de voor mensen leesbare naam van het document. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.
 
-[skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel)
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                     |
+|-------------------------------------------------------------------------------|-----|--------------------------------------------------------|
+| [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1 | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 
-Cardinaliteit: 1:1
 
 ### <dfn>DocumentVersie
 In deze kolom staat de versie van het document.
 
-Cardinaliteit: 0:1
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                     |
+|-------------------------------------------------------------------------------|-----|--------------------------------------------------------|
+| [cs:versie](https://data.crow.nl/contractspecificaties/def/versie) | 0:1 | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 
 
 ### <dfn>DocumentVersieDatum
 In deze kolom staat de versiedatum van het document.
 
-Cardinaliteit: 0:1
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                     |
+|-------------------------------------------------------------------------------|-----|--------------------------------------------------------|
+| [cs:versieDatum](https://data.crow.nl/contractspecificaties/def/versieDatum) | 0:1 | [xsd:date](https://www.w3.org/2001/XMLSchema#date) |
 
 ### <dfn>DocumentAuteur
 In deze kolom staat de auteur van het document.
 
-Cardinaliteit: 0:n
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                     |
+|-------------------------------------------------------------------------------|-----|--------------------------------------------------------|
+| [dct:creator](http://purl.org/dc/terms/creator) | 0:n | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
+
 
 ### <dfn>DocumentType
 In deze kolom staat het documenttype. Voor documenttypen is nog geen nationale afspraak gemaakt. 
 
-Cardinaliteit: 0:1
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                     |
+|-------------------------------------------------------------------------------|-----|--------------------------------------------------------|
+| [cs:documentType](https://data.crow.nl/contractspecificaties/def/documentType) | 0:1 | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 
 ### <dfn>DocumentSectie
-In deze kolom staat het hoofdstuknummer.
+In deze kolom staat de documentsectie. Deze kan gebruikt worden om een document verder op te delen. Middels de 'heeft deel' relatie kunnen net zoveel secties aan een document toegevoegd worden als er nodig zijn.
 
-Cardinaliteit: 0:n
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                     |
+|-------------------------------------------------------------------------------|-----|--------------------------------------------------------|
+| [nen2660:hasPart](https://bimloket.github.io/nen2660/term#hasPart) | 0:n (t.o.v. Document)| [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 
-### <dfn>DocumentSectieTitel
-In deze kolom staat de hoofdstuktitel.
+### <dfn>DocumentSectieNaam
+De DocumentSectieNaam is de voor mensen leesbare naam van het onderwerp. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.
 
-Cardinaliteit: 0:1 ten opzichte van [=DocumentHoofdstuk=]
-
-
-
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                     |
+|-------------------------------------------------------------------------------|-----|--------------------------------------------------------|
+| [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1 (t.o.v. DocumentSectie) | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 ### <dfn>DocumentSectieTekst
 In deze kolom staat de paragraaftekst.
 
-Cardinaliteit: 0:1 ten opzichte van [=DocumentParagraaf=]
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                     |
+|-------------------------------------------------------------------------------|-----|--------------------------------------------------------|
+| [rdf:value](http://www.w3.org/1999/02/22-rdf-syntax-ns#value)                 | 0:1 (t.o.v. DocumentSectie)  | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 
 
 

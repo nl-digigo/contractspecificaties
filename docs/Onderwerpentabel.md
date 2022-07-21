@@ -2,10 +2,6 @@
 
 De onderwerpentabel wordt gebruikt voor de onderwerpen van de eisen, bestaande uit de functies, objecttypen, werkzaamheden en informatieproducten. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN2660-2 en andere standaarden. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (multipliciteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling. 
 
-<p class="note">
-De vertaling / binding van Eigenaren naar NEN2660-2 is nog niet bekend. Mogelijk wordt hier de DCTerms ontologie betrokken.
-</p>
-
 ## Onderwerpenformat
 
 <table class="wikitable" style="text-align:left; valign:top">
@@ -32,12 +28,13 @@ De vertaling / binding van Eigenaren naar NEN2660-2 is nog niet bekend. Mogelijk
 <td> In deze kolom staat de URI van een onderliggend onderwerp. </td>
 </tr>
 <tr>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#voorbeeldtabel </td>
+<td> https://www.example.org/id/Voorbeeld-Object1 </td>
 <td> OBJ-0109 </td>
 <td> Voorbeeld onderwerp </td>
 <td> InformationObject </td>
 <td> Onderwerp van een eis als voorbeeld in de documentatie </td>
-<td> https://bimloket.github.io/COINS-3.0-Contract-als-data/#onderligeendvoorbeeldobject </td></tr>
+<td> https://www.example.org/id/Voorbeeld-Object2 </td>
+</tr>
 </table>
 
 ## Details onderwerpentabel
@@ -47,49 +44,51 @@ De URI is de unieke identifier voor het onderwerp binnen het project ("Brug15").
 
 Als de URI uit een ontologie ("Een brug") direct als onderwerp wordt gebruikt, suggereer je daarmee dat de projecteis altijd geldt voor dit onderwerp; dat hoeft echter niet zo te zijn. Vandaar dat hier altijd een project-URI wordt gebruikt; in een project stel je de projecteisen aan de instaties van het onderwerp waarvan het type gedefinieerd is in je ontologie ("objecttypenbibliotheek"). Gezien de eenvoud van dit uitwisselformaat, is geen verwijzing naar een ontologie opgenomen.
 
-[URI](https://www.w3.org/wiki/URI);  Voor het opstellen van URI's heeft de NEN-2660 een URI-strategie die je moet volgen.
+[URI](https://www.w3.org/wiki/URI);  Voor het opstellen van URI's heeft de NEN 2660-2 een URI-strategie die je moet volgen.
 
-Cardinaliteit: 1:1
+| Taalbinding | Kardinaliteit | Datatype                                                       |
+|-------------|---------------|----------------------------------------------------------------|
+| n.v.t.      | 1:1           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI)         |
 
 > Een URI maakt het meteen "linked data proof"
 
 ### <dfn>OnderwerpCode
 De OnderwerpCode is een nummer van het onderwerp in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar het onderwerp te verwijzen, zonder de volledige URI te hoeven benoemen.
 
-[skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation)
-
-Cardinaliteit: 1:1
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                     |
+|-------------------------------------------------------------------------------|-----|--------------------------------------------------------|
+| [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation) | 1:1 | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 
 ### <dfn>OnderwerpNaam
 De OnderwerpNaam is de voor mensen leesbare naam van het onderwerp. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.
 
-[skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel)
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                     |
+|-------------------------------------------------------------------------------|-----|--------------------------------------------------------|
+| [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1 | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 
-Cardinaliteit: 1:1
-
-### Enum <dfn>OnderwerpType
-Het type van het onderwerp kan in het format uit een van deze vier concepten bestaan:
+### <dfn>OnderwerpType
+Dit is een enumeratie. Het type van het onderwerp kan in het format uit een van deze vier concepten bestaan:
 1. [=FysiekObject=]  
 2. [=Functie=] 
 3. [=Werkzaamheid=]   
 4. [=Informatieproduct=]
 
-[rdfs:Class](https://www.w3.org/TR/rdf-schema/#ch_class)
-
-Cardinaliteit: 0:n
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                     |
+|-------------------------------------------------------------------------------|-----|--------------------------------------------------------|
+| [rdfs:Class](https://www.w3.org/TR/rdf-schema/#ch_class) | 1:1 | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 
 <dl>
 <dt><dfn>FysiekObject
-	<dd>De objecttypen en objecttypenboom ("decompositie") in het contract (Vraagspecificatie Eisendeel) zijn in NEN2660-2 een <a href="https://w3id.org/nen2660/term#FysiekObject">nen2660:FysiekObject</a>. Dit kan in de kolom Type worden ingevuld.
+	<dd>De objecttypen en objecttypenboom ("decompositie") in het contract (Vraagspecificatie Eisendeel) zijn in NEN2660-2 een <a href="https://w3id.org/nen2660/def#PhysicalObject">nen2660:PhysicalObject</a>. Dit kan in de kolom Type worden ingevuld.
 	
 <dt><dfn>Functie
-	<dd>De functies in het contract (Vraagspecificatie Eisendeel) zijn ánders dan de werkzaamheden (Vraagspecificatie Procesdeel / ontwerp- en uitvoeringswerkzaamheden). De functies geven weer, welke diensten het "systeem" moet vervullen tijdens het gebruik; een voorbeeld is een weg, die als functie "het verkeer moet geleiden". De objecten in het contract zijn de functievervullers. De activiteiten zijn door mensen uit te voeren werkzaamheden tijdens het ontwerpen, bouwen, beheren en slopen van het object. In de NEN-2660 is een functie, bijvoorbeeld "Afwikkelen wegverkeer" ZOWEL een <a href="https://w3id.org/nen2660/term#Activity">nen2660:Activity</a>  ALS een <a href="https://w3id.org/nen2660/term#FunctionalEntity">nen2660:FuntionalEntity</a>.
+	<dd>De functies in het contract (Vraagspecificatie Eisendeel) zijn ánders dan de werkzaamheden (Vraagspecificatie Procesdeel / ontwerp- en uitvoeringswerkzaamheden). De functies geven weer, welke diensten het "systeem" moet vervullen tijdens het gebruik; een voorbeeld is een weg, die als functie "het verkeer moet geleiden". De objecten in het contract zijn de functievervullers. De activiteiten zijn door mensen uit te voeren werkzaamheden tijdens het ontwerpen, bouwen, beheren en slopen van het object. In de NEN-2660 is een functie, bijvoorbeeld "Afwikkelen wegverkeer" ZOWEL een <a href="https://w3id.org/nen2660/def#Activity">nen2660:Activity</a>  ALS een <a href="https://w3id.org/nen2660/def/#FunctionalEntity">nen2660:FuntionalEntity</a>.
 
 <dt><dfn>Werkzaamheid
-	<dd>De werkzaamheden zijn door mensen uit te voeren activiteiten tijdens het ontwerpen, bouwen, beheren en slopen van het object. In de NEN2660 is een werkzaamheid, zoals "Opstellen Maandrapportage" een <a href="https://w3id.org/nen2660/term#Activity">nen2660:Activity</a>.
+	<dd>De werkzaamheden zijn door mensen uit te voeren activiteiten tijdens het ontwerpen, bouwen, beheren en slopen van het object. In de NEN2660 is een werkzaamheid, zoals "Opstellen Maandrapportage" een <a href="https://w3id.org/nen2660/def#Activity">nen2660:Activity</a>.
 
 <dt><dfn>Informatieproduct
-	<dd>De informatieproducten in het contract staan vaak zowel in de Vraagspecificatie Procesdeel als in een separate Informatieleveringsspecificatie. Het betreft de gevraagde levering van 'documenten', dit kunnen alle bestandstypes zijn, ook datasets of geometrische bestanden. In de NEN2660 is een informatieproduct een <a href="https://w3id.org/nen2660/term#InformationProduct">nen2660:Informatieproduct</a>.Voorbeelden:<ul>
+	<dd>De informatieproducten in het contract staan vaak zowel in de Vraagspecificatie Procesdeel als in een separate Informatieleveringsspecificatie. Het betreft de gevraagde levering van 'documenten', dit kunnen alle bestandstypes zijn, ook datasets of geometrische bestanden. In de NEN2660 is een InformationObject onderscheiden. Binnen contractspecificaties wordt deze gespecialiseerd naar een <a href="https://data.crow.nl/contractspecificaties/def/Document">cs:Document</a>.Voorbeelden:<ul>
 <li>Informatieleveringsspecificatie:</li><ul>
 <li>Een rapport over het ontwerp van een weg</li>
 <li>Een sterkteberekening van een kunstwerk</li>
@@ -103,16 +102,17 @@ Cardinaliteit: 0:n
 ### <dfn>OnderwerpDefinitie
 De definitie van het onderwerp is een vrij tekstveld die het onderwerp definieert.
 
-[skos:definition](https://www.w3.org/2009/08/skos-reference/skos.html#definition)
-
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                     |
+|-------------------------------------------------------------------------------|-----|--------------------------------------------------------|
+| [skos:definition](https://www.w3.org/2009/08/skos-reference/skos.html#defintion) | 0:1 | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 
 ### <dfn>OnderwerpheeftDeel
 In deze kolom staat de URI van een onderliggend onderwerp.
 Hiermee kan een hiërarchie worden aangegeven zoals een objectenboom of functieboom zoals gebruikelijk in contracten. Een concept kan uit meerdere delen bestaan, er komen dan meerdere regels voor in de Onderwerpentabel. 
 
-[nen2660:hasPart](https://bimloket.github.io/nen2660/term#hasPart)
-
-Cardinaliteit: 0:n
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                     |
+|-------------------------------------------------------------------------------|-----|--------------------------------------------------------|
+| [nen2660:hasPart](https://bimloket.github.io/nen2660/term#hasPart) | 0:n | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 
 
 <p class="note">
