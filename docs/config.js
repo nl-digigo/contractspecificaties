@@ -8,12 +8,7 @@ var respecConfig = {
   shortName: "contractspecificaties/",
   // publishDate: "2021-07-27",
   // previousPublishDate: "2021-07-27",
-  license: {
-    name: "Creative Commons Attribution-NoDerivatives",
-    name_nl: "Creative Commons Naamsvermelding-GeenAfgeleiden",
-    short: "CC BY-ND 4.0",
-    url: "https://creativecommons.org/licenses/by-nd/4.0/",
-  },
+ license: "cc-by-nd",
   editors: [
     {
       name: "Elisabeth de Vries",
@@ -24,6 +19,11 @@ var respecConfig = {
   authors: [
     {
       name: "Rik",
+      company: "CROW",
+      companyURL: "https://www.crow.nl",
+    },
+     {
+      name: "Bob Nonnekens",
       company: "CROW",
       companyURL: "https://www.crow.nl",
     },
