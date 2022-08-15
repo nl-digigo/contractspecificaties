@@ -8,7 +8,7 @@ var respecConfig = {
   shortName: "contractspecificaties/",
   // publishDate: "2021-07-27",
   // previousPublishDate: "2021-07-27",
- license: "cc-by-nd",
+ license: "cc-by",
   editors: [
     {
       name: "Elisabeth de Vries",
