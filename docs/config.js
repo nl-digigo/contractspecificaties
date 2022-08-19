@@ -15,15 +15,25 @@ var respecConfig = {
       company: "BIM loket",
       companyURL: "https://www.bimloket.nl",
     },
-  ],
-  authors: [
     {
       name: "Rik",
       company: "CROW",
       companyURL: "https://www.crow.nl",
     },
-     {
+  ],
+  authors: [
+         {
       name: "Bob Nonnekens",
+      company: "CROW",
+      companyURL: "https://www.crow.nl",
+    },
+    {
+      name: "Gebruikerscommissie CB-NL en ICDD",
+      company: "BIM loket",
+      companyURL: "https://www.bimloket.nl",
+    },
+    {
+      name: "Kernteam Provinciaal Contracten Buffet",
       company: "CROW",
       companyURL: "https://www.crow.nl",
     },
