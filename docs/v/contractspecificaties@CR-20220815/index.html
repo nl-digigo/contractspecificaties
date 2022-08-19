@@ -1,0 +1,3046 @@
+<!DOCTYPE html><html lang="nl" class="js-focus-visible" data-js-focus-visible=""><head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 32.1.9">
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:MuseoSans,"Museo Sans",Museo,sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+<link rel="stylesheet" href="https://docs.crow.nl/webfonts/webfonts.css">
+<link rel="stylesheet" href="https://docs.crow.nl/respec-design/stichting-crow/base.min.css">
+<link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://docs.crow.nl/respec-design/stichting-crow/dark.min.css">
+  
+  
+  
+<title>Handleiding van NEN2660-2 naar uitwisseling contractspecificaties</title>
+  
+  
+
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000;color:var(--toclink-text)}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+<link rel="icon" href="https://www.bimloket.nl/favicon.png">
+<style>
+ul.index{columns:30ch;column-gap:1.5em}
+ul.index li{list-style:inherit}
+ul.index li span{color:inherit;cursor:pointer;white-space:normal}
+#index-defined-here ul.index li{font-size:.9rem}
+ul.index code{color:inherit}
+#index-defined-here .print-only{display:none}
+@media print{
+#index-defined-here .print-only{display:initial}
+}
+</style>
+<meta name="description" content="Dit document bevat een vertaling van het conceptuele model van NEN2660-2 - Regels voor informatiemodellering van de gebouwde omgeving naar tabellen die gebruikt kunnen worden voor uitwisseling van contractspecificaties (contractuele eisen).
+Het gaat specifiek om de UAV-GC contracten waarin eisen staan in de volgende documenten, die door elke opdrachtgever anders genoemd worden:">
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "specStatus": "CR",
+  "reviewDateEnd": "2022-11-01",
+  "hypothesisComments": true,
+  "imprint": "bimloket",
+  "shortName": "contractspecificaties/",
+  "license": "cc-by",
+  "editors": [
+    {
+      "name": "Elisabeth de Vries",
+      "company": "BIM loket",
+      "companyURL": "https://www.bimloket.nl"
+    },
+    {
+      "name": "Rik",
+      "company": "CROW",
+      "companyURL": "https://www.crow.nl"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Bob Nonnekens",
+      "company": "CROW",
+      "companyURL": "https://www.crow.nl"
+    },
+    {
+      "name": "Gebruikerscommissie CB-NL en ICDD",
+      "company": "BIM loket",
+      "companyURL": "https://www.bimloket.nl"
+    },
+    {
+      "name": "Kernteam Provinciaal Contracten Buffet",
+      "company": "CROW",
+      "companyURL": "https://www.crow.nl"
+    }
+  ],
+  "github": "https://github.com/bimloket/contractspecificaties",
+  "localBiblio": {},
+  "lint": {
+    "no-unused-dfns": false
+  },
+  "publishISODate": "2022-08-15T00:00:00.000Z",
+  "generatedSubtitle": "BIM Loket, in consultatie 15 augustus 2022"
+}</script>
+<link rel="sidebar" href="https://hypothes.is/app.html" type="application/annotator+html" data-hypothesis-asset="">
+<link rel="notebook" href="https://hypothes.is/notebook" type="application/annotator+html" data-hypothesis-asset="">
+<link rel="preload" as="style" href="https://cdn.hypothes.is/hypothesis/1.1089.0/build/styles/annotator.css?23ccbc" data-hypothesis-asset="">
+<link rel="hypothesis-client" href="https://cdn.hypothes.is/hypothesis/1.1089.0/build/boot.js" type="application/annotator+javascript" data-hypothesis-asset="">
+<script src="https://cdn.hypothes.is/hypothesis/1.1089.0/build/scripts/annotator.bundle.js?bb6824" data-hypothesis-asset=""></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.hypothes.is/hypothesis/1.1089.0/build/styles/highlights.css?5dd56a" data-hypothesis-asset=""></head>
+
+<body style="background-image: url(&quot;https://docs.crow.nl/respec-design/stichting-crow/status-nl/CR.svg&quot;);" class="h-entry hypothesis-highlights-always-on"><div class="head">
+    <p class="logos"><a class="logo" href="https://bimloket.nl"><img crossorigin="" alt="BIM Loket" height="75" src="https://docs.crow.nl/respec-design/stichting-crow/logo/bimloket.jpg" width="150">
+  </a></p>
+    <h1 id="title" class="title">Handleiding van NEN2660-2 naar uitwisseling contractspecificaties</h1> 
+    <p id="w3c-state">BIM Loket,
+  in consultatie <time style="white-space: pre;" class="dt-published" datetime="2022-08-15">15 augustus 2022</time></p>
+    <details open="">
+      <summary>Meer informatie over dit document</summary>
+      <dl>
+        
+        
+        
+        <dt>Laatste werkversie:</dt><dd><a href="https://bimloket.github.io/contractspecificaties/">https://bimloket.github.io/contractspecificaties/</a></dd>
+        <dt>Geschiedenis:</dt><dd>
+                    <a href="https://github.com/bimloket/contractspecificaties/commits/">Wijzigingsgeschiedenis</a>
+                  </dd>
+        
+        
+        
+        <dt>Redacteurs:</dt><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Elisabeth de Vries</span> (<a class="p-org org h-org" href="https://www.bimloket.nl">BIM loket</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Rik</span> (<a class="p-org org h-org" href="https://www.crow.nl">CROW</a>)
+  </dd>
+        
+        <dt>Auteurs:</dt><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Bob Nonnekens</span> (<a class="p-org org h-org" href="https://www.crow.nl">CROW</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Gebruikerscommissie CB-NL en ICDD</span> (<a class="p-org org h-org" href="https://www.bimloket.nl">BIM loket</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Kernteam Provinciaal Contracten Buffet</span> (<a class="p-org org h-org" href="https://www.crow.nl">CROW</a>)
+  </dd>
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/bimloket/contractspecificaties/">GitHub bimloket/contractspecificaties</a>
+        (<a href="https://github.com/bimloket/contractspecificaties/pulls/">wijzigingsverzoeken</a>,
+        <a href="https://github.com/bimloket/contractspecificaties/issues/new/choose">nieuw issue</a>,
+        <a href="https://github.com/bimloket/contractspecificaties/issues/">openstaande issues</a>)
+      </dd><dd hidden="" id="annotation-service-placeholder">
+        <button type="button" data-load-annotation-service="" control-id="ControlID-8">
+          Laad annotaties
+        </button>
+        <span><small>Annotaties door <a href="https://web.hypothes.is">Hypothes.is</a> (<a href="https://web.hypothes.is/privacy">privacybeleid</a>).</small></span>
+      </dd><dd id="annotation-service-loaded">
+        <span data-hypothesis-annotation-count="">0</span> annotatie(s) met <em>Hypothes.is</em>
+        <button type="button" data-hypothesis-trigger="" control-id="ControlID-3">
+          Toon annotatiebalk
+        </button>
+        <button type="button" data-unload-annotation-service="" control-id="ControlID-4">
+          Verberg
+        </button>
+      </dd>
+        
+        
+      </dl>
+    </details>
+    
+    <p class="copyright">
+    Copyright ©
+    2022
+    
+    <a href="https://bimloket.nl">BIM Loket</a>.
+    BIM Loket
+    <a href="https://www.bimloket.nl/p/21/Disclaimer">disclaimer</a>
+      van toepassing en gedistribueerd onder
+      <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" title="Creative Commons Naamsvermelding">CC BY 4.0</a>
+  </p>
+    <hr title="Separator for header">
+  </div>
+
+  <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>Dit document bevat een vertaling van het conceptuele model van <em>NEN2660-2 - Regels voor informatiemodellering van de gebouwde omgeving</em> naar tabellen die gebruikt kunnen worden voor uitwisseling van contractspecificaties (contractuele eisen).
+Het gaat specifiek om de UAV-GC contracten waarin eisen staan in de volgende documenten, die door elke opdrachtgever anders genoemd worden:</p>
+<ul>
+<li>Vraagspecificatie Proces</li>
+<li>Vraagspecificatie Eisen</li>
+<li>Informatieleveringsspecificatie</li>
+</ul>
+</section>
+
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p><em>Deze paragraaf
+      beschrijft de status van dit document ten tijde van publicatie. Het is
+      mogelijk dat er actuelere versies van dit document bestaan. Bekijk de
+      lijst van BIM Loket technische standaarden op
+      <a href="https://https://bimloket.nl/">bimloket.nl</a>
+      en alle BIM Loket-publicaties via
+      <a href="https://https://bimloket.nl">bimloket.nl</a>.</em></p><p>
+      Dit is een consultatieversie en is nog niet vastgesteld.
+      Een publicatie als in consultatie
+          impliceert geen onderschrijven door BIM Loket.
+    </p><p>
+            Belanghebbenden, geïnteresseerde partijen en anderen worden
+            uitgenodigd dit document te reviewen en hun commentaar in te zenden
+            vóór 1 november 2022. Zowel inhoudelijk als
+            technisch commentaar als commentaar betreffende de
+            implementeerbaarheid is welkom.
+          </p><p>
+      <a href="https://github.com/bimloket/contractspecificaties/issues/">GitHub Issues</a> wordt gebruikt voor de discussie
+      van dit document. Eén issue per onderwerp vereenvoudigt de verwerking.
+    </p><p>
+      Reviewcommentaar mag ook achtergelaten worden als
+      <em>Hypothes.is</em> annotaties. Gebruik het publieke kanaal voor je
+      commentaar.
+    </p></section>
+
+  <nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1. </bdi>Inleiding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#context"><bdi class="secno">1.1 </bdi>Context</a></li><li class="tocline"><a class="tocxref" href="#doel-van-dit-document"><bdi class="secno">1.2 </bdi>Doel van dit document</a></li><li class="tocline"><a class="tocxref" href="#scope-van-dit-document"><bdi class="secno">1.3 </bdi>Scope van dit document</a></li><li class="tocline"><a class="tocxref" href="#informatiemodel"><bdi class="secno">1.4 </bdi>Informatiemodel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#bouwblokken"><bdi class="secno">1.4.1 </bdi>Bouwblokken</a></li><li class="tocline"><a class="tocxref" href="#nen2660-2"><bdi class="secno">1.4.2 </bdi>NEN2660-2</a></li></ol></li><li class="tocline"><a class="tocxref" href="#toepassing"><bdi class="secno">1.5 </bdi>Toepassing</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#machine-leesbaarheid"><bdi class="secno">1.5.1 </bdi>Machine-leesbaarheid</a></li><li class="tocline"><a class="tocxref" href="#opstellen-van-tabellen"><bdi class="secno">1.5.2 </bdi>Opstellen van tabellen</a></li><li class="tocline"><a class="tocxref" href="#inlezen-van-tabellen"><bdi class="secno">1.5.3 </bdi>Inlezen van tabellen</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#doelen"><bdi class="secno">2. </bdi>Doelen</a></li><li class="tocline"><a class="tocxref" href="#eisen"><bdi class="secno">3. </bdi>Eisen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#eisenformat"><bdi class="secno">3.1 </bdi>Eisenformat</a></li><li class="tocline"><a class="tocxref" href="#details"><bdi class="secno">3.2 </bdi>Details</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#eisuri"><bdi class="secno">3.2.1 </bdi><span>EisURI</span></a></li><li class="tocline"><a class="tocxref" href="#eiscode"><bdi class="secno">3.2.2 </bdi><span>EisCode</span></a></li><li class="tocline"><a class="tocxref" href="#eisnaam"><bdi class="secno">3.2.3 </bdi><span>EisNaam</span></a></li><li class="tocline"><a class="tocxref" href="#eistekst"><bdi class="secno">3.2.4 </bdi><span>EisTekst</span></a></li><li class="tocline"><a class="tocxref" href="#eistoelichting"><bdi class="secno">3.2.5 </bdi><span>EisToelichting</span></a></li><li class="tocline"><a class="tocxref" href="#eisheeftonderwerp"><bdi class="secno">3.2.6 </bdi><span>EisheeftOnderwerp</span></a></li><li class="tocline"><a class="tocxref" href="#verificatieplanuri"><bdi class="secno">3.2.7 </bdi><span>VerificatieplanURI</span></a></li><li class="tocline"><a class="tocxref" href="#verificatieplanmethode"><bdi class="secno">3.2.8 </bdi><span>VerificatieplanMethode</span></a></li><li class="tocline"><a class="tocxref" href="#verificatieplanfase"><bdi class="secno">3.2.9 </bdi><span>VerificatieplanFase</span></a></li><li class="tocline"><a class="tocxref" href="#verificatieplantoelichting"><bdi class="secno">3.2.10 </bdi><span>VerificatieplanToelichting</span></a></li><li class="tocline"><a class="tocxref" href="#eisheeftdeel"><bdi class="secno">3.2.11 </bdi><span>EisheeftDeel</span></a></li><li class="tocline"><a class="tocxref" href="#eisbron"><bdi class="secno">3.2.12 </bdi><span>EisBron</span></a></li><li class="tocline"><a class="tocxref" href="#eisreferentiedocument"><bdi class="secno">3.2.13 </bdi><span>EisReferentiedocument</span></a></li><li class="tocline"><a class="tocxref" href="#eistype"><bdi class="secno">3.2.14 </bdi><span>EisType</span></a></li><li class="tocline"><a class="tocxref" href="#eisstatus"><bdi class="secno">3.2.15 </bdi><span>EisStatus</span></a></li><li class="tocline"><a class="tocxref" href="#eisstatusonderbouwing"><bdi class="secno">3.2.16 </bdi><span>EisStatusOnderbouwing</span></a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#onderwerpen"><bdi class="secno">4. </bdi>Onderwerpen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#onderwerpenformat"><bdi class="secno">4.1 </bdi>Onderwerpenformat</a></li><li class="tocline"><a class="tocxref" href="#details-onderwerpentabel"><bdi class="secno">4.2 </bdi>Details onderwerpentabel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#onderwerpuri"><bdi class="secno">4.2.1 </bdi><span>OnderwerpURI</span></a></li><li class="tocline"><a class="tocxref" href="#onderwerpcode"><bdi class="secno">4.2.2 </bdi><span>OnderwerpCode</span></a></li><li class="tocline"><a class="tocxref" href="#onderwerpnaam"><bdi class="secno">4.2.3 </bdi><span>OnderwerpNaam</span></a></li><li class="tocline"><a class="tocxref" href="#onderwerptype"><bdi class="secno">4.2.4 </bdi><span>OnderwerpType</span></a></li><li class="tocline"><a class="tocxref" href="#onderwerpdefinitie"><bdi class="secno">4.2.5 </bdi><span>OnderwerpDefinitie</span></a></li><li class="tocline"><a class="tocxref" href="#onderwerpheeftdeel"><bdi class="secno">4.2.6 </bdi><span>OnderwerpheeftDeel</span></a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#documenten"><bdi class="secno">5. </bdi>Documenten</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#documentenformat"><bdi class="secno">5.1 </bdi>Documentenformat</a></li><li class="tocline"><a class="tocxref" href="#details-documententabel"><bdi class="secno">5.2 </bdi>Details documententabel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#documenturi"><bdi class="secno">5.2.1 </bdi><span>DocumentURI</span></a></li><li class="tocline"><a class="tocxref" href="#documentcode"><bdi class="secno">5.2.2 </bdi><span>DocumentCode</span></a></li><li class="tocline"><a class="tocxref" href="#documentnaam"><bdi class="secno">5.2.3 </bdi><span>DocumentNaam</span></a></li><li class="tocline"><a class="tocxref" href="#documentversie"><bdi class="secno">5.2.4 </bdi><span>DocumentVersie</span></a></li><li class="tocline"><a class="tocxref" href="#documentversiedatum"><bdi class="secno">5.2.5 </bdi><span>DocumentVersieDatum</span></a></li><li class="tocline"><a class="tocxref" href="#documentauteur"><bdi class="secno">5.2.6 </bdi><span>DocumentAuteur</span></a></li><li class="tocline"><a class="tocxref" href="#documenttype"><bdi class="secno">5.2.7 </bdi><span>DocumentType</span></a></li><li class="tocline"><a class="tocxref" href="#documentsectie"><bdi class="secno">5.2.8 </bdi><span>DocumentSectie</span></a></li><li class="tocline"><a class="tocxref" href="#documentsectienaam"><bdi class="secno">5.2.9 </bdi><span>DocumentSectieNaam</span></a></li><li class="tocline"><a class="tocxref" href="#documentsectietekst"><bdi class="secno">5.2.10 </bdi><span>DocumentSectieTekst</span></a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">6. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">7. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Termen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Termen gedefinieerd door referentie</a></li></ol></li><li class="tocline"><a class="tocxref" href="#glossary"><bdi class="secno">B. </bdi>Glossary</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">C.1 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
+
+  
+  <section id="inleiding"><div class="header-wrapper"><h2 id="x1-inleiding"><bdi class="secno">1. </bdi>Inleiding</h2><a class="self-link" href="#inleiding" aria-label="Permalink for Section 1."></a></div>
+<section id="context"><div class="header-wrapper"><h3 id="x1-1-context"><bdi class="secno">1.1 </bdi>Context</h3><a class="self-link" href="#context" aria-label="Permalink for Section 1.1"></a></div>
+<p>Een contract is een de uitvraag of overeenkomst waarmee een asset manager zijn ontwerp-, bouw- of onderhoudswerk overeenkomt met een marktpartij. Bij het opstellen van een contract gaat grote aandacht uit naar het samenstellen van contractteksten, waarna deze teksten in pdf bestanden gepubliceerd worden. Dit leidt voor opdrachtnemers tot veel werk bij aanbestedingen, omdat de contractdocumenten allemaal moeten worden doorzocht op eisen, risico’s, uit te voeren werkzaamheden, enzovoorts. Bijvoorbeeld eisen aan het bouwwerk, eisen aan het werkproces van het project of eisen aan informatieleveringen. Als de eisen als data zouden worden aangeboden kunnen deze beter worden ingelezen in de projectbeheersingsomgevingen van opdrachtnemers. Ook zouden in meerdere projecten gebruikte eisen kunnen worden herkend en automatisch verwerkt in de planning van een project.</p>
+<p>Onderdelen van een <a data-link-type="dfn" href="#dfn-contract" class="internalDFN" id="ref-for-dfn-contract-1">contract</a> zijn:</p>
+<ul>
+<li>Juridische grondslag, bijvoorbeeld de UAV of de UAV-gc</li>
+<li>Vraagspecificatie Eisen met eisen aan het Bouwwerk</li>
+<li>Vraagspecificatie Proces met eisen aan het proces</li>
+<li>Informatieleveringsspecificatie met eisen aan de informatieleveringen, soms onderdeel van Vraagspecificatie Proces</li>
+<li>Een referentie-ontwerp, berekening of een voorgeschreven ontwerp</li>
+<li>Bij UAV: ook resultaatsbeschrijvingen met werkzaamheden en hoeveelheden van objecten/materialen).</li>
+</ul>
+</section><section id="doel-van-dit-document"><div class="header-wrapper"><h3 id="x1-2-doel-van-dit-document"><bdi class="secno">1.2 </bdi>Doel van dit document</h3><a class="self-link" href="#doel-van-dit-document" aria-label="Permalink for Section 1.2"></a></div>
+<p>Dit document heeft als doel om met gebruikers een eenvoudige uitwisselmethode vast te stellen voor contractspecificaties, met tabellen (in CSV), waarmee de meest gangbare applicaties voor eisenmanagement direct uit de voeten kunnen. Voor gebruikers die al verder zijn ontwikkeld op het gebied van interoperabiliteit wordt daarnaast ook uitwisseling in linked data mogelijk gemaakt. </p>
+<p>Desgewenst kunnen gebruikers de contractspecificaties ook in andere talen uitwisselen, zoals XML, GML, Geopackage of als onderdeel van een VISI bericht. Dat is in dit document niet verder uitgewerkt.</p>
+</section><section id="scope-van-dit-document"><div class="header-wrapper"><h3 id="x1-3-scope-van-dit-document"><bdi class="secno">1.3 </bdi>Scope van dit document</h3><a class="self-link" href="#scope-van-dit-document" aria-label="Permalink for Section 1.3"></a></div>
+<p> Het gaat specifiek om de UAV-GC contracten waarin eisen staan (functionele specificaties) in de volgende documenten, die door elke opdrachtgever anders genoemd worden:</p>
+<ul>
+<li>Vraagspecificatie Proces</li>
+<li>Vraagspecificatie Eisen</li>
+<li>Informatieleveringsspecificatie</li>
+</ul>
+<p>Daarnaast wordt een mogelijkheid geboden om de overige contractuele documenten uit te wisselen per paragraaftekst.</p>
+<p>Het betreft hier een eerste, eenvoudige afspraak over uitwisseling van contractuele eisen, waarmee alle partijen met hun huidige applicaties uit de voeten kunnen.
+Het uitwisselen van het referentieontwerp of andere digitale bouwwerkinformatie is buiten scope van deze werkafspraak.</p>
+</section><section id="informatiemodel"><div class="header-wrapper"><h3 id="x1-4-informatiemodel"><bdi class="secno">1.4 </bdi>Informatiemodel</h3><a class="self-link" href="#informatiemodel" aria-label="Permalink for Section 1.4"></a></div>
+<section id="bouwblokken"><div class="header-wrapper"><h4 id="x1-4-1-bouwblokken"><bdi class="secno">1.4.1 </bdi>Bouwblokken</h4><a class="self-link" href="#bouwblokken" aria-label="Permalink for Section 1.4.1"></a></div>
+<p>Het informatiemodel voor de contractspecificaties wordt zoveel mogelijk opgesteld met bouwblokken uit andere standaarden. 
+De volgende linked data standaarden worden toegepast:</p>
+<ol>
+<li>Het conceptuele model van NEN2660-2 - Regels voor informatiemodellering van de gebouwde omgeving. Deze NEN-norm wordt gebruikt als primaire standaard en verwijst in zichzelf ook naar andere standaarden zoals SKOS, RDF-OWL en SHACL. Concepten in de contractspecificaties die hier niet in staan, maken onder meer gebruik van:</li>
+<li>Dublin Core (DC): een standaard voor het beschrijven van content op het internet. Doel van de Dublin Core is en was om een webdocument kernachtig, met een beperkte verzameling attributen, te beschrijven en op deze manier de metadata over zulke documenten beter uitwisselbaar te maken.</li>
+</ol>
+</section><section id="nen2660-2"><div class="header-wrapper"><h4 id="x1-4-2-nen2660-2"><bdi class="secno">1.4.2 </bdi>NEN2660-2</h4><a class="self-link" href="#nen2660-2" aria-label="Permalink for Section 1.4.2"></a></div>
+<figure id="fig-uml-schema-van-een-deel-van-de-nen2660-2-voor-toepassing-op-uitwisseling-van-contractuele-eisen">
+<img src="./media/Diagram1.drawio.svg" alt="UML Schema van een deel van de NEN2660-2 voor toepassing op uitwisseling van contractuele eisen">
+<figcaption>Figuur <bdi class="figno">1</bdi> <span class="fig-title">UML Schema van een deel van de NEN2660-2 voor toepassing op uitwisseling van contractuele eisen
+</span></figcaption></figure> 
+
+
+</section></section><section id="toepassing"><div class="header-wrapper"><h3 id="x1-5-toepassing"><bdi class="secno">1.5 </bdi>Toepassing</h3><a class="self-link" href="#toepassing" aria-label="Permalink for Section 1.5"></a></div>
+<section id="machine-leesbaarheid"><div class="header-wrapper"><h4 id="x1-5-1-machine-leesbaarheid"><bdi class="secno">1.5.1 </bdi>Machine-leesbaarheid</h4><a class="self-link" href="#machine-leesbaarheid" aria-label="Permalink for Section 1.5.1"></a></div>
+<p>De formats zijn zo ingericht, dat er geen dubbele informatie in staat, die zichzelf kan tegenspreken. Vanuit de eisen wordt bijvoorbeeld alleen verwezen naar de URI van het onderwerp, niet naar de naam. Dit heeft als nadeel, dat de formats moeilijker te controleren zijn door een mens. En als voordeel, dat informatie niet dubbel wordt uitgeleverd het het risico op onderlinge tegenstrijdigheden. Een deugdelijke implementatie kan dat voorkomen; als men echter geneigd is om de formats handmatig op te stellen bestaat dit risico. Omdat in de markt voldoende en toegankelijke applicaties beschikbaar zijn voor het opstellen van eisensets, is handmatig opstellen niet nodig. Als de leesbaarheid van de formats vergroot wordt, bestaat het risico dat eindgebruikers in de verleiding komen om last-minute aanpassen in de csv te doen, met kwaliteitsverlies tot gevolg.</p>
+</section><section id="opstellen-van-tabellen"><div class="header-wrapper"><h4 id="x1-5-2-opstellen-van-tabellen"><bdi class="secno">1.5.2 </bdi>Opstellen van tabellen</h4><a class="self-link" href="#opstellen-van-tabellen" aria-label="Permalink for Section 1.5.2"></a></div>
+<p>De tabellen kunnen het beste worden opgesteld in een applicatie die de gebruiker ondersteunt bij toepassing van het informatiemodel en het controleren van de volledigheid van de datasset. Bij het handmatig invullen van de tabellen bestaat een grote kans op fouten: dubbel gebruik van URI's, ontbrekende verplichte onderdelen, et cetera. </p>
+<p>In een applicatie is het volgende wenselijk:</p>
+<ul>
+<li><p>Zorg voor een eenvoudige menselijke controle op de tabellen, bijvoorbeeld door in de applicatie extra kolommen toe te voegen die wel de naam van het onderwerp laten zien. Een (juridische) controle door een mens kan op de uitgebreidere tabel plaatsvinden, waarbij de overbodige kolommen kunnen worden verwijderd voor uitwisseling. Daarmee wordt het ook mogelijk een daadwerkelijke uitgangscontrole uit te voeren als aanbestedende partij, zonder te moeten vertrouwen op de technische implementatie, wat voor veel eindgebruikers een black-box is.</p>
+</li>
+<li><p>Controleer of er in de eisteksten en andere tekstvelden geen codetekens worden gebruikt, die bij uitdraai naar linked data leiden tot interpretatie als code. Onder andere het gebruik van "aanhalingstekens" leidt tot foutmeldingen bij het gebruik van het ttl-formaat.</p>
+</li>
+</ul>
+</section><section id="inlezen-van-tabellen"><div class="header-wrapper"><h4 id="x1-5-3-inlezen-van-tabellen"><bdi class="secno">1.5.3 </bdi>Inlezen van tabellen</h4><a class="self-link" href="#inlezen-van-tabellen" aria-label="Permalink for Section 1.5.3"></a></div>
+<p>De ontvanger van de tabellen kan deze inlezen in de eigen applicatie. Daarbij is het raadzaam om een controle te doen op de integriteit van de tabel: ontbreken van fouten zoals dubbel gebruik van URI's, ontbrekende verplichte onderdelen, et cetera. </p>
+<p>Een ander veelvoorkomen euvel is het gebruik van leestekens en speciale in de teksten in de tabel, die bij uitwisseling worden aangezien voor code, bijvoorbeeld de overgang naar de volgende kolom, of het ontstaan van %#@# gekke tekens in de teksten omdat de ene applicatie uitgaat van html en de andere van platte tekst. Een visuele controle en handmatige aanpassing zal bij gebruik van CSV als uitwisselformaat altijd nodig zijn.</p>
+</section></section></section>
+  
+  <section id="doelen"><div class="header-wrapper"><h2 id="x2-doelen"><bdi class="secno">2. </bdi>Doelen</h2><a class="self-link" href="#doelen" aria-label="Permalink for Section 2."></a></div>
+<p>Bij sommige projecten wordt onderscheid gemaakt tussen doelen en eisen. Dit komt door de werkwijze van functioneel specificeren. Bij het functioneel specificeren begin je met het vaststellen van de doelstellingen van het systeem. Vanuit die doelstellingen bedenk je welke functies het systeem nodig heeft. Daarna werk je specifieker uit hoe je de doelen wilt bereiken en welke eisen je wilt stellen. </p>
+<p>Als je de doelen apart wilt uitwisselen van de andere eisen, dan kun je deze in een aparte tabel zetten. De kolommen van die tabel zijn hetzelfde als bij de eisentabel.</p>
+</section>
+  
+  <section id="eisen"><div class="header-wrapper"><h2 id="x3-eisen"><bdi class="secno">3. </bdi>Eisen</h2><a class="self-link" href="#eisen" aria-label="Permalink for Section 3."></a></div>
+<p>Het eisenformat wordt gebruikt om de eisen te kunnen uitwisselen als data. Bij elke kolom is aangegeven wat de vertaling/binding is naar linked data standaarden, hoe vaak deze waarde ingevuld mag worden per eis ("kardinaliteit") en een beschrijving.</p>
+<p>Een eis is een <a href="https://bimloket.github.io/nen2660/def#Requirement">NEN2660:Requirement</a> volgens NEN 2660.</p>
+<section id="eisenformat"><div class="header-wrapper"><h3 id="x3-1-eisenformat"><bdi class="secno">3.1 </bdi>Eisenformat</h3><a class="self-link" href="#eisenformat" aria-label="Permalink for Section 3.1"></a></div>
+<p>Het format wordt in 4 delen getoond in verband met de leesbaarheid van dit document. De laatste rij bevat een voorbeeld uitwerking.</p>
+<div class="overlarge"><table class="data">
+<thead>
+    <tr><th scope="col"><a data-link-type="dfn" href="#dfn-eisuri" class="internalDFN" id="ref-for-dfn-eisuri-1">EisURI</a>
+    </th><th scope="col"><a data-link-type="dfn" href="#dfn-eiscode" class="internalDFN" id="ref-for-dfn-eiscode-1">EisCode</a>
+    </th><th scope="col"><a data-link-type="dfn" href="#dfn-eisnaam" class="internalDFN" id="ref-for-dfn-eisnaam-1">EisNaam</a>
+    </th><th scope="col"><a data-link-type="dfn" href="#dfn-eistekst" class="internalDFN" id="ref-for-dfn-eistekst-1">EisTekst</a>
+    </th><th scope="col"><a data-link-type="dfn" href="#dfn-eistoelichting" class="internalDFN" id="ref-for-dfn-eistoelichting-1">EisToelichting</a>
+    </th><th scope="col"><a data-link-type="dfn" href="#dfn-eisheeftonderwerp" class="internalDFN" id="ref-for-dfn-eisheeftonderwerp-1">EisheeftOnderwerp</a>
+</th></tr></thead>
+<tbody><tr class="def">
+    <td>In deze kolom staat de unieke identifier (URI) van de eis.
+    </td><td>In deze kolom staat de code of het nummer van de eis.
+    </td><td>In deze kolom staat de de naam oftewel de titel van de eis.
+    </td><td>In deze kolom staat de eistekst.
+    </td><td>In deze kolom staat de toelichting op de eis.
+    </td><td>In deze kolom staat de URI van het Onderwerp (subject) van de eis.
+</td></tr>
+<tr class="example">
+    <td class="pre"><code>https://www.example.org/id/Voorbeeld-Eis1</code>
+    </td><td>EIS1099
+    </td><td>Voorbeeldeis
+    </td><td>Dit is de tekst van de voorbeeldeis
+    </td><td>Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kunnen verduidelijken
+    </td><td> <code>https://www.example.org/id/Voorbeeld-Onderwerp1</code>
+</td></tr>
+</tbody></table></div>
+
+<div class="overlarge"><table class="data">
+<thead>
+    <tr><th><a data-link-type="dfn" href="#dfn-eisuri" class="internalDFN" id="ref-for-dfn-eisuri-2">EisURI</a>
+    </th><th><a data-link-type="dfn" href="#dfn-eiscode" class="internalDFN" id="ref-for-dfn-eiscode-2">EisCode</a>
+    </th><th><a data-link-type="dfn" href="#dfn-eisnaam" class="internalDFN" id="ref-for-dfn-eisnaam-2">EisNaam</a>
+    </th><th><a data-link-type="dfn" href="#dfn-eistekst" class="internalDFN" id="ref-for-dfn-eistekst-2">EisTekst</a>
+    </th><th><a data-link-type="dfn" href="#dfn-eistoelichting" class="internalDFN" id="ref-for-dfn-eistoelichting-2">EisToelichting</a>
+    </th><th><a data-link-type="dfn" href="#dfn-eisheeftonderwerp" class="internalDFN" id="ref-for-dfn-eisheeftonderwerp-2">EisheeftOnderwerp</a>
+</th></tr></thead>
+<tbody><tr class="def">
+    <td>In deze kolom staat de unieke identifier (URI) van de eis.
+    </td><td>In deze kolom staat de code of het nummer van de eis.
+    </td><td>In deze kolom staat de de naam oftewel de titel van de eis.
+    </td><td>In deze kolom staat de eistekst.
+    </td><td>In deze kolom staat de toelichting op de eis.
+    </td><td>In deze kolom staat de URI van het Onderwerp (subject) van de eis.
+</td></tr>
+<tr class="example">
+    <td><code>https://www.example.org/id/Voorbeeld-Eis1</code>
+    </td><td>EIS1099
+    </td><td>Voorbeeldeis
+    </td><td>Dit is de tekst van de voorbeeldeis
+    </td><td>Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kunnen verduidelijken
+    </td><td><code>https://www.example.org/id/Voorbeeld-Onderwerp1</code>
+</td></tr>
+</tbody></table></div>
+
+<div class="overlarge"><table class="data">
+<thead>
+    <tr><th><a data-link-type="dfn" href="#dfn-verificatieplanuri" class="internalDFN" id="ref-for-dfn-verificatieplanuri-1">VerificatieplanURI</a>
+    </th><th><a data-link-type="dfn" href="#dfn-verificatieplanmethode" class="internalDFN" id="ref-for-dfn-verificatieplanmethode-1">VerificatieplanMethode</a>
+    </th><th><a data-link-type="dfn" href="#dfn-verificatieplanfase" class="internalDFN" id="ref-for-dfn-verificatieplanfase-1">VerificatieplanFase</a>
+    </th><th><a data-link-type="dfn" href="#dfn-verificatieplantoelichting" class="internalDFN" id="ref-for-dfn-verificatieplantoelichting-1">VerificatieplanToelichting</a>
+</th></tr></thead>
+<tbody><tr class="def">
+    <td>In deze kolom staat de URI van een verificatieplan bij de eis.
+    </td><td>In deze kolom staat de verificatiemethode van het verificatieplan.
+    </td><td>In deze kolom staat de fase van het verificatieplan.
+    </td><td>In deze kolom staat de toelichting op de verificatiemethode bij de eis.
+</td></tr>
+<tr class="example">
+    <td><code>https://www.example.org/id/Voorbeeld-Verificatieplan1</code>
+    </td><td><code>https://data.crow.nl/contractspecificaties/id/Keuring</code>
+    </td><td><code>https://data.crow.nl/contractspecificaties/id/Aanleg</code>
+    </td><td>Een toelichting waarom een verificatiemethode wordt gevraagd bij de eis, of nadere invulling van de verificatiemethode
+</td></tr>
+</tbody></table></div>
+
+<div class="overlarge"><table class="data">
+<thead>
+    <tr><th><a data-link-type="dfn" href="#dfn-eisheeftdeel" class="internalDFN" id="ref-for-dfn-eisheeftdeel-1">EisheeftDeel</a>
+    </th><th><a data-link-type="dfn" href="#dfn-eisbron" class="internalDFN" id="ref-for-dfn-eisbron-1">EisBron</a>
+    </th><th><a data-link-type="dfn" href="#dfn-eisreferentiedocument" class="internalDFN" id="ref-for-dfn-eisreferentiedocument-1">EisReferentiedocument</a>
+</th></tr></thead>
+<tbody><tr class="def">
+    <td> In deze kolom staat de URI van een onderliggende eis. 
+    </td><td> In deze kolom staat de URI van een bron van de eis in een eisenbibliotheek of brondocument. 
+    </td><td> In deze kolom staat de URI van een gerefereerd document waarin aanvullende eisen staan 
+</td></tr>
+<tr class="example">
+    <td> <code>https://www.example.org/id/Voorbeeld-Eis2</code>
+    </td><td> <code>https://www.example.org/id/Voorbeeld-Document1</code>
+    </td><td> <code>https://www.example.org/id/Voorbeeld-Document2</code>
+</td></tr>
+</tbody></table></div>
+
+<div class="overlarge"><table class="data">
+<thead>
+    <tr><th><a data-link-type="dfn" href="#dfn-eistype" class="internalDFN" id="ref-for-dfn-eistype-1">EisType</a>
+    </th><th><a data-link-type="dfn" href="#dfn-eisstatus" class="internalDFN" id="ref-for-dfn-eisstatus-1">EisStatus</a>
+    </th><th><a data-link-type="dfn" href="#dfn-eisstatusonderbouwing" class="internalDFN" id="ref-for-dfn-eisstatusonderbouwing-1">EisStatusOnderbouwing</a>
+</th></tr></thead>
+<tbody><tr class="def">
+    <td> In deze kolom staat het eistype. 
+    </td><td> In deze kolom staat de status van de eis. 
+    </td><td> In deze kolom staat een toelichting op de status van de eis. 
+</td></tr>
+<tr class="example">
+    <td> <code>https://data.crow.nl/contractspecificaties/id/Proceseis</code> 
+    </td><td> <code>https://data.crow.nl/contractspecificaties/id/Vervallen</code> 
+    </td><td> Komt niet meer voor want ... 
+</td></tr>
+</tbody></table></div>
+
+</section><section id="details"><div class="header-wrapper"><h3 id="x3-2-details"><bdi class="secno">3.2 </bdi>Details</h3><a class="self-link" href="#details" aria-label="Permalink for Section 3.2"></a></div>
+<section id="eisuri"><div class="header-wrapper"><h4 id="x3-2-1-eisuri"><bdi class="secno">3.2.1 </bdi><dfn id="dfn-eisuri" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">EisURI</dfn></h4><a class="self-link" href="#eisuri" aria-label="Permalink for Section 3.2.1"></a></div>
+<p>De URI is de unieke identifier voor de eis binnen het project.</p>
+<p>Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder <a data-link-type="dfn" href="#dfn-eisbron" class="internalDFN" id="ref-for-dfn-eisbron-2">EisBron</a>. Daar staat de URI van de eis uit de bibliotheek. Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet.</p>
+<p>De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context.</p>
+<p><a href="https://www.w3.org/wiki/URI">URI</a>; Voor het opstellen van URI's heeft de NEN 2660 een URI-strategie die je moet volgen.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>n.v.t.</td>
+<td>1:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+</tr>
+
+</tbody></table>
+<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="5"><span>Noot</span></div><aside class="">
+<p>
+Een URI maakt het meteen "linked data proof"</p>
+</aside></div>
+</section><section id="eiscode"><div class="header-wrapper"><h4 id="x3-2-2-eiscode"><bdi class="secno">3.2.2 </bdi><dfn id="dfn-eiscode" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">EisCode</dfn></h4><a class="self-link" href="#eiscode" aria-label="Permalink for Section 3.2.2"></a></div>
+<p>De EisCode is een nummer van de eis in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#notation">skos:notation</a></td>
+<td>1:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="eisnaam"><div class="header-wrapper"><h4 id="x3-2-3-eisnaam"><bdi class="secno">3.2.3 </bdi><dfn id="dfn-eisnaam" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">EisNaam</dfn></h4><a class="self-link" href="#eisnaam" aria-label="Permalink for Section 3.2.3"></a></div>
+<p>De EisNaam wordt ook wel eens de titel van de eis genoemd, en geeft een voor mensen leesbare korte duiding van de inhoud van de eis.</p>
+<p>De EisNaam hoeft niet uniek te zijn in het project, daarvoor heeft de eis een URI. Een unieke naam is voor de menselijke lezer vaak wel handig. Soms wordt de EisNaam in applicaties bijvoorbeeld gebruikt bij het visualiseren van de eisenboom. Unieke namen helpen in dat geval.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel">skos:prefLabel</a></td>
+<td>1:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="eistekst"><div class="header-wrapper"><h4 id="x3-2-4-eistekst"><bdi class="secno">3.2.4 </bdi><dfn id="dfn-eistekst" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">EisTekst</dfn></h4><a class="self-link" href="#eistekst" aria-label="Permalink for Section 3.2.4"></a></div>
+<p>De EisTekst bevat de voor mensen leesbare inhoud van de eis.
+Op dit moment worden eisen in een contract meestal niet voorzien van een voor een systeem leesbare eis, zoals bijvoorbeeld een minimale waarde voor een attribuut van een object. Deze "dataficeringsslag" is buiten scope van dit document, omdat dit een verder gevorderd BIM niveau vraagt en dit document juist bedoelt is als opstap naar uitwisseling van data.</p>
+<p>In de EisTekst kan verwezen worden naar een referentiedocument, waar aanvullende eisen in staan die gelden binnen het contract. De URI van dit document wordt dan opgenomen in de kolom Referentiedocument.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">rdf:value</a></td>
+<td>1:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="eistoelichting"><div class="header-wrapper"><h4 id="x3-2-5-eistoelichting"><bdi class="secno">3.2.5 </bdi><dfn id="dfn-eistoelichting" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">EisToelichting</dfn></h4><a class="self-link" href="#eistoelichting" aria-label="Permalink for Section 3.2.5"></a></div>
+<p>In deze kolom staat de toelichting op de eistekst</p>
+<p>In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld wordt.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#note">skos:note</a></td>
+<td>0:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="eisheeftonderwerp"><div class="header-wrapper"><h4 id="x3-2-6-eisheeftonderwerp"><bdi class="secno">3.2.6 </bdi><dfn id="dfn-eisheeftonderwerp" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">EisheeftOnderwerp</dfn></h4><a class="self-link" href="#eisheeftonderwerp" aria-label="Permalink for Section 3.2.6"></a></div>
+<p>In deze kolom staat de URI van het Onderwerp van het verificatieplan bij de eis. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.</p>
+<p>Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voor de mens. Indien hier ook de naam van het concept zou worden toegevoegd, creëert dit dubbelingen met de onderwerpentabel en daarom mogelijk fouten. Daarom wordt alleen de URI gebruikt.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://data.crow.nl/contractspecificaties/def/isVerificationOf">cs:isVerificationOf</a></td>
+<td>1:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+</tr>
+<tr>
+<td><a href="https://data.crow.nl/contractspecificaties/def/hasAsSubject">cs:hasAsSubject </a></td>
+<td>1:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+</tr>
+
+</tbody></table>
+<blockquote>
+<p>Merk op, dat in de tabel een relatie niet benoemd is, omdat de "regel" de verbindende factor is: <a href="https://data.crow.nl/contractspecificaties/def/hasAsSubject">cs:hasAsSubject</a></p>
+</blockquote>
+</section><section id="verificatieplanuri"><div class="header-wrapper"><h4 id="x3-2-7-verificatieplanuri"><bdi class="secno">3.2.7 </bdi><dfn id="dfn-verificatieplanuri" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">VerificatieplanURI</dfn></h4><a class="self-link" href="#verificatieplanuri" aria-label="Permalink for Section 3.2.7"></a></div>
+<p>De URI is de unieke identifier voor het verificatieplan binnen het project. Zie <a href="https://www.w3.org/wiki/URI">URI conform W3C</a>.</p>
+<p>Kardinaliteit: 1:1 ten opzichte van een verificatieplan
+Datatype:</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>n.v.t.</td>
+<td>1:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+</tr>
+
+</tbody></table>
+<figure id="fig-het-informatiemodel-voor-het-verificatieplan">
+<img src="./media/Diagram2.drawio.svg" alt="UML schema voor het informatiemodel voor het verificatieplan">
+<figcaption>Figuur <bdi class="figno">2</bdi> <span class="fig-title">Het informatiemodel voor het verificatieplan.
+</span></figcaption></figure>
+
+</section><section id="verificatieplanmethode"><div class="header-wrapper"><h4 id="x3-2-8-verificatieplanmethode"><bdi class="secno">3.2.8 </bdi><dfn id="dfn-verificatieplanmethode" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">VerificatieplanMethode</dfn></h4><a class="self-link" href="#verificatieplanmethode" aria-label="Permalink for Section 3.2.8"></a></div>
+<p>In deze kolom staat de methode waarmee de eis geverifieerd moet worden. Dit is een enumeratie. Een verificatiemethode is een eigenschap van een verificatieplan. De eigenschap heeft een enumeratie van de verschillende mogelijke methoden, dat wil zeggen dat de gebruiker een lijst kan opstellen met verificatiemethoden en een waarde uit deze lijst kan gebruiken.</p>
+<p>Bij uitwisseling mag uitsluitend de onderstaande lijst gebruikt worden bij contractspecificaties, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt.</p>
+<p>Classificatie volgens:</p>
+<ol>
+<li>NEN-EN-ISO 9000:2015 Kwaliteitsmanagementsystemen - Grondbeginselen en verklarende woordenlijst</li>
+<li>ISO/IEC/IEEE 29148:2018 Systems and software engineering — Life cycle processes — Requirements engineering</li>
+<li><a href="https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V2/LeidraadSE_def_lowres.pdf">Leidraad SE (V2 en 3)</a></li>
+</ol>
+<dl>
+<dt><dfn id="dfn-vaststellen" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Vaststellen
+    </dfn></dt><dd>Activiteit om een of meer kenmerken en hun karakteristieke waarden te achterhalen
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Vaststellen">csw:Vaststellen</a> 
+    </dd><dd>Bron: NEN-EN-ISO 9001:2015
+
+</dd><dt><dfn id="dfn-beoordelen" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Beoordelen
+    </dfn></dt><dd>Vaststelling van de geschiktheid, toereikendheid of doeltreffendheid van een object voor het bereiken van vastgestelde doelstellingen
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Beoordelen">csw:Beoordelen</a>
+    </dd><dd>Bron: NEN-EN-ISO 9001:2015
+
+</dd><dt><dfn id="dfn-monitoren" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Monitoren
+    </dfn></dt><dd>Vaststellen van de status van een systeem, een proces, een product, een dienst of een activiteit. Bijvoorbeeld zettingen, monitoring van draaiuren t.b.v. optimale vervanging
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Monitoren">csw:Monitoren</a>
+    </dd><dd>Bron: NEN-EN-ISO 9001:2015
+
+</dd><dt><dfn id="dfn-meten" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Meten
+    </dfn></dt><dd>Proces om een waarde vast te stellen. o.a. luchtsnelheidmetingen in tunnels, kalenderen van heipalen
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Meten">csw:Meten</a>
+    </dd><dd>Bron: NEN-EN-ISO 9001:2015 en Leidraad SE v2
+
+</dd><dt><dfn id="dfn-keuren" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Keuren
+    </dfn></dt><dd>Vaststelling van conformiteit met gespecificeerde eisen. Bijvoorbeeld keuring, ingangs- en uitgangscontrole
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Keuren">csw:Keuren</a>
+    </dd><dd>Bron: NEN-EN-ISO 9001:2015
+
+</dd><dt><dfn id="dfn-beproeven" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Beproeven
+    </dfn></dt><dd>Vaststellen volgens eisen voor een specifiek beoogd€ gebruik of toepassing
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Beproeven">csw:Beproeven</a>
+    </dd><dd>Bron: NEN-EN-ISO 9001:2015
+
+</dd><dt><dfn id="dfn-evalueren" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Evalueren
+    </dfn></dt><dd>Beoordelen van de voortgang die behaald is met betrekking tot het bereiken van de doelen
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Evalueren">csw:Evalueren</a>
+    </dd><dd>Bron: NEN-EN-ISO 9001:2015
+
+</dd><dt><dfn id="dfn-analyse" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Analyse
+    </dfn></dt><dd>o.a. haalbaarheidsanalyse, kosten-batenanalyse
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Analyse">csw:Analyse</a>
+    </dd><dd>Bron: Leidraad SE v2
+
+</dd><dt><dfn id="dfn-berekening" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Berekening
+    </dfn></dt><dd>o.a. sterkteberekeningen
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Berekening">csw:Berekening</a>
+    </dd><dd>Bron: Leidraad SE v2
+
+</dd><dt><dfn id="dfn-auditen" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Auditen
+    </dfn></dt><dd>Audit van bestaande kwaliteitssystemen en -processen (o.a. Technical Inspection Services
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Auditen">csw:Auditen</a>
+    </dd><dd>Bron: Leidraad SE v2
+
+</dd><dt><dfn id="dfn-demonstratie" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Demonstratie
+    </dfn></dt><dd>o.a. presentatie van de functionaliteiten van een bestaand systeem
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Demonstratie">csw:Demonstratie</a>
+    </dd><dd>Bron: Leidraad SE v2
+
+</dd><dt><dfn id="dfn-documentbeoordeling" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Documentbeoordeling
+    </dfn></dt><dd>o.a. documentinspecties, reviews, toetsen, ontwerpateliers
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Documentbeoordeling">csw:Documentbeoordeling</a>
+    </dd><dd>Bron: Leidraad SE v2
+
+</dd><dt><dfn id="dfn-modellering" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Modellering
+    </dfn></dt><dd>o.a. prestatiemodellen van beschikbaarheid, verkeersmodellen
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Modellering">csw:Modellering</a>
+    </dd><dd>Bron: Leidraad SE v2
+
+</dd><dt><dfn id="dfn-simulaties" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Simulaties
+    </dfn></dt><dd>o.a. dienstregelingsimulatie
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Simulaties">csw:Simulaties</a>
+    </dd><dd>Bron: Leidraad SE v2
+
+</dd><dt><dfn id="dfn-referentie" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Referentie
+    </dfn></dt><dd>o.a. gebruik van gecertificeerde producten
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Referentie">csw:Referentie</a>
+    </dd><dd>Bron: Leidraad SE v2
+
+</dd><dt><dfn id="dfn-testen" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Testen
+    </dfn></dt><dd>haalbaarheidstesten, FIT, FAT, SIT, SAT
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Testen">csw:Testen</a>
+    </dd><dd>Bron: Leidraad SE v2
+
+</dd><dt><dfn id="dfn-factory-integration-test" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Factory Integration Test
+    </dfn></dt><dd>o.a. hydraulische en mechanische installaties integraal testen
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/FactoryIntegrationTest">csw:FactoryIntegrationTest</a>
+    </dd><dd>Bron: Leidraad SE v2
+
+</dd><dt><dfn id="dfn-factory-acceptance-test" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Factory Acceptance Test
+    </dfn></dt><dd>o.a. cameratesten in fabrieksopstelling
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/FactoryAcceptanceTest">csw:FactoryAcceptanceTest</a>
+    </dd><dd>Bron: Leidraad SE v2
+
+</dd><dt><dfn id="dfn-site-integration-test" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Site Integration Test
+    </dfn></dt><dd>o.a. interactietesten tussen installatie- en besturingssystemen
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/SiteIntegrationTest">csw:SiteIntegrationTest</a>
+    </dd><dd>Bron: Leidraad SE v2
+
+</dd><dt><dfn id="dfn-site-acceptance-test" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Site Acceptance Test
+    </dfn></dt><dd>o.a. calamiteitenoefeningen in bijzijn van hulpdiensten
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/SiteAcceptanceTest">csw:SiteAcceptanceTest</a>
+    </dd><dd>Bron: Leidraad SE v2
+
+</dd><dt><dfn id="dfn-schouw" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Schouw
+    </dfn></dt><dd>o.a. visuele opname van projectlocatie
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Schouw">csw:Schouw</a>
+    </dd><dd>Bron: Leidraad SE v2
+
+</dd><dt><dfn id="dfn-inspectie-cs" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Inspectie (cs)
+    </dfn></dt><dd>o.a. Arbo-inspecties, pompkelderinspecties
+    </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Inspectie">csw:Inspectie</a>
+    </dd><dd>Bron: Leidraad SE v2
+</dd></dl>
+
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://data.crow.nl/contractspecificaties/def/verificationMethod">cs:verificationMethod</a></td>
+<td>0:1</td>
+<td><a href="https://data.crow.nl/contractspecificaties/def/verificationMethod">cs:VerificationMethodeType</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="verificatieplanfase"><div class="header-wrapper"><h4 id="x3-2-9-verificatieplanfase"><bdi class="secno">3.2.9 </bdi><dfn id="dfn-verificatieplanfase" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">VerificatieplanFase</dfn></h4><a class="self-link" href="#verificatieplanfase" aria-label="Permalink for Section 3.2.9"></a></div>
+<p>In deze kolom staat de fase van het verificatieplan. Dit is een enumeratie. Hierbij worden de volgende fasen onderscheiden:</p>
+<dl>
+<dt><dfn id="dfn-conceptfase" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Conceptfase
+    </dfn></dt><dd>Fase om (nieuwe) behoeften van stakeholders te inventariseren en mogelijkheden te beoordelen. De eerste klanteisen en oplossingsrichting worden hier bepaald. De conceptfase kan leiden tot het initiatief voor het ontwikkelen en realiseren van een systeem.</dd>
+    <dd><a href="https://data.crow.nl/contractspecificaties/id/Conceptfase">csw:Conceptfase</a>
+</dd><dt><dfn id="dfn-ontwikkelfase" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Ontwikkelfase
+    </dfn></dt><dd>De fase om een systeem te specificeren dat voldoet aan de klanteisen. Aan het eind van de ontwikkelfase ligt er een (startklaar) ontwerp voor het gehele systeem.</dd>
+    <dd><a href="https://data.crow.nl/contractspecificaties/id/Ontwikkelfase">csw:Ontwikkelfase</a>
+</dd><dt><dfn id="dfn-realisatiefase" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Realisatiefase
+    </dfn></dt><dd>De fase om het systeem te vervaardigen en beproeven. Systeemelementen en deelsystemen worden geïntegreerd tot één geheel.</dd>
+    <dd><a href="https://data.crow.nl/contractspecificaties/id/Realisatiefase">csw:Realisatiefase</a>
+</dd><dt><dfn id="dfn-gebruiksfase" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Gebruiksfase
+    </dfn></dt><dd>De gebruiksfase is de periode waarin het systeem wordt geëxploiteerd. Hier vinden de  activiteiten plaats die nodig zijn om het systeem te gebruiken zoals beoogd.</dd>
+    <dd><a href="https://data.crow.nl/contractspecificaties/id/Gebruiksfase">csw:Gebruiksfase</a>
+</dd><dt><dfn id="dfn-beheer-en-onderhoudsfase" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Beheer- en onderhoudsfase
+    </dfn></dt><dd>De periode waarin de ondersteunende activiteiten worden uitgevoerd, die noodzakelijk zijn om het systeem in werking te houden.</dd>
+<dt><dfn id="dfn-sloopfase" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Sloopfase
+    </dfn></dt><dd>De fase om een systeem met bijbehorende operationele diensten en functies buiten werking te stellen en te verwijderen.</dd>
+    <dd><a href="https://data.crow.nl/contractspecificaties/id/Sloopfase">csw:Sloopfase</a>
+</dd></dl>
+
+<p><a href="https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V2/LeidraadSE_def_lowres.pdf">Bron: Leidraad SE versie 2, Hoofdstuk 4</a></p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://data.crow.nl/contractspecificaties/def/phase">cs:phase</a></td>
+<td>0:1</td>
+<td><a href="https://data.crow.nl/contractspecificaties/def/PhaseType">cs:PhaseType</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="verificatieplantoelichting"><div class="header-wrapper"><h4 id="x3-2-10-verificatieplantoelichting"><bdi class="secno">3.2.10 </bdi><dfn id="dfn-verificatieplantoelichting" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">VerificatieplanToelichting</dfn></h4><a class="self-link" href="#verificatieplantoelichting" aria-label="Permalink for Section 3.2.10"></a></div>
+<p>In deze kolom staat de toelichting op de verificatiemethode.</p>
+<p>In contracten wordt dit gebruikt om nader toe te lichten waarom deze verificatiemethode gevraagd wordt.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#note">skos:note</a></td>
+<td>0:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="eisheeftdeel"><div class="header-wrapper"><h4 id="x3-2-11-eisheeftdeel"><bdi class="secno">3.2.11 </bdi><dfn id="dfn-eisheeftdeel" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">EisheeftDeel</dfn></h4><a class="self-link" href="#eisheeftdeel" aria-label="Permalink for Section 3.2.11"></a></div>
+<p>In deze kolom staat de URI van een onderliggende eis.</p>
+<p>Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelijk in contracten. Een eis kan meerdere onderliggende eisen hebben, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://bimloket.github.io/nen2660/term#hasPart">nen2660:hasPart</a></td>
+<td>0:n</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="eisbron"><div class="header-wrapper"><h4 id="x3-2-12-eisbron"><bdi class="secno">3.2.12 </bdi><dfn id="dfn-eisbron" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">EisBron</dfn></h4><a class="self-link" href="#eisbron" aria-label="Permalink for Section 3.2.12"></a></div>
+<p>De bron van de eis kan naar twee zaken verwijzen:</p>
+<ol>
+<li>De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is). Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet. De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context.</li>
+<li>De URI van een brondocument met herkomst van de eis. Deze URI verwijst naar een document in de documententabel.</li>
+</ol>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="http://purl.org/dc/terms/source">dct:source</a></td>
+<td>0:n</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="eisreferentiedocument"><div class="header-wrapper"><h4 id="x3-2-13-eisreferentiedocument"><bdi class="secno">3.2.13 </bdi><dfn id="dfn-eisreferentiedocument" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">EisReferentiedocument</dfn></h4><a class="self-link" href="#eisreferentiedocument" aria-label="Permalink for Section 3.2.13"></a></div>
+<p>Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kolom de URI van het gerefereerde document.</p>
+<p>Instructie voor gebruik: omdat nog niet alle partijen in staat zijn om de data helemaal te verwerken, moet je het document wel in de eistekst noemen. De eistekst is leidend. Een ontvanger van de eisenset kan er ook niet van uit gaan, dat de opdrachtgever dit altijd in weet te vullen. Als in een eistekst naar een referentiedocument wordt verwezen, kan het zijn dat er geen relatie is gemaakt naar het referentiedocument.</p>
+<p>Voorbeelden:</p>
+<ul>
+<li>De eis verwijst naar een ontwerp of berekening die van toepassing is.</li>
+<li>De eis verwijst naar een richtlijn, handleiding of norm die van toepassing is.</li>
+</ul>
+<p>Deze URI verwijst naar een document in de documententabel.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="http://purl.org/dc/terms/references">dct:references</a></td>
+<td>0:n</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="eistype"><div class="header-wrapper"><h4 id="x3-2-14-eistype"><bdi class="secno">3.2.14 </bdi><dfn id="dfn-eistype" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">EisType</dfn></h4><a class="self-link" href="#eistype" aria-label="Permalink for Section 3.2.14"></a></div>
+<p>In deze kolom staat het eistype. De aspecteisen zijn grotendeels overgenomen uit de <a href="https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V3/Leidraad_V3_SE_web.pdf">Leidraad SE v3</a>; de eistypen die aanduiden aan wat voor concept de eis is gesteld zijn aangepast aan de onderwerpen uit deze richtlijn. Dit is een enumeratie.</p>
+<p>Bij uitwisseling mag je uitsluitend de onderstaande lijst gebruiken, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt.</p>
+<p>Eistypen:</p>
+<dl>
+<dt><dfn id="dfn-informatie-eis" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Informatie-eis
+   </dfn></dt><dd>Verzameling van eisen die betrekking hebben op de te leveren informatieproducten
+   </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Informatie-eis">csw:Informatie-eis</a>
+       
+</dd><dt><dfn id="dfn-systeemeis" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Systeemeis
+   </dfn></dt><dd>De beschrijving van het geheel aan samenhangende of elkaar beïvloedende eisen dat bijdraagt aan het tot standkomen en gebruiken danwel toepassen van het geintegreerde systeem.
+   </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Systeemeis">csw:Systeemeis</a>
+   </dd><dd>Bron: Leidraad SE v3 
+     
+</dd><dt><dfn id="dfn-proceseis" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Proceseis
+   </dfn></dt><dd>De beschrijving van het gevraagde geheel van samenhangende of elkaar beïnvloedende activiteiten dat input omzet in output. 
+   </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Proceseis">csw:Proceseis</a>
+   </dd><dd>Bron: Leidraad SE v3
+
+</dd><dt><dfn id="dfn-functie-eis" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Functie-eis
+   </dfn></dt><dd>De beschrijving van de gevraagde beoogde werking en/of verrichting van een systeem.
+   </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Functie-eis">csw:Functie-eis</a>
+ </dd><dd>Bron: Leidraad SE v3
+
+</dd><dt><dfn id="dfn-aspecteis-betrouwbaarheid" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Aspecteis: Betrouwbaarheid
+   </dfn></dt><dd>De waarschijnlijkheid dat de vereiste functie wordt uitgevoerd onder gegeven omstandigheden gedurende een bepaald tijdsinterval. 
+   </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Betrouwbaarheid">csw:Aspecteis-Betrouwbaarheid</a>
+ </dd><dd>Bron: Leidraad SE v3
+
+</dd><dt><dfn id="dfn-aspecteis-beschikbaarheid" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Aspecteis: Beschikbaarheid
+   </dfn></dt><dd>De waarschijnlijkheid dat de vereiste functie op een willekeurig moment kan worden uitgevoerd onder gegeven omstandigheden.	
+   </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Beschikbaarheid">csw:Aspecteis-Beschikbaarheid</a>
+ </dd><dd>Bron: Leidraad SE v3
+
+</dd><dt><dfn id="dfn-aspecteis-onderhoudbaarheid" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Aspecteis: Onderhoudbaarheid
+   </dfn></dt><dd>De waarschijnlijkheid dat de activiteiten voor onderhoud kunnen worden uitgevoerd binnen de hiervoor vastgestelde tijden, onder gegeven omstandigheden teneinde de vereiste functie te kunnen (blijven) uitvoeren.
+   </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Onderhoudbaarheid">csw:Aspecteis-Onderhoudbaarheid</a>
+ </dd><dd>Bron: Leidraad SE v3
+
+</dd><dt><dfn id="dfn-aspecteis-veiligheid" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Aspecteis: Veiligheid
+   </dfn></dt><dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder optredend letsel aan personen kan worden vervuld dan wel uitgevoerd en de waarschijnlijkheid dat de integriteit van de functie  en de daaraan verbonden data en datastructuren gewaarborgd blijven van ongewenste beïnvloeding.	   
+   </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Veiligheid">csw:Aspecteis-Veiligheid</a>
+ </dd><dd>Bron: Leidraad SE v3
+
+</dd><dt><dfn id="dfn-aspecteis-gezondheid" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Aspecteis: Gezondheid
+   </dfn></dt><dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder negatieve gezondheidsrisico's voor personen kan worden vervuld dan wel uitgevoerd.
+   </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Gezondheid">csw:Aspecteis-Gezondheid</a>
+   </dd><dd>Bron: Leidraad SE v3
+
+</dd><dt><dfn id="dfn-aspecteis-omgeving" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Aspecteis: Omgeving
+   </dfn></dt><dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder ongewenste risico's voor de omgeving kunnen wordenvervuld en/of gerealiseerd.	
+   </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Omgeving">csw:Aspecteis-Omgeving</a>    
+   </dd><dd>Bron: Leidraad SE v3
+
+</dd><dt><dfn id="dfn-aspecteis-duurzaamheid" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Aspecteis: Duurzaamheid
+   </dfn></dt><dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten binnen de hieraan gestelde eisen en PPP (People/Planet/Profit)-doelstellingen kunnen worden gerealiseerd.  
+   </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Duurzaamheid">csw:Aspecteis-Duurzaamheid</a>
+   </dd><dd>Bron: Leidraad SE v3
+
+</dd><dt><dfn id="dfn-aspecteis-vormgeving" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Aspecteis: Vormgeving
+   </dfn></dt><dd>De beschrijving van de gevraagde prestatie ten aanzien van het beeld en het materiaalgebruik met inachtneming van de omgevings- en de gezondheidseisen van het systeem en haar onderdelen.
+   </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Vormgeving">csw:Aspecteis-Vormgeving</a>
+   </dd><dd>Bron: Leidraad SE v3
+
+</dd><dt><dfn id="dfn-aspecteis-toekomstvastheid" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Aspecteis: Toekomstvastheid
+   </dfn></dt><dd>De beschrijving van de gevraagde prestatie van een systeem ten aanzien van de vereiste levensduur van het systeem (als functie en als object) en haar onderdelen.	    
+   </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Toekomstvastheid">csw:Aspecteis-Toekomstvastheid</a>
+   </dd><dd>Bron: Leidraad SE v3
+
+</dd><dt><dfn id="dfn-aspecteis-sloopbaarheid" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Aspecteis: Sloopbaarheid
+   </dfn></dt><dd>De waarschijnlijkheid dat de vereiste functie aan het einde van de levensduur op beheerste wijze kan worden teruggebracht tot minimaal secundaire grondstoffen en met inachtneming van de overige RAMSHE-aspecten.  
+   </dd><dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Sloopbaarheid">csw:Aspecteis-Sloopbaarheid</a>
+   </dd><dd>Bron: Leidraad SE v3 
+</dd></dl>
+
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://w3id.org/nen2660/def#requirementTopicType">nen2660:requirementTopicType</a></td>
+<td>0:n</td>
+<td><a href="https://data.crow.nl/contractspecificaties/def/EisType">cs:EisType</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="eisstatus"><div class="header-wrapper"><h4 id="x3-2-15-eisstatus"><bdi class="secno">3.2.15 </bdi><dfn id="dfn-eisstatus" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">EisStatus</dfn></h4><a class="self-link" href="#eisstatus" aria-label="Permalink for Section 3.2.15"></a></div>
+<p>In deze kolom staat de status van de eis. Dit is een enumeratie. Voor contractspecificaties geldt dat de status één van deze twee zaken is: actueel of vervallen.
+Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijziging in de eisenset te kunnen opnemen en met elkaar uit te wisselen.</p>
+<dl>
+<dt><dfn id="dfn-actueel" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Actueel
+   </dfn></dt><dd><a href="https://data.crow.nl/contractspecificaties/id/Actueel">csw:Actueel</a>
+</dd><dt><dfn id="dfn-vervallen" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Vervallen
+   </dfn></dt><dd><a href="https://data.crow.nl/contractspecificaties/id/Vervallen">csw:Vervallen</a>
+</dd></dl>
+
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://data.crow.nl/contractspecificaties/def/status">cs:status</a></td>
+<td>1:1</td>
+<td><a href="https://data.crow.nl/contractspecificaties/def/StatusType">cs:StatusType</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="eisstatusonderbouwing"><div class="header-wrapper"><h4 id="x3-2-16-eisstatusonderbouwing"><bdi class="secno">3.2.16 </bdi><dfn id="dfn-eisstatusonderbouwing" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">EisStatusOnderbouwing</dfn></h4><a class="self-link" href="#eisstatusonderbouwing" aria-label="Permalink for Section 3.2.16"></a></div>
+<p>In deze kolom staat een toelichting op de status van de eis.
+Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status onderbouwd is.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://data.crow.nl/contractspecificaties/def/statusOnderbouwing">cs:statusOnderbouwing</a></td>
+<td>0:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+<div class="note" role="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="5"><span>Noot</span></div><p class="">
+De "eigenaar" van een eis is vaak een interne rolhouder. In het contract gelden hiervoor de projectafspraken en kan de eigenaar vertegenwoordigd zijn door een andere rolhouder. Een eigenaar van een eis kan intern bijvoorbeeld de objectbeheerder zijn, maar in het contract is de technisch manager eerste aanspreekpunt voor de eis. Meestal wordt de eigenaar niet benoemd in de vraagspecificaties. Daarom is "eigenaarschap" niet opgenomen in de eisentabel.
+</p></div></section></section></section>
+  
+  <section id="onderwerpen"><div class="header-wrapper"><h2 id="x4-onderwerpen"><bdi class="secno">4. </bdi>Onderwerpen</h2><a class="self-link" href="#onderwerpen" aria-label="Permalink for Section 4."></a></div>
+<p>De onderwerpentabel wordt gebruikt voor de onderwerpen van de eisen, bestaande uit de functies, objecttypen, werkzaamheden en informatieproducten. Op de eerste regel staan de kolomnamen. Op de tweede regel staat een korte toelichting; op de derde regel de vertaling / binding naar de NEN2660-2 en andere standaarden. Op de vierde regel staat aangegeven, hoeveel relaties er kunnen voorkomen in dit veld (multipliciteit). Als er meer dan één relatie voorkomt, komen er regels bij in de uitwisseling.</p>
+<section id="onderwerpenformat"><div class="header-wrapper"><h3 id="x4-1-onderwerpenformat"><bdi class="secno">4.1 </bdi>Onderwerpenformat</h3><a class="self-link" href="#onderwerpenformat" aria-label="Permalink for Section 4.1"></a></div>
+<div class="overlarge"><table class="data">
+<thead>
+    <tr><th> <a data-link-type="dfn" href="#dfn-onderwerpuri" class="internalDFN" id="ref-for-dfn-onderwerpuri-1">OnderwerpURI</a>
+    </th><th> <a data-link-type="dfn" href="#dfn-onderwerpcode" class="internalDFN" id="ref-for-dfn-onderwerpcode-1">OnderwerpCode</a>
+    </th><th> <a data-link-type="dfn" href="#dfn-onderwerpnaam" class="internalDFN" id="ref-for-dfn-onderwerpnaam-1">OnderwerpNaam</a>
+    </th><th> <a data-link-type="dfn" href="#dfn-onderwerptype" class="internalDFN" id="ref-for-dfn-onderwerptype-1">OnderwerpType</a>
+    </th><th> <a data-link-type="dfn" href="#dfn-onderwerpdefinitie" class="internalDFN" id="ref-for-dfn-onderwerpdefinitie-1">OnderwerpDefinitie</a>
+    </th><th> <a data-link-type="dfn" href="#dfn-onderwerpheeftdeel" class="internalDFN" id="ref-for-dfn-onderwerpheeftdeel-1">OnderwerpheeftDeel</a>
+</th></tr></thead>
+<tbody><tr class="def">
+    <td> In deze kolom staat de unieke naam (URI) van het onderwerp.
+    </td><td> In deze kolom staat de code ofwel het nummer van het onderwerp.
+    </td><td> In deze kolom staat de naam van het onderwerp.
+    </td><td> In deze kolom staat het type van het onderwerp: Objecttype, Functie, Werkzaamheid of Informatieproduct.
+    </td><td> In deze kolom staat de definitie van het onderwerp.
+    </td><td> In deze kolom staat de URI van een onderliggend onderwerp.
+</td></tr>
+<tr class="example">
+    <td> <code>https://www.example.org/id/Voorbeeld-Object1</code>
+    </td><td> OBJ-0109
+    </td><td> Voorbeeld onderwerp
+    </td><td> InformationObject
+    </td><td> Onderwerp van een eis als voorbeeld in de documentatie
+    </td><td> <code>https://www.example.org/id/Voorbeeld-Object2</code>
+</td></tr>
+</tbody></table></div>
+
+</section><section id="details-onderwerpentabel"><div class="header-wrapper"><h3 id="x4-2-details-onderwerpentabel"><bdi class="secno">4.2 </bdi>Details onderwerpentabel</h3><a class="self-link" href="#details-onderwerpentabel" aria-label="Permalink for Section 4.2"></a></div>
+<section id="onderwerpuri"><div class="header-wrapper"><h4 id="x4-2-1-onderwerpuri"><bdi class="secno">4.2.1 </bdi><dfn id="dfn-onderwerpuri" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">OnderwerpURI</dfn></h4><a class="self-link" href="#onderwerpuri" aria-label="Permalink for Section 4.2.1"></a></div>
+<p>De URI is de unieke identifier voor het onderwerp binnen het project ("Brug15"). Zie <a href="https://www.w3.org/wiki/URI">URI conform W3C</a>.</p>
+<p>Als de URI uit een ontologie ("Een brug") direct als onderwerp wordt gebruikt, suggereer je daarmee dat de projecteis altijd geldt voor dit onderwerp; dat hoeft echter niet zo te zijn. Vandaar dat hier altijd een project-URI wordt gebruikt; in een project stel je de projecteisen aan de instaties van het onderwerp waarvan het type gedefinieerd is in je ontologie ("objecttypenbibliotheek"). Gezien de eenvoud van dit uitwisselformaat, is geen verwijzing naar een ontologie opgenomen.</p>
+<p><a href="https://www.w3.org/wiki/URI">URI</a>; Voor het opstellen van URI's heeft de NEN 2660-2 een URI-strategie die je moet volgen.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>n.v.t.</td>
+<td>1:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+</tr>
+
+</tbody></table>
+<blockquote>
+<p>Een URI maakt het meteen "linked data proof"</p>
+</blockquote>
+</section><section id="onderwerpcode"><div class="header-wrapper"><h4 id="x4-2-2-onderwerpcode"><bdi class="secno">4.2.2 </bdi><dfn id="dfn-onderwerpcode" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">OnderwerpCode</dfn></h4><a class="self-link" href="#onderwerpcode" aria-label="Permalink for Section 4.2.2"></a></div>
+<p>De OnderwerpCode is een nummer van het onderwerp in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar het onderwerp te verwijzen, zonder de volledige URI te hoeven benoemen.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#notation">skos:notation</a></td>
+<td>1:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="onderwerpnaam"><div class="header-wrapper"><h4 id="x4-2-3-onderwerpnaam"><bdi class="secno">4.2.3 </bdi><dfn id="dfn-onderwerpnaam" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">OnderwerpNaam</dfn></h4><a class="self-link" href="#onderwerpnaam" aria-label="Permalink for Section 4.2.3"></a></div>
+<p>De OnderwerpNaam is de voor mensen leesbare naam van het onderwerp. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel">skos:prefLabel</a></td>
+<td>1:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="onderwerptype"><div class="header-wrapper"><h4 id="x4-2-4-onderwerptype"><bdi class="secno">4.2.4 </bdi><dfn id="dfn-onderwerptype" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">OnderwerpType</dfn></h4><a class="self-link" href="#onderwerptype" aria-label="Permalink for Section 4.2.4"></a></div>
+<p>Dit is een enumeratie. Het type van het onderwerp kan in het format uit een van deze vier concepten bestaan:</p>
+<ol>
+<li><a data-link-type="dfn" href="#dfn-fysiekobject" class="internalDFN" id="ref-for-dfn-fysiekobject-1">FysiekObject</a></li>
+<li><a data-link-type="dfn" href="#dfn-functie" class="internalDFN" id="ref-for-dfn-functie-1">Functie</a></li>
+<li><a data-link-type="dfn" href="#dfn-werkzaamheid" class="internalDFN" id="ref-for-dfn-werkzaamheid-1">Werkzaamheid</a></li>
+<li><a data-link-type="dfn" href="#dfn-informatieproduct" class="internalDFN" id="ref-for-dfn-informatieproduct-1">Informatieproduct</a></li>
+</ol>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.w3.org/TR/rdf-schema/#ch_class">rdfs:Class</a></td>
+<td>1:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+</tr>
+
+</tbody></table>
+<dl>
+<dt><dfn id="dfn-fysiekobject" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">FysiekObject
+    </dfn></dt><dd>De objecttypen en objecttypenboom ("decompositie") in het contract (Vraagspecificatie Eisendeel) zijn in NEN2660-2 een <a href="https://w3id.org/nen2660/def#PhysicalObject">nen2660:PhysicalObject</a>. Dit kan in de kolom Type worden ingevuld.
+    
+</dd><dt><dfn id="dfn-functie" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Functie
+    </dfn></dt><dd>De functies in het contract (Vraagspecificatie Eisendeel) zijn ánders dan de werkzaamheden (Vraagspecificatie Procesdeel / ontwerp- en uitvoeringswerkzaamheden). De functies geven weer, welke diensten het "systeem" moet vervullen tijdens het gebruik; een voorbeeld is een weg, die als functie "het verkeer moet geleiden". De objecten in het contract zijn de functievervullers. De activiteiten zijn door mensen uit te voeren werkzaamheden tijdens het ontwerpen, bouwen, beheren en slopen van het object. In de NEN-2660 is een functie, bijvoorbeeld "Afwikkelen wegverkeer" ZOWEL een <a href="https://w3id.org/nen2660/def#Activity">nen2660:Activity</a>  ALS een <a href="https://w3id.org/nen2660/def/#FunctionalEntity">nen2660:FuntionalEntity</a>.
+
+</dd><dt><dfn id="dfn-werkzaamheid" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Werkzaamheid
+    </dfn></dt><dd>De werkzaamheden zijn door mensen uit te voeren activiteiten tijdens het ontwerpen, bouwen, beheren en slopen van het object. In de NEN2660 is een werkzaamheid, zoals "Opstellen Maandrapportage" een <a href="https://w3id.org/nen2660/def#Activity">nen2660:Activity</a>.
+
+</dd><dt><dfn id="dfn-informatieproduct" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Informatieproduct
+    </dfn></dt><dd>De informatieproducten in het contract staan vaak zowel in de Vraagspecificatie Procesdeel als in een separate Informatieleveringsspecificatie. Het betreft de gevraagde levering van 'documenten', dit kunnen alle bestandstypes zijn, ook datasets of geometrische bestanden. In de NEN2660 is een InformationObject onderscheiden. Binnen contractspecificaties wordt deze gespecialiseerd naar een <a href="https://data.crow.nl/contractspecificaties/def/Document">cs:Document</a>.Voorbeelden:<ul>
+<li>Informatieleveringsspecificatie:</li><ul>
+<li>Een rapport over het ontwerp van een weg</li>
+<li>Een sterkteberekening van een kunstwerk</li>
+<li>Een 3D model van een gebouw</li>
+<li>Een linked dataset met attributen van een voetpad</li></ul>
+<li>Procesdeel:</li><ul>
+<li>Een V&amp;G plan</li>
+<li>Een voortgangsrapportage</li></ul></ul>
+</dd></dl>
+
+</section><section id="onderwerpdefinitie"><div class="header-wrapper"><h4 id="x4-2-5-onderwerpdefinitie"><bdi class="secno">4.2.5 </bdi><dfn id="dfn-onderwerpdefinitie" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">OnderwerpDefinitie</dfn></h4><a class="self-link" href="#onderwerpdefinitie" aria-label="Permalink for Section 4.2.5"></a></div>
+<p>De definitie van het onderwerp is een vrij tekstveld die het onderwerp definieert.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#defintion">skos:definition</a></td>
+<td>0:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="onderwerpheeftdeel"><div class="header-wrapper"><h4 id="x4-2-6-onderwerpheeftdeel"><bdi class="secno">4.2.6 </bdi><dfn id="dfn-onderwerpheeftdeel" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">OnderwerpheeftDeel</dfn></h4><a class="self-link" href="#onderwerpheeftdeel" aria-label="Permalink for Section 4.2.6"></a></div>
+<p>In deze kolom staat de URI van een onderliggend onderwerp.
+Hiermee kan een hiërarchie worden aangegeven zoals een objectenboom of functieboom zoals gebruikelijk in contracten. Een concept kan uit meerdere delen bestaan, er komen dan meerdere regels voor in de Onderwerpentabel.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://bimloket.github.io/nen2660/term#hasPart">nen2660:hasPart</a></td>
+<td>0:n</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+</tr>
+
+</tbody></table>
+<div class="note" role="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-1" aria-level="5"><span>Noot</span></div><p class="">
+Net als bij de eisen, is de "eigenaar" van het onderwerp vaak een interne rolhouder. In het contract gelden hiervoor de projectafspraken en kan de eigenaar vertegenwoordigd zijn door een andere rolhouder. Een eigenaar kan intern bijvoorbeeld de objectbeheerder zijn, maar in het contract is de technisch manager eerste aanspreekpunt voor het object. Meestal wordt de eigenaar niet benoemd in de vraagspecificaties. Daarom is "eigenaarschap" niet opgenomen in de onderwerpentabel.
+</p></div></section></section></section>
+  
+  <section id="documenten"><div class="header-wrapper"><h2 id="x5-documenten"><bdi class="secno">5. </bdi>Documenten</h2><a class="self-link" href="#documenten" aria-label="Permalink for Section 5."></a></div>
+<p>Het documentenformat wordt gebruikt voor de definitie van de documenten. De volgende documenten worden opgenomen in de documententabel:</p>
+<ul>
+<li>Brondocumenten voor eisen: dit kan een beleidsstuk zijn, of een norm of wet of ander document waarin eisen beschreven staan. Dit document wordt toegevoegd om een relatie te behouden met het brondocument en om de context van de eis te kunnen opzoeken. De eisen in de eisentabel zijn de eisen die contractueel gelden, een opdrachtnemer hoeft het brondocument niet zelf te scannen op eisen.</li>
+<li>Van toepassing zijnde documenten, waarnaar verwezen wordt in een eistekst. Dit kan een beleidsstuk zijn, of een norm of wet of ander document waarin eisen beschreven staan. Een opdrachtnemer wordt door deze verwijzing verplicht om zelf de eisen in dit document te scannen en mee te nemen in de verificatie en validatie.</li>
+<li>Overige contractuele documenten, zodat ook teksten in paragraven kunnen worden toegevoegd als data. Dit betreft een document, waarvan hele paragraven niet zijn vertaald naar eisen, maar een context bieden voor de eisen, bijvoorbeeld inleidende hoofdstukken van de Vraagspecificatie Eisen, Proces en informatieleveringsspecificatie. Dank zij de documententabel kan een opdrachtnemer wel de teksten per paragraaf inlezen en deze als context oproepen in eigen projectbeheersingssystemen.</li>
+</ul>
+<p>De vertaling / binding van documenten is naar <a href="https://data.crow.nl/contractspecificaties/def/Document">cs:Document</a> als specialisatie van nen2660:InformatieObject. Merk op: ook een eis wordt gezien als InformatieObject; maar deze wordt opgenomen in de Eisentabel. In de onderwerpentabel zijn te leveren documenten/datasets (informatieleveringen) óók InformatieObject. De informatieleveringen die gevráágd worden in het contract, staan niet in de Documententabel.</p>
+<section id="documentenformat"><div class="header-wrapper"><h3 id="x5-1-documentenformat"><bdi class="secno">5.1 </bdi>Documentenformat</h3><a class="self-link" href="#documentenformat" aria-label="Permalink for Section 5.1"></a></div>
+<p>Het format wordt in 2 delen getoond in verband met de leesbaarheid van dit document. De laatste rij bevat een voorbeeld uitwerking.</p>
+<div class="overlarge"><table class="data">
+<thead>
+  <tr><th> <a data-link-type="dfn" href="#dfn-documenturi" class="internalDFN" id="ref-for-dfn-documenturi-1">documentURI</a>
+  </th><th> <a data-link-type="dfn" href="#dfn-documentcode" class="internalDFN" id="ref-for-dfn-documentcode-1">DocumentCode</a>
+  </th><th> <a data-link-type="dfn" href="#dfn-documentnaam" class="internalDFN" id="ref-for-dfn-documentnaam-1">DocumentNaam</a>
+  </th><th> <a data-link-type="dfn" href="#dfn-documentversie" class="internalDFN" id="ref-for-dfn-documentversie-1">DocumentVersie</a>
+  </th><th> <a data-link-type="dfn" href="#dfn-documentversiedatum" class="internalDFN" id="ref-for-dfn-documentversiedatum-1">DocumentVersieDatum</a>
+</th></tr></thead>
+<tbody><tr class="def">
+  <td> In deze kolom staat de unieke naam (URI) van het document.
+  </td><td> In deze kolom staat de code ofwel het nummer van het document.
+  </td><td> In deze kolom staat de naam van het document.
+  </td><td> In deze kolom staat de versie van het document.
+  </td><td> In deze kolom staat de versiedatum van het document.
+</td></tr>
+</tbody></table></div>
+
+<div class="overlarge"><table class="data">
+<thead>
+  <tr><th> <a data-link-type="dfn" href="#dfn-documentauteur" class="internalDFN" id="ref-for-dfn-documentauteur-1">DocumentAuteur</a>
+  </th><th> <a data-link-type="dfn" href="#dfn-documenttype" class="internalDFN" id="ref-for-dfn-documenttype-1">DocumentType</a>
+  </th><th> <a data-link-type="dfn" href="#dfn-documentsectie" class="internalDFN" id="ref-for-dfn-documentsectie-1">DocumentSectie</a>
+  </th><th> <a data-link-type="dfn" href="#dfn-documentsectienaam" class="internalDFN" id="ref-for-dfn-documentsectienaam-1">DocumentSectieNaam</a>
+  </th><th> <a data-link-type="dfn" href="#dfn-documentsectietekst" class="internalDFN" id="ref-for-dfn-documentsectietekst-1">DocumentSectieTekst</a>
+</th></tr></thead>
+<tbody><tr class="def">
+  <td> In deze kolom staat de auteur van het document.
+  </td><td> In deze kolom staat het documenttype.
+  </td><td> In deze kolom staat de sectie URI
+  </td><td> In deze kolom staat de sectie naam.
+  </td><td> In deze kolom staat de sectie tekst.
+</td></tr>
+</tbody></table></div>
+
+</section><section id="details-documententabel"><div class="header-wrapper"><h3 id="x5-2-details-documententabel"><bdi class="secno">5.2 </bdi>Details documententabel</h3><a class="self-link" href="#details-documententabel" aria-label="Permalink for Section 5.2"></a></div>
+<section id="documenturi"><div class="header-wrapper"><h4 id="x5-2-1-documenturi"><bdi class="secno">5.2.1 </bdi><dfn id="dfn-documenturi" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">DocumentURI</dfn></h4><a class="self-link" href="#documenturi" aria-label="Permalink for Section 5.2.1"></a></div>
+<p>De URI is de unieke identifier voor het document binnen het project.</p>
+<p><a href="https://www.w3.org/wiki/URI">URI</a>; Voor het opstellen van URI's heeft de NEN 2660-2 een URI-strategie die je moet volgen.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>n.v.t.</td>
+<td>1:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+</tr>
+
+</tbody></table>
+<blockquote>
+<p>Een URI maakt het meteen "linked data proof"</p>
+</blockquote>
+</section><section id="documentcode"><div class="header-wrapper"><h4 id="x5-2-2-documentcode"><bdi class="secno">5.2.2 </bdi><dfn id="dfn-documentcode" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">DocumentCode</dfn></h4><a class="self-link" href="#documentcode" aria-label="Permalink for Section 5.2.2"></a></div>
+<p>De DocumentCode is een nummer van het onderwerp in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar hetdocument te verwijzen, zonder de volledige URI te hoeven benoemen.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#notation">skos:notation</a></td>
+<td>1:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="documentnaam"><div class="header-wrapper"><h4 id="x5-2-3-documentnaam"><bdi class="secno">5.2.3 </bdi><dfn id="dfn-documentnaam" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">DocumentNaam</dfn></h4><a class="self-link" href="#documentnaam" aria-label="Permalink for Section 5.2.3"></a></div>
+<p>De DocumentNaam is de voor mensen leesbare naam van het document. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel">skos:prefLabel</a></td>
+<td>1:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="documentversie"><div class="header-wrapper"><h4 id="x5-2-4-documentversie"><bdi class="secno">5.2.4 </bdi><dfn id="dfn-documentversie" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">DocumentVersie</dfn></h4><a class="self-link" href="#documentversie" aria-label="Permalink for Section 5.2.4"></a></div>
+<p>In deze kolom staat de versie van het document.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://data.crow.nl/contractspecificaties/def/versie">cs:versie</a></td>
+<td>0:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="documentversiedatum"><div class="header-wrapper"><h4 id="x5-2-5-documentversiedatum"><bdi class="secno">5.2.5 </bdi><dfn id="dfn-documentversiedatum" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">DocumentVersieDatum</dfn></h4><a class="self-link" href="#documentversiedatum" aria-label="Permalink for Section 5.2.5"></a></div>
+<p>In deze kolom staat de versiedatum van het document.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://data.crow.nl/contractspecificaties/def/versieDatum">cs:versieDatum</a></td>
+<td>0:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#date">xsd:date</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="documentauteur"><div class="header-wrapper"><h4 id="x5-2-6-documentauteur"><bdi class="secno">5.2.6 </bdi><dfn id="dfn-documentauteur" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">DocumentAuteur</dfn></h4><a class="self-link" href="#documentauteur" aria-label="Permalink for Section 5.2.6"></a></div>
+<p>In deze kolom staat de auteur van het document.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="http://purl.org/dc/terms/creator">dct:creator</a></td>
+<td>0:n</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="documenttype"><div class="header-wrapper"><h4 id="x5-2-7-documenttype"><bdi class="secno">5.2.7 </bdi><dfn id="dfn-documenttype" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">DocumentType</dfn></h4><a class="self-link" href="#documenttype" aria-label="Permalink for Section 5.2.7"></a></div>
+<p>In deze kolom staat het documenttype. Voor documenttypen is nog geen nationale afspraak gemaakt.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://data.crow.nl/contractspecificaties/def/documentType">cs:documentType</a></td>
+<td>0:1</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="documentsectie"><div class="header-wrapper"><h4 id="x5-2-8-documentsectie"><bdi class="secno">5.2.8 </bdi><dfn id="dfn-documentsectie" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">DocumentSectie</dfn></h4><a class="self-link" href="#documentsectie" aria-label="Permalink for Section 5.2.8"></a></div>
+<p>In deze kolom staat de documentsectie. Deze kan gebruikt worden om een document verder op te delen. Middels de 'heeft deel' relatie kunnen net zoveel secties aan een document toegevoegd worden als er nodig zijn.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://bimloket.github.io/nen2660/term#hasPart">nen2660:hasPart</a></td>
+<td>0:n (t.o.v. Document)</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="documentsectienaam"><div class="header-wrapper"><h4 id="x5-2-9-documentsectienaam"><bdi class="secno">5.2.9 </bdi><dfn id="dfn-documentsectienaam" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">DocumentSectieNaam</dfn></h4><a class="self-link" href="#documentsectienaam" aria-label="Permalink for Section 5.2.9"></a></div>
+<p>De DocumentSectieNaam is de voor mensen leesbare naam van het onderwerp. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel">skos:prefLabel</a></td>
+<td>1:1 (t.o.v. DocumentSectie)</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section><section id="documentsectietekst"><div class="header-wrapper"><h4 id="x5-2-10-documentsectietekst"><bdi class="secno">5.2.10 </bdi><dfn id="dfn-documentsectietekst" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">DocumentSectieTekst</dfn></h4><a class="self-link" href="#documentsectietekst" aria-label="Permalink for Section 5.2.10"></a></div>
+<p>In deze kolom staat de paragraaftekst.</p>
+<table class="def">
+<thead>
+<tr>
+<th>Taalbinding</th>
+<th>Kardinaliteit</th>
+<th>Datatype</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">rdf:value</a></td>
+<td>0:1 (t.o.v. DocumentSectie)</td>
+<td><a href="https://www.w3.org/2001/XMLSchema#string">xsd:string</a></td>
+</tr>
+
+</tbody></table>
+</section></section></section>
+
+
+  <section id="conformance"><div class="header-wrapper"><h2 id="x6-conformiteit"><bdi class="secno">6. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 6."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn,
+      zijn ook alle diagrammen, voorbeelden, en noten in dit document niet
+      normatief. Verder is alles in dit document normatief.</p>
+    
+  </section>
+
+  <section id="tof"><div class="header-wrapper"><h2 id="x7-lijst-met-figuren"><bdi class="secno">7. </bdi>Lijst met figuren</h2><a class="self-link" href="#tof" aria-label="Permalink for Section 7."></a></div>
+    
+  <ul class="tof">
+        <li class="tofline">
+    <a class="tocxref" href="#fig-uml-schema-van-een-deel-van-de-nen2660-2-voor-toepassing-op-uitwisseling-van-contractuele-eisen">Figuur <bdi class="figno">1</bdi> <span class="fig-title">UML Schema van een deel van de NEN2660-2 voor toepassing op uitwisseling van contractuele eisen
+</span></a>
+  </li><li class="tofline">
+    <a class="tocxref" href="#fig-het-informatiemodel-voor-het-verificatieplan">Figuur <bdi class="figno">2</bdi> <span class="fig-title">Het informatiemodel voor het verificatieplan.
+</span></a>
+  </li>
+      </ul></section>
+
+  <section id="index" class="appendix"><div class="header-wrapper"><h2 id="a-index"><bdi class="secno">A. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix A."></a></div>
+    
+  <section id="index-defined-here"><div class="header-wrapper"><h3 id="a-1-termen-gedefinieerd-door-deze-specificatie"><bdi class="secno">A.1 </bdi>Termen gedefinieerd door deze specificatie</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix A.1"></a></div>
+    
+    <ul class="index">
+    <li>
+      <a class="index-term" href="#dfn-actueel">Actueel</a> 
+    <span class="print-only">§3.2.15</span></li><li>
+      <a class="index-term" href="#dfn-analyse">Analyse</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-aspecteis-beschikbaarheid">Aspecteis: Beschikbaarheid</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-aspecteis-betrouwbaarheid">Aspecteis: Betrouwbaarheid</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-aspecteis-duurzaamheid">Aspecteis: Duurzaamheid</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-aspecteis-gezondheid">Aspecteis: Gezondheid</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-aspecteis-omgeving">Aspecteis: Omgeving</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-aspecteis-onderhoudbaarheid">Aspecteis: Onderhoudbaarheid</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-aspecteis-sloopbaarheid">Aspecteis: Sloopbaarheid</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-aspecteis-toekomstvastheid">Aspecteis: Toekomstvastheid</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-aspecteis-veiligheid">Aspecteis: Veiligheid</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-aspecteis-vormgeving">Aspecteis: Vormgeving</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-auditen">Auditen</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-beheer-en-onderhoudsfase">Beheer- en onderhoudsfase</a> 
+    <span class="print-only">§3.2.9</span></li><li>
+      <a class="index-term" href="#dfn-beoordelen">Beoordelen</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-beproeven">Beproeven</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-berekening">Berekening</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-conceptfase">Conceptfase</a> 
+    <span class="print-only">§3.2.9</span></li><li>
+      <a class="index-term" href="#dfn-contract">Contract</a> 
+    <span class="print-only">§B.</span></li><li>
+      <a class="index-term" href="#dfn-demonstratie">Demonstratie</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-documentauteur">DocumentAuteur</a> 
+    <span class="print-only">§5.2.6</span></li><li>
+      <a class="index-term" href="#dfn-documentbeoordeling">Documentbeoordeling</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-documentcode">DocumentCode</a> 
+    <span class="print-only">§5.2.2</span></li><li>
+      <a class="index-term" href="#dfn-documentnaam">DocumentNaam</a> 
+    <span class="print-only">§5.2.3</span></li><li>
+      <a class="index-term" href="#dfn-documentsectie">DocumentSectie</a> 
+    <span class="print-only">§5.2.8</span></li><li>
+      <a class="index-term" href="#dfn-documentsectienaam">DocumentSectieNaam</a> 
+    <span class="print-only">§5.2.9</span></li><li>
+      <a class="index-term" href="#dfn-documentsectietekst">DocumentSectieTekst</a> 
+    <span class="print-only">§5.2.10</span></li><li>
+      <a class="index-term" href="#dfn-documenttype">DocumentType</a> 
+    <span class="print-only">§5.2.7</span></li><li>
+      <a class="index-term" href="#dfn-documenturi">DocumentURI</a> 
+    <span class="print-only">§5.2.1</span></li><li>
+      <a class="index-term" href="#dfn-documentversie">DocumentVersie</a> 
+    <span class="print-only">§5.2.4</span></li><li>
+      <a class="index-term" href="#dfn-documentversiedatum">DocumentVersieDatum</a> 
+    <span class="print-only">§5.2.5</span></li><li>
+      <a class="index-term" href="#dfn-eisbron">EisBron</a> 
+    <span class="print-only">§3.2.12</span></li><li>
+      <a class="index-term" href="#dfn-eiscode">EisCode</a> 
+    <span class="print-only">§3.2.2</span></li><li>
+      <a class="index-term" href="#dfn-eisheeftdeel">EisheeftDeel</a> 
+    <span class="print-only">§3.2.11</span></li><li>
+      <a class="index-term" href="#dfn-eisheeftonderwerp">EisheeftOnderwerp</a> 
+    <span class="print-only">§3.2.6</span></li><li>
+      <a class="index-term" href="#dfn-eisnaam">EisNaam</a> 
+    <span class="print-only">§3.2.3</span></li><li>
+      <a class="index-term" href="#dfn-eisreferentiedocument">EisReferentiedocument</a> 
+    <span class="print-only">§3.2.13</span></li><li>
+      <a class="index-term" href="#dfn-eisstatus">EisStatus</a> 
+    <span class="print-only">§3.2.15</span></li><li>
+      <a class="index-term" href="#dfn-eisstatusonderbouwing">EisStatusOnderbouwing</a> 
+    <span class="print-only">§3.2.16</span></li><li>
+      <a class="index-term" href="#dfn-eistekst">EisTekst</a> 
+    <span class="print-only">§3.2.4</span></li><li>
+      <a class="index-term" href="#dfn-eistoelichting">EisToelichting</a> 
+    <span class="print-only">§3.2.5</span></li><li>
+      <a class="index-term" href="#dfn-eistype">EisType</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-eisuri">EisURI</a> 
+    <span class="print-only">§3.2.1</span></li><li>
+      <a class="index-term" href="#dfn-evalueren">Evalueren</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-factory-acceptance-test">Factory Acceptance Test</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-factory-integration-test">Factory Integration Test</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-functie">Functie</a> 
+    <span class="print-only">§4.2.4</span></li><li>
+      <a class="index-term" href="#dfn-functie-eis">Functie-eis</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-fysiekobject">FysiekObject</a> 
+    <span class="print-only">§4.2.4</span></li><li>
+      <a class="index-term" href="#dfn-gebruiksfase">Gebruiksfase</a> 
+    <span class="print-only">§3.2.9</span></li><li>
+      <a class="index-term" href="#dfn-informatie-eis">Informatie-eis</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-informatieproduct">Informatieproduct</a> 
+    <span class="print-only">§4.2.4</span></li><li>
+      <a class="index-term" href="#dfn-inspectie-cs">Inspectie (cs)</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-keuren">Keuren</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-meten">Meten</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-modellering">Modellering</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-monitoren">Monitoren</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-nen-2660">NEN-2660</a> 
+    <span class="print-only">§B.</span></li><li>
+      <a class="index-term" href="#dfn-onderwerpcode">OnderwerpCode</a> 
+    <span class="print-only">§4.2.2</span></li><li>
+      <a class="index-term" href="#dfn-onderwerpdefinitie">OnderwerpDefinitie</a> 
+    <span class="print-only">§4.2.5</span></li><li>
+      <a class="index-term" href="#dfn-onderwerpheeftdeel">OnderwerpheeftDeel</a> 
+    <span class="print-only">§4.2.6</span></li><li>
+      <a class="index-term" href="#dfn-onderwerpnaam">OnderwerpNaam</a> 
+    <span class="print-only">§4.2.3</span></li><li>
+      <a class="index-term" href="#dfn-onderwerptype">OnderwerpType</a> 
+    <span class="print-only">§4.2.4</span></li><li>
+      <a class="index-term" href="#dfn-onderwerpuri">OnderwerpURI</a> 
+    <span class="print-only">§4.2.1</span></li><li>
+      <a class="index-term" href="#dfn-ontologie">Ontologie</a> 
+    <span class="print-only">§B.</span></li><li>
+      <a class="index-term" href="#dfn-ontwikkelfase">Ontwikkelfase</a> 
+    <span class="print-only">§3.2.9</span></li><li>
+      <a class="index-term" href="#dfn-otl">OTL</a> 
+    <span class="print-only">§B.</span></li><li>
+      <a class="index-term" href="#dfn-owl">OWL</a> 
+    <span class="print-only">§B.</span></li><li>
+      <a class="index-term" href="#dfn-proceseis">Proceseis</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-rdf">RDF</a> 
+    <span class="print-only">§B.</span></li><li>
+      <a class="index-term" href="#dfn-rdfs">RDFS</a> 
+    <span class="print-only">§B.</span></li><li>
+      <a class="index-term" href="#dfn-realisatiefase">Realisatiefase</a> 
+    <span class="print-only">§3.2.9</span></li><li>
+      <a class="index-term" href="#dfn-referentie">Referentie</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-schouw">Schouw</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-shacl">SHACL</a> 
+    <span class="print-only">§B.</span></li><li>
+      <a class="index-term" href="#dfn-simulaties">Simulaties</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-site-acceptance-test">Site Acceptance Test</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-site-integration-test">Site Integration Test</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-skos">SKOS</a> 
+    <span class="print-only">§B.</span></li><li>
+      <a class="index-term" href="#dfn-sloopfase">Sloopfase</a> 
+    <span class="print-only">§3.2.9</span></li><li>
+      <a class="index-term" href="#dfn-systeemeis">Systeemeis</a> 
+    <span class="print-only">§3.2.14</span></li><li>
+      <a class="index-term" href="#dfn-testen">Testen</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-uml">UML</a> 
+    <span class="print-only">§B.</span></li><li>
+      <a class="index-term" href="#dfn-unique-name-assumption">Unique Name Assumption (UNA)</a> 
+    <span class="print-only">§B.</span></li><li>
+      <a class="index-term" href="#dfn-vaststellen">Vaststellen</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-verificatieplanfase">VerificatieplanFase</a> 
+    <span class="print-only">§3.2.9</span></li><li>
+      <a class="index-term" href="#dfn-verificatieplanmethode">VerificatieplanMethode</a> 
+    <span class="print-only">§3.2.8</span></li><li>
+      <a class="index-term" href="#dfn-verificatieplantoelichting">VerificatieplanToelichting</a> 
+    <span class="print-only">§3.2.10</span></li><li>
+      <a class="index-term" href="#dfn-verificatieplanuri">VerificatieplanURI</a> 
+    <span class="print-only">§3.2.7</span></li><li>
+      <a class="index-term" href="#dfn-vervallen">Vervallen</a> 
+    <span class="print-only">§3.2.15</span></li><li>
+      <a class="index-term" href="#dfn-w3c">W3C</a> 
+    <span class="print-only">§B.</span></li><li>
+      <a class="index-term" href="#dfn-werkzaamheid">Werkzaamheid</a> 
+    <span class="print-only">§4.2.4</span></li>
+  </ul>
+  </section><section id="index-defined-elsewhere"><div class="header-wrapper"><h3 id="a-2-termen-gedefinieerd-door-referentie"><bdi class="secno">A.2 </bdi>Termen gedefinieerd door referentie</h3><a class="self-link" href="#index-defined-elsewhere" aria-label="Permalink for Appendix A.2"></a></div>
+    
+    <ul class="index">
+    
+  </ul>
+  </section></section>
+
+<section class="appendix informative" id="glossary"><div class="header-wrapper"><h2 id="b-glossary"><bdi class="secno">B. </bdi>Glossary</h2><a class="self-link" href="#glossary" aria-label="Permalink for Appendix B."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+    
+    <p><dfn data-lt="NEN-2660" id="dfn-nen-2660" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">NEN-2660</dfn>: Regels voor informatiemodellering van de gebouwde omgeving.</p>
+    <p><dfn data-lt="W3C" id="dfn-w3c" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">W3C</dfn>: World Wide Web Consortium, internationale organisatie voor de standaardisatie van het het web.</p>
+    <p><dfn data-lt="OTL" id="dfn-otl" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">OTL</dfn>: Object Type Library (en) of Objecttypenbibliotheek (nl). Term die in de bouwsector gebruikt wordt en een specialisatie is van een <a href="#dfn-ontologie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-ontologie-1">Ontologie</a>.</p>
+    <p><dfn data-lt="unique name assumption|UNA|Unique Name Assumption (UNA)" id="dfn-unique-name-assumption" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Unique Name Assumption (UNA)</dfn>: de aanname dat een ding maar één naam (id) heeft en dat verschillende namen dus  verwijzen naar verschillende dingen in de werkelijkheid.</p>
+    <p><dfn data-lt="UML|Unified Modeling Language" id="dfn-uml" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">UML</dfn>: Unified Modeling Language [<cite><a class="bibref" data-link-type="biblio" href="#bib-uml" title="OMG Unified Modeling Language">uml</a></cite>]</p>
+    <p><dfn data-lt="RDF|Resource Description Framework" id="dfn-rdf" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">RDF</dfn>: Resource Description Framework. Zie [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf11-primer" title="RDF 1.1 Primer">rdf11-primer</a></cite>].</p>
+    <p><dfn data-lt="RDFS|RDF Schema" id="dfn-rdfs" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">RDFS</dfn>: RDF Schema, taal waarin je een Linked Data ontologie kan uitdrukken [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf-schema" title="RDF Schema 1.1">rdf-schema</a></cite>].</p>
+    <p><dfn data-lt="SKOS" id="dfn-skos" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">SKOS</dfn>: Simple Knowledge Organization System. Zie [<cite><a class="bibref" data-link-type="biblio" href="#bib-skos-primer" title="SKOS Simple Knowledge Organization System Primer">skos-primer</a></cite>]</p>
+    <p><dfn data-lt="OWL" id="dfn-owl" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">OWL</dfn>: Web Ontology Language [<cite><a class="bibref" data-link-type="biblio" href="#bib-owl2-overview" title="OWL 2 Web Ontology Language Document Overview (Second Edition)">owl2-overview</a></cite>], bevat uitgebreidere mogelijkheden dan RDFS om een Linked Data ontologie uit te drukken. </p>
+    <p><dfn data-lt="SHACL" id="dfn-shacl" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">SHACL</dfn>: Shapes Constraints Language [<cite><a class="bibref" data-link-type="biblio" href="#bib-shacl" title="Shapes Constraint Language (SHACL)">shacl</a></cite>], een taal om RDF data te valideren tegen een set regels.</p>
+    <p><dfn data-lt="ontologie|ontologieën|Ontologie" id="dfn-ontologie" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Ontologie</dfn>: Een kennismodel van een specifiek kennisdomein in de werkelijkheid. Bevat een set regels, die gebruikt kunnen worden om extra kennis af te leiden uit gelinkte data. Met behulp van zo'n model kunnen computers begrijpen wat de data betekent en redeneren over data. </p>
+    <p><dfn data-lt="Contract" id="dfn-contract" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Contract</dfn>: de uitvraag of overeenkomst waarmee een asset manager zijn ontwerp-, bouw- of onderhoudswerk overeenkomt met een marktpartij. </p>	
+</section>
+
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<script id="annotation-service-runtime">(() => {
+// @ts-check
+const SETTING_KEY = "annotation-service-hypothesis";
+const SETTING_VALUE_ALLOWED = "allowed";
+const hClientDefault = {
+  openSidebar: false,
+  showHighlights: true,
+  theme: "classic",
+  branding: {
+    accentColor: "rgb(0, 157, 224)",
+    appBackgroundColor: "white",
+    ctaBackgroundColor: "rgb(255, 110, 26)",
+    ctaTextColor: "white",
+    selectionFontFamily: "'Museo Sans', Museo, Helvetica, Arial, sans serif",
+    annotationFontFamily: "'Museo Sans', Museo, Helvetica, Arial, sans serif",
+  },
+};
+
+if (document.respec) {
+  document.respec.ready.then(render);
+} else {
+  render();
+}
+
+/** Render the placeholder (Load Service Button) or annotation info (# annotations, Show Annotation Button). */
+function render() {
+  if (localStorage.getItem(SETTING_KEY) == SETTING_VALUE_ALLOWED) {
+    renderAnnotationServiceInfo();
+  } else {
+    renderPlaceholder();
+  }
+}
+
+/** Render Load Service Button, with privacy info. */
+function renderPlaceholder() {
+  localStorage.removeItem(SETTING_KEY);
+
+  /** @type {HTMLElement} */
+  const placeholder = document.querySelector("#annotation-service-placeholder");
+  placeholder.hidden = false;
+
+  const listener = loadButtonListener();
+  document
+    .querySelector("[data-load-annotation-service]")
+    .addEventListener("keydown", listener);
+  document
+    .querySelector("[data-load-annotation-service]")
+    .addEventListener("click", listener);
+
+  /** @type {HTMLElement} */
+  const serviceInfo = document.querySelector("#annotation-service-loaded");
+  serviceInfo.hidden = true;
+}
+
+function loadButtonListener() {
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLButtonElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    target.disabled = true;
+    localStorage.setItem(SETTING_KEY, SETTING_VALUE_ALLOWED);
+    renderAnnotationServiceInfo();
+  };
+}
+
+function unloadButtonListener() {
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLButtonElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    target.disabled = true;
+    localStorage.removeItem(SETTING_KEY);
+    removeHScript();
+  };
+}
+
+function renderAnnotationServiceInfo() {
+  addHConfig(document);
+  addHScript(document);
+}
+
+/**
+ *
+ * @param {Document} doc
+ * @param {*} conf
+ */
+function addHScript(doc, conf) {
+  const script = doc.createElement("script");
+  script.src = "https://hypothes.is/embed.js";
+  script.async = true;
+  doc.body.appendChild(script);
+
+  script.addEventListener("load", event => {
+    /** @type {HTMLElement} */
+    const placeholder = document.querySelector(
+      "#annotation-service-placeholder"
+    );
+    placeholder.hidden = true;
+
+    /** @type {HTMLElement} */
+    const serviceInfo = document.querySelector("#annotation-service-loaded");
+    serviceInfo.hidden = false;
+
+    const unloadListener = unloadButtonListener();
+    document
+      .querySelector("[data-unload-annotation-service]")
+      .addEventListener("keydown", unloadListener);
+    document
+      .querySelector("[data-unload-annotation-service]")
+      .addEventListener("click", unloadListener);
+  });
+}
+
+/**
+ * Retract Hypothesis permission.
+ */
+function removeHScript() {
+  // Deleting the hypothesis-script, does not undo its changes, listeners etc.
+  // Instead, reload the frame.
+  window.location.reload();
+}
+
+/**
+ *
+ * @param {Document} doc
+ * @param {*} conf
+ */
+function addHConfig(doc, conf) {
+  const script = doc.createElement("script");
+  script.className = "js-hypothesis-config";
+  script.type = "application/json";
+  script.innerText = JSON.stringify(hClientDefault);
+  doc.body.appendChild(script);
+}
+})()</script><section id="references" class="appendix"><div class="header-wrapper"><h2 id="c-referenties"><bdi class="secno">C. </bdi>Referenties</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix C."></a></div><section id="informatieve-referenties"><div class="header-wrapper"><h3 id="c-1-informatieve-referenties"><bdi class="secno">C.1 </bdi>Informatieve referenties</h3><a class="self-link" href="#informatieve-referenties" aria-label="Permalink for Appendix C.1"></a></div>
+    
+    <dl class="bibliography"><dt id="bib-owl2-overview">[owl2-overview]</dt><dd>
+      <a href="https://www.w3.org/TR/owl2-overview/"><cite>OWL 2 Web Ontology Language Document Overview (Second Edition)</cite></a>. W3C OWL Working Group.  W3C. 11 December 2012. W3C Recommendation. URL: <a href="https://www.w3.org/TR/owl2-overview/">https://www.w3.org/TR/owl2-overview/</a>
+    </dd><dt id="bib-rdf-schema">[rdf-schema]</dt><dd>
+      <a href="https://www.w3.org/TR/rdf-schema/"><cite>RDF Schema 1.1</cite></a>. Dan Brickley; Ramanathan Guha.  W3C. 25 February 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/rdf-schema/">https://www.w3.org/TR/rdf-schema/</a>
+    </dd><dt id="bib-rdf11-primer">[rdf11-primer]</dt><dd>
+      <a href="https://www.w3.org/TR/rdf11-primer/"><cite>RDF 1.1 Primer</cite></a>. Guus Schreiber; Yves Raimond.  W3C. 24 June 2014. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/rdf11-primer/">https://www.w3.org/TR/rdf11-primer/</a>
+    </dd><dt id="bib-shacl">[shacl]</dt><dd>
+      <a href="https://www.w3.org/TR/shacl/"><cite>Shapes Constraint Language (SHACL)</cite></a>. Holger Knublauch; Dimitris Kontokostas.  W3C. 20 July 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/shacl/">https://www.w3.org/TR/shacl/</a>
+    </dd><dt id="bib-skos-primer">[skos-primer]</dt><dd>
+      <a href="https://www.w3.org/TR/skos-primer/"><cite>SKOS Simple Knowledge Organization System Primer</cite></a>. Antoine Isaac; Ed Summers.  W3C. 18 August 2009. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/skos-primer/">https://www.w3.org/TR/skos-primer/</a>
+    </dd><dt id="bib-uml">[uml]</dt><dd>
+      <a href="http://www.omg.org/spec/UML/"><cite>OMG Unified Modeling Language</cite></a>. Open Management Group.  OMG. 1 March 2015. Normative. URL: <a href="http://www.omg.org/spec/UML/">http://www.omg.org/spec/UML/</a>
+    </dd></dl>
+  </section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-eisuri" aria-label="Links in this document to definition: EisURI">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-eisuri" aria-label="Permalink for definition: EisURI. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-eisuri-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> <a href="#ref-for-dfn-eisuri-2" title="Reference 2">(2)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-eiscode" aria-label="Links in this document to definition: EisCode">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-eiscode" aria-label="Permalink for definition: EisCode. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-eiscode-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> <a href="#ref-for-dfn-eiscode-2" title="Reference 2">(2)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-eisnaam" aria-label="Links in this document to definition: EisNaam">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-eisnaam" aria-label="Permalink for definition: EisNaam. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-eisnaam-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> <a href="#ref-for-dfn-eisnaam-2" title="Reference 2">(2)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-eistekst" aria-label="Links in this document to definition: EisTekst">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-eistekst" aria-label="Permalink for definition: EisTekst. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-eistekst-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> <a href="#ref-for-dfn-eistekst-2" title="Reference 2">(2)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-eistoelichting" aria-label="Links in this document to definition: EisToelichting">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-eistoelichting" aria-label="Permalink for definition: EisToelichting. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-eistoelichting-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> <a href="#ref-for-dfn-eistoelichting-2" title="Reference 2">(2)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-eisheeftonderwerp" aria-label="Links in this document to definition: EisheeftOnderwerp">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-eisheeftonderwerp" aria-label="Permalink for definition: EisheeftOnderwerp. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-eisheeftonderwerp-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> <a href="#ref-for-dfn-eisheeftonderwerp-2" title="Reference 2">(2)</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-verificatieplanuri" aria-label="Links in this document to definition: VerificatieplanURI">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-verificatieplanuri" aria-label="Permalink for definition: VerificatieplanURI. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-verificatieplanuri-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-verificatieplanmethode" aria-label="Links in this document to definition: VerificatieplanMethode">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-verificatieplanmethode" aria-label="Permalink for definition: VerificatieplanMethode. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-verificatieplanmethode-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-vaststellen" aria-label="Links in this document to definition: Vaststellen">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-vaststellen" aria-label="Permalink for definition: Vaststellen. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-beoordelen" aria-label="Links in this document to definition: Beoordelen">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-beoordelen" aria-label="Permalink for definition: Beoordelen. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-monitoren" aria-label="Links in this document to definition: Monitoren">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-monitoren" aria-label="Permalink for definition: Monitoren. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-meten" aria-label="Links in this document to definition: Meten">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-meten" aria-label="Permalink for definition: Meten. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-keuren" aria-label="Links in this document to definition: Keuren">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-keuren" aria-label="Permalink for definition: Keuren. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-beproeven" aria-label="Links in this document to definition: Beproeven">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-beproeven" aria-label="Permalink for definition: Beproeven. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-evalueren" aria-label="Links in this document to definition: Evalueren">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-evalueren" aria-label="Permalink for definition: Evalueren. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-analyse" aria-label="Links in this document to definition: Analyse">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-analyse" aria-label="Permalink for definition: Analyse. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-berekening" aria-label="Links in this document to definition: Berekening">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-berekening" aria-label="Permalink for definition: Berekening. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-auditen" aria-label="Links in this document to definition: Auditen">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-auditen" aria-label="Permalink for definition: Auditen. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-demonstratie" aria-label="Links in this document to definition: Demonstratie">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-demonstratie" aria-label="Permalink for definition: Demonstratie. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-documentbeoordeling" aria-label="Links in this document to definition: Documentbeoordeling">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-documentbeoordeling" aria-label="Permalink for definition: Documentbeoordeling. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-modellering" aria-label="Links in this document to definition: Modellering">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-modellering" aria-label="Permalink for definition: Modellering. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-simulaties" aria-label="Links in this document to definition: Simulaties">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-simulaties" aria-label="Permalink for definition: Simulaties. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-referentie" aria-label="Links in this document to definition: Referentie">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-referentie" aria-label="Permalink for definition: Referentie. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-testen" aria-label="Links in this document to definition: Testen">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-testen" aria-label="Permalink for definition: Testen. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-factory-integration-test" aria-label="Links in this document to definition: Factory Integration Test">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-factory-integration-test" aria-label="Permalink for definition: Factory Integration Test. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-factory-acceptance-test" aria-label="Links in this document to definition: Factory Acceptance Test">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-factory-acceptance-test" aria-label="Permalink for definition: Factory Acceptance Test. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-site-integration-test" aria-label="Links in this document to definition: Site Integration Test">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-site-integration-test" aria-label="Permalink for definition: Site Integration Test. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-site-acceptance-test" aria-label="Links in this document to definition: Site Acceptance Test">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-site-acceptance-test" aria-label="Permalink for definition: Site Acceptance Test. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-schouw" aria-label="Links in this document to definition: Schouw">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-schouw" aria-label="Permalink for definition: Schouw. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-inspectie-cs" aria-label="Links in this document to definition: Inspectie (cs)">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-inspectie-cs" aria-label="Permalink for definition: Inspectie (cs). Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-verificatieplanfase" aria-label="Links in this document to definition: VerificatieplanFase">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-verificatieplanfase" aria-label="Permalink for definition: VerificatieplanFase. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-verificatieplanfase-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-conceptfase" aria-label="Links in this document to definition: Conceptfase">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-conceptfase" aria-label="Permalink for definition: Conceptfase. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-ontwikkelfase" aria-label="Links in this document to definition: Ontwikkelfase">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-ontwikkelfase" aria-label="Permalink for definition: Ontwikkelfase. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-realisatiefase" aria-label="Links in this document to definition: Realisatiefase">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-realisatiefase" aria-label="Permalink for definition: Realisatiefase. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-gebruiksfase" aria-label="Links in this document to definition: Gebruiksfase">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-gebruiksfase" aria-label="Permalink for definition: Gebruiksfase. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-beheer-en-onderhoudsfase" aria-label="Links in this document to definition: Beheer- en onderhoudsfase">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-beheer-en-onderhoudsfase" aria-label="Permalink for definition: Beheer- en onderhoudsfase. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-sloopfase" aria-label="Links in this document to definition: Sloopfase">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-sloopfase" aria-label="Permalink for definition: Sloopfase. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-verificatieplantoelichting" aria-label="Links in this document to definition: VerificatieplanToelichting">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-verificatieplantoelichting" aria-label="Permalink for definition: VerificatieplanToelichting. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-verificatieplantoelichting-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-eisheeftdeel" aria-label="Links in this document to definition: EisheeftDeel">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-eisheeftdeel" aria-label="Permalink for definition: EisheeftDeel. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-eisheeftdeel-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-eisbron" aria-label="Links in this document to definition: EisBron">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-eisbron" aria-label="Permalink for definition: EisBron. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-eisbron-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> 
+  </li><li>
+    <a href="#ref-for-dfn-eisbron-2" title="§ 3.2.1 EisURI">§ 3.2.1 EisURI</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-eisreferentiedocument" aria-label="Links in this document to definition: EisReferentiedocument">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-eisreferentiedocument" aria-label="Permalink for definition: EisReferentiedocument. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-eisreferentiedocument-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-eistype" aria-label="Links in this document to definition: EisType">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-eistype" aria-label="Permalink for definition: EisType. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-eistype-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-informatie-eis" aria-label="Links in this document to definition: Informatie-eis">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-informatie-eis" aria-label="Permalink for definition: Informatie-eis. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-systeemeis" aria-label="Links in this document to definition: Systeemeis">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-systeemeis" aria-label="Permalink for definition: Systeemeis. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-proceseis" aria-label="Links in this document to definition: Proceseis">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-proceseis" aria-label="Permalink for definition: Proceseis. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-functie-eis" aria-label="Links in this document to definition: Functie-eis">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-functie-eis" aria-label="Permalink for definition: Functie-eis. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-aspecteis-betrouwbaarheid" aria-label="Links in this document to definition: Aspecteis: Betrouwbaarheid">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-aspecteis-betrouwbaarheid" aria-label="Permalink for definition: Aspecteis: Betrouwbaarheid. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-aspecteis-beschikbaarheid" aria-label="Links in this document to definition: Aspecteis: Beschikbaarheid">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-aspecteis-beschikbaarheid" aria-label="Permalink for definition: Aspecteis: Beschikbaarheid. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-aspecteis-onderhoudbaarheid" aria-label="Links in this document to definition: Aspecteis: Onderhoudbaarheid">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-aspecteis-onderhoudbaarheid" aria-label="Permalink for definition: Aspecteis: Onderhoudbaarheid. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-aspecteis-veiligheid" aria-label="Links in this document to definition: Aspecteis: Veiligheid">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-aspecteis-veiligheid" aria-label="Permalink for definition: Aspecteis: Veiligheid. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-aspecteis-gezondheid" aria-label="Links in this document to definition: Aspecteis: Gezondheid">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-aspecteis-gezondheid" aria-label="Permalink for definition: Aspecteis: Gezondheid. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-aspecteis-omgeving" aria-label="Links in this document to definition: Aspecteis: Omgeving">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-aspecteis-omgeving" aria-label="Permalink for definition: Aspecteis: Omgeving. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-aspecteis-duurzaamheid" aria-label="Links in this document to definition: Aspecteis: Duurzaamheid">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-aspecteis-duurzaamheid" aria-label="Permalink for definition: Aspecteis: Duurzaamheid. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-aspecteis-vormgeving" aria-label="Links in this document to definition: Aspecteis: Vormgeving">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-aspecteis-vormgeving" aria-label="Permalink for definition: Aspecteis: Vormgeving. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-aspecteis-toekomstvastheid" aria-label="Links in this document to definition: Aspecteis: Toekomstvastheid">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-aspecteis-toekomstvastheid" aria-label="Permalink for definition: Aspecteis: Toekomstvastheid. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-aspecteis-sloopbaarheid" aria-label="Links in this document to definition: Aspecteis: Sloopbaarheid">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-aspecteis-sloopbaarheid" aria-label="Permalink for definition: Aspecteis: Sloopbaarheid. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-eisstatus" aria-label="Links in this document to definition: EisStatus">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-eisstatus" aria-label="Permalink for definition: EisStatus. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-eisstatus-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-actueel" aria-label="Links in this document to definition: Actueel">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-actueel" aria-label="Permalink for definition: Actueel. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-vervallen" aria-label="Links in this document to definition: Vervallen">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-vervallen" aria-label="Permalink for definition: Vervallen. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-eisstatusonderbouwing" aria-label="Links in this document to definition: EisStatusOnderbouwing">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-eisstatusonderbouwing" aria-label="Permalink for definition: EisStatusOnderbouwing. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-eisstatusonderbouwing-1" title="§ 3.1 Eisenformat">§ 3.1 Eisenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-onderwerpuri" aria-label="Links in this document to definition: OnderwerpURI">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-onderwerpuri" aria-label="Permalink for definition: OnderwerpURI. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-onderwerpuri-1" title="§ 4.1 Onderwerpenformat">§ 4.1 Onderwerpenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-onderwerpcode" aria-label="Links in this document to definition: OnderwerpCode">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-onderwerpcode" aria-label="Permalink for definition: OnderwerpCode. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-onderwerpcode-1" title="§ 4.1 Onderwerpenformat">§ 4.1 Onderwerpenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-onderwerpnaam" aria-label="Links in this document to definition: OnderwerpNaam">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-onderwerpnaam" aria-label="Permalink for definition: OnderwerpNaam. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-onderwerpnaam-1" title="§ 4.1 Onderwerpenformat">§ 4.1 Onderwerpenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-onderwerptype" aria-label="Links in this document to definition: OnderwerpType">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-onderwerptype" aria-label="Permalink for definition: OnderwerpType. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-onderwerptype-1" title="§ 4.1 Onderwerpenformat">§ 4.1 Onderwerpenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-fysiekobject" aria-label="Links in this document to definition: FysiekObject">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-fysiekobject" aria-label="Permalink for definition: FysiekObject. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-fysiekobject-1" title="§ 4.2.4 OnderwerpType">§ 4.2.4 OnderwerpType</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-functie" aria-label="Links in this document to definition: Functie">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-functie" aria-label="Permalink for definition: Functie. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-functie-1" title="§ 4.2.4 OnderwerpType">§ 4.2.4 OnderwerpType</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-werkzaamheid" aria-label="Links in this document to definition: Werkzaamheid">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-werkzaamheid" aria-label="Permalink for definition: Werkzaamheid. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-werkzaamheid-1" title="§ 4.2.4 OnderwerpType">§ 4.2.4 OnderwerpType</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-informatieproduct" aria-label="Links in this document to definition: Informatieproduct">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-informatieproduct" aria-label="Permalink for definition: Informatieproduct. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-informatieproduct-1" title="§ 4.2.4 OnderwerpType">§ 4.2.4 OnderwerpType</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-onderwerpdefinitie" aria-label="Links in this document to definition: OnderwerpDefinitie">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-onderwerpdefinitie" aria-label="Permalink for definition: OnderwerpDefinitie. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-onderwerpdefinitie-1" title="§ 4.1 Onderwerpenformat">§ 4.1 Onderwerpenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-onderwerpheeftdeel" aria-label="Links in this document to definition: OnderwerpheeftDeel">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-onderwerpheeftdeel" aria-label="Permalink for definition: OnderwerpheeftDeel. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-onderwerpheeftdeel-1" title="§ 4.1 Onderwerpenformat">§ 4.1 Onderwerpenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-documenturi" aria-label="Links in this document to definition: DocumentURI">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-documenturi" aria-label="Permalink for definition: DocumentURI. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-documenturi-1" title="§ 5.1 Documentenformat">§ 5.1 Documentenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-documentcode" aria-label="Links in this document to definition: DocumentCode">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-documentcode" aria-label="Permalink for definition: DocumentCode. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-documentcode-1" title="§ 5.1 Documentenformat">§ 5.1 Documentenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-documentnaam" aria-label="Links in this document to definition: DocumentNaam">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-documentnaam" aria-label="Permalink for definition: DocumentNaam. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-documentnaam-1" title="§ 5.1 Documentenformat">§ 5.1 Documentenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-documentversie" aria-label="Links in this document to definition: DocumentVersie">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-documentversie" aria-label="Permalink for definition: DocumentVersie. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-documentversie-1" title="§ 5.1 Documentenformat">§ 5.1 Documentenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-documentversiedatum" aria-label="Links in this document to definition: DocumentVersieDatum">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-documentversiedatum" aria-label="Permalink for definition: DocumentVersieDatum. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-documentversiedatum-1" title="§ 5.1 Documentenformat">§ 5.1 Documentenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-documentauteur" aria-label="Links in this document to definition: DocumentAuteur">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-documentauteur" aria-label="Permalink for definition: DocumentAuteur. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-documentauteur-1" title="§ 5.1 Documentenformat">§ 5.1 Documentenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-documenttype" aria-label="Links in this document to definition: DocumentType">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-documenttype" aria-label="Permalink for definition: DocumentType. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-documenttype-1" title="§ 5.1 Documentenformat">§ 5.1 Documentenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-documentsectie" aria-label="Links in this document to definition: DocumentSectie">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-documentsectie" aria-label="Permalink for definition: DocumentSectie. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-documentsectie-1" title="§ 5.1 Documentenformat">§ 5.1 Documentenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-documentsectienaam" aria-label="Links in this document to definition: DocumentSectieNaam">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-documentsectienaam" aria-label="Permalink for definition: DocumentSectieNaam. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-documentsectienaam-1" title="§ 5.1 Documentenformat">§ 5.1 Documentenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-documentsectietekst" aria-label="Links in this document to definition: DocumentSectieTekst">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-documentsectietekst" aria-label="Permalink for definition: DocumentSectieTekst. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-documentsectietekst-1" title="§ 5.1 Documentenformat">§ 5.1 Documentenformat</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-nen-2660" aria-label="Links in this document to definition: NEN-2660">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-nen-2660" aria-label="Permalink for definition: NEN-2660. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-w3c" aria-label="Links in this document to definition: W3C">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-w3c" aria-label="Permalink for definition: W3C. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-otl" aria-label="Links in this document to definition: OTL">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-otl" aria-label="Permalink for definition: OTL. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-unique-name-assumption" aria-label="Links in this document to definition: Unique Name Assumption (UNA)">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-unique-name-assumption" aria-label="Permalink for definition: Unique Name Assumption (UNA). Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-uml" aria-label="Links in this document to definition: UML">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-uml" aria-label="Permalink for definition: UML. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-rdf" aria-label="Links in this document to definition: RDF">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-rdf" aria-label="Permalink for definition: RDF. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-rdfs" aria-label="Links in this document to definition: RDFS">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-rdfs" aria-label="Permalink for definition: RDFS. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-skos" aria-label="Links in this document to definition: SKOS">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-skos" aria-label="Permalink for definition: SKOS. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-owl" aria-label="Links in this document to definition: OWL">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-owl" aria-label="Permalink for definition: OWL. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-shacl" aria-label="Links in this document to definition: SHACL">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-shacl" aria-label="Permalink for definition: SHACL. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-ontologie" aria-label="Links in this document to definition: Ontologie">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-ontologie" aria-label="Permalink for definition: Ontologie. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-ontologie-1" title="§ B. Glossary">§ B. Glossary</a> 
+  </li>
+  </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-contract" aria-label="Links in this document to definition: Contract">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-contract" aria-label="Permalink for definition: Contract. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-contract-1" title="§ 1.1 Context">§ 1.1 Context</a> 
+  </li>
+  </ul>
+    </div><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://docs.crow.nl/respec-design/fixup.js"></script><script class="js-hypothesis-config" type="application/json">{"openSidebar":false,"showHighlights":true,"theme":"classic","branding":{"accentColor":"rgb(0, 157, 224)","appBackgroundColor":"white","ctaBackgroundColor":"rgb(255, 110, 26)","ctaTextColor":"white","selectionFontFamily":"'Museo Sans', Museo, Helvetica, Arial, sans serif","annotationFontFamily":"'Museo Sans', Museo, Helvetica, Arial, sans serif"}}</script><script src="https://hypothes.is/embed.js" async=""></script><hypothesis-sidebar data-js-focus-visible=""></hypothesis-sidebar><hypothesis-notebook data-js-focus-visible=""></hypothesis-notebook><hypothesis-adder data-js-focus-visible="" style="position: absolute; top: 0px; left: 0px;"></hypothesis-adder></body></html>
