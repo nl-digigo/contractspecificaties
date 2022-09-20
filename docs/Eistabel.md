@@ -198,7 +198,7 @@ De bron van de eis kan naar twee zaken verwijzen:
 
 Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kolom de URI van het gerefereerde document. Deze URI verwijst naar een document in de documententabel.
 
-Een referentiedocument is een document waarin extra eisen staan die in het contract gelden. Voorbeelden:
+Een referentiedocument is een document waarin extra eisen staan die in het contract gelden, die de opdrachtnemer zelf uit het document moet afleiden. Voorbeelden:
 
 * De eis verwijst naar een ontwerp of berekening die van toepassing is.
 * De eis verwijst naar een richtlijn, handleiding of norm die van toepassing is.
@@ -352,120 +352,120 @@ Bij uitwisseling mag uitsluitend de onderstaande lijst gebruikt worden bij contr
 
 Classificatie volgens:
 
-1. NEN-EN-ISO 9000:2015 Kwaliteitsmanagementsystemen - Grondbeginselen en verklarende woordenlijst
-2. ISO/IEC/IEEE 29148:2018 Systems and software engineering — Life cycle processes — Requirements engineering
-3. [Leidraad SE (V2 en 3)](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V2/LeidraadSE_def_lowres.pdf)
+1. [[NEN_EN_ISO_9000_2015]]
+2. [[ISO_IEC_IEEE_29148_2018]] Systems and software engineering — Life cycle processes — Requirements engineering
+4. [[LeidraadSE2]]; deze leidraad is niet meer actueel, in [[LeidraadSE3]] worden geen verificatiemethoden meer benoemd die in versie 2 wel stonden.
 
 <dl>
 <dt><dfn>Vaststellen
 	<dd>Activiteit om een of meer kenmerken en hun karakteristieke waarden te achterhalen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Vaststellen">csw:Vaststellen</a> 
-	<dd>Bron: NEN-EN-ISO 9001:2015
+	<dd>Bron: [[NEN_EN_ISO_9000_2015]]
 
 <dt><dfn>Beoordelen
 	<dd>Vaststelling van de geschiktheid, toereikendheid of doeltreffendheid van een object voor het bereiken van vastgestelde doelstellingen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Beoordelen">csw:Beoordelen</a>
-	<dd>Bron: NEN-EN-ISO 9001:2015
+	<dd>Bron: [[NEN_EN_ISO_9000_2015]]
 
 <dt><dfn>Monitoren
 	<dd>Vaststellen van de status van een systeem, een proces, een product, een dienst of een activiteit. Bijvoorbeeld zettingen, monitoring van draaiuren t.b.v. optimale vervanging
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Monitoren">csw:Monitoren</a>
-	<dd>Bron: NEN-EN-ISO 9001:2015
+	<dd>Bron: [[NEN_EN_ISO_9000_2015]]
 
 <dt><dfn>Meten
 	<dd>Proces om een waarde vast te stellen. o.a. luchtsnelheidmetingen in tunnels, kalenderen van heipalen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Meten">csw:Meten</a>
-	<dd>Bron: NEN-EN-ISO 9001:2015 en Leidraad SE v2
+	<dd>Bron: [[NEN_EN_ISO_9000_2015]] en [[LeidraadSE2]]
 
 <dt><dfn>Keuren
 	<dd>Vaststelling van conformiteit met gespecificeerde eisen. Bijvoorbeeld keuring, ingangs- en uitgangscontrole
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Keuren">csw:Keuren</a>
-	<dd>Bron: NEN-EN-ISO 9001:2015
+	<dd>Bron: [[NEN_EN_ISO_9000_2015]]
 
 <dt><dfn>Beproeven
 	<dd>Vaststellen volgens eisen voor een specifiek beoogd€ gebruik of toepassing
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Beproeven">csw:Beproeven</a>
-	<dd>Bron: NEN-EN-ISO 9001:2015
+	<dd>Bron: [[NEN_EN_ISO_9000_2015]]
 
 <dt><dfn>Evalueren
 	<dd>Beoordelen van de voortgang die behaald is met betrekking tot het bereiken van de doelen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Evalueren">csw:Evalueren</a>
-	<dd>Bron: NEN-EN-ISO 9001:2015
+	<dd>Bron: [[NEN_EN_ISO_9000_2015]]
 
 <dt><dfn>Analyse
 	<dd>o.a. haalbaarheidsanalyse, kosten-batenanalyse
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Analyse">csw:Analyse</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Berekening
 	<dd>o.a. sterkteberekeningen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Berekening">csw:Berekening</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Auditen
 	<dd>Audit van bestaande kwaliteitssystemen en -processen (o.a. Technical Inspection Services
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Auditen">csw:Auditen</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Demonstratie
 	<dd>o.a. presentatie van de functionaliteiten van een bestaand systeem
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Demonstratie">csw:Demonstratie</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Documentbeoordeling
 	<dd>o.a. documentinspecties, reviews, toetsen, ontwerpateliers
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Documentbeoordeling">csw:Documentbeoordeling</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Modellering
 	<dd>o.a. prestatiemodellen van beschikbaarheid, verkeersmodellen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Modellering">csw:Modellering</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Simulaties
 	<dd>o.a. dienstregelingsimulatie
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Simulaties">csw:Simulaties</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Referentie
 	<dd>o.a. gebruik van gecertificeerde producten
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Referentie">csw:Referentie</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Testen
 	<dd>haalbaarheidstesten, FIT, FAT, SIT, SAT
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Testen">csw:Testen</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Factory Integration Test
 	<dd>o.a. hydraulische en mechanische installaties integraal testen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/FactoryIntegrationTest">csw:FactoryIntegrationTest</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Factory Acceptance Test
 	<dd>o.a. cameratesten in fabrieksopstelling
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/FactoryAcceptanceTest">csw:FactoryAcceptanceTest</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Site Integration Test
 	<dd>o.a. interactietesten tussen installatie- en besturingssystemen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/SiteIntegrationTest">csw:SiteIntegrationTest</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Site Acceptance Test
 	<dd>o.a. calamiteitenoefeningen in bijzijn van hulpdiensten
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/SiteAcceptanceTest">csw:SiteAcceptanceTest</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Schouw
 	<dd>o.a. visuele opname van projectlocatie
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Schouw">csw:Schouw</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Inspectie (cs)
 	<dd>o.a. Arbo-inspecties, pompkelderinspecties
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Inspectie">csw:Inspectie</a>
-	<dd>Bron: Leidraad SE v2
+	<dd>Bron: [[LeidraadSE2]]
 </dd></dl>
 
 | Taalbinding                                                                                | Kardinaliteit | Datatype                                                                                        |
