@@ -196,16 +196,15 @@ De bron van de eis kan naar twee zaken verwijzen:
 
 ### <dfn>EisReferentiedocument
 
-Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kolom de URI van het gerefereerde document.
+Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kolom de URI van het gerefereerde document. Deze URI verwijst naar een document in de documententabel.
+
+Een referentiedocument is een document waarin extra eisen staan die in het contract gelden. Voorbeelden:
+
+* De eis verwijst naar een ontwerp of berekening die van toepassing is.
+* De eis verwijst naar een richtlijn, handleiding of norm die van toepassing is.
 
 Instructie voor gebruik: omdat nog niet alle partijen in staat zijn om de data helemaal te verwerken, moet je het document wel in de eistekst noemen. De eistekst is leidend. Een ontvanger van de eisenset kan er ook niet van uit gaan, dat de opdrachtgever dit altijd in weet te vullen. Als in een eistekst naar een referentiedocument wordt verwezen, kan het zijn dat er geen relatie is gemaakt naar het referentiedocument.
 
-Voorbeelden:
-
-- De eis verwijst naar een ontwerp of berekening die van toepassing is.
-- De eis verwijst naar een richtlijn, handleiding of norm die van toepassing is.
-
-Deze URI verwijst naar een document in de documententabel.
 
 | Taalbinding                                           | Kardinaliteit | Datatype                                               |
 | ----------------------------------------------------- | ------------- | ------------------------------------------------------ |
