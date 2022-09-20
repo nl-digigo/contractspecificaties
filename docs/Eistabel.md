@@ -37,54 +37,6 @@ Het format wordt in 4 delen getoond in verband met de leesbaarheid van dit docum
 
 <table class="data">
 <thead>
-	<th>[=EisURI=]
-	<th>[=EisCode=]
-	<th>[=EisNaam=]
-	<th>[=EisTekst=]
-	<th>[=EisToelichting=]
-	<th>[=EisheeftOnderwerp=]
-</thead>
-<tr class="def">
-	<td>In deze kolom staat de unieke identifier (URI) van de eis.
-	<td>In deze kolom staat de code of het nummer van de eis.
-	<td>In deze kolom staat de de naam oftewel de titel van de eis.
-	<td>In deze kolom staat de eistekst.
-	<td>In deze kolom staat de toelichting op de eis.
-	<td>In deze kolom staat de URI van het Onderwerp (subject) van de eis.
-</tr>
-<tr class="example">
-	<td>`https://www.example.org/id/Voorbeeld-Eis1`
-	<td>EIS1099
-	<td>Voorbeeldeis
-	<td>Dit is de tekst van de voorbeeldeis
-	<td>Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kunnen verduidelijken
-	<td>`https://www.example.org/id/Voorbeeld-Onderwerp1`
-</tr>
-</table>
-
-<table class="data">
-<thead>
-	<th>[=VerificatieplanURI=]
-	<th>[=VerificatieplanMethode=]
-	<th>[=VerificatieplanFase=]
-	<th>[=VerificatieplanToelichting=]
-</thead>
-<tr class="def">
-	<td>In deze kolom staat de URI van een verificatieplan bij de eis.
-	<td>In deze kolom staat de verificatiemethode van het verificatieplan.
-	<td>In deze kolom staat de fase van het verificatieplan.
-	<td>In deze kolom staat de toelichting op de verificatiemethode bij de eis.
-</tr>
-<tr class="example">
-	<td>`https://www.example.org/id/Voorbeeld-Verificatieplan1`
-	<td>`https://data.crow.nl/contractspecificaties/id/Keuring`
-	<td>`https://data.crow.nl/contractspecificaties/id/Aanleg`
-	<td>Een toelichting waarom een verificatiemethode wordt gevraagd bij de eis, of nadere invulling van de verificatiemethode
-</tr>
-</table>
-
-<table class="data">
-<thead>
 	<th>[=EisheeftDeel=]
 	<th>[=EisBron=]
 	<th>[=EisReferentiedocument=]
@@ -116,6 +68,27 @@ Het format wordt in 4 delen getoond in verband met de leesbaarheid van dit docum
 	<td> `https://data.crow.nl/contractspecificaties/id/Proceseis` 
 	<td> `https://data.crow.nl/contractspecificaties/id/Vervallen` 
 	<td> Komt niet meer voor want ... 
+</tr>
+</table>
+
+<table class="data">
+<thead>
+	<th>[=VerificatieplanURI=]
+	<th>[=VerificatieplanMethode=]
+	<th>[=VerificatieplanFase=]
+	<th>[=VerificatieplanToelichting=]
+</thead>
+<tr class="def">
+	<td>In deze kolom staat de URI van een verificatieplan bij de eis.
+	<td>In deze kolom staat de verificatiemethode van het verificatieplan.
+	<td>In deze kolom staat de fase van het verificatieplan.
+	<td>In deze kolom staat de toelichting op de verificatiemethode bij de eis.
+</tr>
+<tr class="example">
+	<td>`https://www.example.org/id/Voorbeeld-Verificatieplan1`
+	<td>`https://data.crow.nl/contractspecificaties/id/Keuring`
+	<td>`https://data.crow.nl/contractspecificaties/id/Aanleg`
+	<td>Een toelichting waarom een verificatiemethode wordt gevraagd bij de eis, of nadere invulling van de verificatiemethode
 </tr>
 </table>
 
@@ -195,6 +168,165 @@ Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voo
 | { .def } |
 
 > Merk op, dat in de tabel een relatie niet benoemd is, omdat de "regel" de verbindende factor is: <a href="https://data.crow.nl/contractspecificaties/def/hasAsSubject">cs:hasAsSubject</a>
+
+
+
+### <dfn>EisheeftDeel
+
+In deze kolom staat de URI van een onderliggende eis.
+
+Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelijk in contracten. Een eis kan meerdere onderliggende eisen hebben, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.
+
+| Taalbinding                                                        | Kardinaliteit | Datatype                                               |
+| ------------------------------------------------------------------ | ------------- | ------------------------------------------------------ |
+| [nen2660:hasPart](https://bimloket.github.io/nen2660/term#hasPart) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| { .def } |
+
+### <dfn>EisBron
+
+De bron van de eis kan naar twee zaken verwijzen:
+
+1. De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is). Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet. De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context.
+2. De URI van een brondocument met herkomst van de eis. Deze URI verwijst naar een document in de documententabel.
+
+| Taalbinding                                   | Kardinaliteit | Datatype                                               |
+| --------------------------------------------- | ------------- | ------------------------------------------------------ |
+| [dct:source](http://purl.org/dc/terms/source) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| { .def } |
+
+### <dfn>EisReferentiedocument
+
+Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kolom de URI van het gerefereerde document.
+
+Instructie voor gebruik: omdat nog niet alle partijen in staat zijn om de data helemaal te verwerken, moet je het document wel in de eistekst noemen. De eistekst is leidend. Een ontvanger van de eisenset kan er ook niet van uit gaan, dat de opdrachtgever dit altijd in weet te vullen. Als in een eistekst naar een referentiedocument wordt verwezen, kan het zijn dat er geen relatie is gemaakt naar het referentiedocument.
+
+Voorbeelden:
+
+- De eis verwijst naar een ontwerp of berekening die van toepassing is.
+- De eis verwijst naar een richtlijn, handleiding of norm die van toepassing is.
+
+Deze URI verwijst naar een document in de documententabel.
+
+| Taalbinding                                           | Kardinaliteit | Datatype                                               |
+| ----------------------------------------------------- | ------------- | ------------------------------------------------------ |
+| [dct:references](http://purl.org/dc/terms/references) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| { .def } |
+
+### <dfn>EisType
+
+In deze kolom staat het eistype. De aspecteisen zijn grotendeels overgenomen uit de [Leidraad SE v3](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V3/Leidraad_V3_SE_web.pdf); de eistypen die aanduiden aan wat voor concept de eis is gesteld zijn aangepast aan de onderwerpen uit deze richtlijn. Dit is een enumeratie.
+
+Bij uitwisseling mag je uitsluitend de onderstaande lijst gebruiken, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt.
+
+Eistypen:
+
+<dl>
+<dt><dfn>Informatie-eis
+   <dd>Verzameling van eisen die betrekking hebben op de te leveren informatieproducten
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Informatie-eis">csw:Informatie-eis</a>
+	   
+<dt><dfn>Systeemeis
+   <dd>De beschrijving van het geheel aan samenhangende of elkaar beïvloedende eisen dat bijdraagt aan het tot standkomen en gebruiken danwel toepassen van het geintegreerde systeem.
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Systeemeis">csw:Systeemeis</a>
+   <dd>Bron: Leidraad SE v3 
+	 
+<dt><dfn>Proceseis
+   <dd>De beschrijving van het gevraagde geheel van samenhangende of elkaar beïnvloedende activiteiten dat input omzet in output. 
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Proceseis">csw:Proceseis</a>
+   <dd>Bron: Leidraad SE v3
+
+<dt><dfn>Functie-eis
+   <dd>De beschrijving van de gevraagde beoogde werking en/of verrichting van een systeem.
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Functie-eis">csw:Functie-eis</a>
+ <dd>Bron: Leidraad SE v3
+
+<dt><dfn>Aspecteis: Betrouwbaarheid
+   <dd>De waarschijnlijkheid dat de vereiste functie wordt uitgevoerd onder gegeven omstandigheden gedurende een bepaald tijdsinterval. 
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Betrouwbaarheid">csw:Aspecteis-Betrouwbaarheid</a>
+ <dd>Bron: Leidraad SE v3
+
+<dt><dfn>Aspecteis: Beschikbaarheid
+   <dd>De waarschijnlijkheid dat de vereiste functie op een willekeurig moment kan worden uitgevoerd onder gegeven omstandigheden.	
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Beschikbaarheid">csw:Aspecteis-Beschikbaarheid</a>
+ <dd>Bron: Leidraad SE v3
+
+<dt><dfn>Aspecteis: Onderhoudbaarheid
+   <dd>De waarschijnlijkheid dat de activiteiten voor onderhoud kunnen worden uitgevoerd binnen de hiervoor vastgestelde tijden, onder gegeven omstandigheden teneinde de vereiste functie te kunnen (blijven) uitvoeren.
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Onderhoudbaarheid">csw:Aspecteis-Onderhoudbaarheid</a>
+ <dd>Bron: Leidraad SE v3
+
+<dt><dfn>Aspecteis: Veiligheid
+   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder optredend letsel aan personen kan worden vervuld dan wel uitgevoerd en de waarschijnlijkheid dat de integriteit van de functie  en de daaraan verbonden data en datastructuren gewaarborgd blijven van ongewenste beïnvloeding.	   
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Veiligheid">csw:Aspecteis-Veiligheid</a>
+ <dd>Bron: Leidraad SE v3
+
+<dt><dfn>Aspecteis: Gezondheid
+   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder negatieve gezondheidsrisico's voor personen kan worden vervuld dan wel uitgevoerd.
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Gezondheid">csw:Aspecteis-Gezondheid</a>
+   <dd>Bron: Leidraad SE v3
+
+<dt><dfn>Aspecteis: Omgeving
+   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder ongewenste risico's voor de omgeving kunnen wordenvervuld en/of gerealiseerd.	
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Omgeving">csw:Aspecteis-Omgeving</a>    
+   <dd>Bron: Leidraad SE v3
+
+<dt><dfn>Aspecteis: Duurzaamheid
+   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten binnen de hieraan gestelde eisen en PPP (People/Planet/Profit)-doelstellingen kunnen worden gerealiseerd.  
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Duurzaamheid">csw:Aspecteis-Duurzaamheid</a>
+   <dd>Bron: Leidraad SE v3
+
+<dt><dfn>Aspecteis: Vormgeving
+   <dd>De beschrijving van de gevraagde prestatie ten aanzien van het beeld en het materiaalgebruik met inachtneming van de omgevings- en de gezondheidseisen van het systeem en haar onderdelen.
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Vormgeving">csw:Aspecteis-Vormgeving</a>
+   <dd>Bron: Leidraad SE v3
+
+<dt><dfn>Aspecteis: Toekomstvastheid
+   <dd>De beschrijving van de gevraagde prestatie van een systeem ten aanzien van de vereiste levensduur van het systeem (als functie en als object) en haar onderdelen.	    
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Toekomstvastheid">csw:Aspecteis-Toekomstvastheid</a>
+   <dd>Bron: Leidraad SE v3
+
+<dt><dfn>Aspecteis: Sloopbaarheid
+   <dd>De waarschijnlijkheid dat de vereiste functie aan het einde van de levensduur op beheerste wijze kan worden teruggebracht tot minimaal secundaire grondstoffen en met inachtneming van de overige RAMSHE-aspecten.  
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Sloopbaarheid">csw:Aspecteis-Sloopbaarheid</a>
+   <dd>Bron: Leidraad SE v3 
+</dd></dl>
+
+| Taalbinding                                                                       | Kardinaliteit | Datatype                                                             |
+| --------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------- |
+| [nen2660:requirementTopicType](https://w3id.org/nen2660/def#requirementTopicType) | 0:n           | [cs:EisType](https://data.crow.nl/contractspecificaties/def/EisType) |
+| { .def } |
+
+### <dfn>EisStatus
+
+In deze kolom staat de status van de eis. Dit is een enumeratie. Voor contractspecificaties geldt dat de status één van deze twee zaken is: actueel of vervallen.
+Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijziging in de eisenset te kunnen opnemen en met elkaar uit te wisselen.
+
+<dl>
+<dt><dfn>Actueel
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Actueel">csw:Actueel</a>
+<dt><dfn>Vervallen
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Vervallen">csw:Vervallen</a>
+</dl>
+
+| Taalbinding                                                        | Kardinaliteit | Datatype                                                                   |
+| ------------------------------------------------------------------ | ------------- | -------------------------------------------------------------------------- |
+| [cs:status](https://data.crow.nl/contractspecificaties/def/status) | 1:1           | [cs:StatusType](https://data.crow.nl/contractspecificaties/def/StatusType) |
+| { .def } |
+
+### <dfn>EisStatusOnderbouwing
+
+In deze kolom staat een toelichting op de status van de eis.
+Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status onderbouwd is.
+
+| Taalbinding                                                                                | Kardinaliteit | Datatype                                               |
+| ------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------ |
+| [cs:statusOnderbouwing](https://data.crow.nl/contractspecificaties/def/statusOnderbouwing) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
+| { .def } |
+
+<p class="note">
+De "eigenaar" van een eis is vaak een interne rolhouder. In het contract gelden hiervoor de projectafspraken en kan de eigenaar vertegenwoordigd zijn door een andere rolhouder. Een eigenaar van een eis kan intern bijvoorbeeld de objectbeheerder zijn, maar in het contract is de technisch manager eerste aanspreekpunt voor de eis. Meestal wordt de eigenaar niet benoemd in de vraagspecificaties. Daarom is "eigenaarschap" niet opgenomen in de eisentabel.
+</p>
+
 
 ### <dfn>VerificatieplanURI
 
@@ -383,159 +515,3 @@ In contracten wordt dit gebruikt om nader toe te lichten waarom deze verificatie
 | --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |
 | [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 | { .def } |
-
-### <dfn>EisheeftDeel
-
-In deze kolom staat de URI van een onderliggende eis.
-
-Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelijk in contracten. Een eis kan meerdere onderliggende eisen hebben, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.
-
-| Taalbinding                                                        | Kardinaliteit | Datatype                                               |
-| ------------------------------------------------------------------ | ------------- | ------------------------------------------------------ |
-| [nen2660:hasPart](https://bimloket.github.io/nen2660/term#hasPart) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
-| { .def } |
-
-### <dfn>EisBron
-
-De bron van de eis kan naar twee zaken verwijzen:
-
-1. De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is). Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet. De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context.
-2. De URI van een brondocument met herkomst van de eis. Deze URI verwijst naar een document in de documententabel.
-
-| Taalbinding                                   | Kardinaliteit | Datatype                                               |
-| --------------------------------------------- | ------------- | ------------------------------------------------------ |
-| [dct:source](http://purl.org/dc/terms/source) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
-| { .def } |
-
-### <dfn>EisReferentiedocument
-
-Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kolom de URI van het gerefereerde document.
-
-Instructie voor gebruik: omdat nog niet alle partijen in staat zijn om de data helemaal te verwerken, moet je het document wel in de eistekst noemen. De eistekst is leidend. Een ontvanger van de eisenset kan er ook niet van uit gaan, dat de opdrachtgever dit altijd in weet te vullen. Als in een eistekst naar een referentiedocument wordt verwezen, kan het zijn dat er geen relatie is gemaakt naar het referentiedocument.
-
-Voorbeelden:
-
-- De eis verwijst naar een ontwerp of berekening die van toepassing is.
-- De eis verwijst naar een richtlijn, handleiding of norm die van toepassing is.
-
-Deze URI verwijst naar een document in de documententabel.
-
-| Taalbinding                                           | Kardinaliteit | Datatype                                               |
-| ----------------------------------------------------- | ------------- | ------------------------------------------------------ |
-| [dct:references](http://purl.org/dc/terms/references) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
-| { .def } |
-
-### <dfn>EisType
-
-In deze kolom staat het eistype. De aspecteisen zijn grotendeels overgenomen uit de [Leidraad SE v3](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V3/Leidraad_V3_SE_web.pdf); de eistypen die aanduiden aan wat voor concept de eis is gesteld zijn aangepast aan de onderwerpen uit deze richtlijn. Dit is een enumeratie.
-
-Bij uitwisseling mag je uitsluitend de onderstaande lijst gebruiken, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt.
-
-Eistypen:
-
-<dl>
-<dt><dfn>Informatie-eis
-   <dd>Verzameling van eisen die betrekking hebben op de te leveren informatieproducten
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Informatie-eis">csw:Informatie-eis</a>
-	   
-<dt><dfn>Systeemeis
-   <dd>De beschrijving van het geheel aan samenhangende of elkaar beïvloedende eisen dat bijdraagt aan het tot standkomen en gebruiken danwel toepassen van het geintegreerde systeem.
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Systeemeis">csw:Systeemeis</a>
-   <dd>Bron: Leidraad SE v3 
-	 
-<dt><dfn>Proceseis
-   <dd>De beschrijving van het gevraagde geheel van samenhangende of elkaar beïnvloedende activiteiten dat input omzet in output. 
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Proceseis">csw:Proceseis</a>
-   <dd>Bron: Leidraad SE v3
-
-<dt><dfn>Functie-eis
-   <dd>De beschrijving van de gevraagde beoogde werking en/of verrichting van een systeem.
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Functie-eis">csw:Functie-eis</a>
- <dd>Bron: Leidraad SE v3
-
-<dt><dfn>Aspecteis: Betrouwbaarheid
-   <dd>De waarschijnlijkheid dat de vereiste functie wordt uitgevoerd onder gegeven omstandigheden gedurende een bepaald tijdsinterval. 
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Betrouwbaarheid">csw:Aspecteis-Betrouwbaarheid</a>
- <dd>Bron: Leidraad SE v3
-
-<dt><dfn>Aspecteis: Beschikbaarheid
-   <dd>De waarschijnlijkheid dat de vereiste functie op een willekeurig moment kan worden uitgevoerd onder gegeven omstandigheden.	
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Beschikbaarheid">csw:Aspecteis-Beschikbaarheid</a>
- <dd>Bron: Leidraad SE v3
-
-<dt><dfn>Aspecteis: Onderhoudbaarheid
-   <dd>De waarschijnlijkheid dat de activiteiten voor onderhoud kunnen worden uitgevoerd binnen de hiervoor vastgestelde tijden, onder gegeven omstandigheden teneinde de vereiste functie te kunnen (blijven) uitvoeren.
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Onderhoudbaarheid">csw:Aspecteis-Onderhoudbaarheid</a>
- <dd>Bron: Leidraad SE v3
-
-<dt><dfn>Aspecteis: Veiligheid
-   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder optredend letsel aan personen kan worden vervuld dan wel uitgevoerd en de waarschijnlijkheid dat de integriteit van de functie  en de daaraan verbonden data en datastructuren gewaarborgd blijven van ongewenste beïnvloeding.	   
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Veiligheid">csw:Aspecteis-Veiligheid</a>
- <dd>Bron: Leidraad SE v3
-
-<dt><dfn>Aspecteis: Gezondheid
-   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder negatieve gezondheidsrisico's voor personen kan worden vervuld dan wel uitgevoerd.
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Gezondheid">csw:Aspecteis-Gezondheid</a>
-   <dd>Bron: Leidraad SE v3
-
-<dt><dfn>Aspecteis: Omgeving
-   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder ongewenste risico's voor de omgeving kunnen wordenvervuld en/of gerealiseerd.	
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Omgeving">csw:Aspecteis-Omgeving</a>    
-   <dd>Bron: Leidraad SE v3
-
-<dt><dfn>Aspecteis: Duurzaamheid
-   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten binnen de hieraan gestelde eisen en PPP (People/Planet/Profit)-doelstellingen kunnen worden gerealiseerd.  
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Duurzaamheid">csw:Aspecteis-Duurzaamheid</a>
-   <dd>Bron: Leidraad SE v3
-
-<dt><dfn>Aspecteis: Vormgeving
-   <dd>De beschrijving van de gevraagde prestatie ten aanzien van het beeld en het materiaalgebruik met inachtneming van de omgevings- en de gezondheidseisen van het systeem en haar onderdelen.
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Vormgeving">csw:Aspecteis-Vormgeving</a>
-   <dd>Bron: Leidraad SE v3
-
-<dt><dfn>Aspecteis: Toekomstvastheid
-   <dd>De beschrijving van de gevraagde prestatie van een systeem ten aanzien van de vereiste levensduur van het systeem (als functie en als object) en haar onderdelen.	    
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Toekomstvastheid">csw:Aspecteis-Toekomstvastheid</a>
-   <dd>Bron: Leidraad SE v3
-
-<dt><dfn>Aspecteis: Sloopbaarheid
-   <dd>De waarschijnlijkheid dat de vereiste functie aan het einde van de levensduur op beheerste wijze kan worden teruggebracht tot minimaal secundaire grondstoffen en met inachtneming van de overige RAMSHE-aspecten.  
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Sloopbaarheid">csw:Aspecteis-Sloopbaarheid</a>
-   <dd>Bron: Leidraad SE v3 
-</dd></dl>
-
-| Taalbinding                                                                       | Kardinaliteit | Datatype                                                             |
-| --------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------- |
-| [nen2660:requirementTopicType](https://w3id.org/nen2660/def#requirementTopicType) | 0:n           | [cs:EisType](https://data.crow.nl/contractspecificaties/def/EisType) |
-| { .def } |
-
-### <dfn>EisStatus
-
-In deze kolom staat de status van de eis. Dit is een enumeratie. Voor contractspecificaties geldt dat de status één van deze twee zaken is: actueel of vervallen.
-Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijziging in de eisenset te kunnen opnemen en met elkaar uit te wisselen.
-
-<dl>
-<dt><dfn>Actueel
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Actueel">csw:Actueel</a>
-<dt><dfn>Vervallen
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Vervallen">csw:Vervallen</a>
-</dl>
-
-| Taalbinding                                                        | Kardinaliteit | Datatype                                                                   |
-| ------------------------------------------------------------------ | ------------- | -------------------------------------------------------------------------- |
-| [cs:status](https://data.crow.nl/contractspecificaties/def/status) | 1:1           | [cs:StatusType](https://data.crow.nl/contractspecificaties/def/StatusType) |
-| { .def } |
-
-### <dfn>EisStatusOnderbouwing
-
-In deze kolom staat een toelichting op de status van de eis.
-Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status onderbouwd is.
-
-| Taalbinding                                                                                | Kardinaliteit | Datatype                                               |
-| ------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------ |
-| [cs:statusOnderbouwing](https://data.crow.nl/contractspecificaties/def/statusOnderbouwing) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
-| { .def } |
-
-<p class="note">
-De "eigenaar" van een eis is vaak een interne rolhouder. In het contract gelden hiervoor de projectafspraken en kan de eigenaar vertegenwoordigd zijn door een andere rolhouder. Een eigenaar van een eis kan intern bijvoorbeeld de objectbeheerder zijn, maar in het contract is de technisch manager eerste aanspreekpunt voor de eis. Meestal wordt de eigenaar niet benoemd in de vraagspecificaties. Daarom is "eigenaarschap" niet opgenomen in de eisentabel.
-</p>
