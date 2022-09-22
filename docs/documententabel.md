@@ -115,6 +115,13 @@ In deze kolom staat het documenttype. Voor documenttypen is nog geen nationale a
 | [cs:documentType](https://data.crow.nl/contractspecificaties/def/documentType) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 | { .def }
 
+
+<p class="note" title="Teksten opnemen als data">
+De bovenstaande eigenschappen van het document zijn voldoende om bij een eis het brondocument te kunnen meegeven. 
+Naast eisen kunnen ook teksten in de contractdocumenten worden meegegeven als data. Hiervan kan de opdrachtnemer gebruik maken om het gehele contract te kunnen verwerken in een projectmanagementsysteem, om bijvoorbeeld eisen af te leiden uit de tekst, of risico's, of andere zaken. 
+Ook kan deze optie gebruikt worden in een contract voor ingenieursdiensten, waarbij ook het samenstellen van een contract wordt gevraagd aan een opdrachtnemer.
+</p>
+
 ### <dfn>DocumentSectie
 
 In deze kolom staat de documentsectie. Deze kan gebruikt worden om een document verder op te delen. Middels de 'heeft deel' relatie kunnen net zoveel secties aan een document toegevoegd worden als er nodig zijn.

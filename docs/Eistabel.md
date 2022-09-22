@@ -285,7 +285,7 @@ Eistypen:
    <dd>Bron: Leidraad SE v3
 
 <dt><dfn>Aspecteis: Sloopbaarheid
-   <dd>De waarschijnlijkheid dat de vereiste functie aan het einde van de levensduur op beheerste wijze kan worden teruggebracht tot minimaal secundaire grondstoffen en met inachtneming van de overige RAMSHE-aspecten.  
+   <dd>De waarschijnlijkheid dat de vereiste functie aan het einde van de levensduur op beheerste wijze kan worden teruggebracht tot minimaal secundaire grondstoffen en met inachtneming van de overige aspecten.  
    <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Sloopbaarheid">csw:Aspecteis-Sloopbaarheid</a>
    <dd>Bron: Leidraad SE v3 
 </dd></dl>
