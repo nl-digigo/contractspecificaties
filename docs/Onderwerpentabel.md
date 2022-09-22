@@ -6,28 +6,39 @@ De onderwerpentabel wordt gebruikt voor de onderwerpen van de eisen, bestaande u
 
 <table class="data">
 <thead>
-	<th> [=OnderwerpURI=]
-	<th> [=OnderwerpCode=]
-	<th> [=OnderwerpNaam=]
-	<th> [=OnderwerpType=]
-	<th> [=OnderwerpDefinitie=]
-	<th> [=OnderwerpheeftDeel=]
+	<th>Kolomnaam
+	<th>Definitie
+	<th>Voorbeeld
 </thead>
-<tr class="def">
-	<td> In deze kolom staat de unieke naam (URI) van het onderwerp.
-	<td> In deze kolom staat de code ofwel het nummer van het onderwerp.
-	<td> In deze kolom staat de naam van het onderwerp.
-	<td> In deze kolom staat het type van het onderwerp: Objecttype, Functie, Werkzaamheid of Informatieproduct.
-	<td> In deze kolom staat de definitie van het onderwerp.
-	<td> In deze kolom staat de URI van een onderliggend onderwerp.
+<tr>
+	<td scope="row">  [=OnderwerpURI=]
+	<td class="def">In deze kolom staat de unieke naam (URI) van het onderwerp.
+	<td class="example">`https://www.example.org/id/Voorbeeld-Object1`
 </tr>
-<tr class="example">
-	<td> `https://www.example.org/id/Voorbeeld-Object1`
-	<td> OBJ-0109
-	<td> Voorbeeld onderwerp
-	<td> InformationObject
-	<td> Onderwerp van een eis als voorbeeld in de documentatie
-	<td> `https://www.example.org/id/Voorbeeld-Object2`
+<tr>
+	<td scope="row"> [=OnderwerpCode=]
+	<td class="def">In deze kolom staat de code ofwel het nummer van het onderwerp.
+	<td class="example">OBJ-0109
+</tr>
+<tr>
+	<td scope="row"> [=OnderwerpNaam=]
+	<td class="def">In deze kolom staat de naam van het onderwerp.
+	<td class="example">Voorbeeld onderwerp
+</tr>
+<tr>
+	<td scope="row">  [=OnderwerpType=]
+	<td class="def">In deze kolom staat het type van het onderwerp: Objecttype, Functie, Werkzaamheid of Informatieproduct.
+	<td class="example"> InformationObject
+</tr>
+<tr>
+	<td scope="row"> [=OnderwerpDefinitie=]
+	<td class="def"> In deze kolom staat de definitie van het onderwerp.
+	<td class="example"> Onderwerp van een eis als voorbeeld in de documentatie
+</tr>
+<tr>
+	<td scope="row"> [=OnderwerpheeftDeel=]
+	<td class="def">In deze kolom staat de URI van een onderliggend onderwerp.
+	<td class="example">`https://www.example.org/id/Voorbeeld-Object2`
 </tr>
 </table>
 
@@ -74,6 +85,10 @@ Dit is een enumeratie. Het type van het onderwerp kan in het format uit een van 
 2. [=Functie=]
 3. [=Werkzaamheid=]
 4. [=Informatieproduct=]
+
+Een Eis kan betrekking hebben op een Object (Galecopperbrug), maar ook op een Objecttype (brug, of alle bruggen <i>in dit project</i>); op een Functie (keren water Nederrijn bij Driel), of juist op een Functietype (Keren water in een rivier op een locatie) enz. Algemeen: eisen kunnen zowel betrekking op Type als op Individueel-niveau. In het project bedoel je altijd "de individuele Fysieke objecten van het type "weg" <i>in dit project</i>" als het onderwerp de naam "Weg" heeft; of als er maar een weg is is het beter de naam van het onderwerp specifieker te maken: "N224".
+
+<div class="issue" data-number="28"></div>
 
 | Taalbinding                                              | Kardinaliteit | Datatype                                               |
 | -------------------------------------------------------- | ------------- | ------------------------------------------------------ |

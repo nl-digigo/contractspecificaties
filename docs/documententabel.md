@@ -14,35 +14,63 @@ Het format wordt in 2 delen getoond in verband met de leesbaarheid van dit docum
 
 <table class="data">
 <thead>
-  <th> [=documentURI=]
-  <th> [=DocumentCode=]
-  <th> [=DocumentNaam=]
-  <th> [=DocumentVersie=]
-  <th> [=DocumentVersieDatum=]
+	<th>Kolomnaam
+	<th>Definitie
+	<th>Voorbeeld
 </thead>
-<tr class="def">
-  <td> In deze kolom staat de unieke naam (URI) van het document.
-  <td> In deze kolom staat de code ofwel het nummer van het document.
-  <td> In deze kolom staat de naam van het document.
-  <td> In deze kolom staat de versie van het document.
-  <td> In deze kolom staat de versiedatum van het document.
+<tr>
+	<td scope="row">  [=documentURI=]
+	<td class="def">In deze kolom staat de unieke naam (URI) van het document.
+	<td class="example">`https://www.example.org/id/Voorbeeld-Document1`
 </tr>
-</table>
-
-<table class="data">
-<thead>
-  <th> [=DocumentAuteur=]
-  <th> [=DocumentType=]
-  <th> [=DocumentSectie=]
-  <th> [=DocumentSectieNaam=]
-  <th> [=DocumentSectieTekst=]
-</thead>
-<tr class="def">
-  <td> In deze kolom staat de auteur van het document.
-  <td> In deze kolom staat het documenttype.
-  <td> In deze kolom staat de sectie URI
-  <td> In deze kolom staat de sectie naam.
-  <td> In deze kolom staat de sectie tekst.
+<tr>
+	<td scope="row">  [=DocumentCode=]
+	<td class="def">In deze kolom staat de code ofwel het nummer van het document.
+	<td class="example">Ede300-225
+</tr>
+<tr>
+	<td scope="row"> [=DocumentNaam=] 
+	<td class="def">In deze kolom staat de naam van het document.
+	<td class="example">Omgevingsvisie Ede
+</tr>
+<tr>
+	<td scope="row">   [=DocumentVersie=]
+	<td class="def">In deze kolom staat de versie van het document.
+	<td class="example">1.0
+</tr>
+<tr>
+	<td scope="row">   [=DocumentVersieDatum=]
+	<td class="def">In deze kolom staat de versiedatum van het document.
+	<td class="example">10-10-1979
+</tr>
+<tr>
+	<td scope="row">  [=DocumentAuteur=]
+	<td class="def">In deze kolom staat de auteur van het document.
+	<td class="example"> Jan Klaassen
+</tr>
+</tr>
+<tr>
+	<td scope="row">  [=DocumentType=]
+	<td class="def">In deze kolom staat het documenttype.
+	<td class="example">Een omgevingsvisie
+</tr>
+</tr>
+<tr>
+	<td scope="row">   [=DocumentSectie=]
+	<td class="def">In deze kolom staat de sectie URI
+	<td class="example">`https://www.example.org/id/Voorbeeld-Sectie1`
+</tr>
+</tr>
+<tr>
+	<td scope="row">  [=DocumentSectieNaam=]
+	<td class="def">In deze kolom staat de sectie naam.
+	<td class="example">1. Inleiding
+</tr>
+</tr>
+<tr>
+	<td scope="row">  [=DocumentSectieTekst=]
+	<td class="def">In deze kolom staat de sectie tekst.
+	<td class="example">Tekst van de sectie
 </tr>
 </table>
 
@@ -116,13 +144,16 @@ In deze kolom staat het documenttype. Voor documenttypen is nog geen nationale a
 | { .def }
 
 
+### <dfn>DocumentSectie
+
 <p class="note" title="Teksten opnemen als data">
 De bovenstaande eigenschappen van het document zijn voldoende om bij een eis het brondocument te kunnen meegeven. 
-Naast eisen kunnen ook teksten in de contractdocumenten worden meegegeven als data. Hiervan kan de opdrachtnemer gebruik maken om het gehele contract te kunnen verwerken in een projectmanagementsysteem, om bijvoorbeeld eisen af te leiden uit de tekst, of risico's, of andere zaken. 
+Naast eisen kunnen ook teksten in de contractdocumenten worden meegegeven als data. Hiervoor kunnen de onderstaande eigenschappen worden gebruikt. Als je geen teksten wilt opnemen, kun je deze kolommen leeg laten. 
+Van de contractuele teksten kan een opdrachtnemer gebruik maken om het gehele contract te kunnen verwerken in een projectmanagementsysteem, om bijvoorbeeld eisen af te leiden uit de tekst, of risico's, of andere zaken. 
 Ook kan deze optie gebruikt worden in een contract voor ingenieursdiensten, waarbij ook het samenstellen van een contract wordt gevraagd aan een opdrachtnemer.
+<br>
+Bij gebruikmaking van deze optie kan eventueel een aparte tabel uitgewisseld worden, waarin de tekst van één document wordt uitgewisseld, om foutopsporing eenvoudiger te maken.
 </p>
-
-### <dfn>DocumentSectie
 
 In deze kolom staat de documentsectie. Deze kan gebruikt worden om een document verder op te delen. Middels de 'heeft deel' relatie kunnen net zoveel secties aan een document toegevoegd worden als er nodig zijn.
 

@@ -6,91 +6,96 @@ Een eis is een [NEN2660:Requirement](https://bimloket.github.io/nen2660/def#Requ
 
 ## Eisenformat
 
-Het format wordt in 4 delen getoond in verband met de leesbaarheid van dit document. De laatste rij bevat een voorbeeld uitwerking.
+Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te bevorderen.
+
+
 
 <table class="data">
 <thead>
-	<th scope="col">[=EisURI=]
-	<th scope="col">[=EisCode=]
-	<th scope="col">[=EisNaam=]
-	<th scope="col">[=EisTekst=]
-	<th scope="col">[=EisToelichting=]
-	<th scope="col">[=EisheeftOnderwerp=]
+	<th>Kolomnaam
+	<th>Definitie
+	<th>Voorbeeld
 </thead>
-<tr class="def">
-	<td>In deze kolom staat de unieke identifier (URI) van de eis.
-	<td>In deze kolom staat de code of het nummer van de eis.
-	<td>In deze kolom staat de de naam oftewel de titel van de eis.
-	<td>In deze kolom staat de eistekst.
-	<td>In deze kolom staat de toelichting op de eis.
-	<td>In deze kolom staat de URI van het Onderwerp (subject) van de eis.
+<tr>
+	<td scope="row"> [=EisURI=]
+	<td class="def">In deze kolom staat de unieke identifier (URI) van de eis.
+	<td class="example">`https://www.example.org/id/Voorbeeld-Eis1`
 </tr>
-<tr class="example">
-	<td class="pre">`https://www.example.org/id/Voorbeeld-Eis1`
-	<td>EIS1099
-	<td>Voorbeeldeis
-	<td>Dit is de tekst van de voorbeeldeis
-	<td>Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kunnen verduidelijken
-	<td> `https://www.example.org/id/Voorbeeld-Onderwerp1`
+<tr>
+	<td scope="row"> [=EisCode=]
+	<td class="def">In deze kolom staat de code of het nummer van de eis.
+    <td class="example">EIS1099
+</tr>
+	<td scope="row"> [=EisNaam=]
+	<td class="def">In deze kolom staat de de naam oftewel de titel van de eis.
+	<td class="example">Voorbeeldeis
+</tr>
+	<td scope="row"> [=EisTekst=]
+	<td class="def">In deze kolom staat de eistekst.
+	<td class="example">Dit is de tekst van de voorbeeldeis
+</tr>
+<tr>	
+	<td scope="row"> [=EisToelichting=]
+	<td class="def">In deze kolom staat de toelichting op de eis.
+	<td class="example">Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kunnen verduidelijken
+</tr>
+<tr>
+	<td scope="row"> [=EisheeftOnderwerp=]
+	<td class="def">In deze kolom staat de URI van het Onderwerp (subject) van de eis.
+	<td class="example"> `https://www.example.org/id/Voorbeeld-Onderwerp1`
+</tr>
+<tr>
+	<td scope="row"> [=EisheeftDeel=]
+	<td class="def">In deze kolom staat de URI van een onderliggende eis. 
+	<td class="example"> `https://www.example.org/id/Voorbeeld-Eis2`
+</tr>
+<tr>
+	<td scope="row"> [=EisBron=]
+	<td class="def"> In deze kolom staat de URI van een bron van de eis in een eisenbibliotheek of brondocument. 
+	<td class="example"> `https://www.example.org/id/Voorbeeld-Document1`
+</tr>
+<tr>
+	<td scope="row"> [=EisReferentiedocument=]
+	<td class="def"> In deze kolom staat de URI van een gerefereerd document waarin aanvullende eisen staan 
+	<td class="example"> `https://www.example.org/id/Voorbeeld-Document2`
+</tr>
+<tr>
+	<td scope="row"> [=EisType=]
+	<td class="def"> In deze kolom staat het eistype. 
+	<td class="example"> `https://data.crow.nl/contractspecificaties/id/Proceseis` 
+</tr>
+<tr>
+	<td scope="row"> [=EisStatus=]
+	<td class="def">  In deze kolom staat de status van de eis. 
+	<td class="example">  `https://data.crow.nl/contractspecificaties/id/Vervallen` 
+</tr>
+<tr>
+	<td scope="row"> [=EisStatusOnderbouwing=]
+	<td class="def"> In deze kolom staat een toelichting op de status van de eis. 
+	<td class="example"> Komt niet meer voor want ... 
+</tr>
+<tr>
+	<td scope="row"> [=EisverificatieplanURI=]
+	<td class="def"> In deze kolom staat de URI van een verificatieplan bij de eis.
+	<td class="example">`https://www.example.org/id/Voorbeeld-Verificatieplan1`
+</tr>
+<tr>
+	<td scope="row"> [=EisverificatieplanMethode=]
+	<td class="def">In deze kolom staat de verificatiemethode van het verificatieplan.
+	<td class="example">`https://data.crow.nl/contractspecificaties/id/Keuring`
+</tr>
+<tr>
+	<td scope="row"> [=EisverificatieplanFase=]
+	<td class="def">In deze kolom staat de fase waarin dit Eisverificatieplan wordt uitgevoerd.
+	<td class="example">`https://data.crow.nl/contractspecificaties/id/Aanleg`
+</tr>
+<tr>
+	<td scope="row"> [=EisverificatieplanToelichting=]
+	<td class="def">In deze kolom staat de toelichting op de verificatiemethode bij de eis.
+	<td class="example">Een toelichting waarom een verificatiemethode wordt gevraagd bij de eis, of nadere invulling van de verificatiemethode
 </tr>
 </table>
 
-<table class="data">
-<thead>
-	<th>[=EisheeftDeel=]
-	<th>[=EisBron=]
-	<th>[=EisReferentiedocument=]
-</thead>
-<tr class="def">
-	<td> In deze kolom staat de URI van een onderliggende eis. 
-	<td> In deze kolom staat de URI van een bron van de eis in een eisenbibliotheek of brondocument. 
-	<td> In deze kolom staat de URI van een gerefereerd document waarin aanvullende eisen staan 
-</tr>
-<tr class="example">
-	<td> `https://www.example.org/id/Voorbeeld-Eis2`
-	<td> `https://www.example.org/id/Voorbeeld-Document1`
-	<td> `https://www.example.org/id/Voorbeeld-Document2`
-</tr>
-</table>
-
-<table class="data">
-<thead>
-	<th>[=EisType=]
-	<th>[=EisStatus=]
-	<th>[=EisStatusOnderbouwing=]
-</thead>
-<tr class="def">
-	<td> In deze kolom staat het eistype. 
-	<td> In deze kolom staat de status van de eis. 
-	<td> In deze kolom staat een toelichting op de status van de eis. 
-</tr>
-<tr class="example">
-	<td> `https://data.crow.nl/contractspecificaties/id/Proceseis` 
-	<td> `https://data.crow.nl/contractspecificaties/id/Vervallen` 
-	<td> Komt niet meer voor want ... 
-</tr>
-</table>
-
-<table class="data">
-<thead>
-	<th>[=VerificatieplanURI=]
-	<th>[=VerificatieplanMethode=]
-	<th>[=VerificatieplanFase=]
-	<th>[=VerificatieplanToelichting=]
-</thead>
-<tr class="def">
-	<td>In deze kolom staat de URI van een verificatieplan bij de eis.
-	<td>In deze kolom staat de verificatiemethode van het verificatieplan.
-	<td>In deze kolom staat de fase van het verificatieplan.
-	<td>In deze kolom staat de toelichting op de verificatiemethode bij de eis.
-</tr>
-<tr class="example">
-	<td>`https://www.example.org/id/Voorbeeld-Verificatieplan1`
-	<td>`https://data.crow.nl/contractspecificaties/id/Keuring`
-	<td>`https://data.crow.nl/contractspecificaties/id/Aanleg`
-	<td>Een toelichting waarom een verificatiemethode wordt gevraagd bij de eis, of nadere invulling van de verificatiemethode
-</tr>
-</table>
 
 ## Details
 
@@ -219,6 +224,8 @@ Bij uitwisseling mag je uitsluitend de onderstaande lijst gebruiken, zonder zelf
 
 Eistypen:
 
+<div class="issue" data-number="48"></div>
+
 <dl>
 <dt><dfn>Informatie-eis
    <dd>Verzameling van eisen die betrekking hebben op de te leveren informatieproducten
@@ -327,9 +334,9 @@ De "eigenaar" van een eis is vaak een interne rolhouder. In het contract gelden 
 </p>
 
 
-### <dfn>VerificatieplanURI
+### <dfn>EisverificatieplanURI
 
-De URI is de unieke identifier voor het verificatieplan binnen het project. Zie [URI conform W3C](https://www.w3.org/wiki/URI).
+De URI is de unieke identifier voor het Eisverificatieplan in deze fase, in dit project. Een eis kan meerdere verificatieplannen kennen, elk in een eigen fase. Een Eisverificatieplan geldt voor één fase. Indien in een andere fase precies dezelfde verificatie wordt uitgevoerd, zijn er twee Eisverificatieplannen. Zie [URI conform W3C](https://www.w3.org/wiki/URI).
 
 Kardinaliteit: 1:1 ten opzichte van een verificatieplan
 Datatype:
@@ -344,9 +351,9 @@ Datatype:
 <figcaption>Het informatiemodel voor het verificatieplan.</caption>
 </figure>
 
-### <dfn>VerificatieplanMethode
+### <dfn>EisverificatieplanMethode
 
-In deze kolom staat de methode waarmee de eis geverifieerd moet worden. Dit is een enumeratie. Een verificatiemethode is een eigenschap van een verificatieplan. De eigenschap heeft een enumeratie van de verschillende mogelijke methoden, dat wil zeggen dat de gebruiker een lijst kan opstellen met verificatiemethoden en een waarde uit deze lijst kan gebruiken.
+In deze kolom staat de methode waarmee de eis geverifieerd moet worden. Dit is een enumeratie. Een eisverificatiemethode is een eigenschap van een eisverificatieplan. De eigenschap heeft een enumeratie van de verschillende mogelijke methoden, dat wil zeggen dat de gebruiker een lijst kan opstellen met verificatiemethoden en een waarde uit deze lijst kan gebruiken.
 
 Bij uitwisseling mag uitsluitend de onderstaande lijst gebruikt worden bij contractspecificaties, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt.
 
@@ -473,9 +480,9 @@ Classificatie volgens:
 | [cs:verificationMethod](https://data.crow.nl/contractspecificaties/def/verificationMethod) | 0:1           | [cs:VerificationMethodeType](https://data.crow.nl/contractspecificaties/def/verificationMethod) |
 | { .def } |
 
-### <dfn>VerificatieplanFase
+### <dfn>EisverificatieplanFase
 
-In deze kolom staat de fase van het verificatieplan. Dit is een enumeratie. Hierbij worden de volgende fasen onderscheiden:
+In deze kolom staat de fase van het eisverificatieplan. Dit is een enumeratie. Hierbij worden de volgende fasen onderscheiden:
 
 <dl>
 <dt><dfn>Conceptfase
@@ -499,16 +506,18 @@ In deze kolom staat de fase van het verificatieplan. Dit is een enumeratie. Hier
 
 [Bron: Leidraad SE versie 2, Hoofdstuk 4](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V2/LeidraadSE_def_lowres.pdf)
 
+<div class="issue" data-number="53"></div>
+
 | Taalbinding                                                      | Kardinaliteit | Datatype                                                                 |
 | ---------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------ |
 | [cs:phase](https://data.crow.nl/contractspecificaties/def/phase) | 0:1           | [cs:PhaseType](https://data.crow.nl/contractspecificaties/def/PhaseType) |
 | { .def } |
 
-### <dfn>VerificatieplanToelichting
+### <dfn>EisverificatieplanToelichting
 
-In deze kolom staat de toelichting op de verificatiemethode.
+In deze kolom staat de toelichting op de eisverificatiemethode.
 
-In contracten wordt dit gebruikt om nader toe te lichten waarom deze verificatiemethode gevraagd wordt.
+In contracten wordt dit gebruikt om nader toe te lichten waarom deze eisverificatiemethode gevraagd wordt.
 
 | Taalbinding                                                           | Kardinaliteit | Datatype                                               |
 | --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |
