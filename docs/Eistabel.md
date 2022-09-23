@@ -101,13 +101,14 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 
 ### <dfn>EisURI
 
-De URI is de unieke identifier voor de eis binnen het project.
+De URI is de unieke identifier voor de eis binnen het project. Zie [URI volgens W3C](https://www.w3.org/wiki/URI).
+
+Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je moet volgen.
 
 Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder [=EisBron=]. Daar staat de URI van de eis uit de bibliotheek. Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet.
 
 De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context.
 
-[URI](https://www.w3.org/wiki/URI); Voor het opstellen van URI's heeft de NEN 2660 een URI-strategie die je moet volgen.
 
 | Taalbinding | Kardinaliteit | Datatype                                               |
 | ----------- | ------------- | ------------------------------------------------------ |
@@ -337,6 +338,8 @@ De "eigenaar" van een eis is vaak een interne rolhouder. In het contract gelden 
 ### <dfn>EisverificatieplanURI
 
 De URI is de unieke identifier voor het Eisverificatieplan in deze fase, in dit project. Een eis kan meerdere verificatieplannen kennen, elk in een eigen fase. Een Eisverificatieplan geldt voor één fase. Indien in een andere fase precies dezelfde verificatie wordt uitgevoerd, zijn er twee Eisverificatieplannen. Zie [URI conform W3C](https://www.w3.org/wiki/URI).
+
+Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je moet volgen.
 
 Kardinaliteit: 1:1 ten opzichte van een verificatieplan
 Datatype:

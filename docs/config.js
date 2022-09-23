@@ -70,10 +70,17 @@ ISO_IEC_IEEE_29148_2018: {
   publisher: "NEN",
 },
 NEN_2660_2_2022: {
-  title: "NEN 2660-2Regels voor informatiemodellering van de gebouwde omgeving - Deel 2: Praktische configuratie, extensie en implementatie van NEN 2660-1",
+  title: "NEN 2660-2 Regels voor informatiemodellering van de gebouwde omgeving - Deel 2: Praktische configuratie, extensie en implementatie van NEN 2660-1",
   href: "https://connect.nen.nl/Family/Detail?name=NEN%202660-2",
   status: "Actueel",
   publisher: "NEN",
 },
+NEN_2660_1_2022: {
+  title: "NEN 2660-1 Rules for information modelling of the built environment - Part 1: Conceptual models",
+  href: "https://www.nen.nl/en/nen-2660-1-2022-nl-291666",
+  status: "Actueel",
+  publisher: "NEN",
+},
+
 },
 };

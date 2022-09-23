@@ -50,7 +50,7 @@ De URI is de unieke identifier voor het onderwerp binnen het project ("Brug15").
 
 Als de URI uit een ontologie ("Een brug") direct als onderwerp wordt gebruikt, suggereer je daarmee dat de projecteis altijd geldt voor dit onderwerp; dat hoeft echter niet zo te zijn. Vandaar dat hier altijd een project-URI wordt gebruikt; in een project stel je de projecteisen aan de instaties van het onderwerp waarvan het type gedefinieerd is in je ontologie ("objecttypenbibliotheek"). Gezien de eenvoud van dit uitwisselformaat, is geen verwijzing naar een ontologie opgenomen.
 
-[URI](https://www.w3.org/wiki/URI); Voor het opstellen van URI's heeft de NEN 2660-2 een URI-strategie die je moet volgen.
+Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je moet volgen.
 
 | Taalbinding | Kardinaliteit | Datatype                                               |
 | ----------- | ------------- | ------------------------------------------------------ |
@@ -100,10 +100,13 @@ Een Eis kan betrekking hebben op een Object (Galecopperbrug), maar ook op een Ob
 	<dd>De objecttypen en objecttypenboom ("decompositie") in het contract (Vraagspecificatie Eisendeel) zijn in NEN2660-2 een <a href="https://w3id.org/nen2660/def#PhysicalObject">nen2660:PhysicalObject</a>. Dit kan in de kolom Type worden ingevuld.
 	
 <dt><dfn>Functie
-	<dd>De functies in het contract (Vraagspecificatie Eisendeel) zijn ánders dan de werkzaamheden (Vraagspecificatie Procesdeel / ontwerp- en uitvoeringswerkzaamheden). De functies geven weer, welke diensten het "systeem" moet vervullen tijdens het gebruik; een voorbeeld is een weg, die als functie "het verkeer moet geleiden". De objecten in het contract zijn de functievervullers. De activiteiten zijn door mensen uit te voeren werkzaamheden tijdens het ontwerpen, bouwen, beheren en slopen van het object. In de NEN-2660 is een functie, bijvoorbeeld "Afwikkelen wegverkeer" ZOWEL een <a href="https://w3id.org/nen2660/def#Activity">nen2660:Activity</a>  ALS een <a href="https://w3id.org/nen2660/def/#FunctionalEntity">nen2660:FuntionalEntity</a>.
+	<dd>In de [[NEN_2660_1_2022]], par. 8.5.3, opmerking 2 wordt functie gedefinieerd als "De functie van een object is de activiteit die het (object) uitvoert of kan uitvoeren, zodanig dat de output van die activiteit bijdraagt aan het doel dat de betrokken stakeholder wil bereiken." 
+	<dd>In de [[NEN_2660_2_2022]] is een functie, bijvoorbeeld "Afwikkelen wegverkeer" ZOWEL een <a href="https://w3id.org/nen2660/def#Activity">nen2660:Activity</a>  ALS een <a href="https://w3id.org/nen2660/def/#FunctionalEntity">nen2660:FuntionalEntity</a>.
+	<dd>Ook mensen kunnen volgens de gegeven definitie in de [[NEN_2660_1_2022]] functies uitvoeren, zoals "De door mensen uit te voeren werkzaamheden tijdens het ontwerpen, bouwen, beheren en slopen van het object". In dit uitwisselformaat en in hedendaagse Vraagspecificaties (Eisendeel) worden functies specifiek alleen meegegeven om aan te duiden, welke diensten het "systeem" moet vervullen tijdens het gebruik; een voorbeeld is een weg, die als functie "het verkeer moet geleiden". De objecten in het contract zijn de functievervullers. De werkzaamheden van mensen tijdens het project, waaronder die beschreven worden in Vraagspecificatie Procesdeel en de ontwerp- en uitvoeringswerkzaamheden, worden in dit uitwisselformaat <b>niet</b> beschreven als functies.
 
 <dt><dfn>Werkzaamheid
-	<dd>De werkzaamheden zijn door mensen uit te voeren activiteiten tijdens het ontwerpen, bouwen, beheren en slopen van het object. In de NEN2660 is een werkzaamheid, zoals "Opstellen Maandrapportage" een <a href="https://w3id.org/nen2660/def#Activity">nen2660:Activity</a>.
+	<dd>De werkzaamheden zijn door mensen uit te voeren activiteiten tijdens het ontwerpen, bouwen, beheren en slopen van het object, met name die werkzaamheden die in een contract in de Vraagspecificatie Procesdeel staan.
+	<dd>In de [[NEN_2660_2_2022]] is een werkzaamheid, zoals "Opstellen Maandrapportage" een <a href="https://w3id.org/nen2660/def#Activity">nen2660:Activity</a>.
 
 <dt><dfn>Informatieproduct
 	<dd>De informatieproducten in het contract staan vaak zowel in de Vraagspecificatie Procesdeel als in een separate Informatieleveringsspecificatie. Het betreft de gevraagde levering van 'documenten', dit kunnen alle bestandstypes zijn, ook datasets of geometrische bestanden. In de NEN2660 is een InformationObject onderscheiden. Binnen contractspecificaties wordt deze gespecialiseerd naar een <a href="https://data.crow.nl/contractspecificaties/def/Document">cs:Document</a>.Voorbeelden:<ul>

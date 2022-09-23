@@ -78,9 +78,9 @@ Het format wordt in 2 delen getoond in verband met de leesbaarheid van dit docum
 
 ### <dfn>DocumentURI
 
-De URI is de unieke identifier voor het document binnen het project.
+De URI is de unieke identifier voor het document binnen het project.Zie [URI volgens W3C](https://www.w3.org/wiki/URI).
 
-[URI](https://www.w3.org/wiki/URI); Voor het opstellen van URI's heeft de NEN 2660-2 een URI-strategie die je moet volgen.
+Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je moet volgen.
 
 | Taalbinding | Kardinaliteit | Datatype                                               |
 | ----------- | ------------- | ------------------------------------------------------ |
