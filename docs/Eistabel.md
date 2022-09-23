@@ -26,7 +26,7 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td class="def">In deze kolom staat de code of het nummer van de eis.
     <td class="example">EIS1099
 </tr>
-	<td scope="row"> [=EisNaam=]
+	<td scope="row"> [=EisTitel=]
 	<td class="def">In deze kolom staat de de naam oftewel de titel van de eis.
 	<td class="example">Voorbeeldeis
 </tr>
@@ -38,11 +38,6 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td scope="row"> [=EisToelichting=]
 	<td class="def">In deze kolom staat de toelichting op de eis.
 	<td class="example">Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kunnen verduidelijken
-</tr>
-<tr>
-	<td scope="row"> [=EisheeftOnderwerp=]
-	<td class="def">In deze kolom staat de URI van het Onderwerp (subject) van de eis.
-	<td class="example"> `https://www.example.org/id/Voorbeeld-Onderwerp1`
 </tr>
 <tr>
 	<td scope="row"> [=EisheeftDeel=]
@@ -78,6 +73,11 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td scope="row"> [=EisverificatieplanURI=]
 	<td class="def"> In deze kolom staat de URI van een verificatieplan bij de eis.
 	<td class="example">`https://www.example.org/id/Voorbeeld-Verificatieplan1`
+</tr>
+<tr>
+	<td scope="row"> [=EisheeftOnderwerp=]
+	<td class="def">In deze kolom staat de URI van het Onderwerp (subject) van de eis.
+	<td class="example"> `https://www.example.org/id/Voorbeeld-Onderwerp1`
 </tr>
 <tr>
 	<td scope="row"> [=EisverificatieplanMethode=]
@@ -127,11 +127,11 @@ De EisCode is een nummer van de eis in spreektaal, vaak een voor mensen herkenba
 | [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 | { .def } |
 
-### <dfn>EisNaam
+### <dfn>EisTitel
 
-De EisNaam wordt ook wel eens de titel van de eis genoemd, en geeft een voor mensen leesbare korte duiding van de inhoud van de eis.
+De EisTitel wordt ook wel eens de titel van de eis genoemd, en geeft een voor mensen leesbare korte duiding van de inhoud van de eis.
 
-De EisNaam hoeft niet uniek te zijn in het project, daarvoor heeft de eis een URI. Een unieke naam is voor de menselijke lezer vaak wel handig. Soms wordt de EisNaam in applicaties bijvoorbeeld gebruikt bij het visualiseren van de eisenboom. Unieke namen helpen in dat geval.
+De EisTitel hoeft niet uniek te zijn in het project, daarvoor heeft de eis een URI. Een unieke naam is voor de menselijke lezer vaak wel handig. Soms wordt de EisTitel in applicaties bijvoorbeeld gebruikt bij het visualiseren van de eisenboom. Unieke namen helpen in dat geval.
 
 | Taalbinding                                                                     | Kardinaliteit | Datatype                                               |
 | ------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |
@@ -160,21 +160,6 @@ In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld
 | --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |
 | [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 | { .def } |
-
-### <dfn>EisheeftOnderwerp
-
-In deze kolom staat de URI van het Onderwerp van het verificatieplan bij de eis. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.
-
-Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voor de mens. Indien hier ook de naam van het concept zou worden toegevoegd, creëert dit dubbelingen met de onderwerpentabel en daarom mogelijk fouten. Daarom wordt alleen de URI gebruikt.
-
-| Taalbinding                                                                            | Kardinaliteit | Datatype                                               |
-| -------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |
-| [cs:isVerificationOf](https://data.crow.nl/contractspecificaties/def/isVerificationOf) | 1:1           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
-| [cs:hasAsSubject ](https://data.crow.nl/contractspecificaties/def/hasAsSubject)        | 1:1           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
-| { .def } |
-
-> Merk op, dat in de tabel een relatie niet benoemd is, omdat de "regel" de verbindende factor is: <a href="https://data.crow.nl/contractspecificaties/def/hasAsSubject">cs:hasAsSubject</a>
-
 
 
 ### <dfn>EisheeftDeel
@@ -337,9 +322,15 @@ De "eigenaar" van een eis is vaak een interne rolhouder. In het contract gelden 
 
 ### <dfn>EisverificatieplanURI
 
-De URI is de unieke identifier voor het Eisverificatieplan in deze fase, in dit project. Een eis kan meerdere verificatieplannen kennen, elk in een eigen fase. Een Eisverificatieplan geldt voor één fase. Indien in een andere fase precies dezelfde verificatie wordt uitgevoerd, zijn er twee Eisverificatieplannen. Zie [URI conform W3C](https://www.w3.org/wiki/URI).
-
+De URI is de unieke identifier voor het Eisverificatieplan in deze fase, in dit project. Zie [URI conform W3C](https://www.w3.org/wiki/URI).
 Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je moet volgen.
+
+
+Het Eisverificatieplan geeft de verificatiemethode voor de eis (een type uit een lijst plus een vrij tekstveld met toelichting), per object en per fase waarin de verificatie wordt uitgevoerd.  
+
+Een eis kan meerdere verificatieplannen kennen, elk in een eigen fase. Een Eisverificatieplan geldt voor één fase. Indien in een andere fase precies dezelfde verificatie wordt uitgevoerd, zijn er twee Eisverificatieplannen.  
+
+
 
 Kardinaliteit: 1:1 ten opzichte van een verificatieplan
 Datatype:
@@ -351,8 +342,23 @@ Datatype:
 
 <figure>
 <img src="./media/Diagram2.drawio.svg" alt="UML schema voor het informatiemodel voor het verificatieplan">
-<figcaption>Het informatiemodel voor het verificatieplan.</caption>
+<figcaption>Het informatiemodel voor het verificatieplan. In de [[NEN_2660_2_2022]] hoort het Onderwerp bij het Eisverificatieplan en heeft geen directe relatie met de eis.</caption>
 </figure>
+
+### <dfn>EisheeftOnderwerp
+
+In deze kolom staat de URI van het Onderwerp van het Eisverificatieplan. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel met elk een eigen Eisverificatieplan en een eigen onderwerp.
+
+Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voor de mens. Indien hier ook de naam van het concept zou worden toegevoegd, creëert dit dubbelingen met de onderwerpentabel en daarom mogelijk fouten. Daarom wordt alleen de URI gebruikt.
+
+| Taalbinding                                                                            | Kardinaliteit | Datatype                                               |
+| -------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |
+| [cs:isVerificationOf](https://data.crow.nl/contractspecificaties/def/isVerificationOf) | 1:1 tov het Eisverificatieplan          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| [cs:hasAsSubject ](https://data.crow.nl/contractspecificaties/def/hasAsSubject)        | 1:1 tov het Eisverificatieplan          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| { .def } |
+
+> Merk op, dat in de tabel een relatie niet benoemd is, omdat de "regel" de verbindende factor is: <a href="https://data.crow.nl/contractspecificaties/def/hasAsSubject">cs:hasAsSubject</a>
+
 
 ### <dfn>EisverificatieplanMethode
 
@@ -526,3 +532,6 @@ In contracten wordt dit gebruikt om nader toe te lichten waarom deze eisverifica
 | --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |
 | [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 | { .def } |
+
+
+<div class="issue" data-number="37"></div>
