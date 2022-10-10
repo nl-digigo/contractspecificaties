@@ -57,7 +57,9 @@ Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die 
 | n.v.t.      | 1:1           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
-> Een URI maakt het meteen "linked data proof"
+<aside class="note" title="LinkedData Proof">
+Een URI maakt het meteen "linked data proof"
+</aside>
 
 ### <dfn>OnderwerpCode
 
