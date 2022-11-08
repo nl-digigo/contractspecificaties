@@ -1,12 +1,12 @@
 # Eisen
 
-Het eisenformat wordt gebruikt om de eisen te kunnen uitwisselen als data. Bij elke kolom is aangegeven wat de vertaling/binding is naar linked data standaarden, hoe vaak deze waarde ingevuld mag worden per eis ("kardinaliteit") en een beschrijving.
+Het eisenformat wordt gebruikt om de eisen te kunnen uitwisselen als data. 
 
 Een eis is een [NEN2660:Requirement](https://bimloket.github.io/nen2660/def#Requirement) volgens NEN 2660.
 
 ## Eisenformat
 
-Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te bevorderen.
+Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te bevorderen. Bij uitwisseling is de tabel horizontaal waarbij een of meerdere regels gebruikt kunnen worden per eis. 
 
 
 
@@ -71,7 +71,7 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 </tr>
 <tr>
 	<td scope="row"> [=EisverificatieplanURI=]
-	<td class="def"> In deze kolom staat de URI van een verificatieplan bij de eis.
+	<td class="def"> In deze kolom staat de URI van een Eisverificatieplan.
 	<td class="example">`https://www.example.org/id/Voorbeeld-Verificatieplan1`
 </tr>
 <tr>
@@ -119,9 +119,10 @@ De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelf
 Een URI maakt het meteen "linked data proof"
 </aside>
 
+
 ### <dfn>EisCode
 
-De EisCode is een <i>in het contract opgenomen</i> nummer van de eis in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek over het contract naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen.
+De EisCode is een <i>in het contract opgenomen</i> nummer van de eis in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek over het contract naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen. Omdat deze code de eis identificeert, moet de code binnen het project uniek zijn.
 
 | Taalbinding                                                                   | Kardinaliteit | Datatype                                               |  Maximaal aantal tekens                                               |
 | ----------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
@@ -198,6 +199,7 @@ Een referentiedocument is een document waarin extra eisen staan die in het contr
 
 * De eis verwijst naar een ontwerp of berekening die van toepassing is.
 * De eis verwijst naar een richtlijn, handleiding of norm die van toepassing is.
+* De eis verwijst naar een figuur die van toepassing is.
 
 Instructie voor gebruik: omdat nog niet alle partijen in staat zijn om de data helemaal te verwerken, moet je het document wel in de eistekst noemen. De eistekst is leidend. Een ontvanger van de eisenset kan er ook niet van uit gaan, dat de opdrachtgever dit altijd in weet te vullen. Als in een eistekst naar een referentiedocument wordt verwezen, kan het zijn dat er geen relatie is gemaakt naar het referentiedocument.
 
@@ -219,23 +221,24 @@ Eistypen:
 
 <dl>
 <dt><dfn>Informatie-eis
-   <dd>Verzameling van eisen die betrekking hebben op de te leveren informatieproducten
+   <dd>Eis gesteld aan een te leveren [=Informatieproduct=]
    <dd><a href="https://data.crow.nl/contractspecificaties/id/Informatie-eis">csw:Informatie-eis</a>
 	   
 <dt><dfn>Systeemeis
-   <dd>De beschrijving van het geheel aan samenhangende of elkaar beïvloedende eisen dat bijdraagt aan het tot standkomen en gebruiken danwel toepassen van het geintegreerde systeem.
+   <dd>Eis gesteld aan een [=FysiekObject=]
+   <dd>Een eis die het tot stand komen en gebruiken dan wel toepassen van het geïntegreerde systeem specificeert. Bron: [[LeidraadSE3]]
+   <dd>Andere in de sector gebruikte namen van eisen die allemaal tot de Systeemeisen behoren: Functionele eis; Prestatie-eis; Technische eis; Ontwerprandvoorwaarde
    <dd><a href="https://data.crow.nl/contractspecificaties/id/Systeemeis">csw:Systeemeis</a>
-   <dd>Bron: [[LeidraadSE3]]
 	 
 <dt><dfn>Proceseis
-   <dd>De beschrijving van het gevraagde geheel van samenhangende of elkaar beïnvloedende activiteiten dat input omzet in output. 
+   <dd>Eis gesteld aan een [=Werkzaamheid=]
+   <dd>De beschrijving van het gevraagde geheel van samenhangende of elkaar beïnvloedende activiteiten dat input omzet in output. Bron: [[LeidraadSE3]] 
    <dd><a href="https://data.crow.nl/contractspecificaties/id/Proceseis">csw:Proceseis</a>
-   <dd>Bron: [[LeidraadSE3]]
 
 <dt><dfn>Functie-eis
-   <dd>De beschrijving van de gevraagde beoogde werking en/of verrichting van een systeem.
+   <dd>Eis gesteld aan een [=Functie=]
+   <dd>De beschrijving van de gevraagde beoogde werking en/of verrichting van een systeem. Bron: [[LeidraadSE3]]
    <dd><a href="https://data.crow.nl/contractspecificaties/id/Functie-eis">csw:Functie-eis</a>
- <dd>Bron: [[LeidraadSE3]]
 
 <dt><dfn>Aspecteis: Betrouwbaarheid
    <dd>De waarschijnlijkheid dat de vereiste functie wordt uitgevoerd onder gegeven omstandigheden gedurende een bepaald tijdsinterval. 
@@ -303,6 +306,8 @@ Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijzig
    <dd><a href="https://data.crow.nl/contractspecificaties/id/Actueel">csw:Actueel</a>
 <dt><dfn>Vervallen
    <dd><a href="https://data.crow.nl/contractspecificaties/id/Vervallen">csw:Vervallen</a>
+<dt><dfn>Concept
+   <dd><a href="https://data.crow.nl/contractspecificaties/id/Concept">csw:Concept</a>
 </dl>
 
 | Taalbinding                                                        | Kardinaliteit | Datatype                                                                   |
@@ -360,7 +365,7 @@ Merk op, dat in de tabel een relatie niet benoemd is, omdat de "regel" de verbin
 
 ### Enum <dfn>EisverificatieplanMethode
 
-In deze kolom staat de methode waarmee de eis geverifieerd moet worden. Dit is een enumeratie. Een eisverificatiemethode is een eigenschap van een eisverificatieplan. De eigenschap heeft een enumeratie van de verschillende mogelijke methoden, dat wil zeggen dat de gebruiker een lijst kan opstellen met verificatiemethoden en een waarde uit deze lijst kan gebruiken.
+In deze kolom staat de methode waarmee de eis geverifieerd moet worden. Een eisverificatiemethode is een eigenschap van een eisverificatieplan. De eisverificatiemethode is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van tye voren vastgestelde verificatiemethoden. Het is niet verplicht om een verificatiemethode voor te schrijven bij een Eisverificatieplan, je kunt dit ook aan de opdrachtnemer laten.
 
 Bij uitwisseling mag uitsluitend de onderstaande lijst gebruikt worden bij contractspecificaties, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt.
 
@@ -369,6 +374,8 @@ Classificatie volgens:
 1. [[NEN_EN_ISO_9000_2015]]
 2. [[ISO_IEC_IEEE_29148_2018]] Systems and software engineering — Life cycle processes — Requirements engineering
 4. [[LeidraadSE2]]; deze leidraad is niet meer actueel, in [[LeidraadSE3]] worden geen verificatiemethoden meer benoemd die in versie 2 wel stonden.
+
+<div class="issue" data-number="63"></div>
 
 <dl>
 <dt><dfn>Vaststellen
@@ -489,7 +496,15 @@ Classificatie volgens:
 
 ### Enum <dfn>EisverificatieplanFase
 
-In deze kolom staat de fase van het eisverificatieplan. Dit is een enumeratie. Hierbij worden de volgende fasen onderscheiden:
+In deze kolom staat de fase van het eisverificatieplan. Dit is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van te voren vastgestelde fasen. Dit om uitwisseling tussen systemen makkelijker te maken.
+
+De opdrachtgever gebruikt deze fase, om vast te leggen wanneer een eis geverifieerd dient te worden.  Voorbeelden zijn de eis aan een berm: "Twee keer maaien per maand." (gebruiksfase) en "Kijkhoeken aanleggen bij rotonde." (Ontwikkelfase). Zelfde object, verschillende fases.
+De voorwaarde om deze fase te kunnen vastleggen is dus het bijvoegen van een Eisverificatieplan.
+
+Als je specifiekere deadlines wilt afspreken in een project, zijn deze fasen te generiek. Op dit moment zul je voor specifiekere deadlines de EisverificatieplanToelichting moeten gebruiken, of dit in de Eistekst opnemen. 
+
+
+Hierbij worden de volgende fasen onderscheiden:
 
 <dl>
 <dt><dfn>Conceptfase
@@ -533,9 +548,3 @@ In contracten wordt dit gebruikt om nader toe te lichten waarom deze eisverifica
 
 
 <div class="issue" data-number="37"></div>
-
-### Buiten scope
-
-<aside class="note" title="Eisinitiator / eigenaar">
-De "eigenaar" of "initiator" van een eis is vaak een interne rolhouder. In het contract gelden hiervoor de projectafspraken en kan de eigenaar vertegenwoordigd zijn door een andere rolhouder. Een eigenaar van een eis kan intern bijvoorbeeld de objectbeheerder zijn, maar in het contract is de technisch manager eerste aanspreekpunt voor de eis. Meestal wordt de eigenaar niet benoemd in de vraagspecificaties. Daarom is "eigenaarschap" niet opgenomen in de eisentabel.
-</aside>
