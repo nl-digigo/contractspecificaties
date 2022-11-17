@@ -70,27 +70,27 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td class="example"> Komt niet meer voor want ... 
 </tr>
 <tr>
-	<td scope="row"> [=EisverificatieplanURI=]
-	<td class="def"> In deze kolom staat de URI van een Eisverificatieplan.
-	<td class="example">`https://www.example.org/id/Voorbeeld-Verificatieplan1`
+	<td scope="row"> [=VerificatievoorschriftURI=]
+	<td class="def"> In deze kolom staat de URI van een Verificatievoorschrift.
+	<td class="example">`https://www.example.org/id/Voorbeeld-Verificatievoorschrift1`
 </tr>
 <tr>
-	<td scope="row"> [=EisheeftOnderwerp=]
-	<td class="def">In deze kolom staat de URI van het Onderwerp (subject) van de eis.
+	<td scope="row"> [=VerificatievoorschriftheeftOnderwerp=]
+	<td class="def">In deze kolom staat de URI van het Onderwerp (subject) van het Verificatievoorschrift.
 	<td class="example"> `https://www.example.org/id/Voorbeeld-Onderwerp1`
 </tr>
 <tr>
-	<td scope="row"> [=EisverificatieplanMethode=]
-	<td class="def">In deze kolom staat de verificatiemethode van het verificatieplan.
+	<td scope="row"> [=VerificatievoorschriftMethode=]
+	<td class="def">In deze kolom staat de verificatiemethode van het Verificatievoorschrift.
 	<td class="example">`https://data.crow.nl/contractspecificaties/id/Keuring`
 </tr>
 <tr>
-	<td scope="row"> [=EisverificatieplanFase=]
-	<td class="def">In deze kolom staat de fase waarin dit Eisverificatieplan wordt uitgevoerd.
+	<td scope="row"> [=VerificatievoorschriftFase=]
+	<td class="def">In deze kolom staat de fase waarin dit Verificatievoorschrift wordt uitgevoerd.
 	<td class="example">`https://data.crow.nl/contractspecificaties/id/Aanleg`
 </tr>
 <tr>
-	<td scope="row"> [=EisverificatieplanToelichting=]
+	<td scope="row"> [=VerificatievoorschriftToelichting=]
 	<td class="def">In deze kolom staat de toelichting op de verificatiemethode bij de eis.
 	<td class="example">Een toelichting waarom een verificatiemethode wordt gevraagd bij de eis, of nadere invulling van de verificatiemethode
 </tr>
@@ -326,46 +326,50 @@ Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status o
 | { .def } |
 
 
-### <dfn>EisverificatieplanURI
+### <dfn>VerificatievoorschriftURI
 
-De URI is de unieke identifier voor het Eisverificatieplan in deze fase, in dit project. Zie [URI conform W3C](https://www.w3.org/wiki/URI).
+De URI is de unieke identifier voor het Verificatievoorschrift in deze fase, in dit project. Zie [URI conform W3C](https://www.w3.org/wiki/URI).
 Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je moet volgen.
 
 
-Het Eisverificatieplan geeft de <i>in het contract voorgeschreven</i> verificatiemethode voor de eis (een type uit een lijst plus een vrij tekstveld met toelichting), per object en per fase waarin de verificatie wordt uitgevoerd.  
+Het Verificatievoorschrift geeft de <i>in het contract voorgeschreven</i> verificatiemethode voor de eis (een type uit een lijst plus een vrij tekstveld met toelichting), per object en per fase waarin de verificatie wordt uitgevoerd.  
 
-Een eis kan meerdere verificatieplannen kennen, elk in een eigen fase. Een Eisverificatieplan geldt voor één fase. Indien in een andere fase precies dezelfde verificatie wordt uitgevoerd, zijn er twee Eisverificatieplannen.  
+Een eis kan meerdere Verificatievoorschriften kennen, elk in een eigen fase. Een Verificatievoorschrift geldt voor één fase. Indien in een andere fase precies dezelfde verificatie wordt uitgevoerd, zijn er twee Verificatievoorschriften.  
 
 | Taalbinding | Kardinaliteit | Datatype                                               |
 | ----------- | ------------- | ------------------------------------------------------ |
-| n.v.t.      | 1:1 ten opzichte van een Eisverificatieplan       | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| n.v.t.      | 1:1 ten opzichte van een Verificatievoorschrift       | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
 
-### <dfn>EisheeftOnderwerp
+### <dfn>VerificatievoorschriftheeftOnderwerp
 
-In deze kolom staat de URI van het Onderwerp van het Eisverificatieplan. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel met elk een eigen Eisverificatieplan en een eigen onderwerp.
+In deze kolom staat de URI van het Onderwerp van het Verificatievoorschrift. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel met elk een eigen Verificatievoorschrift en een eigen onderwerp.
 
 Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voor de mens. Indien hier ook de naam van het concept zou worden toegevoegd, creëert dit dubbelingen met de onderwerpentabel en daarom mogelijk fouten. Daarom wordt alleen de URI gebruikt.
 
 | Taalbinding                                                                            | Kardinaliteit | Datatype                                               |
 | -------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |
-| [cs:isVerificationOf](https://data.crow.nl/contractspecificaties/def/isVerificationOf) | 1:1 tov het Eisverificatieplan          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
-| [cs:hasAsSubject ](https://data.crow.nl/contractspecificaties/def/hasAsSubject)        | 1:1 tov het Eisverificatieplan          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| [cs:isVerificationOf](https://data.crow.nl/contractspecificaties/def/isVerificationOf) | 1:1 tov het Verificatievoorschrift          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| [cs:hasAsSubject ](https://data.crow.nl/contractspecificaties/def/hasAsSubject)        | 1:1 tov het Verificatievoorschrift          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
-<aside class="note" title="Eis en Eisverificatieplan">
+<aside class="note" title="Onderwerp van Eis en Verificatievoorschrift">
 Merk op, dat in de tabel een relatie niet benoemd is, omdat de "regel" de verbindende factor is: <a href="https://data.crow.nl/contractspecificaties/def/hasAsSubject">cs:hasAsSubject</a>
+Dit is het onderwerp van het Verificatievoorschrift. In de [[NEN_2660_2_2022]] zijn er twee manieren om een eis te verbinden met een onderwerp: <ol>
+<li>Rechtstreeks via de relatie: hasRequirement</li>
+<li>Indirect via de relaties: isVerificationOf en hasAsSubject</li>
+Deze laatste heeft de voorkeur binnen Contractspecificaties, omdat er meer informatie kan worden vastgelgd over het Verificatievoorschrift. 
 <figure>
-<img src="./media/Diagram2.drawio.svg" alt="UML schema voor het informatiemodel voor het verificatieplan">
-<figcaption>Het informatiemodel voor het verificatieplan. In de [[NEN_2660_2_2022]] hoort het Onderwerp bij het Eisverificatieplan en heeft geen directe relatie met de eis.</caption>
+<img src="./media/Diagram2.drawio.svg" alt="UML schema voor het informatiemodel voor het Verificatievoorschrift">
+<figcaption>Het informatiemodel voor het Verificatievoorschrift.  hoort het Onderwerp bij het Verificatievoorschrift en heeft geen directe relatie met de eis.</caption>
 </figure>
 </aside>
 
 
-### Enum <dfn>EisverificatieplanMethode
+### Enum <dfn>VerificatievoorschriftMethode
 
-In deze kolom staat de methode waarmee de eis geverifieerd moet worden. Een eisverificatiemethode is een eigenschap van een eisverificatieplan. De eisverificatiemethode is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van tye voren vastgestelde verificatiemethoden. Het is niet verplicht om een verificatiemethode voor te schrijven bij een Eisverificatieplan, je kunt dit ook aan de opdrachtnemer laten.
+In deze kolom staat de methode waarmee de eis geverifieerd moet worden. Een eisverificatiemethode is een eigenschap van een Verificatievoorschrift. De eisverificatiemethode is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van tye voren vastgestelde verificatiemethoden. Het is niet verplicht om een verificatiemethode voor te schrijven bij een Verificatievoorschrift, je kunt dit ook aan de opdrachtnemer laten.
 
 Bij uitwisseling mag uitsluitend de onderstaande lijst gebruikt worden bij contractspecificaties, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt.
 
@@ -494,14 +498,14 @@ Classificatie volgens:
 | [cs:verificationMethod](https://data.crow.nl/contractspecificaties/def/verificationMethod) | 0:1           | [cs:VerificationMethodeType](https://data.crow.nl/contractspecificaties/def/verificationMethod) |
 | { .def } |
 
-### Enum <dfn>EisverificatieplanFase
+### Enum <dfn>VerificatievoorschriftFase
 
-In deze kolom staat de fase van het eisverificatieplan. Dit is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van te voren vastgestelde fasen. Dit om uitwisseling tussen systemen makkelijker te maken.
+In deze kolom staat de fase van het Verificatievoorschrift. Dit is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van te voren vastgestelde fasen. Dit om uitwisseling tussen systemen makkelijker te maken.
 
 De opdrachtgever gebruikt deze fase, om vast te leggen wanneer een eis geverifieerd dient te worden.  Voorbeelden zijn de eis aan een berm: "Twee keer maaien per maand." (gebruiksfase) en "Kijkhoeken aanleggen bij rotonde." (Ontwikkelfase). Zelfde object, verschillende fases.
-De voorwaarde om deze fase te kunnen vastleggen is dus het bijvoegen van een Eisverificatieplan.
+De voorwaarde om deze fase te kunnen vastleggen is dus het bijvoegen van een Verificatievoorschrift.
 
-Als je specifiekere deadlines wilt afspreken in een project, zijn deze fasen te generiek. Op dit moment zul je voor specifiekere deadlines de EisverificatieplanToelichting moeten gebruiken, of dit in de Eistekst opnemen. 
+Als je specifiekere deadlines wilt afspreken in een project, zijn deze fasen te generiek. Op dit moment zul je voor specifiekere deadlines de VerificatievoorschriftToelichting moeten gebruiken, of dit in de Eistekst opnemen. 
 
 
 Hierbij worden de volgende fasen onderscheiden:
@@ -535,11 +539,11 @@ Hierbij worden de volgende fasen onderscheiden:
 | [cs:phase](https://data.crow.nl/contractspecificaties/def/phase) | 0:1           | [cs:PhaseType](https://data.crow.nl/contractspecificaties/def/PhaseType) |
 | { .def } |
 
-### <dfn>EisverificatieplanToelichting
+### <dfn>VerificatievoorschriftToelichting
 
-In deze kolom staat de toelichting op de eisverificatiemethode.
+In deze kolom staat de toelichting op het Verificatievoorschrift.
 
-In contracten wordt dit gebruikt om nader toe te lichten waarom deze eisverificatiemethode gevraagd wordt.
+In contracten wordt dit gebruikt om nader toe te lichten waarom dit Verificatievoorschrift gevraagd wordt.
 
 | Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Maximaal aantal tekens                                               |
 | --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
