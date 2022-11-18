@@ -75,28 +75,27 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td class="example">`https://www.example.org/id/Voorbeeld-Verificatievoorschrift1`
 </tr>
 <tr>
-	<td scope="row"> [=VerificatievoorschriftheeftOnderwerp=]
+	<td scope="row"> [=VerificatieheeftOnderwerp=]
 	<td class="def">In deze kolom staat de URI van het Onderwerp (subject) van het Verificatievoorschrift.
 	<td class="example"> `https://www.example.org/id/Voorbeeld-Onderwerp1`
 </tr>
 <tr>
-	<td scope="row"> [=VerificatievoorschriftMethode=]
+	<td scope="row"> [=VerificatieMethode=]
 	<td class="def">In deze kolom staat de verificatiemethode van het Verificatievoorschrift.
 	<td class="example">`https://data.crow.nl/contractspecificaties/id/Keuring`
 </tr>
 <tr>
-	<td scope="row"> [=VerificatievoorschriftFase=]
+	<td scope="row"> [=VerificatieFase=]
 	<td class="def">In deze kolom staat de fase waarin dit Verificatievoorschrift wordt uitgevoerd.
 	<td class="example">`https://data.crow.nl/contractspecificaties/id/Aanleg`
 </tr>
 <tr>
-	<td scope="row"> [=VerificatievoorschriftMoment=]
+	<td scope="row"> [=VerificatieMoment=]
 	<td class="def">In deze kolom staat het moment waarop dit Verificatievoorschrift moet zijn uitgevoerd.
 	<td class="example">Twee weken voor het begin van de Gebruiksfase
 </tr>
-VerificatievoorschriftMoment
 <tr>
-	<td scope="row"> [=VerificatievoorschriftToelichting=]
+	<td scope="row"> [=VerificatieToelichting=]
 	<td class="def">In deze kolom staat de toelichting op de verificatiemethode bij de eis.
 	<td class="example">Een toelichting waarom een verificatiemethode wordt gevraagd bij de eis, of nadere invulling van de verificatiemethode
 </tr>
@@ -326,7 +325,7 @@ Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijzig
 In deze kolom staat een toelichting op de status van de eis.
 Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status onderbouwd is.
 
-| Taalbinding                                                                                | Kardinaliteit | Datatype                                               |  Maximaal aantal tekens                                               |
+| Taalbinding                                                                                | Kardinaliteit | Datatype                                               |  Maximaal aantal tekens  |
 | ------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
 | [cs:statusOnderbouwing](https://data.crow.nl/contractspecificaties/def/statusOnderbouwing) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000 |
 | { .def } |
@@ -348,7 +347,7 @@ Een eis kan meerdere Verificatievoorschriften kennen, elk in een eigen fase. Een
 | { .def } |
 
 
-### <dfn>VerificatievoorschriftheeftOnderwerp
+### <dfn>VerificatieheeftOnderwerp
 
 In deze kolom staat de URI van het Onderwerp van het Verificatievoorschrift. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel met elk een eigen Verificatievoorschrift en een eigen onderwerp.
 
@@ -356,8 +355,8 @@ Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voo
 
 | Taalbinding                                                                            | Kardinaliteit | Datatype                                               |
 | -------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |
-| [cs:isVerificationOf](https://data.crow.nl/contractspecificaties/def/isVerificationOf) | 1:1 tov het Verificatievoorschrift          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
-| [cs:hasAsSubject ](https://data.crow.nl/contractspecificaties/def/hasAsSubject)        | 1:1 tov het Verificatievoorschrift          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| [cs:isVerificationOf](https://data.crow.nl/contractspecificaties/def/isVerificationOf) | 1:1 tov een Verificatievoorschrift          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| [cs:hasAsSubject ](https://data.crow.nl/contractspecificaties/def/hasAsSubject)        | 1:1 tov een Verificatievoorschrift          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
 <aside class="note" title="Onderwerp van Eis en Verificatievoorschrift">
@@ -373,7 +372,7 @@ Deze laatste heeft de voorkeur binnen Contractspecificaties, omdat er meer infor
 </aside>
 
 
-### Enum <dfn>VerificatievoorschriftMethode
+### Enum <dfn>VerificatieMethode
 
 In deze kolom staat de methode waarmee de eis geverifieerd moet worden. Een eisverificatiemethode is een eigenschap van een Verificatievoorschrift. De eisverificatiemethode is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van tye voren vastgestelde verificatiemethoden. Het is niet verplicht om een verificatiemethode voor te schrijven bij een Verificatievoorschrift, je kunt dit ook aan de opdrachtnemer laten.
 
@@ -501,40 +500,49 @@ Classificatie volgens:
 
 | Taalbinding                                                                                | Kardinaliteit | Datatype                                                                                        |
 | ------------------------------------------------------------------------------------------ | ------------- | ----------------------------------------------------------------------------------------------- |
-| [cs:verificationMethod](https://data.crow.nl/contractspecificaties/def/verificationMethod) | 0:1           | [cs:VerificationMethodeType](https://data.crow.nl/contractspecificaties/def/verificationMethod) |
+| [cs:verificationMethod](https://data.crow.nl/contractspecificaties/def/verificationMethod) | 0:1  tov een Verificatievoorschrift           | [cs:VerificationMethodeType](https://data.crow.nl/contractspecificaties/def/verificationMethod) |
 | { .def } |
 
-### Enum <dfn>VerificatievoorschriftFase
+### Enum <dfn>VerificatieFase
 
 In deze kolom staat de fase van het Verificatievoorschrift. Dit is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van te voren vastgestelde fasen. Dit om uitwisseling tussen systemen makkelijker te maken.
 
 De opdrachtgever gebruikt deze fase, om een grove selectie te kunnen maken van de eisen die in een bepaalde fase relevant zijn, zodat niet meteen in de Conceptfase ook alle technische eisen voor de Gebruiksfase worden meegenomen of beoordeeld. Deze selectie kan ook worden uitgewisseld met bijvoorbeeld een externe partij die in de voorfase meehelpt bij concept, ontwerp en het opstellen van een contract. Daarom is dit onderdeel van het uitwisselformaat voor Contractspecificaties.
 
-Als je specifiekere deadlines wilt voorschrijven, moet je dezen opnemen bij [=VerificatievoorschriftMoment=]
+Als je specifiekere deadlines wilt voorschrijven, moet je dezen opnemen bij [=VerificatieMoment=]
 
+De voorwaarde om deze fase te kunnen vastleggen is het bijvoegen van een Verificatievoorschrift.
 
-Hierbij worden de volgende fasen onderscheiden:
+<a href="https://www.researchgate.net/publication/362209021_An_Explorative_Analysis_of_European_Standards_on_Building_Information_Modelling">Deze analyse</a> op basis van ISO 22263:2008 enRIBA, 2020: Royal Institution of British Architects, (2020). The
+RIBA Plan of Work 2020. (R. Architecture, Ed.)(RIBA). London: RIBA Architecture.) geeft de volgende fasen, aangevuld met de Nederlandse definities uit de [[LeidraadSE2]]
 
 <dl>
-<dt><dfn>Conceptfase
+<dt><dfn lang=EN>Strategic Definition / <dfn lang="NL">Conceptfase
 	<dd>Fase om (nieuwe) behoeften van stakeholders te inventariseren en mogelijkheden te beoordelen. De eerste klanteisen en oplossingsrichting worden hier bepaald. De conceptfase kan leiden tot het initiatief voor het ontwikkelen en realiseren van een systeem.</dd>
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Conceptfase">csw:Conceptfase</a>
 	<dd> [Bron: [[LeidraadSE2]], Hoofdstuk 4
-<dt><dfn>Ontwikkelfase
+<dt><dfn lang=EN>Briefing / <dfn lang="NL">Projectinstructiefase
+	<dd>De overhandiging van de bestaande situatie, de eerste klanteisen vanuit de stakeholders en oplossingsrichting van de asset manager aan het project.</dd>
+	<dd><a href="https://data.crow.nl/contractspecificaties/id/Projectinstructiefase">csw:Projectinstructiefase</a>
+<dt><dfn lang=EN>Design / <dfn lang="NL">Ontwikkelfase
 	<dd>De fase om een systeem te specificeren dat voldoet aan de klanteisen. Aan het eind van de ontwikkelfase ligt er een (startklaar) ontwerp voor het gehele systeem.</dd>
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Ontwikkelfase">csw:Ontwikkelfase</a>
 	<dd> [Bron: [[LeidraadSE2]], Hoofdstuk 4
-<dt><dfn>Realisatiefase
+<dt><dfn lang=EN>Procurement / <dfn lang="NL">Contracterings- en aanbestedingsfase
 	<dd>De fase om het systeem te vervaardigen en beproeven. Systeemelementen en deelsystemen worden geïntegreerd tot één geheel.</dd>
-	<dd><a href="https://data.crow.nl/contractspecificaties/id/Realisatiefase">csw:Realisatiefase</a>
+	<dd><a href="https://data.crow.nl/contractspecificaties/id/Contracteringaanbestedingsfase">csw:Contracteringaanbestedingsfase</a>
+<dt><dfn lang=EN>Manufacturing and Construction / <dfn lang="NL">Fabricage- en bouwfase
+	<dd>De fase om het systeem te vervaardigen en beproeven. Systeemelementen en deelsystemen worden geïntegreerd tot één geheel.</dd>
+	<dd><a href="https://data.crow.nl/contractspecificaties/id/Fabricageenbouwfase">csw:Fabricageenbouwfase</a>
 	<dd> [Bron: [[LeidraadSE2]], Hoofdstuk 4
-<dt><dfn>Gebruiksfase
-	<dd>De gebruiksfase is de periode waarin het systeem wordt geëxploiteerd. Hier vinden de activiteiten plaats die nodig zijn om het systeem te gebruiken zoals beoogd, en de ondersteunende activiteiten voor beheer en kleinschalig onderhoud </dd>
+<dt><dfn lang=EN>Handover / <dfn lang="NL">Oplevering projectfase
+	<dd>De oplevering van het project aan de asset manager </dd>
+	<dd><a href="https://data.crow.nl/contractspecificaties/id/Opleveringproject">csw:Opleveringprojectfase</a>
+<dt><dfn lang=EN>Operation and Maintenance / <dfn lang="NL">Gebruiksfase
+	<dd>De gebruiksfase is de periode waarin het systeem wordt geëxploiteerd. Hier vinden de activiteiten plaats die nodig zijn om het systeem te gebruiken zoals beoogd, zoals facility management of aansturing van systemen, en ondersteunende beheer- en onderhoudsactiviteiten</dd>
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Gebruiksfase">csw:Gebruiksfase</a>
 	<dd> [Bron: [[LeidraadSE2]], Hoofdstuk 4
-<dt><dfn>Vervanging en Renovatie
-	<dd>Grootschalig onderhoud, bijvoorbeeld vervanging en renovatie van kunstwerken of complete functionele ombouw van een gebouw, zoals van kantoor naar woning</dd>
-<dt><dfn>Sloopfase
+<dt><dfn lang=EN>Decommissioning / <dfn lang="NL">Sloopfase
 	<dd>De fase om een systeem met bijbehorende operationele diensten en functies buiten werking te stellen en te verwijderen.</dd>
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Sloopfase">csw:Sloopfase</a>
 	<dd> [Bron: [[LeidraadSE2]], Hoofdstuk 4
@@ -542,21 +550,28 @@ Hierbij worden de volgende fasen onderscheiden:
 
 | Taalbinding                                                      | Kardinaliteit | Datatype                                                                 |
 | ---------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------ |
-| [cs:phase](https://data.crow.nl/contractspecificaties/def/phase) | 0:1           | [cs:PhaseType](https://data.crow.nl/contractspecificaties/def/PhaseType) |
+| [cs:phase](https://data.crow.nl/contractspecificaties/def/phase) | 0:1  tov een Verificatievoorschrift            | [cs:PhaseType](https://data.crow.nl/contractspecificaties/def/PhaseType) |
 | { .def } |
 
 
-### <dfn>VerificatievoorschriftMoment
-De opdrachtgever gebruikt deze fase, om vast te leggen wanneer een eis geverifieerd dient te worden.  Voorbeelden zijn de eis aan een berm: "Twee keer maaien per maand." (gebruiksfase) en "Kijkhoeken aanleggen bij rotonde." (Ontwikkelfase). Zelfde object, verschillende fases.
-De voorwaarde om deze fase te kunnen vastleggen is dus het bijvoegen van een Verificatievoorschrift.
+### <dfn>VerificatieMoment
+De opdrachtgever gebruikt deze fase, om vast te leggen wanneer een eis geverifieerd dient te worden. De voorwaarde om een Verificatiemoment te kunnen vastleggen is het bijvoegen van een Verificatievoorschrift.
 
-| Taalbinding                                                      | Kardinaliteit | Datatype                                                                 |  Maximaal aantal tekens                                               |
-| ---------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------ |  255  |
-| NTB | 0:1           | NTB |
+| Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Maximaal aantal tekens                                               |
+| --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
+| [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1   tov een Verificatievoorschrift          | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255 |
 | { .def } |
 
+<aside class="note" title="Standaard fasen / momenten">
+Er zijn verschillende richtlijnen en afspraken in Nederland die werken met een lijst met oplevermomenten of andere momenten/fasen in een project. Al naar gelang de context, kan dus een standaard gebruikt worden. Op dit moment is niet duidelijk, of dit kan leiden tot één standaard, of dat voor verschillende toepassingen verschillende lijsten beschikbaar zijn. Een paar van de genoemde standaarden:
+<ul>
+<li>In de DNR (De Nieuwe Regelening) is een <a href="https://bna.nl/standaardtaakbeschrijving-stb">standaardtaakbeschrijving</a> (STB) beschikbaar waarin een recentere fase opdeling wordt gehanteerd. Er is een herziening van de DNR in de maak (Zie <a href="https://www.nlingenieurs.nl/nieuws/consultatie-van-de-vernieuwde-regeling-dnr2022-van-start/">dit nieuwsbericht</a>) en volgens <a href="https://www.stiion.nl/de-nieuwe-regeling-dnr/#:~:text=De%20laatste%20versie%20van%20de%20STB%20dateert%20van%202014%20(STB%202014).%20Er%20wordt%20gewerkt%20aan%20een%20update%20van%20de%20STB%20waarbij%20onder%20andere%20aandacht%20is%20voor%20het%20digitale%20ontwerp%2D%20en%20bouwproces">dit nieuwsbericht</a> wordt gewerkt aan een update van de STB.</li>
+<li>Bouwend Nederland heeft een structuur ontwikkeld volgens <a href="https://www.bouwendnederland.nl/actueel/nieuws/23671/vib-ontwikkelt-branche-brede-eenduidige-structuur-voor-ontwerpfasen">dit nieuwsbericht</a></li>
+</ul>
+</aside>
 
-### <dfn>VerificatievoorschriftToelichting
+
+### <dfn>VerificatieToelichting
 
 In deze kolom staat de toelichting op het Verificatievoorschrift.
 
@@ -564,7 +579,7 @@ In contracten wordt dit gebruikt om nader toe te lichten waarom dit Verificatiev
 
 | Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Maximaal aantal tekens                                               |
 | --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000 |
+| [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1  tov een Verificatievoorschrift           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000 |
 | { .def } |
 
 
