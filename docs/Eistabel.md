@@ -90,6 +90,12 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td class="example">`https://data.crow.nl/contractspecificaties/id/Aanleg`
 </tr>
 <tr>
+	<td scope="row"> [=VerificatievoorschriftMoment=]
+	<td class="def">In deze kolom staat het moment waarop dit Verificatievoorschrift moet zijn uitgevoerd.
+	<td class="example">Twee weken voor het begin van de Gebruiksfase
+</tr>
+VerificatievoorschriftMoment
+<tr>
 	<td scope="row"> [=VerificatievoorschriftToelichting=]
 	<td class="def">In deze kolom staat de toelichting op de verificatiemethode bij de eis.
 	<td class="example">Een toelichting waarom een verificatiemethode wordt gevraagd bij de eis, of nadere invulling van de verificatiemethode
@@ -502,10 +508,9 @@ Classificatie volgens:
 
 In deze kolom staat de fase van het Verificatievoorschrift. Dit is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van te voren vastgestelde fasen. Dit om uitwisseling tussen systemen makkelijker te maken.
 
-De opdrachtgever gebruikt deze fase, om vast te leggen wanneer een eis geverifieerd dient te worden.  Voorbeelden zijn de eis aan een berm: "Twee keer maaien per maand." (gebruiksfase) en "Kijkhoeken aanleggen bij rotonde." (Ontwikkelfase). Zelfde object, verschillende fases.
-De voorwaarde om deze fase te kunnen vastleggen is dus het bijvoegen van een Verificatievoorschrift.
+De opdrachtgever gebruikt deze fase, om een grove selectie te kunnen maken van de eisen die in een bepaalde fase relevant zijn, zodat niet meteen in de Conceptfase ook alle technische eisen voor de Gebruiksfase worden meegenomen of beoordeeld. Deze selectie kan ook worden uitgewisseld met bijvoorbeeld een externe partij die in de voorfase meehelpt bij concept, ontwerp en het opstellen van een contract. Daarom is dit onderdeel van het uitwisselformaat voor Contractspecificaties.
 
-Als je specifiekere deadlines wilt afspreken in een project, zijn deze fasen te generiek. Op dit moment zul je voor specifiekere deadlines de VerificatievoorschriftToelichting moeten gebruiken, of dit in de Eistekst opnemen. 
+Als je specifiekere deadlines wilt voorschrijven, moet je dezen opnemen bij [=VerificatievoorschriftMoment=]
 
 
 Hierbij worden de volgende fasen onderscheiden:
@@ -514,30 +519,42 @@ Hierbij worden de volgende fasen onderscheiden:
 <dt><dfn>Conceptfase
 	<dd>Fase om (nieuwe) behoeften van stakeholders te inventariseren en mogelijkheden te beoordelen. De eerste klanteisen en oplossingsrichting worden hier bepaald. De conceptfase kan leiden tot het initiatief voor het ontwikkelen en realiseren van een systeem.</dd>
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Conceptfase">csw:Conceptfase</a>
+	<dd> [Bron: [[LeidraadSE2]], Hoofdstuk 4
 <dt><dfn>Ontwikkelfase
 	<dd>De fase om een systeem te specificeren dat voldoet aan de klanteisen. Aan het eind van de ontwikkelfase ligt er een (startklaar) ontwerp voor het gehele systeem.</dd>
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Ontwikkelfase">csw:Ontwikkelfase</a>
+	<dd> [Bron: [[LeidraadSE2]], Hoofdstuk 4
 <dt><dfn>Realisatiefase
 	<dd>De fase om het systeem te vervaardigen en beproeven. Systeemelementen en deelsystemen worden geïntegreerd tot één geheel.</dd>
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Realisatiefase">csw:Realisatiefase</a>
+	<dd> [Bron: [[LeidraadSE2]], Hoofdstuk 4
 <dt><dfn>Gebruiksfase
-	<dd>De gebruiksfase is de periode waarin het systeem wordt geëxploiteerd. Hier vinden de  activiteiten plaats die nodig zijn om het systeem te gebruiken zoals beoogd.</dd>
+	<dd>De gebruiksfase is de periode waarin het systeem wordt geëxploiteerd. Hier vinden de activiteiten plaats die nodig zijn om het systeem te gebruiken zoals beoogd, en de ondersteunende activiteiten voor beheer en kleinschalig onderhoud </dd>
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Gebruiksfase">csw:Gebruiksfase</a>
-<dt><dfn>Beheer- en onderhoudsfase
-	<dd>De periode waarin de ondersteunende activiteiten worden uitgevoerd, die noodzakelijk zijn om het systeem in werking te houden.</dd>
+	<dd> [Bron: [[LeidraadSE2]], Hoofdstuk 4
+<dt><dfn>Vervanging en Renovatie
+	<dd>Grootschalig onderhoud, bijvoorbeeld vervanging en renovatie van kunstwerken of complete functionele ombouw van een gebouw, zoals van kantoor naar woning</dd>
 <dt><dfn>Sloopfase
 	<dd>De fase om een systeem met bijbehorende operationele diensten en functies buiten werking te stellen en te verwijderen.</dd>
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Sloopfase">csw:Sloopfase</a>
+	<dd> [Bron: [[LeidraadSE2]], Hoofdstuk 4
 </dl>
-
-[Bron: Leidraad SE versie 2, Hoofdstuk 4](https://www.leidraadse.nl/assets/files/downloads/LeidraadSE/V2/LeidraadSE_def_lowres.pdf)
-
-<div class="issue" data-number="53"></div>
 
 | Taalbinding                                                      | Kardinaliteit | Datatype                                                                 |
 | ---------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------ |
 | [cs:phase](https://data.crow.nl/contractspecificaties/def/phase) | 0:1           | [cs:PhaseType](https://data.crow.nl/contractspecificaties/def/PhaseType) |
 | { .def } |
+
+
+### <dfn>VerificatievoorschriftMoment
+De opdrachtgever gebruikt deze fase, om vast te leggen wanneer een eis geverifieerd dient te worden.  Voorbeelden zijn de eis aan een berm: "Twee keer maaien per maand." (gebruiksfase) en "Kijkhoeken aanleggen bij rotonde." (Ontwikkelfase). Zelfde object, verschillende fases.
+De voorwaarde om deze fase te kunnen vastleggen is dus het bijvoegen van een Verificatievoorschrift.
+
+| Taalbinding                                                      | Kardinaliteit | Datatype                                                                 |  Maximaal aantal tekens                                               |
+| ---------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------ |  255  |
+| NTB | 0:1           | NTB |
+| { .def } |
+
 
 ### <dfn>VerificatievoorschriftToelichting
 
