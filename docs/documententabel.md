@@ -147,14 +147,15 @@ In deze kolom staat het documenttype. Voor documenttypen is nog geen nationale a
 
 ### <dfn>DocumentSectie
 
-<p class="note" title="Teksten opnemen als data">
+<aside class="note" title="Teksten opnemen als data">
 De bovenstaande eigenschappen van het document zijn voldoende om bij een eis het brondocument te kunnen meegeven. 
 Naast eisen kunnen ook teksten in de contractdocumenten worden meegegeven als data. Hiervoor kunnen de onderstaande eigenschappen worden gebruikt. Als je geen teksten wilt opnemen, kun je deze kolommen leeg laten. 
-Van de contractuele teksten kan een opdrachtnemer gebruik maken om het gehele contract te kunnen verwerken in een projectmanagementsysteem, om bijvoorbeeld eisen af te leiden uit de tekst, of risico's, of andere zaken. 
-Ook kan deze optie gebruikt worden in een contract voor ingenieursdiensten, waarbij ook het samenstellen van een contract wordt gevraagd aan een opdrachtnemer.
-<br>
+Toepassingsvoorbeelden om teksten uit te wisselen:
+<ol><li> In Vraagspecificaties worden vaak naast eisen ook teksten toegevoegd. Door deze per sectie beschikbaar te maken kan een opdrachtnemer het gehele contract verwerken in een projectmanagementsysteem of kwaliteitssystreem. Het is dan mogelijk om bijvoorbeeld eisen af te leiden uit de tekst, of raakvlakken en risico's, of andere zaken.</li> 
+<li>Ook kan deze optie gebruikt worden in een contract voor ingenieursdiensten, waarbij ook het samenstellen van een contract wordt gevraagd aan een opdrachtnemer. De opdrachtgever geeft dan teksten mee die tekstueel aan het project kunnen worden aangepast.</li>
+</ol>
 Bij gebruikmaking van deze optie kan eventueel een aparte tabel uitgewisseld worden, waarin de tekst van één document wordt uitgewisseld, om foutopsporing eenvoudiger te maken.
-</p>
+</aside>
 
 In deze kolom staat de documentsectie. Deze kan gebruikt worden om een document verder op te delen. Middels de 'heeft deel' relatie kunnen net zoveel secties aan een document toegevoegd worden als er nodig zijn.
 

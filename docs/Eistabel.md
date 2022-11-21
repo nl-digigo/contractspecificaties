@@ -388,114 +388,101 @@ Classificatie volgens:
 
 <dl>
 <dt><dfn>Vaststellen
-	<dd>Activiteit om een of meer kenmerken en hun karakteristieke waarden te achterhalen
+	<dd>Het vaststellen van verificatiecriteria waarbij een of meer kenmerken en hun karakteristieke waarden worden bepaald als basis voor de verificatie.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Vaststellen">csw:Vaststellen</a> 
-	<dd>Bron: [[NEN_EN_ISO_9000_2015]]
 
 <dt><dfn>Beoordelen
-	<dd>Vaststelling van de geschiktheid, toereikendheid of doeltreffendheid van een object voor het bereiken van vastgestelde doelstellingen
+	<dd>Op basis van deskundigheid vaststellen van de geschiktheid, toereikendheid of doeltreffendheid van een object voor het bereiken van de gewenste functionaliteit en kwaliteit.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Beoordelen">csw:Beoordelen</a>
-	<dd>Bron: [[NEN_EN_ISO_9000_2015]]
 
 <dt><dfn>Monitoren
-	<dd>Vaststellen van de status van een systeem, een proces, een product, een dienst of een activiteit. Bijvoorbeeld zettingen, monitoring van draaiuren t.b.v. optimale vervanging
+	<dd>Het systematisch en periodiek verzamelen van de functionaliteits- of kwaliteitsstatus van een systeem, een proces, een product, een dienst of een activiteit. 
+	<dd>Voorbeelden: zettingsmetingen met sensoren, monitoring van draaiuren voor optimale vervanging.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Monitoren">csw:Monitoren</a>
-	<dd>Bron: [[NEN_EN_ISO_9000_2015]]
+	<dd>Bron definitie: <a href="https://www.encyclo.nl/begrip/monitoren">Encyclo.nl:Monitoren</a>
 
 <dt><dfn>Meten
-	<dd>Proces om een waarde vast te stellen. o.a. luchtsnelheidmetingen in tunnels, kalenderen van heipalen
+	<dd>Het uitdrukken van een waargenomen grootheid in een getal met een relevante eenheid die vergeleken kan worden met andere waardes van eenzelfde grootheid. Hiervoor kunnen meetinstrumenten worden gebruikt. Meting is echter niet beperkt tot natuurkundige grootheden, maar strekt zich uit tot een kwantitatieve beschrijving van de gehele werkelijkheid. Metingen zijn meestal kwantitatieve waarnemingen: het resultaat wordt in een getalwaarde en een eenheid uitgedrukt. 
+	<dd>Voorbeelden: luchtsnelheidmetingen in tunnels, kalenderen van heipalen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Meten">csw:Meten</a>
-	<dd>Bron: [[NEN_EN_ISO_9000_2015]] en [[LeidraadSE2]]
+	<dd>Bron definitie: <a href="https://nl.wikipedia.org/wiki/Meten">Wikipedia:Meten</a>
 
 <dt><dfn>Keuren
-	<dd>Vaststelling van conformiteit met gespecificeerde eisen. Bijvoorbeeld keuring, ingangs- en uitgangscontrole
+	<dd>Een formele en gedisciplineerde beoordelingstechniek waarbij een product of dienst wordt onderzocht op kwaliteit en functionaliteit. Het gebruik van controlelijsten (checklists) is typisch voor de vorm van beoordeling. 
+	<dd>Voorbeelden: een ingangs- en uitgangscontrole.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Keuren">csw:Keuren</a>
-	<dd>Bron: [[NEN_EN_ISO_9000_2015]]
+	<dd>Bron definitie: <a href="https://www.encyclo.nl/begrip/keuring">Encyclo.nl:Keuren</a>
 
 <dt><dfn>Beproeven
-	<dd>Vaststellen volgens eisen voor een specifiek beoogd€ gebruik of toepassing
+	<dd>Het door middel van gebruik vaststellen dat de gewenste functionaliteit en kwaliteit worden gehaald.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Beproeven">csw:Beproeven</a>
-	<dd>Bron: [[NEN_EN_ISO_9000_2015]]
 
 <dt><dfn>Evalueren
-	<dd>Beoordelen van de voortgang die behaald is met betrekking tot het bereiken van de doelen
+	<dd>Het verzamelen, interpreteren en presenteren van informatie teneinde de waarde van een resultaat of proces te bepalen. Hierbij kan het gaan om het waarderen van de resultaten van personen of bedrijven, maar ook om het waarderen van alternatieve oplossingen. 
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Evalueren">csw:Evalueren</a>
-	<dd>Bron: [[NEN_EN_ISO_9000_2015]]
+	<dd>Bron definitie: <a href="https://nl.wikipedia.org/wiki/Evaluatie">Wikipedia:Evalueren</a>
 
-<dt><dfn>Analyse
-	<dd>o.a. haalbaarheidsanalyse, kosten-batenanalyse
+<dt><dfn>Analyseren
+    <dd>het ontleden van een bepaald (denk)object tot de constituerende elementen. Het is een wetenschappelijke methode om data, objecten en materie systematisch te onderzoeken. 
+	<dd>Voorbeelden: Haalbaarheidsanalyse, kosten-batenanalyse, materiaalanalyse.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Analyse">csw:Analyse</a>
-	<dd>Bron: [[LeidraadSE2]]
 
-<dt><dfn>Berekening
-	<dd>o.a. sterkteberekeningen
+<dt><dfn>Berekenen
+    <dd>Het uitvoeren 
+	<dd>Voorbeeldensterkteberekeningen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Berekening">csw:Berekening</a>
-	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Auditen
 	<dd>Audit van bestaande kwaliteitssystemen en -processen (o.a. Technical Inspection Services
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Auditen">csw:Auditen</a>
-	<dd>Bron: [[LeidraadSE2]]
 
-<dt><dfn>Demonstratie
+<dt><dfn>Demonstreren
 	<dd>o.a. presentatie van de functionaliteiten van een bestaand systeem
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Demonstratie">csw:Demonstratie</a>
-	<dd>Bron: [[LeidraadSE2]]
 
-<dt><dfn>Documentbeoordeling
+<dt><dfn>Document beoordelen
 	<dd>o.a. documentinspecties, reviews, toetsen, ontwerpateliers
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Documentbeoordeling">csw:Documentbeoordeling</a>
-	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Modellering
 	<dd>o.a. prestatiemodellen van beschikbaarheid, verkeersmodellen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Modellering">csw:Modellering</a>
-	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Simulaties
 	<dd>o.a. dienstregelingsimulatie
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Simulaties">csw:Simulaties</a>
-	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Referentie
 	<dd>o.a. gebruik van gecertificeerde producten
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Referentie">csw:Referentie</a>
-	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Testen
 	<dd>haalbaarheidstesten, FIT, FAT, SIT, SAT
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Testen">csw:Testen</a>
-	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Factory Integration Test
 	<dd>o.a. hydraulische en mechanische installaties integraal testen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/FactoryIntegrationTest">csw:FactoryIntegrationTest</a>
-	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Factory Acceptance Test
 	<dd>o.a. cameratesten in fabrieksopstelling
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/FactoryAcceptanceTest">csw:FactoryAcceptanceTest</a>
-	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Site Integration Test
 	<dd>o.a. interactietesten tussen installatie- en besturingssystemen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/SiteIntegrationTest">csw:SiteIntegrationTest</a>
-	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Site Acceptance Test
 	<dd>o.a. calamiteitenoefeningen in bijzijn van hulpdiensten
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/SiteAcceptanceTest">csw:SiteAcceptanceTest</a>
-	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Schouw
 	<dd>o.a. visuele opname van projectlocatie
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Schouw">csw:Schouw</a>
-	<dd>Bron: [[LeidraadSE2]]
 
 <dt><dfn>Inspectie (cs)
 	<dd>o.a. Arbo-inspecties, pompkelderinspecties
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Inspectie">csw:Inspectie</a>
-	<dd>Bron: [[LeidraadSE2]]
 </dd></dl>
 
 | Taalbinding                                                                                | Kardinaliteit | Datatype                                                                                        |

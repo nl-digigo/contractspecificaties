@@ -1,13 +1,15 @@
 var respecConfig = {
   // this template doesn't use all possible config parameters
   // see https://github.com/stichting-crow/respec/wiki for all options
-  specStatus: "WD",
+  specStatus: "PR",
   imprint: "bimloket",
   // specType: "handreiking",
   // subtitle: "Hier komt een subtitle",
   shortName: "contractspecificaties/",
-  // publishDate: "2021-07-27",
-  // previousPublishDate: "2021-07-27",
+  publishDate: "2022-11-22",
+  reviewDateEnd: "2022-11-01",
+  previousPublishDate: "2022-08-15",
+  previousMaturity: "CR",
  license: "cc-by",
   editors: [
     {
