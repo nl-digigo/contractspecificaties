@@ -106,13 +106,19 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 
 ### <dfn>EisURI
 
-De URI is de unieke identifier voor de eis binnen het project. Zie [URI volgens W3C](https://www.w3.org/wiki/URI).
+De <abbr title="uniform resource identifier">URI</abbr> is de unieke identifier voor de eis binnen het project. Zie [URI volgens W3C](https://www.w3.org/wiki/URI).
 
 Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je moet volgen.
 
 Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder [=EisBron=]. Daar staat de URI van de eis uit de bibliotheek. Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet.
 
-De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context.
+De eis in het project moet een andere URI hebben dan de bron. 
+
+<aside class="note" title="Unieke indentificatie van concepten in projecten">
+Unieke indentificatie van concepten in projecten is van belang, omdat in het Digitaal Stelsel Gebouwde Omgeving toegewerkt wordt naar interoperabiliteit van data. Als je in een project dezelfde URI's gebruikt als in de bibliotheek, ga je in tegen de basisprincipes die hiervoor nodig zijn: een eis in een bibliotheek is niet dezelfde eis als de eis met dezelfde tekst in een project, want deze wordt toegepast in (gekopieerd naar) een andere context. Ook kan n de bilbiotheek een verificatievoorschrift bij de eis zijn opgenomen, die in het project niet wordt opgenomen omdat er meer vrijheid wordt gegeven aan de opdrachtnemer. Als dezelfde URI wordt gebruikt, kan hierover verwarring ontstaan.
+
+De herkenbaarheid van de eis voor de menselijke lezer kan wel in stand gehouden worden doordat je wel dezelfde [=EisCode=] kan gebruiken als in de bibliotheek.
+</aside>
 
 
 | Taalbinding | Kardinaliteit | Datatype                                               |
@@ -214,91 +220,13 @@ Instructie voor gebruik: omdat nog niet alle partijen in staat zijn om de data h
 | [dct:references](http://purl.org/dc/terms/references) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
-### Enum <dfn>EisType
+### <dfn>EisType
 
-In deze kolom staat het eistype. De aspecteisen zijn grotendeels overgenomen uit de [[LeidraadSE3]]; de eistypen die aanduiden aan wat voor concept de eis is gesteld zijn aangepast aan de onderwerpen uit deze richtlijn. Dit is een enumeratie.
+In deze kolom staat het eistype. Welke eistypen gebruikt worden, wordt nog niet gestandaardiseerd; hierover bestaat helaas nog te weinig consensus in de sector.
 
-Bij uitwisseling mag je uitsluitend de onderstaande lijst gebruiken, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt.
-
-Eistypen:
-
-<div class="issue" data-number="48"></div>
-
-<dl>
-<dt><dfn>Informatie-eis
-   <dd>Eis gesteld aan een te leveren [=Informatieproduct=]
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Informatie-eis">csw:Informatie-eis</a>
-	   
-<dt><dfn>Systeemeis
-   <dd>Eis gesteld aan een [=FysiekObject=]
-   <dd>Een eis die het tot stand komen en gebruiken dan wel toepassen van het geïntegreerde systeem specificeert. Bron: [[LeidraadSE3]]
-   <dd>Andere in de sector gebruikte namen van eisen die allemaal tot de Systeemeisen behoren: Functionele eis; Prestatie-eis; Technische eis; Ontwerprandvoorwaarde
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Systeemeis">csw:Systeemeis</a>
-	 
-<dt><dfn>Proceseis
-   <dd>Eis gesteld aan een [=Werkzaamheid=]
-   <dd>De beschrijving van het gevraagde geheel van samenhangende of elkaar beïnvloedende activiteiten dat input omzet in output. Bron: [[LeidraadSE3]] 
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Proceseis">csw:Proceseis</a>
-
-<dt><dfn>Functie-eis
-   <dd>Eis gesteld aan een [=Functie=]
-   <dd>De beschrijving van de gevraagde beoogde werking en/of verrichting van een systeem. Bron: [[LeidraadSE3]]
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Functie-eis">csw:Functie-eis</a>
-
-<dt><dfn>Aspecteis: Betrouwbaarheid
-   <dd>De waarschijnlijkheid dat de vereiste functie wordt uitgevoerd onder gegeven omstandigheden gedurende een bepaald tijdsinterval. 
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Betrouwbaarheid">csw:Aspecteis-Betrouwbaarheid</a>
- <dd>Bron: [[LeidraadSE3]]
-
-<dt><dfn>Aspecteis: Beschikbaarheid
-   <dd>De waarschijnlijkheid dat de vereiste functie op een willekeurig moment kan worden uitgevoerd onder gegeven omstandigheden.	
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Beschikbaarheid">csw:Aspecteis-Beschikbaarheid</a>
- <dd>Bron: [[LeidraadSE3]]
-
-<dt><dfn>Aspecteis: Onderhoudbaarheid
-   <dd>De waarschijnlijkheid dat de activiteiten voor onderhoud kunnen worden uitgevoerd binnen de hiervoor vastgestelde tijden, onder gegeven omstandigheden teneinde de vereiste functie te kunnen (blijven) uitvoeren.
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Onderhoudbaarheid">csw:Aspecteis-Onderhoudbaarheid</a>
- <dd>Bron: [[LeidraadSE3]]
-
-<dt><dfn>Aspecteis: Veiligheid
-   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder optredend letsel aan personen kan worden vervuld dan wel uitgevoerd en de waarschijnlijkheid dat de integriteit van de functie  en de daaraan verbonden data en datastructuren gewaarborgd blijven van ongewenste beïnvloeding.	   
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Veiligheid">csw:Aspecteis-Veiligheid</a>
- <dd>Bron: [[LeidraadSE3]]
-
-<dt><dfn>Aspecteis: Gezondheid
-   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder negatieve gezondheidsrisico's voor personen kan worden vervuld dan wel uitgevoerd.
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Gezondheid">csw:Aspecteis-Gezondheid</a>
-   <dd>Bron: [[LeidraadSE3]]
-
-<dt><dfn>Aspecteis: Omgeving
-   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten zonder ongewenste risico's voor de omgeving kunnen wordenvervuld en/of gerealiseerd.	
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Omgeving">csw:Aspecteis-Omgeving</a>    
-   <dd>Bron: [[LeidraadSE3]]
-
-<dt><dfn>Aspecteis: Duurzaamheid
-   <dd>De waarschijnlijkheid dat de vereiste functie en de daarvoor benodigde activiteiten binnen de hieraan gestelde eisen en PPP (People/Planet/Profit)-doelstellingen kunnen worden gerealiseerd.  
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Duurzaamheid">csw:Aspecteis-Duurzaamheid</a>
-   <dd>Bron: [[LeidraadSE3]]
-
-<dt><dfn>Aspecteis: Vormgeving
-   <dd>De beschrijving van de gevraagde prestatie ten aanzien van het beeld en het materiaalgebruik met inachtneming van de omgevings- en de gezondheidseisen van het systeem en haar onderdelen.
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Vormgeving">csw:Aspecteis-Vormgeving</a>
-   <dd>Bron: Leidraad SE v3
-
-<dt><dfn>Aspecteis: Toekomstvastheid
-   <dd>De beschrijving van de gevraagde prestatie van een systeem ten aanzien van de vereiste levensduur van het systeem (als functie en als object) en haar onderdelen.	    
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Toekomstvastheid">csw:Aspecteis-Toekomstvastheid</a>
-   <dd>Bron: [[LeidraadSE3]]
-
-<dt><dfn>Aspecteis: Sloopbaarheid
-   <dd>De waarschijnlijkheid dat de vereiste functie aan het einde van de levensduur op beheerste wijze kan worden teruggebracht tot minimaal secundaire grondstoffen en met inachtneming van de overige aspecten.  
-   <dd><a href="https://data.crow.nl/contractspecificaties/id/Aspecteis-Sloopbaarheid">csw:Aspecteis-Sloopbaarheid</a>
-   <dd>Bron: [[LeidraadSE3]]
-</dd></dl>
-
-| Taalbinding                                                                       | Kardinaliteit | Datatype                                                             |
+| Taalbinding                                                                       | Kardinaliteit | Datatype                                                             |  Maximaal aantal tekens  |
 | --------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------- |
-| [nen2660:requirementTopicType](https://w3id.org/nen2660/def#requirementTopicType) | 0:n           | [cs:EisType](https://data.crow.nl/contractspecificaties/def/EisType) |
+| [nen2660:requirementTopicType](https://w3id.org/nen2660/def#requirementTopicType) | 0:n           | [cs:EisType](https://data.crow.nl/contractspecificaties/def/EisType) |   255   |
 | { .def } |
 
 ### Enum <dfn>EisStatus
@@ -374,17 +302,16 @@ Deze laatste heeft de voorkeur binnen Contractspecificaties, omdat er meer infor
 
 ### Enum <dfn>VerificatieMethode
 
-In deze kolom staat de methode waarmee de eis geverifieerd moet worden. Een eisverificatiemethode is een eigenschap van een Verificatievoorschrift. De eisverificatiemethode is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van tye voren vastgestelde verificatiemethoden. Het is niet verplicht om een verificatiemethode voor te schrijven bij een Verificatievoorschrift, je kunt dit ook aan de opdrachtnemer laten.
+In deze kolom staat de verificatiemethode waarmee de eis geverifieerd moet worden. Een verificatiemethode is een eigenschap van een verificatievoorschrift. De verificatiemethode is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van te voren vastgestelde verificatiemethoden. Het is niet verplicht om een verificatiemethode voor te schrijven bij een Verificatievoorschrift, je kunt dit ook aan de opdrachtnemer laten.
 
-Bij uitwisseling mag uitsluitend de onderstaande lijst gebruikt worden bij contractspecificaties, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst met eistypen en aspecten gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij bij elk project een aangepaste lijst moet worden gemaakt.
+Bij uitwisseling mag uitsluitend de onderstaande lijst gebruikt worden bij contractspecificaties, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij door opdrachtnemers bij elk project een aangepaste lijst moet maken. 
 
-Classificatie volgens:
+De verificatiemethoden zijn afgeleid uit de volgende standaarden:
 
 1. [[NEN_EN_ISO_9000_2015]]
 2. [[ISO_IEC_IEEE_29148_2018]] Systems and software engineering — Life cycle processes — Requirements engineering
-4. [[LeidraadSE2]]; deze leidraad is niet meer actueel, in [[LeidraadSE3]] worden geen verificatiemethoden meer benoemd die in versie 2 wel stonden.
+4. [[LeidraadSE2]]; deze leidraad is niet meer actueel, in [[LeidraadSE3]] worden geen verificatiemethoden meer benoemd die in versie 2 wel stonden. Daarbij geldt, dat in de sector voldoende consensus lijkt te bestaan over de in [[LeidraadSE2]] genoemde verificatiemethoden. Dit in tegenstelling tot de eistypen, waarvoor dit nog onvoldoende geldt. 
 
-<div class="issue" data-number="63"></div>
 
 <dl>
 <dt><dfn>Vaststellen
@@ -392,11 +319,11 @@ Classificatie volgens:
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Vaststellen">csw:Vaststellen</a> 
 
 <dt><dfn>Beoordelen
-	<dd>Op basis van deskundigheid vaststellen van de geschiktheid, toereikendheid of doeltreffendheid van een object voor het bereiken van de gewenste functionaliteit en kwaliteit.
+	<dd>Op basis van deskundigheid vaststellen van de geschiktheid, toereikendheid of doeltreffendheid van een systeem, een proces, een product, een dienst of een activiteit om te zien of het aan de verificatiecriteria voldoet.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Beoordelen">csw:Beoordelen</a>
 
 <dt><dfn>Monitoren
-	<dd>Het systematisch en periodiek verzamelen van de functionaliteits- of kwaliteitsstatus van een systeem, een proces, een product, een dienst of een activiteit. 
+	<dd>Het systematisch en periodiek verzamelen van de status een systeem, een proces, een product, een dienst of een activiteit om te zien of het aan de verificatiecriteria voldoet.
 	<dd>Voorbeelden: zettingsmetingen met sensoren, monitoring van draaiuren voor optimale vervanging.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Monitoren">csw:Monitoren</a>
 	<dd>Bron definitie: <a href="https://www.encyclo.nl/begrip/monitoren">Encyclo.nl:Monitoren</a>
@@ -408,13 +335,13 @@ Classificatie volgens:
 	<dd>Bron definitie: <a href="https://nl.wikipedia.org/wiki/Meten">Wikipedia:Meten</a>
 
 <dt><dfn>Keuren
-	<dd>Een formele en gedisciplineerde beoordelingstechniek waarbij een product of dienst wordt onderzocht op kwaliteit en functionaliteit. Het gebruik van controlelijsten (checklists) is typisch voor de vorm van beoordeling. 
+	<dd>Een formele en gedisciplineerde beoordelingstechniek waarbij wordt onderzocht of een systeem, een proces, een product, een dienst of een activiteit aan de verificatiecriteria voldoet. Het gebruik van controlelijsten (checklists) is typisch voor de vorm van beoordeling. 
 	<dd>Voorbeelden: een ingangs- en uitgangscontrole.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Keuren">csw:Keuren</a>
 	<dd>Bron definitie: <a href="https://www.encyclo.nl/begrip/keuring">Encyclo.nl:Keuren</a>
 
 <dt><dfn>Beproeven
-	<dd>Het door middel van gebruik vaststellen dat de gewenste functionaliteit en kwaliteit worden gehaald.
+	<dd>Het door middel van gebruik vaststellen of een systeem, een proces, een product, een dienst of een activiteit aan de verificatiecriteria voldoet.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Beproeven">csw:Beproeven</a>
 
 <dt><dfn>Evalueren
@@ -428,64 +355,79 @@ Classificatie volgens:
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Analyse">csw:Analyse</a>
 
 <dt><dfn>Berekenen
-    <dd>Het uitvoeren 
+    <dd>Het uitvoeren van berekeningen aan een systeem, een proces, een product, een dienst of een activiteit om te bereken of het aan de verificatiecriteria voldoet.
 	<dd>Voorbeeldensterkteberekeningen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Berekening">csw:Berekening</a>
 
 <dt><dfn>Auditen
-	<dd>Audit van bestaande kwaliteitssystemen en -processen (o.a. Technical Inspection Services
+    <dd>Onafhankelijk onderzoeken en evalueren van de activiteiten en de resultaten van een organisatie. 
+	<dd>Voorbeelden: Audit van bestaande kwaliteitssystemen en -processen, Technical Inspection Services
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Auditen">csw:Auditen</a>
+	<dd>Bron definitie: <a href="https://www.encyclo.nl/begrip/audit">Encyclo.nl:/auditen</a>
 
 <dt><dfn>Demonstreren
-	<dd>o.a. presentatie van de functionaliteiten van een bestaand systeem
+    <dd>Laten zien dat een systeem, een proces, een product, een dienst of een activiteit aan de verificatiecriteria voldoet.
+	<dd>Voorbeeld: presentatie van de functionaliteiten van een bestaand systeem
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Demonstratie">csw:Demonstratie</a>
 
 <dt><dfn>Document beoordelen
+    <dd>Op basis van deskundigheid vaststellen of een document aan de verificatiecriteria voldoet.
 	<dd>o.a. documentinspecties, reviews, toetsen, ontwerpateliers
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Documentbeoordeling">csw:Documentbeoordeling</a>
 
-<dt><dfn>Modellering
-	<dd>o.a. prestatiemodellen van beschikbaarheid, verkeersmodellen
+<dt><dfn>Modelleren
+     <dd>Met behulp van een fysiek of virtueel model onderzoeken of een systeem, een proces, een product, een dienst of een activiteit aan de verificatiecriteria voldoet.
+	<dd>Voorbeelden: prestatiemodellen van beschikbaarheid, verkeersmodellen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Modellering">csw:Modellering</a>
 
-<dt><dfn>Simulaties
-	<dd>o.a. dienstregelingsimulatie
+<dt><dfn>Simuleren
+    <dd>Met behulp van een fysiek of virtueel model het gebruik nabootsen van een systeem, een proces, een product, een dienst of een activiteit om te zien of het aan de verificatiecriteria voldoet.
+	<dd>oVoorbeeld: Dienstregelingsimulatie
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Simulaties">csw:Simulaties</a>
 
-<dt><dfn>Referentie
-	<dd>o.a. gebruik van gecertificeerde producten
+<dt><dfn>Refereren
+    <dd>Door te verwijzen naar een alternatieve toepassing of verificatie van een systeem, een proces, een product, een dienst of een activiteit laten zien dat deze aan de verificatiecriteria voldoet.
+	<dd>Voorbeeld: gebruik van gecertificeerde producten
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Referentie">csw:Referentie</a>
 
 <dt><dfn>Testen
-	<dd>haalbaarheidstesten, FIT, FAT, SIT, SAT
+    <dd>Het proces waarmee de correcte werking van een systeem of product wordt aangetoond. Activiteiten zoals meten, onderzoeken, beproeven, keuren met kalibers van één of meer kenmerken van een product of dienst en het vergelijken van de uitkomsten met de verificatiecriteria, om te bepalen of aan de eisen is voldaan.
+	<dd>Voorbeeld: haalbaarheidstesten, <abbr title="Factory Integration Test">FIT</abbr>, <abbr title="Factory Acceptance Test">FAT</abbr>, <abbr title="Site Integration Test">SIT</abbr>, <abbr title="Site Acceptance Test">SAT</abbr>
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Testen">csw:Testen</a>
+	<dd>Bron definitie: <a href="https://nl.wikipedia.org/wiki/Testen_(software)">Wikipedia:Testen</a>
 
 <dt><dfn>Factory Integration Test
-	<dd>o.a. hydraulische en mechanische installaties integraal testen
+    <dd>Het integraal testen van de functionaliteit van systemen voordat zij de fabriek verlaten.
+	<dd>Voorbeelden: hydraulische en mechanische installaties integraal testen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/FactoryIntegrationTest">csw:FactoryIntegrationTest</a>
 
 <dt><dfn>Factory Acceptance Test
-	<dd>o.a. cameratesten in fabrieksopstelling
+    <dd>Het testen van systemen in een fabrieksopstelling om te zien of het aan de verificatiecriteria voldoet.
+	<dd>Voorbeelden: cameratesten in fabrieksopstelling
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/FactoryAcceptanceTest">csw:FactoryAcceptanceTest</a>
 
 <dt><dfn>Site Integration Test
-	<dd>o.a. interactietesten tussen installatie- en besturingssystemen
+    <dd>Het integraal testen van de functionaliteit van een reeds op locatie ingericht systeem.
+	<dd>Voorbeelden: interactietesten tussen installatie- en besturingssystemen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/SiteIntegrationTest">csw:SiteIntegrationTest</a>
 
 <dt><dfn>Site Acceptance Test
-	<dd>o.a. calamiteitenoefeningen in bijzijn van hulpdiensten
+     <dd>Het testen van een reeds op locatie ingericht systeem  om te zien of het aan de verificatiecriteria voldoet.  
+	<dd>Voorbeelden: calamiteitenoefeningen in bijzijn van hulpdiensten
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/SiteAcceptanceTest">csw:SiteAcceptanceTest</a>
 
-<dt><dfn>Schouw
-	<dd>o.a. visuele opname van projectlocatie
+<dt><dfn>Schouwen
+    <dd>Op basis van deskundigheid ter plaatse visueel vaststellen of een systeem, een proces, een product, een dienst of een activiteit aan de verificatiecriteria voldoet.
+	<dd>Voorbeelden: visuele opname van projectlocatie
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Schouw">csw:Schouw</a>
 
-<dt><dfn>Inspectie (cs)
-	<dd>o.a. Arbo-inspecties, pompkelderinspecties
+<dt><dfn>Inspecteren
+    <dd>Het eenmalig of periodiek onderzoeken of een in gebruik zijnd systeem, een proces, een product, een dienst of een activiteit aan de verificatiecriteria voldoet.
+	<dd>Voorbeelden: Arbo-inspecties, pompkelderinspecties
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Inspectie">csw:Inspectie</a>
 </dd></dl>
 
-| Taalbinding                                                                                | Kardinaliteit | Datatype                                                                                        |
+| Taalbinding                                                                                | Kardinaliteit | Datatype                                                |
 | ------------------------------------------------------------------------------------------ | ------------- | ----------------------------------------------------------------------------------------------- |
 | [cs:verificationMethod](https://data.crow.nl/contractspecificaties/def/verificationMethod) | 0:1  tov een Verificatievoorschrift           | [cs:VerificationMethodeType](https://data.crow.nl/contractspecificaties/def/verificationMethod) |
 | { .def } |
