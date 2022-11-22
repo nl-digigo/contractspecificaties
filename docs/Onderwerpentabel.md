@@ -25,7 +25,7 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 <tr>
 	<td scope="row"> [=OnderwerpNaam=]
 	<td class="def">In deze kolom staat de naam van het onderwerp.
-	<td class="example">Voorbeeld onderwerp
+	<td class="example">Bushalte Ede-Zuid
 </tr>
 <tr>
 	<td scope="row">  [=OnderwerpType=]

@@ -50,9 +50,19 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td class="example"> `https://www.example.org/id/Voorbeeld-Document1`
 </tr>
 <tr>
+	<td scope="row"> [=DocumentNaam=]
+	<td class="def"> In deze kolom staat de DocumentNaam van een bron van de eis in een eisenbibliotheek of brondocument. 
+	<td class="example"> Omgevingsvisie Ede
+</tr>
+<tr>
 	<td scope="row"> [=EisReferentiedocument=]
 	<td class="def"> In deze kolom staat de URI van een gerefereerd document waarin aanvullende eisen staan 
 	<td class="example"> `https://www.example.org/id/Voorbeeld-Document2`
+</tr>
+<tr>
+	<td scope="row"> [=Documentnaam=]
+	<td class="def"> In deze kolom staat de documentnaam van een gerefereerd document waarin aanvullende eisen staan 
+	<td class="example"> Handboek Wegontwerp
 </tr>
 <tr>
 	<td scope="row"> [=EisType=]
@@ -78,6 +88,11 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td scope="row"> [=VerificatieheeftOnderwerp=]
 	<td class="def">In deze kolom staat de URI van het Onderwerp (subject) van het Verificatievoorschrift.
 	<td class="example"> `https://www.example.org/id/Voorbeeld-Onderwerp1`
+</tr>
+<tr>
+	<td scope="row"> [=OnderwerpNaam=]
+	<td class="def">In deze kolom staat de naam van het Onderwerp (subject) van het Verificatievoorschrift.
+	<td class="example"> Bushalte Ede-Zuid
 </tr>
 <tr>
 	<td scope="row"> [=VerificatieMethode=]
@@ -202,6 +217,9 @@ De bron van de eis kan naar twee zaken verwijzen:
 | [dct:source](http://purl.org/dc/terms/source) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
+### Documentnaam
+Dubbeling met de [=Documentnaam=] in de Documententabel, om de tabel meer leesbaar te maken voor de menselijke lezer. Naam van het brondocument.
+
 ### <dfn>EisReferentiedocument
 
 Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kolom de URI van het gerefereerde document. Deze URI verwijst naar een document in de documententabel.
@@ -220,13 +238,16 @@ Instructie voor gebruik: omdat nog niet alle partijen in staat zijn om de data h
 | [dct:references](http://purl.org/dc/terms/references) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
+### Documentnaam
+Dubbeling met de [=Documentnaam=] in de Documententabel, om de tabel meer leesbaar te maken voor de menselijke lezer. Naam van het gerefereerde document.
+
 ### <dfn>EisType
 
 In deze kolom staat het eistype. Welke eistypen gebruikt worden, wordt nog niet gestandaardiseerd; hierover bestaat helaas nog te weinig consensus in de sector.
 
 | Taalbinding                                                                       | Kardinaliteit | Datatype                                                             |  Maximaal aantal tekens  |
-| --------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------- |
-| [nen2660:requirementTopicType](https://w3id.org/nen2660/def#requirementTopicType) | 0:n           | [cs:EisType](https://data.crow.nl/contractspecificaties/def/EisType) |   255   |
+| --------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------- | ------------ |
+| NTB | 0:n           | NTB |   255   |
 | { .def } |
 
 ### Enum <dfn>EisStatus
@@ -299,6 +320,8 @@ Deze laatste heeft de voorkeur binnen Contractspecificaties, omdat er meer infor
 </figure>
 </aside>
 
+### OnderwerpNaam
+Dubbeling met de [=Onderwerpnaam=] in de Onderwerpentabel, om de tabel meer leesbaar te maken voor de menselijke lezer. Naam van het onderwerp.
 
 ### Enum <dfn>VerificatieMethode
 
