@@ -105,16 +105,16 @@ Een Eis kan betrekking hebben op een Object (Galecopperbrug), maar ook op een Ob
 <dt><dfn>FysiekObject
 	<dd>De objecttypen en objecttypenboom ("decompositie") in het contract (Vraagspecificatie Eisen met eisen aan het Bouwwerk) zijn in NEN2660-2 een <a href="https://w3id.org/nen2660/def#PhysicalObject">nen2660:PhysicalObject</a>. Dit kan in de kolom Type worden ingevuld.
 	
-<dt><dfn>Functie
+<dt><dfn data-lt="Functie|Functies">Functie</dfn>
 	<dd>In de [[NEN_2660_1_2022]], par. 8.5.3, opmerking 2 wordt functie gedefinieerd als "De functie van een object is de activiteit die het (object) uitvoert of kan uitvoeren, zodanig dat de output van die activiteit bijdraagt aan het doel dat de betrokken stakeholder wil bereiken." De functies staan meestal in de Vraagspecificatie Eisen met eisen aan het Bouwwerk.
 	<dd>In de [[NEN_2660_2_2022]] is een functie, bijvoorbeeld "Afwikkelen wegverkeer" ZOWEL een <a href="https://w3id.org/nen2660/def#Activity">nen2660:Activity</a>  ALS een <a href="https://w3id.org/nen2660/def/#FunctionalEntity">nen2660:FuntionalEntity</a>.
 	<dd>Ook mensen kunnen volgens de gegeven definitie in de [[NEN_2660_1_2022]] functies uitvoeren, zoals "De door mensen uit te voeren werkzaamheden tijdens het ontwerpen, bouwen, beheren en slopen van het object". In dit uitwisselformaat en in hedendaagse Vraagspecificaties (Vraagspecificatie Eisen met eisen aan het Bouwwerk) worden functies specifiek alleen meegegeven om aan te duiden, welke diensten het "systeem" moet vervullen tijdens het gebruik; een voorbeeld is een weg, die als functie "het verkeer moet geleiden". De objecten in het contract zijn de functievervullers. De werkzaamheden van mensen tijdens het project, waaronder die beschreven worden in Vraagspecificatie Procesdeel en de ontwerp- en uitvoeringswerkzaamheden, worden in dit uitwisselformaat <b>niet</b> beschreven als functies.
 
-<dt><dfn>Werkzaamheid
+<dt><dfn data-lt="Werkzaamheid|Werkzaamheden">Werkzaamheid</dfn>
 	<dd>De werkzaamheden zijn door mensen uit te voeren activiteiten tijdens het ontwerpen, bouwen, beheren en slopen van het object, met name die werkzaamheden die in een contract in de Vraagspecificatie Procesdeel staan.
 	<dd>In de [[NEN_2660_2_2022]] is een werkzaamheid, zoals "Opstellen Maandrapportage" een <a href="https://w3id.org/nen2660/def#Activity">nen2660:Activity</a>.
 
-<dt><dfn>Informatieproduct
+<dt><dfn data-lt="Informatieproduct|Informatieproducten">Informatieproduct</dfn>
 	<dd>De informatieproducten in het contract staan vaak zowel in de Vraagspecificatie Procesdeel als in een separate Informatieleveringsspecificatie. Het betreft de gevraagde levering van 'documenten', dit kunnen alle bestandstypes zijn, ook datasets of geometrische bestanden. In de NEN2660 is een InformationObject onderscheiden. Binnen contractspecificaties wordt deze gespecialiseerd naar een <a href="https://data.crow.nl/contractspecificaties/def/Document">cs:Document</a>.Voorbeelden:<ul>
 <li>Informatieleveringsspecificatie:</li><ul>
 <li>Een rapport over het ontwerp van een weg</li>

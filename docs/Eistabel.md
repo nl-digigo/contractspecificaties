@@ -247,7 +247,7 @@ In deze kolom staat het eistype. Welke eistypen gebruikt worden, wordt nog niet 
 
 | Taalbinding                                                                       | Kardinaliteit | Datatype                                                             |  Maximaal aantal tekens  |
 | --------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------- | ------------ |
-| NTB | 0:n           | NTB |   255   |
+| nen2660:requirementTopicType | 0:n           | string |   255   |
 | { .def } |
 
 ### Enum <dfn>EisStatus
@@ -517,7 +517,7 @@ De opdrachtgever gebruikt deze fase, om vast te leggen wanneer een eis geverifie
 <aside class="note" title="Standaard fasen / momenten">
 Er zijn verschillende richtlijnen en afspraken in Nederland die werken met een lijst met oplevermomenten of andere momenten/fasen in een project. Al naar gelang de context, kan dus een standaard gebruikt worden. Op dit moment is niet duidelijk, of dit kan leiden tot één standaard, of dat voor verschillende toepassingen verschillende lijsten beschikbaar zijn. Een paar van de genoemde standaarden:
 <ul>
-<li>In de DNR (De Nieuwe Regelening) is een <a href="https://bna.nl/standaardtaakbeschrijving-stb">standaardtaakbeschrijving</a> (STB) beschikbaar waarin een recentere fase opdeling wordt gehanteerd. Er is een herziening van de DNR in de maak (Zie <a href="https://www.nlingenieurs.nl/nieuws/consultatie-van-de-vernieuwde-regeling-dnr2022-van-start/">dit nieuwsbericht</a>) en volgens <a href="https://www.stiion.nl/de-nieuwe-regeling-dnr/#:~:text=De%20laatste%20versie%20van%20de%20STB%20dateert%20van%202014%20(STB%202014).%20Er%20wordt%20gewerkt%20aan%20een%20update%20van%20de%20STB%20waarbij%20onder%20andere%20aandacht%20is%20voor%20het%20digitale%20ontwerp%2D%20en%20bouwproces">dit nieuwsbericht</a> wordt gewerkt aan een update van de STB.</li>
+<li>In de DNR (De Nieuwe Regeling) is een <a href="https://bna.nl/standaardtaakbeschrijving-stb">standaardtaakbeschrijving</a> (STB) beschikbaar waarin een recentere fase opdeling wordt gehanteerd. Er is een herziening van de DNR in de maak (Zie <a href="https://www.nlingenieurs.nl/nieuws/consultatie-van-de-vernieuwde-regeling-dnr2022-van-start/">dit nieuwsbericht</a>) en volgens <a href="https://www.stiion.nl/de-nieuwe-regeling-dnr/#:~:text=De%20laatste%20versie%20van%20de%20STB%20dateert%20van%202014%20(STB%202014).%20Er%20wordt%20gewerkt%20aan%20een%20update%20van%20de%20STB%20waarbij%20onder%20andere%20aandacht%20is%20voor%20het%20digitale%20ontwerp%2D%20en%20bouwproces">dit nieuwsbericht</a> wordt gewerkt aan een update van de STB.</li>
 <li>Bouwend Nederland heeft een structuur ontwikkeld volgens <a href="https://www.bouwendnederland.nl/actueel/nieuws/23671/vib-ontwikkelt-branche-brede-eenduidige-structuur-voor-ontwerpfasen">dit nieuwsbericht</a></li>
 </ul>
 </aside>
