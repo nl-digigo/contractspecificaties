@@ -535,4 +535,4 @@ In contracten wordt dit gebruikt om nader toe te lichten waarom dit Verificatiev
 | { .def } |
 
 
-<div class="issue" data-number="37"></div>
+

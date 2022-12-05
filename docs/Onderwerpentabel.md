@@ -63,7 +63,6 @@ Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die 
 Een URI maakt het meteen "linked data proof"
 </aside>
 
-<div class="issue" data-number="54"></div>
 
 ### <dfn>onderwerpCode
 
@@ -94,7 +93,7 @@ Dit is een enumeratie. Het type van het onderwerp kan in het format uit een van 
 
 Een Eis kan betrekking hebben op een Object (Galecopperbrug), maar ook op een Objecttype (brug, of alle bruggen <i>in dit project</i>); op een Functie (keren water Nederrijn bij Driel), of juist op een Functietype (Keren water in een rivier op een locatie) enz. Algemeen: eisen kunnen zowel betrekking op Type als op Individueel-niveau. In het project bedoel je altijd "de individuele Fysieke objecten van het type "weg" <i>in dit project</i>" als het onderwerp de naam "Weg" heeft; of als er maar een weg is is het beter de naam van het onderwerp specifieker te maken: "N224".
 
-<div class="issue" data-number="28"></div>
+
 
 | Taalbinding                                              | Kardinaliteit | Datatype                                               |
 | -------------------------------------------------------- | ------------- | ------------------------------------------------------ |
