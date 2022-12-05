@@ -23,51 +23,51 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td class="example">`https://www.example.org/id/Voorbeeld-Document1`
 </tr>
 <tr>
-	<td scope="row">  [=DocumentCode=]
+	<td scope="row">  [=documentCode=]
 	<td class="def">In deze kolom staat de code ofwel het nummer van het document.
 	<td class="example">Ede300-225
 </tr>
 <tr>
-	<td scope="row"> [=DocumentNaam=] 
+	<td scope="row"> [=documentNaam=] 
 	<td class="def">In deze kolom staat de naam van het document.
 	<td class="example">Omgevingsvisie Ede
 </tr>
 <tr>
-	<td scope="row">   [=DocumentVersie=]
+	<td scope="row">   [=documentVersie=]
 	<td class="def">In deze kolom staat de versie van het document.
 	<td class="example">1.0
 </tr>
 <tr>
-	<td scope="row">   [=DocumentVersieDatum=]
+	<td scope="row">   [=documentVersieDatum=]
 	<td class="def">In deze kolom staat de versiedatum van het document.
 	<td class="example">10-10-1979
 </tr>
 <tr>
-	<td scope="row">  [=DocumentAuteur=]
+	<td scope="row">  [=documentAuteur=]
 	<td class="def">In deze kolom staat de auteur van het document.
 	<td class="example"> Jan Klaassen
 </tr>
 </tr>
 <tr>
-	<td scope="row">  [=DocumentType=]
+	<td scope="row">  [=documentType=]
 	<td class="def">In deze kolom staat het documenttype.
 	<td class="example">Een omgevingsvisie
 </tr>
 </tr>
 <tr>
-	<td scope="row">   [=DocumentSectie=]
+	<td scope="row">   [=documentSectie=]
 	<td class="def">In deze kolom staat de sectie URI
 	<td class="example">`https://www.example.org/id/Voorbeeld-Sectie1`
 </tr>
 </tr>
 <tr>
-	<td scope="row">  [=DocumentSectieNaam=]
+	<td scope="row">  [=documentSectieNaam=]
 	<td class="def">In deze kolom staat de sectie naam.
 	<td class="example">1. Inleiding
 </tr>
 </tr>
 <tr>
-	<td scope="row">  [=DocumentSectieTekst=]
+	<td scope="row">  [=documentSectieTekst=]
 	<td class="def">In deze kolom staat de sectie tekst.
 	<td class="example">Tekst van de sectie
 </tr>
@@ -75,7 +75,7 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 
 ## Details documententabel
 
-### <dfn>DocumentURI
+### <dfn>documentURI
 
 De URI is de unieke identifier voor het document binnen het project.Zie [URI volgens W3C](https://www.w3.org/wiki/URI).
 
@@ -90,7 +90,7 @@ Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die 
 Een URI maakt het meteen "linked data proof"
 </aside>
 
-### <dfn>DocumentCode
+### <dfn>documentCode
 
 De DocumentCode is een nummer van het onderwerp in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar hetdocument te verwijzen, zonder de volledige URI te hoeven benoemen. Omdat deze code het document identificeert, moet de code binnen het project uniek zijn.
 
@@ -99,7 +99,7 @@ De DocumentCode is een nummer van het onderwerp in spreektaal, vaak een voor men
 | [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 | { .def }
 
-### <dfn>DocumentNaam
+### <dfn>documentNaam
 
 De DocumentNaam is de voor mensen leesbare naam van het document. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.
 
@@ -108,7 +108,7 @@ De DocumentNaam is de voor mensen leesbare naam van het document. Deze naam hoef
 | [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 | { .def }
 
-### <dfn>DocumentVersie
+### <dfn>documentVersie
 
 In deze kolom staat de versie van het document.
 
@@ -117,7 +117,7 @@ In deze kolom staat de versie van het document.
 | [cs:versie](https://data.crow.nl/contractspecificaties/def/versie) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 | { .def }
 
-### <dfn>DocumentVersieDatum
+### <dfn>documentVersieDatum
 
 In deze kolom staat de versiedatum van het document.
 
@@ -126,7 +126,7 @@ In deze kolom staat de versiedatum van het document.
 | [cs:versieDatum](https://data.crow.nl/contractspecificaties/def/versieDatum) | 0:1           | [xsd:date](https://www.w3.org/2001/XMLSchema#date) |
 | { .def }
 
-### <dfn>DocumentAuteur
+### <dfn>documentAuteur
 
 In deze kolom staat de auteur van het document.
 
@@ -135,7 +135,7 @@ In deze kolom staat de auteur van het document.
 | [dct:creator](http://purl.org/dc/terms/creator) | 0:n           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 | { .def }
 
-### <dfn>DocumentType
+### <dfn>documentType
 
 In deze kolom staat het documenttype. Voor documenttypen is nog geen nationale afspraak gemaakt.
 
@@ -145,7 +145,7 @@ In deze kolom staat het documenttype. Voor documenttypen is nog geen nationale a
 | { .def }
 
 
-### <dfn>DocumentSectie
+### <dfn>documentSectie
 
 <aside class="note" title="Teksten opnemen als data">
 De bovenstaande eigenschappen van het document zijn voldoende om bij een eis het brondocument te kunnen meegeven. 
@@ -164,7 +164,7 @@ In deze kolom staat de documentsectie. Deze kan gebruikt worden om een document 
 | [nen2660:hasPart](https://bimloket.github.io/nen2660/term#hasPart) | 0:n (t.o.v. Document) | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def }
 
-### <dfn>DocumentSectieNaam
+### <dfn>documentSectieNaam
 
 De DocumentSectieNaam is de voor mensen leesbare naam van het onderwerp. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.
 
@@ -173,7 +173,7 @@ De DocumentSectieNaam is de voor mensen leesbare naam van het onderwerp. Deze na
 | [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1 (t.o.v. DocumentSectie) | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 | { .def }
 
-### <dfn>DocumentSectieTekst
+### <dfn>documentSectieTekst
 
 In deze kolom staat de paragraaftekst.
 

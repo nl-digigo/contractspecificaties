@@ -13,32 +13,32 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<th>Voorbeeld
 </thead>
 <tr>
-	<td scope="row">  [=OnderwerpURI=]
+	<td scope="row">  [=onderwerpURI=]
 	<td class="def">In deze kolom staat de unieke naam (URI) van het onderwerp.
 	<td class="example">`https://www.example.org/id/Voorbeeld-Object1`
 </tr>
 <tr>
-	<td scope="row"> [=OnderwerpCode=]
+	<td scope="row"> [=onderwerpCode=]
 	<td class="def">In deze kolom staat de code ofwel het nummer van het onderwerp.
 	<td class="example">OBJ-0109
 </tr>
 <tr>
-	<td scope="row"> [=OnderwerpNaam=]
+	<td scope="row"> [=onderwerpNaam=]
 	<td class="def">In deze kolom staat de naam van het onderwerp.
 	<td class="example">Bushalte Ede-Zuid
 </tr>
 <tr>
-	<td scope="row">  [=OnderwerpType=]
+	<td scope="row">  [=onderwerpType=]
 	<td class="def">In deze kolom staat het type van het onderwerp: Objecttype, Functie, Werkzaamheid of Informatieproduct.
 	<td class="example"> InformationObject
 </tr>
 <tr>
-	<td scope="row"> [=OnderwerpDefinitie=]
+	<td scope="row"> [=onderwerpDefinitie=]
 	<td class="def"> In deze kolom staat de definitie van het onderwerp.
 	<td class="example"> Onderwerp van een eis als voorbeeld in de documentatie
 </tr>
 <tr>
-	<td scope="row"> [=OnderwerpheeftDeel=]
+	<td scope="row"> [=onderwerpheeftDeel=]
 	<td class="def">In deze kolom staat de URI van een onderliggend onderwerp.
 	<td class="example">`https://www.example.org/id/Voorbeeld-Object2`
 </tr>
@@ -46,7 +46,7 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 
 ## Details onderwerpentabel
 
-### <dfn>OnderwerpURI
+### <dfn>onderwerpURI
 
 De URI is de unieke identifier voor het onderwerp binnen het project ("Brug15"). Zie [URI conform W3C](https://www.w3.org/wiki/URI).
 
@@ -65,7 +65,7 @@ Een URI maakt het meteen "linked data proof"
 
 <div class="issue" data-number="54"></div>
 
-### <dfn>OnderwerpCode
+### <dfn>onderwerpCode
 
 De OnderwerpCode is een nummer van het onderwerp in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar het onderwerp te verwijzen, zonder de volledige URI te hoeven benoemen. Omdat deze code het onderwerp identificeert, moet de code binnen het project uniek zijn.
 
@@ -74,7 +74,7 @@ De OnderwerpCode is een nummer van het onderwerp in spreektaal, vaak een voor me
 | [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 | { .def } |
 
-### <dfn>OnderwerpNaam
+### <dfn>onderwerpNaam
 
 De OnderwerpNaam is de voor mensen leesbare naam van het onderwerp. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.
 
@@ -83,7 +83,7 @@ De OnderwerpNaam is de voor mensen leesbare naam van het onderwerp. Deze naam ho
 | [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 | { .def } |
 
-### <dfn>OnderwerpType
+### <dfn>onderwerpType
 
 Dit is een enumeratie. Het type van het onderwerp kan in het format uit een van deze vier concepten bestaan:
 
@@ -126,7 +126,7 @@ Een Eis kan betrekking hebben op een Object (Galecopperbrug), maar ook op een Ob
 <li>Een voortgangsrapportage</li></ul></ul>
 </dl>
 
-### <dfn>OnderwerpDefinitie
+### <dfn>onderwerpDefinitie
 
 De definitie van het onderwerp is een vrij tekstveld die het onderwerp definieert.
 
@@ -135,7 +135,7 @@ De definitie van het onderwerp is een vrij tekstveld die het onderwerp definieer
 | [skos:definition](https://www.w3.org/2009/08/skos-reference/skos.html#defintion) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 | { .def } |
 
-### <dfn>OnderwerpheeftDeel
+### <dfn>onderwerpHeeftDeel
 
 In deze kolom staat de URI van een onderliggend onderwerp.
 Hiermee kan een hiërarchie worden aangegeven zoals een objectenboom of functieboom zoals gebruikelijk in contracten. Een concept kan uit meerdere delen bestaan, er komen dan meerdere regels voor in de Onderwerpentabel.

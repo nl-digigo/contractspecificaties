@@ -17,100 +17,100 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<th>Voorbeeld
 </thead>
 <tr>
-	<td scope="row"> [=EisURI=]
+	<td scope="row"> [=eisURI=]
 	<td class="def">In deze kolom staat de unieke identifier (URI) van de eis.
 	<td class="example">`https://www.example.org/id/Voorbeeld-Eis1`
 </tr>
 <tr>
-	<td scope="row"> [=EisCode=]
+	<td scope="row"> [=eisCode=]
 	<td class="def">In deze kolom staat de code of het nummer van de eis.
     <td class="example">EIS1099
 </tr>
-	<td scope="row"> [=EisTitel=]
+	<td scope="row"> [=eisTitel=]
 	<td class="def">In deze kolom staat de de naam oftewel de titel van de eis.
 	<td class="example">Voorbeeldeis
 </tr>
-	<td scope="row"> [=EisTekst=]
+	<td scope="row"> [=eisTekst=]
 	<td class="def">In deze kolom staat de eistekst.
 	<td class="example">Dit is de tekst van de voorbeeldeis
 </tr>
 <tr>	
-	<td scope="row"> [=EisToelichting=]
+	<td scope="row"> [=eisToelichting=]
 	<td class="def">In deze kolom staat de toelichting op de eis.
 	<td class="example">Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kunnen verduidelijken
 </tr>
 <tr>
-	<td scope="row"> [=EisheeftDeel=]
+	<td scope="row"> [=eisHeeftDeel=]
 	<td class="def">In deze kolom staat de URI van een onderliggende eis. 
 	<td class="example"> `https://www.example.org/id/Voorbeeld-Eis2`
 </tr>
 <tr>
-	<td scope="row"> [=EisBron=]
+	<td scope="row"> [=eisBron=]
 	<td class="def"> In deze kolom staat de URI van een bron van de eis in een eisenbibliotheek of brondocument. 
 	<td class="example"> `https://www.example.org/id/Voorbeeld-Document1`
 </tr>
 <tr>
-	<td scope="row"> [=DocumentNaam=]
+	<td scope="row"> [=documentNaam=]
 	<td class="def"> In deze kolom staat de DocumentNaam van een bron van de eis in een eisenbibliotheek of brondocument. 
 	<td class="example"> Omgevingsvisie Ede
 </tr>
 <tr>
-	<td scope="row"> [=EisReferentiedocument=]
+	<td scope="row"> [=eisReferentiedocument=]
 	<td class="def"> In deze kolom staat de URI van een gerefereerd document waarin aanvullende eisen staan 
 	<td class="example"> `https://www.example.org/id/Voorbeeld-Document2`
 </tr>
 <tr>
-	<td scope="row"> [=Documentnaam=]
+	<td scope="row"> [=documentNaam=]
 	<td class="def"> In deze kolom staat de documentnaam van een gerefereerd document waarin aanvullende eisen staan 
 	<td class="example"> Handboek Wegontwerp
 </tr>
 <tr>
-	<td scope="row"> [=EisType=]
+	<td scope="row"> [=eisType=]
 	<td class="def"> In deze kolom staat het eistype. 
 	<td class="example"> `https://data.crow.nl/contractspecificaties/id/Proceseis` 
 </tr>
 <tr>
-	<td scope="row"> [=EisStatus=]
+	<td scope="row"> [=eisStatus=]
 	<td class="def">  In deze kolom staat de status van de eis. 
 	<td class="example">  `https://data.crow.nl/contractspecificaties/id/Vervallen` 
 </tr>
 <tr>
-	<td scope="row"> [=EisStatusOnderbouwing=]
+	<td scope="row"> [=eisStatusOnderbouwing=]
 	<td class="def"> In deze kolom staat een toelichting op de status van de eis. 
 	<td class="example"> Komt niet meer voor want ... 
 </tr>
 <tr>
-	<td scope="row"> [=VerificatievoorschriftURI=]
+	<td scope="row"> [=verificatievoorschriftURI=]
 	<td class="def"> In deze kolom staat de URI van een Verificatievoorschrift.
 	<td class="example">`https://www.example.org/id/Voorbeeld-Verificatievoorschrift1`
 </tr>
 <tr>
-	<td scope="row"> [=VerificatieheeftOnderwerp=]
+	<td scope="row"> [=verificatieHeeftOnderwerp=]
 	<td class="def">In deze kolom staat de URI van het Onderwerp (subject) van het Verificatievoorschrift.
 	<td class="example"> `https://www.example.org/id/Voorbeeld-Onderwerp1`
 </tr>
 <tr>
-	<td scope="row"> [=OnderwerpNaam=]
+	<td scope="row"> [=onderwerpNaam=]
 	<td class="def">In deze kolom staat de naam van het Onderwerp (subject) van het Verificatievoorschrift.
 	<td class="example"> Bushalte Ede-Zuid
 </tr>
 <tr>
-	<td scope="row"> [=VerificatieMethode=]
+	<td scope="row"> [=verificatieMethode=]
 	<td class="def">In deze kolom staat de verificatiemethode van het Verificatievoorschrift.
 	<td class="example">`https://data.crow.nl/contractspecificaties/id/Keuring`
 </tr>
 <tr>
-	<td scope="row"> [=VerificatieFase=]
+	<td scope="row"> [=verificatieFase=]
 	<td class="def">In deze kolom staat de fase waarin dit Verificatievoorschrift wordt uitgevoerd.
 	<td class="example">`https://data.crow.nl/contractspecificaties/id/Aanleg`
 </tr>
 <tr>
-	<td scope="row"> [=VerificatieMoment=]
+	<td scope="row"> [=verificatieMoment=]
 	<td class="def">In deze kolom staat het moment waarop dit Verificatievoorschrift moet zijn uitgevoerd.
 	<td class="example">Twee weken voor het begin van de Gebruiksfase
 </tr>
 <tr>
-	<td scope="row"> [=VerificatieToelichting=]
+	<td scope="row"> [=verificatievoorschriftToelichting=]
 	<td class="def">In deze kolom staat de toelichting op de verificatiemethode bij de eis.
 	<td class="example">Een toelichting waarom een verificatiemethode wordt gevraagd bij de eis, of nadere invulling van de verificatiemethode
 </tr>
@@ -119,7 +119,7 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 
 ## Details
 
-### <dfn>EisURI
+### <dfn>eisURI
 
 De <abbr title="uniform resource identifier">URI</abbr> is de unieke identifier voor de eis binnen het project. Zie [URI volgens W3C](https://www.w3.org/wiki/URI).
 
@@ -146,7 +146,7 @@ Een URI maakt het meteen "linked data proof"
 </aside>
 
 
-### <dfn>EisCode
+### <dfn>eisCode
 
 De EisCode is een <i>in het contract opgenomen</i> nummer van de eis in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek over het contract naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen. Omdat deze code de eis identificeert, moet de code binnen het project uniek zijn.
 
@@ -159,7 +159,7 @@ De EisCode is een <i>in het contract opgenomen</i> nummer van de eis in spreekta
 Bij alle codes is het zo dat iedere ketenpartner een eigen code kan hangen aan de item (eis, document, stakeholder, etc.). Aannemer, opdrachtgever, ingenieursbureau, eisenbibliotheek kunnen allemaal eigen codes toevoegen aan een eis. Omdat dit het uitwisselformaat betreft voor het contract, wordt ervan uitgegaan dat er maar één code uitgewisseld kan worden per eis. 
 </aside>
 
-### <dfn>EisTitel
+### <dfn>eisTitel
 
 De EisTitel wordt ook wel eens de titel van de eis genoemd, en geeft een voor mensen leesbare korte duiding van de inhoud van de eis.
 
@@ -170,7 +170,7 @@ De EisTitel hoeft niet uniek te zijn in het project, daarvoor heeft de eis een U
 | [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 56 |
 | { .def } |
 
-### <dfn>EisTekst
+### <dfn>eisTekst
 
 De EisTekst bevat de voor mensen leesbare inhoud van de eis.
 Op dit moment worden eisen in een contract meestal niet voorzien van een voor een systeem leesbare eis, zoals bijvoorbeeld een minimale waarde voor een attribuut van een object. Deze "dataficeringsslag" is buiten scope van dit document, omdat dit een verder gevorderd BIM niveau vraagt en dit document juist bedoelt is als opstap naar uitwisseling van data.
@@ -182,7 +182,7 @@ In de EisTekst kan verwezen worden naar een referentiedocument, waar aanvullende
 | [rdf:value](http://www.w3.org/1999/02/22-rdf-syntax-ns#value) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000  |
 | { .def } |
 
-### <dfn>EisToelichting
+### <dfn>eisToelichting
 
 In deze kolom staat de toelichting op de eistekst
 
@@ -194,7 +194,7 @@ In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld
 | { .def } |
 
 
-### <dfn>EisheeftDeel
+### <dfn>eisHeeftDeel
 
 In deze kolom staat de URI van een onderliggende eis.
 
@@ -205,7 +205,7 @@ Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelij
 | [nen2660:hasPart](https://bimloket.github.io/nen2660/term#hasPart) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
-### <dfn>EisBron
+### <dfn>eisBron
 
 De bron van de eis kan naar twee zaken verwijzen:
 
@@ -217,10 +217,10 @@ De bron van de eis kan naar twee zaken verwijzen:
 | [dct:source](http://purl.org/dc/terms/source) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
-### Documentnaam
-Dubbeling met de [=Documentnaam=] in de Documententabel, om de tabel meer leesbaar te maken voor de menselijke lezer. Naam van het brondocument.
+### documentNaam
+Dubbeling met de [=documentNaam=] in de Documententabel, om de tabel meer leesbaar te maken voor de menselijke lezer. Naam van het brondocument.
 
-### <dfn>EisReferentiedocument
+### <dfn>eisReferentiedocument
 
 Als in de eistekst wordt verwezen naar een referentiedocument, staat in deze kolom de URI van het gerefereerde document. Deze URI verwijst naar een document in de documententabel.
 
@@ -238,10 +238,10 @@ Instructie voor gebruik: omdat nog niet alle partijen in staat zijn om de data h
 | [dct:references](http://purl.org/dc/terms/references) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
-### Documentnaam
-Dubbeling met de [=Documentnaam=] in de Documententabel, om de tabel meer leesbaar te maken voor de menselijke lezer. Naam van het gerefereerde document.
+### documentNaam
+Dubbeling met de [=documentNaam=] in de Documententabel, om de tabel meer leesbaar te maken voor de menselijke lezer. Naam van het gerefereerde document.
 
-### <dfn>EisType
+### <dfn>eisType
 
 In deze kolom staat het eistype. Welke eistypen gebruikt worden, wordt nog niet gestandaardiseerd; hierover bestaat helaas nog te weinig consensus in de sector.
 
@@ -250,7 +250,7 @@ In deze kolom staat het eistype. Welke eistypen gebruikt worden, wordt nog niet 
 | nen2660:requirementTopicType | 0:n           | string |   255   |
 | { .def } |
 
-### Enum <dfn>EisStatus
+### Enum <dfn>eisStatus
 
 In deze kolom staat de status van de eis. Dit is een enumeratie. Voor contractspecificaties geldt dat de status één van deze twee zaken is: actueel of vervallen.
 Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijziging in de eisenset te kunnen opnemen en met elkaar uit te wisselen.
@@ -269,7 +269,7 @@ Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijzig
 | [cs:status](https://data.crow.nl/contractspecificaties/def/status) | 1:1           | [cs:StatusType](https://data.crow.nl/contractspecificaties/def/StatusType) |
 | { .def } |
 
-### <dfn>EisStatusOnderbouwing
+### <dfn>eisStatusOnderbouwing
 
 In deze kolom staat een toelichting op de status van de eis.
 Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status onderbouwd is.
@@ -280,7 +280,7 @@ Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status o
 | { .def } |
 
 
-### <dfn>VerificatievoorschriftURI
+### <dfn>verificatievoorschriftURI
 
 De URI is de unieke identifier voor het Verificatievoorschrift in deze fase, in dit project. Zie [URI conform W3C](https://www.w3.org/wiki/URI).
 Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je moet volgen.
@@ -296,7 +296,7 @@ Een eis kan meerdere Verificatievoorschriften kennen, elk in een eigen fase. Een
 | { .def } |
 
 
-### <dfn>VerificatieheeftOnderwerp
+### <dfn>verificatieHeeftOnderwerp
 
 In deze kolom staat de URI van het Onderwerp van het Verificatievoorschrift. Een eis kan aan meerdere Onderwerpen gesteld worden, er komen dan meerdere regels met dezelfde eis voor in de eisentabel met elk een eigen Verificatievoorschrift en een eigen onderwerp.
 
@@ -323,7 +323,7 @@ Deze laatste heeft de voorkeur binnen Contractspecificaties, omdat er meer infor
 ### OnderwerpNaam
 Dubbeling met de [=Onderwerpnaam=] in de Onderwerpentabel, om de tabel meer leesbaar te maken voor de menselijke lezer. Naam van het onderwerp.
 
-### Enum <dfn>VerificatieMethode
+### Enum <dfn>verificatieMethode
 
 In deze kolom staat de verificatiemethode waarmee de eis geverifieerd moet worden. Een verificatiemethode is een eigenschap van een verificatievoorschrift. De verificatiemethode is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van te voren vastgestelde verificatiemethoden. Het is niet verplicht om een verificatiemethode voor te schrijven bij een Verificatievoorschrift, je kunt dit ook aan de opdrachtnemer laten.
 
@@ -455,7 +455,7 @@ De verificatiemethoden zijn afgeleid uit de volgende standaarden:
 | [cs:verificationMethod](https://data.crow.nl/contractspecificaties/def/verificationMethod) | 0:1  tov een Verificatievoorschrift           | [cs:VerificationMethodeType](https://data.crow.nl/contractspecificaties/def/verificationMethod) |
 | { .def } |
 
-### Enum <dfn>VerificatieFase
+### Enum <dfn>verificatieFase
 
 In deze kolom staat de fase van het Verificatievoorschrift. Dit is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van te voren vastgestelde fasen. Dit om uitwisseling tussen systemen makkelijker te maken.
 
@@ -506,7 +506,7 @@ RIBA Plan of Work 2020. (R. Architecture, Ed.)(RIBA). London: RIBA Architecture.
 | { .def } |
 
 
-### <dfn>VerificatieMoment
+### <dfn>verificatieMoment
 De opdrachtgever gebruikt deze fase, om vast te leggen wanneer een eis geverifieerd dient te worden. De voorwaarde om een Verificatiemoment te kunnen vastleggen is het bijvoegen van een Verificatievoorschrift.
 
 | Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Maximaal aantal tekens                                               |
@@ -523,7 +523,7 @@ Er zijn verschillende richtlijnen en afspraken in Nederland die werken met een l
 </aside>
 
 
-### <dfn>VerificatieToelichting
+### <dfn>verificatievoorschriftToelichting
 
 In deze kolom staat de toelichting op het Verificatievoorschrift.
 
