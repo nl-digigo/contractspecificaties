@@ -150,7 +150,7 @@ Een URI maakt het meteen "linked data proof"
 
 De EisCode is een <i>in het contract opgenomen</i> nummer van de eis in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek over het contract naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen. Omdat deze code de eis identificeert, moet de code binnen het project uniek zijn.
 
-| Taalbinding                                                                   | Kardinaliteit | Datatype                                               |  Maximaal aantal tekens                                               |
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
 | ----------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
 | [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 56 |
 | { .def } |
@@ -165,7 +165,7 @@ De EisTitel wordt ook wel eens de titel van de eis genoemd, en geeft een voor me
 
 De EisTitel hoeft niet uniek te zijn in het project, daarvoor heeft de eis een URI. Een unieke naam is voor de menselijke lezer vaak wel handig. Soms wordt de EisTitel in applicaties bijvoorbeeld gebruikt bij het visualiseren van de eisenboom. Unieke namen helpen in dat geval.
 
-| Taalbinding                                                                     | Kardinaliteit | Datatype                                               |  Maximaal aantal tekens                                               |
+| Taalbinding                                                                     | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
 | ------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
 | [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 56 |
 | { .def } |
@@ -177,7 +177,7 @@ Op dit moment worden eisen in een contract meestal niet voorzien van een voor ee
 
 In de EisTekst kan verwezen worden naar een referentiedocument, waar aanvullende eisen in staan die gelden binnen het contract. De URI van dit document wordt dan opgenomen in de kolom Referentiedocument.
 
-| Taalbinding                                                   | Kardinaliteit | Datatype                                               |  Maximaal aantal tekens                                               |
+| Taalbinding                                                   | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
 | ------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
 | [rdf:value](http://www.w3.org/1999/02/22-rdf-syntax-ns#value) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000  |
 | { .def } |
@@ -188,7 +188,7 @@ In deze kolom staat de toelichting op de eistekst
 
 In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld wordt.
 
-| Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Maximaal aantal tekens                                               |
+| Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
 | --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
 | [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000  |
 | { .def } |
@@ -245,7 +245,7 @@ Dubbeling met de [=documentNaam=] in de Documententabel, om de tabel meer leesba
 
 In deze kolom staat het eistype. Welke eistypen gebruikt worden, wordt nog niet gestandaardiseerd; hierover bestaat helaas nog te weinig consensus in de sector.
 
-| Taalbinding                                                                       | Kardinaliteit | Datatype                                                             |  Maximaal aantal tekens  |
+| Taalbinding                                                                       | Kardinaliteit | Datatype                                                             |  Geadviseerd maximaal aantal tekens  |
 | --------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------- | ------------ |
 | nen2660:requirementTopicType | 0:n           | string |   255   |
 | { .def } |
@@ -274,7 +274,7 @@ Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijzig
 In deze kolom staat een toelichting op de status van de eis.
 Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status onderbouwd is.
 
-| Taalbinding                                                                                | Kardinaliteit | Datatype                                               |  Maximaal aantal tekens  |
+| Taalbinding                                                                                | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens  |
 | ------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
 | [cs:statusOnderbouwing](https://data.crow.nl/contractspecificaties/def/statusOnderbouwing) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000 |
 | { .def } |
@@ -509,7 +509,7 @@ RIBA Plan of Work 2020. (R. Architecture, Ed.)(RIBA). London: RIBA Architecture.
 ### <dfn>verificatieMoment
 De opdrachtgever gebruikt deze fase, om vast te leggen wanneer een eis geverifieerd dient te worden. De voorwaarde om een Verificatiemoment te kunnen vastleggen is het bijvoegen van een Verificatievoorschrift.
 
-| Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Maximaal aantal tekens                                               |
+| Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
 | --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
 | [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1   tov een Verificatievoorschrift          | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255 |
 | { .def } |
@@ -529,7 +529,7 @@ In deze kolom staat de toelichting op het Verificatievoorschrift.
 
 In contracten wordt dit gebruikt om nader toe te lichten waarom dit Verificatievoorschrift gevraagd wordt.
 
-| Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Maximaal aantal tekens                                               |
+| Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                  |
 | --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
 | [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1  tov een Verificatievoorschrift           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000 |
 | { .def } |
