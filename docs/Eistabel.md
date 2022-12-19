@@ -333,6 +333,7 @@ De verificatiemethoden zijn afgeleid uit de volgende standaarden:
 
 1. [[NEN_EN_ISO_9000_2015]]
 2. [[ISO_IEC_IEEE_29148_2018]] Systems and software engineering — Life cycle processes — Requirements engineering
+3. [[ISO_IEC_IEEE_15288_2015]] ISO/IEC/IEEE 15288 Systems and software engineering - System life cycle processes
 4. [[LeidraadSE2]]; deze leidraad is niet meer actueel, in [[LeidraadSE3]] worden geen verificatiemethoden meer benoemd die in versie 2 wel stonden. Daarbij geldt, dat in de sector voldoende consensus lijkt te bestaan over de in [[LeidraadSE2]] genoemde verificatiemethoden. Dit in tegenstelling tot de eistypen, waarvoor dit nog onvoldoende geldt. 
 
 
@@ -340,84 +341,96 @@ De verificatiemethoden zijn afgeleid uit de volgende standaarden:
 <dt><dfn>Vaststellen
 	<dd>Het vaststellen van verificatiecriteria waarbij een of meer kenmerken en hun karakteristieke waarden worden bepaald als basis voor de verificatie.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Vaststellen">csw:Vaststellen</a> 
+	<dd>Engels: Determining [[NEN_EN_ISO_9000_2015]] par. 3.11
 
 <dt><dfn>Beoordelen
 	<dd>Op basis van deskundigheid vaststellen van de geschiktheid, toereikendheid of doeltreffendheid van een systeem, een proces, een product, een dienst of een activiteit om te zien of het aan de verificatiecriteria voldoet.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Beoordelen">csw:Beoordelen</a>
+	<dd>Engels: Reviewing [[NEN_EN_ISO_9000_2015]] par. 3.11	
 
 <dt><dfn>Monitoren
-	<dd>Het systematisch en periodiek verzamelen van de status een systeem, een proces, een product, een dienst of een activiteit om te zien of het aan de verificatiecriteria voldoet.
+	<dd>Het systematisch en periodiek verzamelen van de status een systeem, een proces, een product, een dienst of een activiteit om te zien of het aan de verificatiecriteria voldoet. <a href="https://www.encyclo.nl/begrip/monitoren">Bron definitie:Encyclo.nl</a>
 	<dd>Voorbeelden: zettingsmetingen met sensoren, monitoring van draaiuren voor optimale vervanging.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Monitoren">csw:Monitoren</a>
-	<dd>Bron definitie: <a href="https://www.encyclo.nl/begrip/monitoren">Encyclo.nl:Monitoren</a>
+	<dd>Engels: Monitoring [[NEN_EN_ISO_9000_2015]] par. 3.11
 
 <dt><dfn>Meten
-	<dd>Het uitdrukken van een waargenomen grootheid in een getal met een relevante eenheid die vergeleken kan worden met andere waardes van eenzelfde grootheid. Hiervoor kunnen meetinstrumenten worden gebruikt. Meting is echter niet beperkt tot natuurkundige grootheden, maar strekt zich uit tot een kwantitatieve beschrijving van de gehele werkelijkheid. Metingen zijn meestal kwantitatieve waarnemingen: het resultaat wordt in een getalwaarde en een eenheid uitgedrukt. 
+	<dd>Het uitdrukken van een waargenomen grootheid in een getal met een relevante eenheid die vergeleken kan worden met andere waardes van eenzelfde grootheid. Hiervoor kunnen meetinstrumenten worden gebruikt. Meting is echter niet beperkt tot natuurkundige grootheden, maar strekt zich uit tot een kwantitatieve beschrijving van de gehele werkelijkheid. Metingen zijn meestal kwantitatieve waarnemingen: het resultaat wordt in een getalwaarde en een eenheid uitgedrukt.  <a href="https://nl.wikipedia.org/wiki/Meten">Bron definitie:Wikipedia</a>
 	<dd>Voorbeelden: luchtsnelheidmetingen in tunnels, kalenderen van heipalen
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Meten">csw:Meten</a>
-	<dd>Bron definitie: <a href="https://nl.wikipedia.org/wiki/Meten">Wikipedia:Meten</a>
+    <dd>Engels: Measuring [[NEN_EN_ISO_9000_2015]] par. 3.11
 
 <dt><dfn>Keuren
-	<dd>Een formele en gedisciplineerde beoordelingstechniek waarbij wordt onderzocht of een systeem, een proces, een product, een dienst of een activiteit aan de verificatiecriteria voldoet. Het gebruik van controlelijsten (checklists) is typisch voor de vorm van beoordeling. 
+	<dd>Een formele en gedisciplineerde beoordelingstechniek waarbij wordt onderzocht of een systeem, een proces, een product, een dienst of een activiteit aan de verificatiecriteria voldoet. Het gebruik van controlelijsten (checklists) is typisch voor de vorm van beoordeling. <a href="https://www.encyclo.nl/begrip/keuring">Bron definitie:Encyclo.nl</a>
 	<dd>Voorbeelden: een ingangs- en uitgangscontrole.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Keuren">csw:Keuren</a>
-	<dd>Bron definitie: <a href="https://www.encyclo.nl/begrip/keuring">Encyclo.nl:Keuren</a>
+	<dd>Engels: Inspecting [[NEN_EN_ISO_9000_2015]] par. 3.11
 
 <dt><dfn>Beproeven
 	<dd>Het door middel van gebruik vaststellen of een systeem, een proces, een product, een dienst of een activiteit aan de verificatiecriteria voldoet.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Beproeven">csw:Beproeven</a>
+	<dd>Engels: Testing [[NEN_EN_ISO_9000_2015]] par. 3.11	
 
 <dt><dfn>Evalueren
-	<dd>Het verzamelen, interpreteren en presenteren van informatie teneinde de waarde van een resultaat of proces te bepalen. Hierbij kan het gaan om het waarderen van de resultaten van personen of bedrijven, maar ook om het waarderen van alternatieve oplossingen. 
+	<dd>Het verzamelen, interpreteren en presenteren van informatie teneinde de waarde van een resultaat of proces te bepalen. Hierbij kan het gaan om het waarderen van de resultaten van personen of bedrijven, maar ook om het waarderen van alternatieve oplossingen. <a href="https://nl.wikipedia.org/wiki/Evaluatie">Bron definitie:Wikipedia</a>
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Evalueren">csw:Evalueren</a>
-	<dd>Bron definitie: <a href="https://nl.wikipedia.org/wiki/Evaluatie">Wikipedia:Evalueren</a>
+	<dd>Engels: Evaluating [[NEN_EN_ISO_9000_2015]]	par. 3.11
 
 <dt><dfn>Analyseren
     <dd>het ontleden van een bepaald (denk)object tot de constituerende elementen. Het is een wetenschappelijke methode om data, objecten en materie systematisch te onderzoeken. 
 	<dd>Voorbeelden: Haalbaarheidsanalyse, kosten-batenanalyse, materiaalanalyse.
-	<dd><a href="https://data.crow.nl/contractspecificaties/id/Analyse">csw:Analyse</a>
+	<dd><a href="https://data.crow.nl/contractspecificaties/id/Analyseren">csw:Analyseren</a>
+	<dd>Engels: Analysing (including modelling and simulation) [[ISO_IEC_IEEE_29148_2018]] par. 6.5.2
 
 <dt><dfn>Berekenen
     <dd>Het uitvoeren van berekeningen aan een systeem, een proces, een product, een dienst of een activiteit om te bereken of het aan de verificatiecriteria voldoet.
 	<dd>Voorbeeldensterkteberekeningen
-	<dd><a href="https://data.crow.nl/contractspecificaties/id/Berekening">csw:Berekening</a>
+	<dd><a href="https://data.crow.nl/contractspecificaties/id/Berekenen">csw:Berekenen</a>
+	<dd>Engels: Calculating (part of Analysing) [[ISO_IEC_IEEE_29148_2018]] par. 6.5.2	
 
 <dt><dfn>Auditen
-    <dd>Onafhankelijk onderzoeken en evalueren van de activiteiten en de resultaten van een organisatie. 
-	<dd>Voorbeelden: Audit van bestaande kwaliteitssystemen en -processen, Technical Inspection Services
+    <dd>Onafhankelijk onderzoeken en evalueren van de activiteiten en de resultaten van een organisatie. <a href="https://www.encyclo.nl/begrip/audit">Bron definitie:Encyclo.nl</a>. 
+	<dd>Voorbeelden: Audit van bestaande kwaliteitssystemen en -processen, Technical Inspection Services. 
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Auditen">csw:Auditen</a>
-	<dd>Bron definitie: <a href="https://www.encyclo.nl/begrip/audit">Encyclo.nl:/auditen</a>
+	<dd>Engels: Auditing [[ISO_IEC_IEEE_15288_2015]] 4.1
 
 <dt><dfn>Demonstreren
     <dd>Laten zien dat een systeem, een proces, een product, een dienst of een activiteit aan de verificatiecriteria voldoet.
 	<dd>Voorbeeld: presentatie van de functionaliteiten van een bestaand systeem
-	<dd><a href="https://data.crow.nl/contractspecificaties/id/Demonstratie">csw:Demonstratie</a>
-
+	<dd><a href="https://data.crow.nl/contractspecificaties/id/Demonstreren">csw:Demonstreren</a>
+	<dd>Engels: Demonstrating [[ISO_IEC_IEEE_29148_2018]] par. 6.5.2		
+	
 <dt><dfn>Document beoordelen
     <dd>Op basis van deskundigheid vaststellen of een document aan de verificatiecriteria voldoet.
 	<dd>o.a. documentinspecties, reviews, toetsen, ontwerpateliers
-	<dd><a href="https://data.crow.nl/contractspecificaties/id/Documentbeoordeling">csw:Documentbeoordeling</a>
+	<dd><a href="https://data.crow.nl/contractspecificaties/id/Documentbeoordelen">csw:Documentbeoordelen</a>
+	<dd>Engels: Document reviewing [[NEN_EN_ISO_9000_2015]] par. 3.11		
 
 <dt><dfn>Modelleren
      <dd>Met behulp van een fysiek of virtueel model onderzoeken of een systeem, een proces, een product, een dienst of een activiteit aan de verificatiecriteria voldoet.
 	<dd>Voorbeelden: prestatiemodellen van beschikbaarheid, verkeersmodellen
-	<dd><a href="https://data.crow.nl/contractspecificaties/id/Modellering">csw:Modellering</a>
+	<dd><a href="https://data.crow.nl/contractspecificaties/id/Modelleren">csw:Modelleren</a>
+	<dd>Engels: Modelling (part of Analysing) [[ISO_IEC_IEEE_29148_2018]] par. 6.5.2	
+
 
 <dt><dfn>Simuleren
     <dd>Met behulp van een fysiek of virtueel model het gebruik nabootsen van een systeem, een proces, een product, een dienst of een activiteit om te zien of het aan de verificatiecriteria voldoet.
-	<dd>oVoorbeeld: Dienstregelingsimulatie
-	<dd><a href="https://data.crow.nl/contractspecificaties/id/Simulaties">csw:Simulaties</a>
+	<dd>Voorbeeld: Dienstregelingsimulatie
+	<dd><a href="https://data.crow.nl/contractspecificaties/id/Simuleren">csw:Simuleren</a>
+	<dd>Engels: Simulating (part of Analysing) [[ISO_IEC_IEEE_29148_2018]] par. 6.5.2		
 
 <dt><dfn>Refereren
     <dd>Door te verwijzen naar een alternatieve toepassing of verificatie van een systeem, een proces, een product, een dienst of een activiteit laten zien dat deze aan de verificatiecriteria voldoet.
 	<dd>Voorbeeld: gebruik van gecertificeerde producten
-	<dd><a href="https://data.crow.nl/contractspecificaties/id/Referentie">csw:Referentie</a>
-
+	<dd><a href="https://data.crow.nl/contractspecificaties/id/Refereren">csw:Refereren</a>
+	<dd>Engels: Referencing 
+	
 <dt><dfn>Testen
     <dd>Het proces waarmee de correcte werking van een systeem of product wordt aangetoond. Activiteiten zoals meten, onderzoeken, beproeven, keuren met kalibers van één of meer kenmerken van een product of dienst en het vergelijken van de uitkomsten met de verificatiecriteria, om te bepalen of aan de eisen is voldaan.
 	<dd>Voorbeeld: haalbaarheidstesten, <abbr title="Factory Integration Test">FIT</abbr>, <abbr title="Factory Acceptance Test">FAT</abbr>, <abbr title="Site Integration Test">SIT</abbr>, <abbr title="Site Acceptance Test">SAT</abbr>
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Testen">csw:Testen</a>
 	<dd>Bron definitie: <a href="https://nl.wikipedia.org/wiki/Testen_(software)">Wikipedia:Testen</a>
+	<dd>Engels: Testing [[ISO_IEC_IEEE_29148_2018]] par. 6.5.2	
 
 <dt><dfn>Factory Integration Test
     <dd>Het integraal testen van de functionaliteit van systemen voordat zij de fabriek verlaten.
@@ -442,12 +455,13 @@ De verificatiemethoden zijn afgeleid uit de volgende standaarden:
 <dt><dfn>Schouwen
     <dd>Op basis van deskundigheid ter plaatse visueel vaststellen of een systeem, een proces, een product, een dienst of een activiteit aan de verificatiecriteria voldoet.
 	<dd>Voorbeelden: visuele opname van projectlocatie
-	<dd><a href="https://data.crow.nl/contractspecificaties/id/Schouw">csw:Schouw</a>
+	<dd><a href="https://data.crow.nl/contractspecificaties/id/Schouwen">csw:Schouwen</a>
 
 <dt><dfn>Inspecteren
     <dd>Het eenmalig of periodiek onderzoeken of een in gebruik zijnd systeem, een proces, een product, een dienst of een activiteit aan de verificatiecriteria voldoet.
 	<dd>Voorbeelden: Arbo-inspecties, pompkelderinspecties
-	<dd><a href="https://data.crow.nl/contractspecificaties/id/Inspectie">csw:Inspectie</a>
+	<dd><a href="https://data.crow.nl/contractspecificaties/id/Inspecteren">csw:Inspecteren</a>
+	<dd>Engels: Inspecting [[ISO_IEC_IEEE_29148_2018]] par. 6.5.2
 </dd></dl>
 
 | Taalbinding                                                                                | Kardinaliteit | Datatype                                                |
@@ -511,7 +525,7 @@ De opdrachtgever gebruikt deze fase, om vast te leggen wanneer een eis geverifie
 
 | Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
 | --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1   tov een Verificatievoorschrift          | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255 |
+| [cs:verificationMoment](https://data.crow.nl/contractspecificaties/def/verificatieMoment) | 0:1   tov een Verificatievoorschrift          | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255 |
 | { .def } |
 
 <aside class="note" title="Standaard fasen / momenten">
