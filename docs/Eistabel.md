@@ -2,7 +2,7 @@
 
 Het eisenformat wordt gebruikt om de eisen te kunnen uitwisselen als data. 
 
-Een eis is een [NEN2660:Requirement](https://bimloket.github.io/nen2660/def#Requirement) volgens NEN 2660.
+Een eis is een [nen2660:Requirement](https://bimloket.github.io/nen2660/def#Requirement) volgens [[NEN_2660_2_2022]].
 
 ## Eisenformat
 
@@ -250,7 +250,7 @@ In deze kolom staat het eistype. Welke eistypen gebruikt worden, wordt nog niet 
 | nen2660:requirementTopicType | 0:n           | string |   255   |
 | { .def } |
 
-### Enum <dfn>eisStatus
+### <dfn>eisStatus</dfn> (enumeratie)
 
 In deze kolom staat de status van de eis. Dit is een enumeratie. Voor contractspecificaties geldt dat de status één van deze twee zaken is: actueel of vervallen.
 Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijziging in de eisenset te kunnen opnemen en met elkaar uit te wisselen.
@@ -292,7 +292,7 @@ Een eis kan meerdere Verificatievoorschriften kennen, elk in een eigen fase. Een
 
 | Taalbinding | Kardinaliteit | Datatype                                               |
 | ----------- | ------------- | ------------------------------------------------------ |
-| n.v.t.      | 1:1 ten opzichte van een Verificatievoorschrift       | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| [cs:isVerificationOf](https://data.crow.nl/contractspecificaties/def/isVerificationOf) | 1:1 t.o.v. een Verificatievoorschrift          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
 
@@ -304,8 +304,7 @@ Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voo
 
 | Taalbinding                                                                            | Kardinaliteit | Datatype                                               |
 | -------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |
-| [cs:isVerificationOf](https://data.crow.nl/contractspecificaties/def/isVerificationOf) | 1:1 tov een Verificatievoorschrift          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
-| [cs:hasAsSubject ](https://data.crow.nl/contractspecificaties/def/hasAsSubject)        | 1:1 tov een Verificatievoorschrift          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| [cs:hasAsSubject ](https://data.crow.nl/contractspecificaties/def/hasAsSubject)        | 1:1 t.o.v. een Verificatievoorschrift          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
 <aside class="note" title="Onderwerp van Eis en Verificatievoorschrift">
@@ -320,10 +319,10 @@ Deze laatste heeft de voorkeur binnen Contractspecificaties, omdat er meer infor
 </figure>
 </aside>
 
-### OnderwerpNaam
-Dubbeling met de [=Onderwerpnaam=] in de Onderwerpentabel, om de tabel meer leesbaar te maken voor de menselijke lezer. Naam van het onderwerp.
+### onderwerpNaam
+Dubbeling met de [=onderwerpnaam=] in de Onderwerpentabel, om de tabel meer leesbaar te maken voor de menselijke lezer. Naam van het onderwerp.
 
-### Enum <dfn>verificatieMethode
+### <dfn>verificatieMethode</dfn> (enumeratie)
 
 In deze kolom staat de verificatiemethode waarmee de eis geverifieerd moet worden. Een verificatiemethode is een eigenschap van een verificatievoorschrift. De verificatiemethode is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van te voren vastgestelde verificatiemethoden. Het is niet verplicht om een verificatiemethode voor te schrijven bij een Verificatievoorschrift, je kunt dit ook aan de opdrachtnemer laten.
 
@@ -466,10 +465,10 @@ De verificatiemethoden zijn afgeleid uit de volgende standaarden:
 
 | Taalbinding                                                                                | Kardinaliteit | Datatype                                                |
 | ------------------------------------------------------------------------------------------ | ------------- | ----------------------------------------------------------------------------------------------- |
-| [cs:verificationMethod](https://data.crow.nl/contractspecificaties/def/verificationMethod) | 0:1  tov een Verificatievoorschrift           | [cs:VerificationMethodeType](https://data.crow.nl/contractspecificaties/def/verificationMethod) |
+| [cs:verificationMethod](https://data.crow.nl/contractspecificaties/def/verificationMethod) | 0:1  t.o.v. een Verificatievoorschrift           | [cs:VerificationMethodeType](https://data.crow.nl/contractspecificaties/def/verificationMethod) |
 | { .def } |
 
-### Enum <dfn>verificatieFase
+### <dfn>verificatieFase</dfn> (enumeratie)
 
 In deze kolom staat de fase van het Verificatievoorschrift. Dit is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van te voren vastgestelde fasen. Dit om uitwisseling tussen systemen makkelijker te maken.
 
@@ -516,7 +515,7 @@ RIBA Plan of Work 2020. (R. Architecture, Ed.)(RIBA). London: RIBA Architecture.
 
 | Taalbinding                                                      | Kardinaliteit | Datatype                                                                 |
 | ---------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------ |
-| [cs:phase](https://data.crow.nl/contractspecificaties/def/phase) | 0:1  tov een Verificatievoorschrift            | [cs:PhaseType](https://data.crow.nl/contractspecificaties/def/PhaseType) |
+| [cs:phase](https://data.crow.nl/contractspecificaties/def/phase) | 0:1  t.o.v. een Verificatievoorschrift            | [cs:PhaseType](https://data.crow.nl/contractspecificaties/def/PhaseType) |
 | { .def } |
 
 
@@ -525,7 +524,7 @@ De opdrachtgever gebruikt deze fase, om vast te leggen wanneer een eis geverifie
 
 | Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
 | --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| [cs:verificationMoment](https://data.crow.nl/contractspecificaties/def/verificatieMoment) | 0:1   tov een Verificatievoorschrift          | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255 |
+| [cs:verificationMoment](https://data.crow.nl/contractspecificaties/def/verificatieMoment) | 0:1   t.o.v. een Verificatievoorschrift          | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255 |
 | { .def } |
 
 <aside class="note" title="Standaard fasen / momenten">
@@ -545,7 +544,7 @@ In contracten wordt dit gebruikt om nader toe te lichten waarom dit Verificatiev
 
 | Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                  |
 | --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1  tov een Verificatievoorschrift           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000 |
+| [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1  t.o.v. een Verificatievoorschrift           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000 |
 | { .def } |
 
 
