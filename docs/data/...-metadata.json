@@ -1,0 +1,304 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/csvw",
+    {
+      "@language": "nl",
+      "nen2660": "https://w3id.org/nen2660/def#",
+      "cs": "https://data.crow.nl/contractspecificaties/def/",
+      "csw": "https://data.crow.nl/contractspecificaties/id/"
+    }
+  ],
+  "dc:title": "Voorbeeld bestand",
+  "dc:description": "Een voorbeeld bestand uitgelegd",
+  "dc:publisher": "Stichting CROW",
+  "dc:date": "2022-12-31",
+  "dialect": {
+    "encoding": "utf-8",
+    "quoteChar": "\"",
+    "doubleQuote": true,
+    "header": true,
+    "delimiter": ";"
+  },
+  "tables": [
+    {
+      "url": "Eisentabel voorbeeld.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "eisURI",
+            "required": true,
+            "datatype": "anyURI"
+          },
+          {
+            "name": "eisCode",
+            "required": true,
+            "datatype": "string",
+            "propertyUrl": "skos:notation"
+          },
+          {
+            "name": "eisTitel",
+            "required": true,
+            "datatype": "string",
+            "propertyUrl": "skos:prefLabel"
+          },
+          {
+            "name": "eisTekst",
+            "required": true,
+            "datatype": "string",
+            "propertyUrl": "rdf:value"
+          },
+          {
+            "name": "eisToelichting",
+            "required": false,
+            "datatype": "string",
+            "propertyUrl": "skos:note"
+          },
+          {
+            "name": "eisHeeftDeel",
+            "required": false,
+            "datatype": "anyURI",
+            "propertyUrl": "nen2660:hasPart"
+          },
+          {
+            "name": "eisBron",
+            "required": false,
+            "propertyUrl": "dc:source",
+            "valueUrl": "Documententabel voorbeeld.csv#{eisBron}"
+          },
+          // {
+          // "name": "documentNaam",
+          // "required": false,
+          // "datatype": "string",
+          // "propertyUrl": "skos:prefLabel"
+          // },
+          {
+            "name": "eisReferentieDocument",
+            "required": false,
+            "propertyUrl": "dc:references",
+            "valueUrl": "Documententabel voorbeeld.csv#{eisReferentieDocument}"
+          },
+          // {
+          // "name": "documentNaam",
+          // "required": false,
+          // "datatype": "string",
+          // "propertyUrl": "skos:prefLabel"
+          // },
+          // {
+          // "name": "eisType",
+          // "required": true,
+          // "datatype": "anyURI",
+          // "propertyUrl": "nen2660:requirementTopicType"
+          // },
+          {
+            "name": "eisStatus",
+            "required": true,
+            "propertyUrl": "cs:status",
+            "valueUrl": "csw:{eisStatus}"
+          },
+          {
+            "name": "eisStatusOnderbouwing",
+            "required": false,
+            "datatype": "string",
+            "propertyUrl": "cs:statusOnderbouwing"
+          },
+          {
+            "name": "verificatievoorschriftURI",
+            "required": true,
+            "aboutUrl": "#{verificatievoorschriftURI}",
+            "propertyUrl": "cs:isVerificationOf",
+            "valueUrl": "#{eisURI}"
+          },
+          {
+            "name": "verificatieHeeftOnderwerp",
+            "required": true,
+            "aboutUrl": "#{verificatievoorschriftURI}",
+            "propertyUrl": "cs:hasAsSubject",
+            "valueUrl": "Onderwerpentabel voorbeeld.csv#{verificatieHeeftOnderwerp}"
+          },
+          {
+            "name": "verificatieMethode",
+            "required": false,
+            "aboutUrl": "#{verificatievoorschriftURI}",
+            "propertyUrl": "cs:verificationMethod",
+            "valueUrl": "csw:{verificatieMethode}"
+          },
+          {
+            "name": "verificatieFase",
+            "required": false,
+            "aboutUrl": "#{verificatievoorschriftURI}",
+            "propertyUrl": "cs:phase",
+            "valueUrl": "csw:{verificatieFase}"
+          },
+          {
+            "name": "verificatieMoment",
+            "required": false,
+            "datatype": "string",
+            "propertyUrl": "cs:verificatieMoment"
+          },
+          {
+            "name": "verificatievoorschriftToelichting",
+            "required": false,
+            "datatype": "string",
+            "propertyUrl": "skos:note"
+          }
+        ],
+        "aboutUrl": "#{eisURI}"
+      }
+    },
+    {
+      "url": "Onderwerpentabel voorbeeld.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "onderwerpURI",
+            "required": true,
+            "datatype": "anyURI"
+          },
+          {
+            "name": "onderwerpCode",
+            "required": true,
+            "datatype": "string",
+            "propertyUrl": "skos:notation"
+          },
+          {
+            "name": "onderwerpNaam",
+            "required": true,
+            "datatype": "string",
+            "propertyUrl": "skos:prefLabel"
+          },
+          {
+            "name": "onderwerpType",
+            "required": true,
+            "valueUrl": "cs:{onderwerpType}",
+            "propertyUrl": "rdf:type"
+          },
+          {
+            "name": "onderwerpDefinitie",
+            "required": false,
+            "datatype": "string",
+            "propertyUrl": "skos:prefLabel"
+          },
+          {
+            "name": "onderwerpHeeftDeel",
+            "required": false,
+            "aboutUrl": "#{onderwerpURI}",
+            "propertyUrl": "nen2660:hasPart",
+            "valueUrl": "#{onderwerpHeeftDeel}"
+          }
+        ],
+        "aboutUrl": "#{onderwerpURI}"
+      }
+    },
+    {
+      "url": "Documententabel voorbeeld.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "type-document",
+            "virtual": true,
+            "propertyUrl": "rdf:type",
+            "valueUrl": "cs:Document"
+          },
+          {
+            "name": "documentURI",
+            "required": true,
+            "datatype": "anyURI"
+          },
+          {
+            "name": "documentCode",
+            "required": true,
+            "datatype": "string",
+            "propertyUrl": "skos:notation"
+          },
+          {
+            "name": "documentNaam",
+            "required": true,
+            "datatype": "string",
+            "propertyUrl": "skos:prefLabel"
+          },
+          {
+            "name": "documentVersie",
+            "required": false,
+            "datatype": "string",
+            "propertyUrl": "cs:versie"
+          },
+          {
+            "name": "documentVersieDatum",
+            "required": false,
+            "datatype": "string",
+            "propertyUrl": "cs:versieDatum"
+          },
+          {
+            "name": "documentAuteur",
+            "required": false,
+            "datatype": "string",
+            "propertyUrl": "dc:creator"
+          },
+          {
+            "name": "documentType",
+            "required": false,
+            "datatype": "string",
+            "propertyUrl": "cs:documentType"
+          },
+          {
+            "name": "type-documentsectie",
+            "virtual": true,
+            "aboutUrl": "#{documentSectie}",
+            "propertyUrl": "rdf:type",
+            "valueUrl": "cs:Document"
+          },
+          {
+            "name": "documentSectie",
+            "required": false,
+            "propertyUrl": "nen2660:hasPart",
+            "aboutUrl": "#{documentURI}",
+            "valueUrl": "#{documentSectie}"
+          },
+          {
+            "name": "documentSectieNaam",
+            "required": false,
+            "aboutUrl": "#{documentSectie}",
+            "datatype": "string",
+            "propertyUrl": "skos:prefLabel"
+          },
+          {
+            "name": "documentSectieTekst",
+            "required": false,
+            "aboutUrl": "#{documentSectie}",
+            "datatype": "string",
+            "propertyUrl": "rdf:value"
+          }
+        ],
+        "aboutUrl": "#{documentURI}"
+      }
+    }
+  ],
+  "foreignKeys": [
+    {
+      "columnReference": "eisBron",
+      "reference": {
+        "resource": "Documententabel voorbeeld.csv",
+        "columnReference": "documentURI"
+      }
+    },
+    {
+      "columnReference": "eisReferentieDocument",
+      "reference": {
+        "resource": "Documententabel voorbeeld.csv",
+        "columnReference": "documentURI"
+      }
+    },
+    {
+      "columnReference": "verificatieHeeftOnderwerp",
+      "reference": {
+        "resource": "Onderwerpentabel voorbeeld.csv",
+        "columnReference": "onderwerpURI"
+      }
+    }
+  ],
+  "primaryKey": [
+    "eisBron",
+    "eisReferentieDocument",
+    "verificatieHeeftOnderwerp"
+  ]
+}

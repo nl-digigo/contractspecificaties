@@ -247,7 +247,7 @@ In deze kolom staat het eistype. Welke eistypen gebruikt worden, wordt nog niet 
 
 | Taalbinding                                                                       | Kardinaliteit | Datatype                                                             |  Geadviseerd maximaal aantal tekens  |
 | --------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------- | ------------ |
-| nen2660:requirementTopicType | 0:n           | string |   255   |
+| [nen2660:requirementTopicType ](https://w3id.org/nen2660/def#RequirementTopicType)    | 0:n           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |   255   |
 | { .def } |
 
 ### <dfn>eisStatus</dfn> (enumeratie)
