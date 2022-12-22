@@ -20,13 +20,15 @@ Om de CSV file (de distributie) goed te kunnen lezen/interpreteren zijn minimaal
 * [CSV Dialect](http://dataprotocols.org/csv-dialect/)
 * [Model for Tabular Data and Metadata on the Web](https://www.w3.org/TR/tabular-data-model/#syntax)
 
-| Gegeven            | Toelichting                                                                                                                 | Taalbinding   |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------------|---------------|
-| Encodering         | Specificeert hoe de CSV gecodeert is. Standaard is dit `utf-8`                                                              | `encoding`    |
-| Quote teken        | specificeert een één-karakter tekenreeks om te gebruiken als aanhalingsteken. Standaard is dit `"`                          | `quoteChar`   |
-| Dubbel quote teken | Bepaalt de behandeling van aanhalingstekens in velden.                                                                      | `doubleQuote` |
-| Header             | Geeft aan of het bestand een header-rij bevat. Indien `true` is de eerste rij in het bestand een header-rij, geen gegevens. | `header`      |
-| Scheidingsteken    | Specificeert een één-karakter tekenreeks om te gebruiken als veldscheidingsteken. Standaard is dit `;` (vanuit NL Excel)    | `delimiter`   |
+In de kolom 'Best practice' staat de aanbeveling voor Contractspecificaties.
+
+| Gegeven            | Toelichting                                                                                                                       | Taalbinding   | Best practice |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------|---------------|---------------|
+| Encodering         | Specificeert hoe de CSV gecodeert is.                                                                                             | `encoding`    | `utf-8`       |
+| Quote teken        | Specificeert een één-karakter tekenreeks om te gebruiken als aanhalingsteken.                                                     | `quoteChar`   | `"`           |
+| Dubbel quote teken | Bepaalt de behandeling van aanhalingstekens in velden.                                                                            | `doubleQuote` | `true`        |
+| Header             | Geeft aan of het bestand een header-rij bevat. Indien `true` is de eerste rij in het bestand een header-rij, geen gegevens.       | `header`      | `true`        |
+| Scheidingsteken    | Specificeert een één-karakter tekenreeks om te gebruiken als veldscheidingsteken. Standaard is dit `,`, maar vanuit NL Excel `;`) | `delimiter`   | `;`           |
 | { .def }     |
 
 ## JSON metadata file
