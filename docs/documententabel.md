@@ -161,7 +161,7 @@ In deze kolom staat de documentsectie. Deze kan gebruikt worden om een document 
 
 | Taalbinding                                                        | Kardinaliteit         | Datatype                                               |
 | ------------------------------------------------------------------ | --------------------- | ------------------------------------------------------ |
-| [nen2660:hasPart](https://bimloket.github.io/nen2660/term#hasPart) | 0:n (t.o.v. Document) | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| [nen2660:hasPart](https://bimloket.github.io/nen2660/def#hasPart) | 0:n (t.o.v. Document) | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def }
 
 ### <dfn>documentSectieNaam

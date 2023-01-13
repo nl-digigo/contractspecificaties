@@ -50,7 +50,7 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td class="example"> `https://www.example.org/id/Voorbeeld-Document1`
 </tr>
 <tr>
-	<td scope="row"> [=documentNaam=]
+	<td scope="row"> [=eisBronNaam=]
 	<td class="def"> In deze kolom staat de DocumentNaam van een bron van de eis in een eisenbibliotheek of brondocument. 
 	<td class="example"> Omgevingsvisie Ede
 </tr>
@@ -60,7 +60,7 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td class="example"> `https://www.example.org/id/Voorbeeld-Document2`
 </tr>
 <tr>
-	<td scope="row"> [=documentNaam=]
+	<td scope="row"> [=eisReferentiedocumentNaam=]
 	<td class="def"> In deze kolom staat de documentnaam van een gerefereerd document waarin aanvullende eisen staan 
 	<td class="example"> Handboek Wegontwerp
 </tr>
@@ -202,7 +202,7 @@ Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelij
 
 | Taalbinding                                                        | Kardinaliteit | Datatype                                               |
 | ------------------------------------------------------------------ | ------------- | ------------------------------------------------------ |
-| [nen2660:hasPart](https://bimloket.github.io/nen2660/term#hasPart) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| [nen2660:hasPart](https://bimloket.github.io/nen2660/def#hasPart) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
 ### <dfn>eisBron
@@ -217,7 +217,7 @@ De bron van de eis kan naar twee zaken verwijzen:
 | [dct:source](http://purl.org/dc/terms/source) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
-### documentNaam
+### <dfn>eisBronNaam
 Dubbeling met de [=documentNaam=] in de Documententabel, om de tabel meer leesbaar te maken voor de menselijke lezer. Naam van het brondocument.
 
 ### <dfn>eisReferentiedocument
@@ -238,7 +238,7 @@ Instructie voor gebruik: omdat nog niet alle partijen in staat zijn om de data h
 | [dct:references](http://purl.org/dc/terms/references) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
-### documentNaam
+### <dfn>eisReferentiedocumentNaam
 Dubbeling met de [=documentNaam=] in de Documententabel, om de tabel meer leesbaar te maken voor de menselijke lezer. Naam van het gerefereerde document.
 
 ### <dfn>eisType
@@ -247,8 +247,12 @@ In deze kolom staat het eistype. Welke eistypen gebruikt worden, wordt nog niet 
 
 | Taalbinding                                                                       | Kardinaliteit | Datatype                                                             |  Geadviseerd maximaal aantal tekens  |
 | --------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------- | ------------ |
-| [nen2660:requirementTopicType ](https://w3id.org/nen2660/def#RequirementTopicType)    | 0:n           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |   255   |
+| [cs:requirementTopcType](https://data.crow.nl/contractspecificaties/def/requirementTopicType)    | 0:n           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |   255   |
 | { .def } |
+
+<aside class="note" title="Afwijking NEN 2660-2">
+Eigenlijk hadden we hier een lijst willen aanbieden, zoals ook bedoeld is in de NEN 2660-2: <a href="https://w3id.org/nen2660/def#RequirementTopicType">nen2660:requirementTopicType</a>. Omdat er geen consensus bereikt is over de eistypes, laten we dit open. 
+</aside>
 
 ### <dfn>eisStatus</dfn> (enumeratie)
 
@@ -309,10 +313,13 @@ Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voo
 
 <aside class="note" title="Onderwerp van Eis en Verificatievoorschrift">
 Merk op, dat in de tabel een relatie niet benoemd is, omdat de "regel" de verbindende factor is: <a href="https://data.crow.nl/contractspecificaties/def/hasAsSubject">cs:hasAsSubject</a>
-Dit is het onderwerp van het Verificatievoorschrift. In de [[NEN_2660_2_2022]] zijn er twee manieren om een eis te verbinden met een onderwerp: <ol>
-<li>Rechtstreeks via de relatie: hasRequirement</li>
-<li>Indirect via de relaties: isVerificationOf en hasAsSubject</li>
-Deze laatste heeft de voorkeur binnen Contractspecificaties, omdat er meer informatie kan worden vastgelgd over het Verificatievoorschrift. 
+Dit is het onderwerp van het Verificatievoorschrift. 
+
+In de [[NEN_2660_2_2022]] wordt een eis rechtstreeks verbonden met een onderwerp via de relatie: hasRequirement. 
+
+Binnen contractspecificaties wijken we hiervan af, omdat we meer informatie willen kunnen toevoegen bij het verificatievoorschrift. We werken daarom via de relaties: isVerificationOf en hasAsSubject.
+
+Als je de formats gebruikt om uit te wisselen, kun je niet gebruik maken van de relatie hasRequirement. Dit omdat dit de automatisering zou bemoeilijken. Als je uitwisselt in een linked data formaat, dan kun je beide methodes gebruiken.
 <figure>
 <img src="./media/Diagram2.drawio.svg" alt="UML schema voor het informatiemodel voor het Verificatievoorschrift">
 <figcaption>Het informatiemodel voor het Verificatievoorschrift.  hoort het Onderwerp bij het Verificatievoorschrift en heeft geen directe relatie met de eis.</caption>

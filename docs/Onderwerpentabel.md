@@ -28,8 +28,13 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td class="example">Bushalte Ede-Zuid
 </tr>
 <tr>
-	<td scope="row">  [=onderwerpType=]
-	<td class="def">In deze kolom staat het type van het onderwerp: Objecttype, Functie, Werkzaamheid of Informatieproduct.
+	<td scope="row">  [=onderwerpTypeURI=]
+	<td class="def">In deze kolom staat de URI type van het onderwerptype.
+	<td class="example"> InformationObject
+</tr>
+<tr>
+	<td scope="row">  [=onderwerpTypeNaam=]
+	<td class="def">In deze kolom staat de voor mensen leesbare naam van het onderwerptype: FysiekObject, Functie, Werkzaamheid of InformatieProduct.
 	<td class="example"> InformationObject
 </tr>
 <tr>
@@ -58,7 +63,7 @@ Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die 
 | ----------- | ------------- | ------------------------------------------------------ |
 | n.v.t.      | 1:1           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
-ioo9itrkd5mt
+
 <aside class="note" title="LinkedData Proof">
 Een URI maakt het meteen "linked data proof"
 </aside>
@@ -83,17 +88,27 @@ De OnderwerpNaam is de voor mensen leesbare naam van het onderwerp. Deze naam ho
 | [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |  255  |
 | { .def } |
 
-### <dfn>onderwerpType
+### <dfn>onderwerpTypeURI
 
-Dit is een enumeratie. Het type van het onderwerp kan in het format uit een van deze vier concepten bestaan:
+In deze kolom staat de URI type van het onderwerptype, zodat deze tabel geautomatiseerd verwerkt kan worden:
+
+1. https://data.crow.nl/contractspecificaties/def/PhysicalObject
+2. https://data.crow.nl/contractspecificaties/def/Function
+3. https://data.crow.nl/contractspecificaties/def/Work
+4. https://data.crow.nl/contractspecificaties/def/InformationProduct
+
+
+
+### <dfn>onderwerpTypeNaam
+
+Het type van het onderwerp kan in het format uit een van deze vier concepten bestaan:
 
 1. [=FysiekObject=]
 2. [=Functie=]
 3. [=Werkzaamheid=]
-4. [=Informatieproduct=]
+4. [=InformatieProduct=]
 
 Een Eis kan betrekking hebben op een Object (Galecopperbrug), maar ook op een Objecttype (brug, of alle bruggen <i>in dit project</i>); op een Functie (keren water Nederrijn bij Driel), of juist op een Functietype (Keren water in een rivier op een locatie) enz. Algemeen: eisen kunnen zowel betrekking op Type als op Individueel-niveau. In het project bedoel je altijd "de individuele Fysieke objecten van het type "weg" <i>in dit project</i>" als het onderwerp de naam "Weg" heeft; of als er maar een weg is is het beter de naam van het onderwerp specifieker te maken: "N224".
-
 
 
 | Taalbinding                                              | Kardinaliteit | Datatype                                               |
@@ -106,16 +121,16 @@ Een Eis kan betrekking hebben op een Object (Galecopperbrug), maar ook op een Ob
 	<dd>De objecttypen en objecttypenboom ("decompositie") in het contract (Vraagspecificatie Eisen met eisen aan het Bouwwerk) zijn in NEN2660-2 een <a href="https://w3id.org/nen2660/def#PhysicalObject">nen2660:PhysicalObject</a>. Dit kan in de kolom Type worden ingevuld.
 	
 <dt><dfn data-lt="Functie|Functies">Functie</dfn>
-	<dd>In de [[NEN_2660_1_2022]], par. 8.5.3, opmerking 2 wordt functie gedefinieerd als "De functie van een object is de activiteit die het (object) uitvoert of kan uitvoeren, zodanig dat de output van die activiteit bijdraagt aan het doel dat de betrokken stakeholder wil bereiken." De functies staan meestal in de Vraagspecificatie Eisen met eisen aan het Bouwwerk.
+	<dd>In de [[NEN_2660_1_2022]], par. 8.5.3, opmerking 2 wordt functie gedefinieerd als "De functie van een object is de activiteit die het (object) uitvoert of kan uitvoeren, zodanig dat de output van die activiteit bijdraagt aan het doel dat de betrokken stakeholder wil bereiken." De functies staan meestal in de Vraagspecificatie Eisen met eisen aan het Bouwwerk. Daarom maken wij een specifiekere klasse: <a href="https://data.crow.nl/contractspecificaties/def/Function">cs:Function</a>
 	<dd>In de [[NEN_2660_2_2022]] is een functie, bijvoorbeeld "Afwikkelen wegverkeer" ZOWEL een <a href="https://w3id.org/nen2660/def#Activity">nen2660:Activity</a>  ALS een <a href="https://w3id.org/nen2660/def/#FunctionalEntity">nen2660:FuntionalEntity</a>.
 	<dd>Ook mensen kunnen volgens de gegeven definitie in de [[NEN_2660_1_2022]] functies uitvoeren, zoals "De door mensen uit te voeren werkzaamheden tijdens het ontwerpen, bouwen, beheren en slopen van het object". In dit uitwisselformaat en in hedendaagse Vraagspecificaties (Vraagspecificatie Eisen met eisen aan het Bouwwerk) worden functies specifiek alleen meegegeven om aan te duiden, welke diensten het "systeem" moet vervullen tijdens het gebruik; een voorbeeld is een weg, die als functie "het verkeer moet geleiden". De objecten in het contract zijn de functievervullers. De werkzaamheden van mensen tijdens het project, waaronder die beschreven worden in Vraagspecificatie Procesdeel en de ontwerp- en uitvoeringswerkzaamheden, worden in dit uitwisselformaat <b>niet</b> beschreven als functies.
 
 <dt><dfn data-lt="Werkzaamheid|Werkzaamheden">Werkzaamheid</dfn>
-	<dd>De werkzaamheden zijn door mensen uit te voeren activiteiten tijdens het ontwerpen, bouwen, beheren en slopen van het object, met name die werkzaamheden die in een contract in de Vraagspecificatie Procesdeel staan.
-	<dd>In de [[NEN_2660_2_2022]] is een werkzaamheid, zoals "Opstellen Maandrapportage" een <a href="https://w3id.org/nen2660/def#Activity">nen2660:Activity</a>.
+	<dd>De werkzaamheden zijn door mensen uit te voeren activiteiten tijdens het ontwerpen, bouwen, beheren en slopen van het object, met name die werkzaamheden die in een contract in de Vraagspecificatie Procesdeel staan. 
+	<dd>In de [[NEN_2660_2_2022]] bestaat een <a href="https://w3id.org/nen2660/def#Activity">nen2660:Activity</a>. Wij maken die specifieker naar <a href="https://data.crow.nl/contractspecificaties/def/Worky">cs:Work</a>
 
-<dt><dfn data-lt="Informatieproduct|Informatieproducten">Informatieproduct</dfn>
-	<dd>De informatieproducten in het contract staan vaak zowel in de Vraagspecificatie Procesdeel als in een separate Informatieleveringsspecificatie. Het betreft de gevraagde levering van 'documenten', dit kunnen alle bestandstypes zijn, ook datasets of geometrische bestanden. In de NEN2660 is een InformationObject onderscheiden. Binnen contractspecificaties wordt deze gespecialiseerd naar een <a href="https://data.crow.nl/contractspecificaties/def/Document">cs:Document</a>.Voorbeelden:<ul>
+<dt><dfn data-lt="InformatieProduct|InformatieProducten">Informatieproduct</dfn>
+	<dd>De informatieproducten in het contract staan vaak zowel in de Vraagspecificatie Procesdeel als in een separate Informatieleveringsspecificatie. Het betreft de gevraagde levering van 'documenten', dit kunnen alle bestandstypes zijn, ook datasets of geometrische bestanden. In de NEN2660 is een InformationObject onderscheiden. Binnen contractspecificaties maken wij een specifieke klasse <a href="https://data.crow.nl/contractspecificaties/def/InformationProduct">cs:InformationProduct</a>.Voorbeelden:<ul>
 <li>Informatieleveringsspecificatie:</li><ul>
 <li>Een rapport over het ontwerp van een weg</li>
 <li>Een sterkteberekening van een kunstwerk</li>
@@ -142,7 +157,7 @@ Hiermee kan een hiërarchie worden aangegeven zoals een objectenboom of functieb
 
 | Taalbinding                                                        | Kardinaliteit | Datatype                                               |
 | ------------------------------------------------------------------ | ------------- | ------------------------------------------------------ |
-| [nen2660:hasPart](https://bimloket.github.io/nen2660/term#hasPart) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| [nen2660:hasPart](https://bimloket.github.io/nen2660/def#hasPart) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
 <p class="note">
