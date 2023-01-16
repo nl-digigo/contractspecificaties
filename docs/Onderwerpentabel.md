@@ -57,7 +57,7 @@ De URI is de unieke identifier voor het onderwerp binnen het project ("Brug15").
 
 Als de URI uit een ontologie ("Een brug") direct als onderwerp wordt gebruikt, suggereer je daarmee dat de projecteis altijd geldt voor dit onderwerp; dat hoeft echter niet zo te zijn. Vandaar dat hier altijd een project-URI wordt gebruikt; in een project stel je de projecteisen aan de instaties van het onderwerp waarvan het type gedefinieerd is in je ontologie ("objecttypenbibliotheek"). Gezien de eenvoud van dit uitwisselformaat, is geen verwijzing naar een ontologie opgenomen.
 
-Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je moet volgen.
+Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je MOET volgen.
 
 | Taalbinding | Kardinaliteit | Datatype                                               |
 | ----------- | ------------- | ------------------------------------------------------ |
@@ -72,7 +72,7 @@ Een URI maakt het meteen "linked data proof"
 ### <dfn>onderwerpCode
 
 
-De OnderwerpCode is een nummer van het onderwerp in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar het onderwerp te verwijzen, zonder de volledige URI te hoeven benoemen. Omdat deze code het onderwerp identificeert, moet de code binnen het project uniek zijn.
+De OnderwerpCode is een nummer van het onderwerp in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar het onderwerp te verwijzen, zonder de volledige URI te hoeven benoemen. Omdat deze code het onderwerp identificeert, MOET de code binnen het project uniek zijn.
 
 | Taalbinding                                                                   | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
 | ----------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |  ---  |
@@ -129,7 +129,7 @@ Een Eis kan betrekking hebben op een Object (Galecopperbrug), maar ook op een Ob
 	<dd>De werkzaamheden zijn door mensen uit te voeren activiteiten tijdens het ontwerpen, bouwen, beheren en slopen van het object, met name die werkzaamheden die in een contract in de Vraagspecificatie Procesdeel staan. 
 	<dd>In de [[NEN_2660_2_2022]] bestaat een <a href="https://w3id.org/nen2660/def#Activity">nen2660:Activity</a>. Wij maken die specifieker naar <a href="https://data.crow.nl/contractspecificaties/def/Worky">cs:Work</a>
 
-<dt><dfn data-lt="InformatieProduct|InformatieProducten">Informatieproduct</dfn>
+<dt><dfn data-lt="InformatieProduct|InformatieProducten">InformatieProduct</dfn>
 	<dd>De informatieproducten in het contract staan vaak zowel in de Vraagspecificatie Procesdeel als in een separate Informatieleveringsspecificatie. Het betreft de gevraagde levering van 'documenten', dit kunnen alle bestandstypes zijn, ook datasets of geometrische bestanden. In de NEN2660 is een InformationObject onderscheiden. Binnen contractspecificaties maken wij een specifieke klasse <a href="https://data.crow.nl/contractspecificaties/def/InformationProduct">cs:InformationProduct</a>.Voorbeelden:<ul>
 <li>Informatieleveringsspecificatie:</li><ul>
 <li>Een rapport over het ontwerp van een weg</li>

@@ -123,11 +123,11 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 
 De <abbr title="uniform resource identifier">URI</abbr> is de unieke identifier voor de eis binnen het project. Zie [URI volgens W3C](https://www.w3.org/wiki/URI).
 
-Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je moet volgen.
+Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je MOET volgen.
 
 Bij de eisen kan verwezen worden naar een eis in een eisenbibliotheek onder [=EisBron=]. Daar staat de URI van de eis uit de bibliotheek. Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet.
 
-De eis in het project moet een andere URI hebben dan de bron. 
+De eis in het project MOET een andere URI hebben dan de bron. 
 
 <aside class="note" title="Unieke indentificatie van concepten in projecten">
 Unieke indentificatie van concepten in projecten is van belang, omdat in het Digitaal Stelsel Gebouwde Omgeving toegewerkt wordt naar interoperabiliteit van data. Als je in een project dezelfde URI's gebruikt als in de bibliotheek, ga je in tegen de basisprincipes die hiervoor nodig zijn: een eis in een bibliotheek is niet dezelfde eis als de eis met dezelfde tekst in een project, want deze wordt toegepast in (gekopieerd naar) een andere context. Ook kan n de bilbiotheek een verificatievoorschrift bij de eis zijn opgenomen, die in het project niet wordt opgenomen omdat er meer vrijheid wordt gegeven aan de opdrachtnemer. Als dezelfde URI wordt gebruikt, kan hierover verwarring ontstaan.
@@ -148,7 +148,7 @@ Een URI maakt het meteen "linked data proof"
 
 ### <dfn>eisCode
 
-De EisCode is een <i>in het contract opgenomen</i> nummer van de eis in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek over het contract naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen. Omdat deze code de eis identificeert, moet de code binnen het project uniek zijn.
+De EisCode is een <i>in het contract opgenomen</i> nummer van de eis in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek over het contract naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen. Omdat deze code de eis identificeert, MOET de code binnen het project uniek zijn.
 
 | Taalbinding                                                                   | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
 | ----------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
@@ -209,7 +209,7 @@ Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelij
 
 De bron van de eis kan naar twee zaken verwijzen:
 
-1. De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is). Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet. De eis in het project moet een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context.
+1. De URI van de gebruikte eis uit een bibliotheek (indien deze niet gewijzigd is). Deze URI verwijst naar een openbaar gepubliceerde eis in een bibliotheek, bijvoorbeeld het Provinciaal Contracten Buffet. De eis in het project MOET een andere URI hebben dan de bron. Het is niet dezelfde eis, want deze wordt toegepast in (gekopieerd naar) een andere context.
 2. De URI van een brondocument met herkomst van de eis. Deze URI verwijst naar een document in de documententabel.
 
 | Taalbinding                                   | Kardinaliteit | Datatype                                               |
@@ -230,7 +230,7 @@ Een referentiedocument is een document waarin extra eisen staan die in het contr
 * De eis verwijst naar een richtlijn, handleiding of norm die van toepassing is.
 * De eis verwijst naar een figuur die van toepassing is.
 
-Instructie voor gebruik: omdat nog niet alle partijen in staat zijn om de data helemaal te verwerken, moet je het document wel in de eistekst noemen. De eistekst is leidend. Een ontvanger van de eisenset kan er ook niet van uit gaan, dat de opdrachtgever dit altijd in weet te vullen. Als in een eistekst naar een referentiedocument wordt verwezen, kan het zijn dat er geen relatie is gemaakt naar het referentiedocument.
+Instructie voor gebruik: omdat nog niet alle partijen in staat zijn om de data helemaal te verwerken, MOET je het document wel in de eistekst noemen. De eistekst is leidend. Een ontvanger van de eisenset kan er ook niet van uit gaan, dat de opdrachtgever dit altijd in weet te vullen. Als in een eistekst naar een referentiedocument wordt verwezen, kan het zijn dat er geen relatie is gemaakt naar het referentiedocument.
 
 
 | Taalbinding                                           | Kardinaliteit | Datatype                                               |
@@ -287,7 +287,7 @@ Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status o
 ### <dfn>verificatievoorschriftURI
 
 De URI is de unieke identifier voor het Verificatievoorschrift in deze fase, in dit project. Zie [URI conform W3C](https://www.w3.org/wiki/URI).
-Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je moet volgen.
+Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je MOET volgen.
 
 
 Het Verificatievoorschrift geeft de <i>in het contract voorgeschreven</i> verificatiemethode voor de eis (een type uit een lijst plus een vrij tekstveld met toelichting), per object en per fase waarin de verificatie wordt uitgevoerd.  
@@ -333,7 +333,7 @@ Dubbeling met de [=onderwerpnaam=] in de Onderwerpentabel, om de tabel meer lees
 
 In deze kolom staat de verificatiemethode waarmee de eis geverifieerd moet worden. Een verificatiemethode is een eigenschap van een verificatievoorschrift. De verificatiemethode is een enumeratie, dat wil zeggen dat de gebruiker moet kiezen uit een lijst met van te voren vastgestelde verificatiemethoden. Het is niet verplicht om een verificatiemethode voor te schrijven bij een Verificatievoorschrift, je kunt dit ook aan de opdrachtnemer laten.
 
-Bij uitwisseling mag uitsluitend de onderstaande lijst gebruikt worden bij contractspecificaties, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt, waarbij door opdrachtnemers bij elk project een aangepaste lijst moet maken. 
+Bij uitwisseling MOET uitsluitend de onderstaande lijst gebruikt worden, zonder zelf uitbreidingen te doen. Als elke opdrachtgever een eigen lijst gebruikt wordt het inrichten van standaard omgevingen voor de verwerking van contracteisen onnodig bemoeilijkt. 
 
 De verificatiemethoden zijn afgeleid uit de volgende standaarden:
 
@@ -481,7 +481,7 @@ In deze kolom staat de fase van het Verificatievoorschrift. Dit is een enumerati
 
 De opdrachtgever gebruikt deze fase, om een grove selectie te kunnen maken van de eisen die in een bepaalde fase relevant zijn, zodat niet meteen in de Conceptfase ook alle technische eisen voor de Gebruiksfase worden meegenomen of beoordeeld. Deze selectie kan ook worden uitgewisseld met bijvoorbeeld een externe partij die in de voorfase meehelpt bij concept, ontwerp en het opstellen van een contract. Daarom is dit onderdeel van het uitwisselformaat voor Contractspecificaties.
 
-Als je specifiekere deadlines wilt voorschrijven, moet je dezen opnemen bij [=VerificatieMoment=]
+Als je specifiekere deadlines wilt voorschrijven, MOET je deze opnemen bij [=VerificatieMoment=]
 
 De voorwaarde om deze fase te kunnen vastleggen is het bijvoegen van een Verificatievoorschrift.
 

@@ -79,7 +79,7 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 
 De URI is de unieke identifier voor het document binnen het project.Zie [URI volgens W3C](https://www.w3.org/wiki/URI).
 
-Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je moet volgen.
+Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je MOET volgen.
 
 | Taalbinding | Kardinaliteit | Datatype                                               |
 | ----------- | ------------- | ------------------------------------------------------ |
@@ -92,7 +92,7 @@ Een URI maakt het meteen "linked data proof"
 
 ### <dfn>documentCode
 
-De DocumentCode is een nummer van het onderwerp in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar hetdocument te verwijzen, zonder de volledige URI te hoeven benoemen. Omdat deze code het document identificeert, moet de code binnen het project uniek zijn.
+De DocumentCode is een nummer van het onderwerp in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar hetdocument te verwijzen, zonder de volledige URI te hoeven benoemen. Omdat deze code het document identificeert, MOET de code binnen het project uniek zijn.
 
 | Taalbinding                                                                   | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
 | ----------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |  ---  |
