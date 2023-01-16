@@ -1,4 +1,4 @@
-DocumentURI;DocumentCode;DocumentNaam;DocumentVersie;DocumentVersieDatum;DocumentAuteur;DocumentType;DocumentSectie;DocumentSectienaam;DocumentSectieTekst
+﻿documentURI,documentCode,documentNaam,documentVersie,documentVersieDatum,documentAuteur,documentType,documentSectie,documentSectieNaam,documentSectieTekst;;;;;;;;;
 https://www.example.org/id/brondocument1;Brondoc1;TNO rapport;A ;;;;;;
 https://www.example.org/id/referentiedocument1;Refdoc1;NEN-EN 1991-2+C1:2011/NB:2011. Belastingen op constructies, artikel 5.3.2.2;2011;;;NEN norm;;;
 https://www.example.org/id/contractdocument1;Cont1;Vraagspecificatie Eisendeel;A ;;Piet Klaas;Vraagspecificatie Eisendeel;0;Inleiding en leeswijzer;
