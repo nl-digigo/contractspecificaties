@@ -40,7 +40,7 @@ In de kolom 'Best practice' staat de aanbeveling voor Contractspecificaties.
 
 ## JSON metadata file
 
-Bovenstaande gegevens worden vastgelegd in een [JSON-LD](https://json-ld.org/) bestand. Dit bestand bevat daarnaast ook een beschrijving van de tabellen en de kolommen. Dit wordt gedaan om bij elke kolom aan te kunnen geven wat de taalbinding is naar de ontologie van Contractspecificaties. Deze verandert in principe niet. Hierdoor hoeft er in de JSON-LD Metadata file niet veel aangepast te worden als deze wordt opgeleverd tezamen met de CSV's. Het basis bestand is te vinden bij de ['formats' op GitHub](https://github.com/bimloket/contractspecificaties/blob/master/formats/metadata.json) en een 'verder ingevuld' [voorbeeld bestand](https://github.com/bimloket/contractspecificaties/blob/master/examples/zonnwegen_PCB/example-metadata.json) ook. 
+Bovenstaande gegevens worden vastgelegd in een [JSON-LD](https://json-ld.org/) bestand. Dit bestand bevat daarnaast ook een beschrijving van de tabellen en de kolommen. Dit wordt gedaan om bij elke kolom aan te kunnen geven wat de taalbinding is naar de ontologie van Contractspecificaties. Deze verandert in principe niet. Hierdoor hoeft er in de JSON-LD Metadata file niet veel aangepast te worden als deze wordt opgeleverd tezamen met de CSV's. Het basis bestand is te vinden bij de ['formats' op GitHub](https://github.com/bimloket/contractspecificaties/blob/master/formats/metadata.json) en een 'verder ingevuld' [voorbeeld bestand](https://github.com/bimloket/contractspecificaties/blob/master/examples/zonnewegen_PCB/example-metadata.json) ook. 
 
 
 
