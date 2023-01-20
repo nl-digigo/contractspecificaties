@@ -65,30 +65,30 @@
             "propertyUrl": "dc:source",
             "valueUrl": "Documententabel voorbeeld.csv#{eisBron}"
           },
-          // {
-          // "name": "documentNaam",
-          // "required": false,
-          // "datatype": "string",
-          // "propertyUrl": "skos:prefLabel"
-          // },
+          {
+          "name": "eisBronNaam",
+          "required": false,
+          "datatype": "string",
+          "propertyUrl": "skos:prefLabel"
+          },
           {
             "name": "eisReferentieDocument",
             "required": false,
             "propertyUrl": "dc:references",
             "valueUrl": "Documententabel voorbeeld.csv#{eisReferentieDocument}"
           },
-          // {
-          // "name": "documentNaam",
-          // "required": false,
-          // "datatype": "string",
-          // "propertyUrl": "skos:prefLabel"
-          // },
-          // {
-          // "name": "eisType",
-          // "required": true,
-          // "datatype": "anyURI",
-          // "propertyUrl": "nen2660:requirementTopicType"
-          // },
+          {
+          "name": "eisReferentiedocumentNaam",
+          "required": false,
+          "datatype": "string",
+          "propertyUrl": "skos:prefLabel"
+          },
+          {
+          "name": "eisType",
+          "required": true,
+          "datatype": "anyURI",
+          "propertyUrl": "cs:requirementTopicType"
+          },
           {
             "name": "eisStatus",
             "required": true,
@@ -99,7 +99,7 @@
             "name": "eisStatusOnderbouwing",
             "required": false,
             "datatype": "string",
-            "propertyUrl": "cs:statusOnderbouwing"
+            "propertyUrl": "cs:statusJustification"
           },
           {
             "name": "verificatievoorschriftURI",
@@ -114,6 +114,12 @@
             "aboutUrl": "#{verificatievoorschriftURI}",
             "propertyUrl": "cs:hasAsSubject",
             "valueUrl": "Onderwerpentabel voorbeeld.csv#{verificatieHeeftOnderwerp}"
+          },
+          {
+            "name": "onderwerpNaam",
+            "required": false,
+            "datatype": "string",
+            "propertyUrl": "skos:prefLabel"
           },
           {
             "name": "verificatieMethode",
@@ -133,7 +139,7 @@
             "name": "verificatieMoment",
             "required": false,
             "datatype": "string",
-            "propertyUrl": "cs:verificatieMoment"
+            "propertyUrl": "cs:verificationMoment"
           },
           {
             "name": "verificatievoorschriftToelichting",
@@ -167,16 +173,21 @@
             "propertyUrl": "skos:prefLabel"
           },
           {
-            "name": "onderwerpType",
+            "name": "onderwerpTypeURI", 
             "required": true,
-            "valueUrl": "cs:{onderwerpType}",
+            "valueUrl": "cs:{onderwerpTypeURI}",
             "propertyUrl": "rdf:type"
           },
           {
+            "name": "onderwerpTypeNaam",
+            "required": true,
+            "datatype": "string",
+            "propertyUrl": "skos:prefLabel"
+          },{
             "name": "onderwerpDefinitie",
             "required": false,
             "datatype": "string",
-            "propertyUrl": "skos:prefLabel"
+            "propertyUrl": "skos:definition"
           },
           {
             "name": "onderwerpHeeftDeel",
@@ -220,13 +231,13 @@
             "name": "documentVersie",
             "required": false,
             "datatype": "string",
-            "propertyUrl": "cs:versie"
+            "propertyUrl": "cs:version"
           },
           {
             "name": "documentVersieDatum",
             "required": false,
             "datatype": "string",
-            "propertyUrl": "cs:versieDatum"
+            "propertyUrl": "cs:versionDate"
           },
           {
             "name": "documentAuteur",

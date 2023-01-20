@@ -1,0 +1,390 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dsa: <http://w3id.org/dsa/> .
+@prefix otl: <http://www.laces.tech/publication/ns/semmtech/live/laces/schema/otl-manager/> .
+@prefix ldoc: <http://www.laces.tech/publication/ns/semmtech/live/laces/schema/document-extractions/> .
+@prefix lkos: <http://www.laces.tech/publication/ns/semmtech/live/laces/schema/kos/> .
+@prefix lspec: <http://www.laces.tech/publication/ns/semmtech/live/laces/schema/specifications/> .
+@prefix ls: <http://www.laces.tech/publication/ns/semmtech/live/laces/schema/shapes/> .
+@prefix lbm: <http://www.laces.tech/publication/ns/semmtech/live/laces/schema/blueprint-manager/> .
+
+skos:altLabel a owl:AnnotationProperty;
+  skos:prefLabel "altLabel" .
+
+<https://w3id.org/nen2660/def#Activity> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/nen2660/def#Entity>;
+  skos:prefLabel "Activiteit" .
+
+<https://w3id.org/nen2660/def#isDescribedBy> a owl:ObjectProperty;
+  skos:prefLabel "isBeschrevenDoor" .
+
+skos:prefLabel a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  skos:altLabel "documentNaam@nl", "eisTitel@nl", "onderwerpNaam@nl";
+  skos:prefLabel "naam" .
+
+<https://w3id.org/nen2660/def#InformationObject> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/nen2660/def#Entity>;
+  skos:prefLabel "InformatieObject" .
+
+<https://w3id.org/nen2660/def#hasPart> a owl:ObjectProperty;
+  skos:altLabel "onderwerpHeeftDeel@nl", "eisHeeftDeel@nl", "documentHeeftDeel@nl";
+  skos:prefLabel "heeftDeel" .
+
+skos:definition a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  skos:altLabel "onderwerpDefinitie@nl";
+  skos:prefLabel "definitie" .
+
+dcterms:creator a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  skos:altLabel "documentAuteur@nl";
+  skos:prefLabel "auteur" .
+
+rdf:value a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  skos:altLabel "eisTekst@nl", "documentSectieTekst@nl";
+  skos:prefLabel "tekst" .
+
+skos:notation a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  skos:altLabel "eisCode@nl", "documentCode@nl", "onderwerpCode@nl";
+  skos:prefLabel "code" .
+
+skos:note a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  skos:altLabel "verificatievoorschriftToelichting@nl", "eisToelichting@nl";
+  skos:prefLabel "toelichting" .
+
+<https://w3id.org/nen2660/def#Object> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/nen2660/def#Entity>;
+  skos:prefLabel "Object" .
+
+dcterms:source a owl:DatatypeProperty;
+  rdfs:range xsd:anyURI;
+  skos:altLabel "eisBron@nl";
+  skos:prefLabel "bron" .
+
+<https://w3id.org/nen2660/def#FunctionalEntity> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/nen2660/def#Entity>;
+  skos:prefLabel "FunctioneleEntiteit" .
+
+<https://w3id.org/nen2660/def#Requirement> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/nen2660/def#InformationObject>;
+  skos:altLabel "Eis@nl";
+  skos:prefLabel "Eis" .
+
+dcterms:references a owl:ObjectProperty;
+  skos:altLabel "EisReferentiedocument@nl";
+  skos:prefLabel "refereert" .
+
+<https://w3id.org/nen2660/def#Entity> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/nen2660/def#ConcreteConcept>;
+  skos:prefLabel "Entiteit" .
+
+<https://w3id.org/nen2660/def#ConcreteConcept> a owl:Class;
+  skos:prefLabel "ConcreetConcept" .
+
+<https://data.crow.nl/contractspecificaties/def/hasAsSubject> a owl:ObjectProperty;
+  rdfs:subPropertyOf <https://w3id.org/nen2660/def#isDescribedBy>;
+  skos:altLabel "verificatieHeeftOnderwerp@nl";
+  skos:prefLabel "heeftAlsOnderwerp" .
+
+<https://data.crow.nl/contractspecificaties/def/isVerificationOf> a owl:ObjectProperty;
+  rdfs:subPropertyOf <https://w3id.org/nen2660/def#isDescribedBy>;
+  skos:prefLabel "isVerificatieVan" .
+
+<https://data.crow.nl/contractspecificaties/def/phase> a owl:DatatypeProperty;
+  rdfs:range xsd:enumeration;
+  skos:altLabel "verificatieFase@nl";
+  skos:prefLabel "fase" .
+
+<https://data.crow.nl/contractspecificaties/def/documentType> a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  skos:altLabel "documentType@nl";
+  skos:prefLabel "documentType" .
+
+<https://data.crow.nl/contractspecificaties/def/status> a owl:DatatypeProperty;
+  rdfs:range xsd:enumeration;
+  skos:altLabel "eisStatus@nl";
+  skos:prefLabel "status" .
+
+<https://data.crow.nl/contractspecificaties/def/Function> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/nen2660/def#Activity>, <https://w3id.org/nen2660/def#FunctionalEntity>;
+  skos:altLabel "Functie@nl";
+  skos:prefLabel "Functie";
+  skos:definition "Een activiteit die uitgevoerd wordt door een object, wiens externe gedrag bijdraagt aan gestelde doelen door één of meerdere technische entiteiten"@nl .
+
+<https://data.crow.nl/contractspecificaties/def/Document> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/nen2660/def#InformationObject>;
+  skos:altLabel "Document@nl";
+  skos:prefLabel "Document" .
+
+<https://data.crow.nl/contractspecificaties/def/verificationMoment> a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  skos:altLabel "verificatieMoment@nl";
+  skos:prefLabel "verificatieMoment" .
+
+<https://data.crow.nl/contractspecificaties/def/verificationMethod> a owl:DatatypeProperty;
+  rdfs:range xsd:enumeration;
+  skos:altLabel "verificatieMethode@nl";
+  skos:prefLabel "verificatieMethode" .
+
+<https://data.crow.nl/contractspecificaties/def/VerificationPrescription> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/nen2660/def#InformationObject>;
+  skos:altLabel "Verificatievoorschrift@nl";
+  skos:prefLabel "Verificatievoorschrift" .
+
+<https://data.crow.nl/contractspecificaties/def/Work> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/nen2660/def#Activity>;
+  skos:altLabel "Werkzaamheid@nl";
+  skos:prefLabel "Werkzaamheid";
+  skos:definition "Door mensen uit te voeren activiteit tijdens het ontwerpen, bouwen, beheren en slopen van het object"@nl .
+
+<https://data.crow.nl/contractspecificaties/def/version> a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  skos:altLabel "documentVersie@nl";
+  skos:prefLabel "versie" .
+
+<https://data.crow.nl/contractspecificaties/def/DocumentSection> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/nen2660/def#InformationObject>;
+  skos:altLabel "DocumentSectie@nl";
+  skos:prefLabel "DocumentSectie" .
+
+<https://data.crow.nl/contractspecificaties/def/versionDate> a owl:DatatypeProperty;
+  rdfs:range xsd:date;
+  skos:altLabel "documentVersieDatum";
+  skos:prefLabel "versieDatum" .
+
+<https://data.crow.nl/contractspecificaties/def/statusJustification> a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  skos:altLabel "eisStatusOnderbouwing@nl";
+  skos:prefLabel "statusOnderbouwing" .
+
+<https://data.crow.nl/contractspecificaties/def/requirementTopicType> a owl:DatatypeProperty;
+  rdfs:range xsd:string;
+  skos:altLabel "eisType@nl";
+  skos:prefLabel "eisOnderwerpType";
+  skos:related <https://w3id.org/nen2660/def#RequirementTopicType> .
+
+<https://data.crow.nl/contractspecificaties/def/PhysicalObject> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/nen2660/def#Object>;
+  owl:equivalentClass <https://w3id.org/nen2660/def#PhysicalObject>;
+  skos:altLabel "FysiekObject@nl";
+  skos:prefLabel "FysiekObject" .
+
+<https://data.crow.nl/contractspecificaties/def/InformationProduct> a owl:Class;
+  rdfs:subClassOf <https://data.crow.nl/contractspecificaties/def/Document>;
+  skos:altLabel "InformatieProduct@nl";
+  skos:prefLabel "InformatieProduct" .
+
+<https://data.crow.nl/contractspecificaties/def/626a8d38d48e5a08e4aa6a4f> a sh:NodeShape;
+  sh:targetClass <https://data.crow.nl/contractspecificaties/def/Document>;
+  sh:property [
+      sh:path skos:notation;
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1
+    ], [
+      sh:path <https://w3id.org/nen2660/def#hasPart>;
+      sh:class <https://data.crow.nl/contractspecificaties/def/DocumentSection>
+    ], [
+      sh:path skos:definition;
+      sh:datatype xsd:string;
+      sh:maxCount 1
+    ], [
+      sh:path <https://data.crow.nl/contractspecificaties/def/documentType>;
+      sh:datatype xsd:string;
+      sh:maxCount 1
+    ], [
+      sh:path dcterms:creator;
+      sh:datatype xsd:string
+    ], [
+      sh:path <https://data.crow.nl/contractspecificaties/def/version>;
+      sh:datatype xsd:string;
+      sh:maxCount 1
+    ], [
+      sh:path <https://data.crow.nl/contractspecificaties/def/versionDate>;
+      sh:datatype xsd:date;
+      sh:maxCount 1
+    ], [
+      sh:path skos:prefLabel;
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1
+    ] .
+
+<https://data.crow.nl/contractspecificaties/def/626a7824d48e5a08e4aa68f6> a sh:NodeShape;
+  sh:targetClass <https://w3id.org/nen2660/def#Requirement>;
+  sh:property [
+      sh:path dcterms:references;
+      sh:class <https://data.crow.nl/contractspecificaties/def/Document>
+    ], [
+      sh:path <https://data.crow.nl/contractspecificaties/def/status>;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:in (<https://data.crow.nl/contractspecificaties/id/Vervallen> <https://data.crow.nl/contractspecificaties/id/Concept>
+          <https://data.crow.nl/contractspecificaties/id/Actueel>)
+    ], [
+      sh:path rdf:value;
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1
+    ], [
+      sh:path <https://data.crow.nl/contractspecificaties/def/requirementTopicType>;
+      sh:datatype xsd:string
+    ], [
+      sh:path skos:note;
+      sh:datatype xsd:string;
+      sh:maxCount 1
+    ], [
+      sh:path dcterms:source;
+      sh:datatype xsd:anyURI
+    ], [
+      sh:path skos:notation;
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1
+    ], [
+      sh:path <https://data.crow.nl/contractspecificaties/def/statusJustification>;
+      sh:datatype xsd:string;
+      sh:maxCount 1
+    ], [
+      sh:path skos:prefLabel;
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1
+    ] .
+
+<https://data.crow.nl/contractspecificaties/def/626a7eecd48e5a08e4aa697c> a sh:NodeShape;
+  sh:targetClass <https://data.crow.nl/contractspecificaties/def/VerificationPrescription>;
+  sh:property [
+      sh:path <https://data.crow.nl/contractspecificaties/def/hasAsSubject>;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:class <https://w3id.org/nen2660/def#Entity>
+    ], [
+      sh:path <https://data.crow.nl/contractspecificaties/def/isVerificationOf>;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:class <https://w3id.org/nen2660/def#Requirement>
+    ], [
+      sh:path <https://data.crow.nl/contractspecificaties/def/verificationMoment>;
+      sh:datatype xsd:string
+    ], [
+      sh:path <https://data.crow.nl/contractspecificaties/def/verificationMethod>;
+      sh:maxCount 1;
+      sh:in (<https://data.crow.nl/contractspecificaties/id/Demonstreren> <https://data.crow.nl/contractspecificaties/id/Auditen>
+          <https://data.crow.nl/contractspecificaties/id/Monitoren> <https://data.crow.nl/contractspecificaties/id/Beproeven>
+          <https://data.crow.nl/contractspecificaties/id/SiteAcceptanceTest> <https://data.crow.nl/contractspecificaties/id/Analyseren>
+          <https://data.crow.nl/contractspecificaties/id/Meten> <https://data.crow.nl/contractspecificaties/id/SiteIntegrationTest>
+          <https://data.crow.nl/contractspecificaties/id/Refereren> <https://data.crow.nl/contractspecificaties/id/Beoordelen>
+          <https://data.crow.nl/contractspecificaties/id/Schouwen> <https://data.crow.nl/contractspecificaties/id/Documentbeoordelen>
+          <https://data.crow.nl/contractspecificaties/id/Simuleren> <https://data.crow.nl/contractspecificaties/id/Vaststellen>
+          <https://data.crow.nl/contractspecificaties/id/Testen> <https://data.crow.nl/contractspecificaties/id/Inspecteren>
+          <https://data.crow.nl/contractspecificaties/id/Keuren> <https://data.crow.nl/contractspecificaties/id/FactoryAcceptanceTest>
+          <https://data.crow.nl/contractspecificaties/id/Evalueren> <https://data.crow.nl/contractspecificaties/id/Modelleren>
+          <https://data.crow.nl/contractspecificaties/id/Berekenen> <https://data.crow.nl/contractspecificaties/id/FactoryIntegrationTest>)
+    ], [
+      sh:path <https://data.crow.nl/contractspecificaties/def/phase>;
+      sh:maxCount 1;
+      sh:in (<https://data.crow.nl/contractspecificaties/id/Contracteringaanbestedingsfase>
+          <https://data.crow.nl/contractspecificaties/id/Gebruiksfase> <https://data.crow.nl/contractspecificaties/id/Ontwikkelfase>
+          <https://data.crow.nl/contractspecificaties/id/Fabricageenbouwfase> <https://data.crow.nl/contractspecificaties/id/Sloopfase>
+          <https://data.crow.nl/contractspecificaties/id/Conceptfase> <https://data.crow.nl/contractspecificaties/id/Projectinstructiefase>
+          <https://data.crow.nl/contractspecificaties/id/Opleveringprojectfase>)
+    ], [
+      sh:path skos:note;
+      sh:datatype xsd:string;
+      sh:maxCount 1
+    ] .
+
+<https://data.crow.nl/contractspecificaties/def/626a8e0dd48e5a08e4aa6a74> a sh:NodeShape;
+  sh:targetClass <https://data.crow.nl/contractspecificaties/def/Work>;
+  sh:property [
+      sh:path skos:definition;
+      sh:datatype xsd:string;
+      sh:maxCount 1
+    ], [
+      sh:path skos:prefLabel;
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1
+    ], [
+      sh:path skos:notation;
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1
+    ] .
+
+<https://data.crow.nl/contractspecificaties/def/62d914298a0208507455a6a8> a sh:NodeShape;
+  sh:targetClass <https://data.crow.nl/contractspecificaties/def/DocumentSection>;
+  sh:property [
+      sh:path rdf:value;
+      sh:datatype xsd:string;
+      sh:maxCount 1
+    ], [
+      sh:path skos:prefLabel;
+      sh:datatype xsd:string;
+      sh:maxCount 1
+    ] .
+
+<https://data.crow.nl/contractspecificaties/def/626a8b81d48e5a08e4aa6a33> a sh:NodeShape;
+  sh:targetClass <https://w3id.org/nen2660/def#ConcreteConcept>;
+  sh:property [
+      sh:path <https://w3id.org/nen2660/def#hasPart>;
+      sh:class <https://w3id.org/nen2660/def#ConcreteConcept>
+    ] .
+
+<https://data.crow.nl/contractspecificaties/def/> a owl:Ontology;
+  owl:versionInfo "0";
+  dcterms:creator "Stichting CROW";
+  rdfs:label "Contractspecificaties Ontology";
+  dcterms:description "The informationmodel for the Contractspecificaties from BIM Loket";
+  dcterms:date "2023-01-20T13:37:52.319644587" .
+
+<https://data.crow.nl/contractspecificaties/def/626a8e3ed48e5a08e4aa6a83> a sh:NodeShape;
+  sh:targetClass <https://data.crow.nl/contractspecificaties/def/Function>;
+  sh:property [
+      sh:path skos:prefLabel;
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1
+    ], [
+      sh:path skos:definition;
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1
+    ], [
+      sh:path skos:notation;
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1
+    ] .
+
+<https://data.crow.nl/contractspecificaties/def/626a8e9ed48e5a08e4aa6aa0> a sh:NodeShape;
+  sh:targetClass <https://data.crow.nl/contractspecificaties/def/PhysicalObject>;
+  sh:property [
+      sh:path skos:prefLabel;
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1
+    ], [
+      sh:path skos:definition;
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1
+    ], [
+      sh:path skos:notation;
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1
+    ] .

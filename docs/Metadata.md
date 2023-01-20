@@ -1,6 +1,8 @@
 # Metadata
 
-Omdat CSV in principe platte tekst bestanden zijn, bestaat er geen geïntegreerde mogelijkheid om metadata aan te geven. Dit is wel handig bij gegevens overdracht. Bij CSV is hiervoor [CSVW](https://csvw.org/) voor bedacht. Binnen Contractspecifaties doen we dan ook de aanbeveling om dit te gebruiken. 
+Omdat CSV in principe platte tekst bestanden zijn, bestaat er geen geïntegreerde mogelijkheid om metadata aan te geven. Dit is wel handig bij gegevens overdracht. Bij CSV is hiervoor [CSVW](https://csvw.org/) voor bedacht. Binnen Contractspecifaties doen we dan ook de aanbeveling om dit te gebruiken. De reden hiervoor is tweeledig:
+* Door deze standaard te adopteren is metadateren van CSV mogelijk én is het gebaseerd op een open standaard;
+* Deze standaard leent zich ook voor het automatisch omzetten naar RDF.
 
 ## Gegevens over de set
 
@@ -31,9 +33,16 @@ In de kolom 'Best practice' staat de aanbeveling voor Contractspecificaties.
 | Scheidingsteken    | Specificeert een één-karakter tekenreeks om te gebruiken als veldscheidingsteken. Standaard is dit `,`, maar vanuit NL Excel `;`) | `delimiter`   | `;`           |
 | { .def }     |
 
+>ADVISEMENT "Quotes en scheidingstekens"
+>Bij het gebruik van CSV zijn quotes en scheidingstekens altijd hetgeen waar het meest mis gaat. Vandaar dat we in bovenstaande tabel best practices hebben beschreven. 
+>Dit resulteert in het advies: Quote tekens hoeven niet, tenzij het scheidingsteken voorkomt in de celwaarde. dan MOET wel. Er MAG wel altijd gebruik gemaakt worden van quote tekens.
+>Daarnaast wordt wanneer een CSV gemaakt wordt vanuit een Nederlandse versie van Microsoft Excel altijd de puntkomma als scheidingsteken gebruikt. Waar dit in andere implementaties meestal de komma is. Binnen Contractspecificaties adviseren we om die reden om de puntkomma te gebruiken.
+
 ## JSON metadata file
 
-Bovenstaande gegevens worden vastgelegd in een [JSON-LD](https://json-ld.org/) bestand. Dit bestand bevat daarnaast ook een beschrijving van de tabellen en de kolommen. Dit wordt gedaan om bij elke kolom aan te kunnen geven wat de taalbinding is naar de ontologie van Contractspecificaties. Deze verandert in principe niet. Hierdoor hoeft er in de JSON-LD Metadata file niet veel aangepast te worden als deze wordt opgeleverd tezamen met de CSV's. Een voorbeeld is te vinden op de [#TODO GitHub](...). 
+Bovenstaande gegevens worden vastgelegd in een [JSON-LD](https://json-ld.org/) bestand. Dit bestand bevat daarnaast ook een beschrijving van de tabellen en de kolommen. Dit wordt gedaan om bij elke kolom aan te kunnen geven wat de taalbinding is naar de ontologie van Contractspecificaties. Deze verandert in principe niet. Hierdoor hoeft er in de JSON-LD Metadata file niet veel aangepast te worden als deze wordt opgeleverd tezamen met de CSV's. Het basis bestand is te vinden bij de ['formats' op GitHub](https://github.com/bimloket/contractspecificaties/blob/master/formats/metadata.json) en een 'verder ingevuld' [voorbeeld bestand](https://github.com/bimloket/contractspecificaties/blob/master/examples/zonnwegen_PCB/example-metadata.json) ook. 
+
+
 
 De gegevens die aangepast moeten worden betreffen:
 * De gegevens over de set;

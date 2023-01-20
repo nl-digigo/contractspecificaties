@@ -30,12 +30,12 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 <tr>
 	<td scope="row">  [=onderwerpTypeURI=]
 	<td class="def">In deze kolom staat de URI type van het onderwerptype.
-	<td class="example"> InformationObject
+	<td class="example"> https://data.crow.nl/contractspecificaties/def/InformationProduct
 </tr>
 <tr>
 	<td scope="row">  [=onderwerpTypeNaam=]
 	<td class="def">In deze kolom staat de voor mensen leesbare naam van het onderwerptype: FysiekObject, Functie, Werkzaamheid of InformatieProduct.
-	<td class="example"> InformationObject
+	<td class="example"> InformationInformatieProductObject
 </tr>
 <tr>
 	<td scope="row"> [=onderwerpDefinitie=]
@@ -43,7 +43,7 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td class="example"> Onderwerp van een eis als voorbeeld in de documentatie
 </tr>
 <tr>
-	<td scope="row"> [=onderwerpheeftDeel=]
+	<td scope="row"> [=onderwerpHeeftDeel=]
 	<td class="def">In deze kolom staat de URI van een onderliggend onderwerp.
 	<td class="example">`https://www.example.org/id/Voorbeeld-Object2`
 </tr>
