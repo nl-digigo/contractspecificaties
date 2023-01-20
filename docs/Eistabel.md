@@ -280,7 +280,7 @@ Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status o
 
 | Taalbinding                                                                                | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens  |
 | ------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| [cs:statusOnderbouwing](https://data.crow.nl/contractspecificaties/def/statusOnderbouwing) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000 |
+| [cs:statusJustification](https://data.crow.nl/contractspecificaties/def/statusJustification) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000 |
 | { .def } |
 
 
@@ -531,7 +531,7 @@ De opdrachtgever gebruikt deze fase, om vast te leggen wanneer een eis geverifie
 
 | Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
 | --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| [cs:verificationMoment](https://data.crow.nl/contractspecificaties/def/verificatieMoment) | 0:1   t.o.v. een Verificatievoorschrift          | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255 |
+| [cs:verificationMoment](https://data.crow.nl/contractspecificaties/def/verificationMoment) | 0:1   t.o.v. een Verificatievoorschrift          | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255 |
 | { .def } |
 
 <aside class="note" title="Standaard fasen / momenten">

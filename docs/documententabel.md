@@ -114,7 +114,7 @@ In deze kolom staat de versie van het document.
 
 | Taalbinding                                                        | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens        |
 | ------------------------------------------------------------------ | ------------- | ------------------------------------------------------ |  ---  |
-| [cs:versie](https://data.crow.nl/contractspecificaties/def/versie) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |  255  |
+| [cs:version](https://data.crow.nl/contractspecificaties/def/version) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |  255  |
 | { .def }
 
 ### <dfn>documentVersieDatum
@@ -123,7 +123,7 @@ In deze kolom staat de versiedatum van het document.
 
 | Taalbinding                                                                  | Kardinaliteit | Datatype                                           | 
 | ---------------------------------------------------------------------------- | ------------- | -------------------------------------------------- |
-| [cs:versieDatum](https://data.crow.nl/contractspecificaties/def/versieDatum) | 0:1           | [xsd:date](https://www.w3.org/2001/XMLSchema#date) |  
+| [cs:versionDate](https://data.crow.nl/contractspecificaties/def/versionDate) | 0:1           | [xsd:date](https://www.w3.org/2001/XMLSchema#date) |  
 | { .def }
 
 ### <dfn>documentAuteur
