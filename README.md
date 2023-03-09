@@ -8,6 +8,8 @@ Zie voor meer informatie ook de [businesscase](https://www.bimloket.nl/documents
 
 De eerste stap is, om met gebruikers een eenvoudige uitwisselmethode vast te stellen met tabellen (in CSV formaat). Het doel is om met de meest gangbare applicaties beter te kunnen uitwisselen. Voor de koplopers is de samenhang met de [NEN2660-2](https://www.nen.nl/nen-2660-2-2022-nl-291667) beschreven; zodat het ook mogelijk is om dezelfde informatie over specificaties uit te wisselen met behulp van linked data.
 
+Het actuele document met de uitwisselafspraak staat [hier](https://bimloket.github.io/contractspecificaties).
+
 # Actueel
 De beheerorganisaties van CB-NL/ICDD van BIM Loket en van het Provinciaal Contractenbuffet van CROW werken samen rondom het thema “een eenvoudig uitwisselformaat voor eisen in UAV-GC contracten”. In een openbare consultatie is [het document](https://bimloket.github.io/contractspecificaties/v/contractspecificaties@CR-20220815/) gereviewed. Deze review wordt momenteel verwerkt, waarna het document wordt vastgesteld.
 
