@@ -11,5 +11,5 @@ De eerste stap is, om met gebruikers een eenvoudige uitwisselmethode vast te ste
 # Actueel
 De beheerorganisaties van CB-NL/ICDD van BIM Loket en van het Provinciaal Contractenbuffet van CROW werken samen rondom het thema “een eenvoudig uitwisselformaat voor eisen in UAV-GC contracten”. In een openbare consultatie is [het document](https://bimloket.github.io/contractspecificaties/v/contractspecificaties@CR-20220815/) gereviewed. Deze review wordt momenteel verwerkt, waarna het document wordt vastgesteld.
 
-Het concept-informatiemodel kan [hier](https://bimloket.github.io/ld-viewer/contractspecificaties/#/view) bekeken worden.
+Het informatiemodel kan [hier](https://bimloket.github.io/ld-viewer/contractspecificaties/#/view) bekeken worden.
 
