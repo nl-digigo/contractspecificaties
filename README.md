@@ -9,7 +9,7 @@ In contracten zitten nu veel (pdf)documenten opgenomen met specificaties. Bij he
 Met gebruikers is een eenvoudige uitwisselmethode vastgesteld met tabellen. Het doel is om met de meest gangbare applicaties beter te kunnen uitwisselen. Om een goede relatie met standaarden te houden, is een vertaling van de eisentabel naar de [NEN2660-2](https://www.nen.nl/nen-2660-2-2022-nl-291667) gemaakt; Het informatiemodel kan [hier](https://bimloket.github.io/ld-viewer/contractspecificaties/#/view) bekeken worden. Op basis van dit informatiemodel kunnen de contractspecificaties ook in linked data worden uitgewisseld, voor degenen die hier al klaar voor zijn.
 
 
-# Gereviewde versies
+**Gereviewde versies**
 [2022](https://bimloket.github.io/contractspecificaties/v/contractspecificaties@CR-20220815/)
 
 # Oproep voorbeelden delen verificatie, raakvlakken en risico’s
