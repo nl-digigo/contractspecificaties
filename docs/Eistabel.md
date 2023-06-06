@@ -501,7 +501,7 @@ RIBA Plan of Work 2020. (R. Architecture, Ed.)(RIBA). London: RIBA Architecture.
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Ontwikkelfase">csw:Ontwikkelfase</a>
 	<dd> [Bron: [[LeidraadSE2]], Hoofdstuk 4
 <dt><dfn lang=EN>Procurement / <dfn lang="NL">Contracterings- en aanbestedingsfase
-	<dd>De fase om het systeem te vervaardigen en beproeven. Systeemelementen en deelsystemen worden geïntegreerd tot één geheel.</dd>
+	<dd>De fase om werkzaamheden aan het systeem uit te besteden aan een of meerdere opdrachtnemers en afspraken te maken tussen alle bij de werkzaamheden betrokken partijen.</dd>
 	<dd><a href="https://data.crow.nl/contractspecificaties/id/Contracteringaanbestedingsfase">csw:Contracteringaanbestedingsfase</a>
 <dt><dfn lang=EN>Manufacturing and Construction / <dfn lang="NL">Fabricage- en bouwfase
 	<dd>De fase om het systeem te vervaardigen en beproeven. Systeemelementen en deelsystemen worden geïntegreerd tot één geheel.</dd>
