@@ -60,7 +60,7 @@ Als de URI uit een ontologie ("Een brug") direct als onderwerp wordt gebruikt, s
 Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je MOET volgen.
 
 | Taalbinding | Kardinaliteit | Datatype                                               |
-| ----------- | ------------- | ------------------------------------------------------ |
+|-------------|---------------|--------------------------------------------------------|
 | n.v.t.      | 1:1           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
@@ -74,18 +74,18 @@ Een URI maakt het meteen "linked data proof"
 
 De OnderwerpCode is een nummer van het onderwerp in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar het onderwerp te verwijzen, zonder de volledige URI te hoeven benoemen. Omdat deze code het onderwerp identificeert, MOET de code binnen het project uniek zijn.
 
-| Taalbinding                                                                   | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
-| ----------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |  ---  |
-| [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |  255  |
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|-------------------------------------------------------------------------------|---------------|--------------------------------------------------------|------------------------------------|
+| [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255                                |
 | { .def } |
 
 ### <dfn>onderwerpNaam
 
 De OnderwerpNaam is de voor mensen leesbare naam van het onderwerp. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.
 
-| Taalbinding                                                                     | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
-| ------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |  ---  |
-| [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |  255  |
+| Taalbinding                                                                     | Kardinaliteit | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|---------------------------------------------------------------------------------|---------------|--------------------------------------------------------|------------------------------------|
+| [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255                                |
 | { .def } |
 
 ### <dfn>onderwerpTypeURI
@@ -112,7 +112,7 @@ Een Eis kan betrekking hebben op een Object (Galecopperbrug), maar ook op een Ob
 
 
 | Taalbinding                                              | Kardinaliteit | Datatype                                               |
-| -------------------------------------------------------- | ------------- | ------------------------------------------------------ |
+|----------------------------------------------------------|---------------|--------------------------------------------------------|
 | [rdfs:Class](https://www.w3.org/TR/rdf-schema/#ch_class) | 1:1           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
@@ -145,9 +145,9 @@ Een Eis kan betrekking hebben op een Object (Galecopperbrug), maar ook op een Ob
 
 De definitie van het onderwerp is een vrij tekstveld die het onderwerp definieert.
 
-| Taalbinding                                                                      | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
-| -------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |  ---  |
-| [skos:definition](https://www.w3.org/2009/08/skos-reference/skos.html#defintion) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |  2000  |
+| Taalbinding                                                                      | Kardinaliteit | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|----------------------------------------------------------------------------------|---------------|--------------------------------------------------------|------------------------------------|
+| [skos:definition](https://www.w3.org/2009/08/skos-reference/skos.html#defintion) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000                               |
 | { .def } |
 
 ### <dfn>onderwerpHeeftDeel
@@ -156,8 +156,8 @@ In deze kolom staat de URI van een onderliggend onderwerp.
 Hiermee kan een hiërarchie worden aangegeven zoals een objectenboom of functieboom zoals gebruikelijk in contracten. Een concept kan uit meerdere delen bestaan, er komen dan meerdere regels voor in de Onderwerpentabel.
 
 | Taalbinding                                                        | Kardinaliteit | Datatype                                               |
-| ------------------------------------------------------------------ | ------------- | ------------------------------------------------------ |
-| [nen2660:hasPart](https://bimloket.github.io/nen2660/def#hasPart) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+|--------------------------------------------------------------------|---------------|--------------------------------------------------------|
+| [nen2660:hasPart](https://nl-digigo.github.io/nen2660/def#hasPart) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
 <p class="note">

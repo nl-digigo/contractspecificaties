@@ -40,7 +40,7 @@ var respecConfig = {
       companyURL: "https://www.crow.nl",
     },
   ],
-  github: "https://github.com/bimloket/contractspecificaties",
+  github: "https://github.com/nl-digigo/contractspecificaties",
   localBiblio: {},
   lint: { "no-unused-dfns": false },
 

@@ -2,7 +2,7 @@
 
 Het eisenformat wordt gebruikt om de eisen te kunnen uitwisselen als data. 
 
-Een eis is een [nen2660:Requirement](https://bimloket.github.io/nen2660/def#Requirement) volgens [[NEN_2660_2_2022]].
+Een eis is een [nen2660:Requirement](https://nl-digigo.github.io/nen2660/def#Requirement) volgens [[NEN_2660_2_2022]].
 
 ## Eisenformat
 
@@ -137,7 +137,7 @@ De herkenbaarheid van de eis voor de menselijke lezer kan wel in stand gehouden 
 
 
 | Taalbinding | Kardinaliteit | Datatype                                               |
-| ----------- | ------------- | ------------------------------------------------------ |
+|-------------|---------------|--------------------------------------------------------|
 | n.v.t.      | 1:1           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
@@ -150,9 +150,9 @@ Een URI maakt het meteen "linked data proof"
 
 De EisCode is een <i>in het contract opgenomen</i> nummer van de eis in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek over het contract naar de eis te verwijzen, zonder de volledige URI te hoeven benoemen. Omdat deze code de eis identificeert, MOET de code binnen het project uniek zijn.
 
-| Taalbinding                                                                   | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
-| ----------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 56 |
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|-------------------------------------------------------------------------------|---------------|--------------------------------------------------------|------------------------------------|
+| [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 56                                 |
 | { .def } |
 
 <aside class="note" title="Codes">
@@ -165,9 +165,9 @@ De EisTitel wordt ook wel eens de titel van de eis genoemd, en geeft een voor me
 
 De EisTitel hoeft niet uniek te zijn in het project, daarvoor heeft de eis een URI. Een unieke naam is voor de menselijke lezer vaak wel handig. Soms wordt de EisTitel in applicaties bijvoorbeeld gebruikt bij het visualiseren van de eisenboom. Unieke namen helpen in dat geval.
 
-| Taalbinding                                                                     | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
-| ------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 56 |
+| Taalbinding                                                                     | Kardinaliteit | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|---------------------------------------------------------------------------------|---------------|--------------------------------------------------------|------------------------------------|
+| [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 56                                 |
 | { .def } |
 
 ### <dfn>eisTekst
@@ -177,9 +177,9 @@ Op dit moment worden eisen in een contract meestal niet voorzien van een voor ee
 
 In de EisTekst kan verwezen worden naar een referentiedocument, waar aanvullende eisen in staan die gelden binnen het contract. De URI van dit document wordt dan opgenomen in de kolom Referentiedocument.
 
-| Taalbinding                                                   | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
-| ------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| [rdf:value](http://www.w3.org/1999/02/22-rdf-syntax-ns#value) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000  |
+| Taalbinding                                                   | Kardinaliteit | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|---------------------------------------------------------------|---------------|--------------------------------------------------------|------------------------------------|
+| [rdf:value](http://www.w3.org/1999/02/22-rdf-syntax-ns#value) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000                               |
 | { .def } |
 
 ### <dfn>eisToelichting
@@ -188,9 +188,9 @@ In deze kolom staat de toelichting op de eistekst
 
 In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld wordt.
 
-| Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
-| --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000  |
+| Taalbinding                                                           | Kardinaliteit | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|-----------------------------------------------------------------------|---------------|--------------------------------------------------------|------------------------------------|
+| [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000                               |
 | { .def } |
 
 
@@ -201,8 +201,8 @@ In deze kolom staat de URI van een onderliggende eis.
 Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelijk in contracten. Een eis kan meerdere onderliggende eisen hebben, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.
 
 | Taalbinding                                                        | Kardinaliteit | Datatype                                               |
-| ------------------------------------------------------------------ | ------------- | ------------------------------------------------------ |
-| [nen2660:hasPart](https://bimloket.github.io/nen2660/def#hasPart) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+|--------------------------------------------------------------------|---------------|--------------------------------------------------------|
+| [nen2660:hasPart](https://nl-digigo.github.io/nen2660/def#hasPart) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
 ### <dfn>eisBron
@@ -213,7 +213,7 @@ De bron van de eis kan naar twee zaken verwijzen:
 2. De URI van een brondocument met herkomst van de eis. Deze URI verwijst naar een document in de documententabel.
 
 | Taalbinding                                   | Kardinaliteit | Datatype                                               |
-| --------------------------------------------- | ------------- | ------------------------------------------------------ |
+|-----------------------------------------------|---------------|--------------------------------------------------------|
 | [dct:source](http://purl.org/dc/terms/source) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
@@ -234,7 +234,7 @@ Instructie voor gebruik: omdat nog niet alle partijen in staat zijn om de data h
 
 
 | Taalbinding                                           | Kardinaliteit | Datatype                                               |
-| ----------------------------------------------------- | ------------- | ------------------------------------------------------ |
+|-------------------------------------------------------|---------------|--------------------------------------------------------|
 | [dct:references](http://purl.org/dc/terms/references) | 0:n           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
@@ -245,9 +245,9 @@ Dubbeling met de [=documentNaam=] in de Documententabel, om de tabel meer leesba
 
 In deze kolom staat het eistype. Welke eistypen gebruikt worden, wordt nog niet gestandaardiseerd; hierover bestaat helaas nog te weinig consensus in de sector.
 
-| Taalbinding                                                                       | Kardinaliteit | Datatype                                                             |  Geadviseerd maximaal aantal tekens  |
-| --------------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------- | ------------ |
-| [cs:requirementTopcType](https://data.crow.nl/contractspecificaties/def/requirementTopicType)    | 0:n           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |   255   |
+| Taalbinding                                                                                   | Kardinaliteit | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|-----------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|------------------------------------|
+| [cs:requirementTopcType](https://data.crow.nl/contractspecificaties/def/requirementTopicType) | 0:n           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255                                |
 | { .def } |
 
 <aside class="note" title="Afwijking NEN 2660-2">
@@ -269,7 +269,7 @@ Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijzig
 </dl>
 
 | Taalbinding                                                        | Kardinaliteit | Datatype                                                                   |
-| ------------------------------------------------------------------ | ------------- | -------------------------------------------------------------------------- |
+|--------------------------------------------------------------------|---------------|----------------------------------------------------------------------------|
 | [cs:status](https://data.crow.nl/contractspecificaties/def/status) | 1:1           | [cs:StatusType](https://data.crow.nl/contractspecificaties/def/StatusType) |
 | { .def } |
 
@@ -278,9 +278,9 @@ Doel is om wijzigingen door een Nota van Inlichtingen of een contractuele wijzig
 In deze kolom staat een toelichting op de status van de eis.
 Gebruikers willen de reden van vervallen toevoegen aan de eis, zodat de status onderbouwd is.
 
-| Taalbinding                                                                                | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens  |
-| ------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| [cs:statusJustification](https://data.crow.nl/contractspecificaties/def/statusJustification) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000 |
+| Taalbinding                                                                                  | Kardinaliteit | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|----------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|------------------------------------|
+| [cs:statusJustification](https://data.crow.nl/contractspecificaties/def/statusJustification) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000                               |
 | { .def } |
 
 
@@ -294,9 +294,9 @@ Het Verificatievoorschrift geeft de <i>in het contract voorgeschreven</i> verifi
 
 Een eis kan meerdere Verificatievoorschriften kennen, elk in een eigen fase. Een Verificatievoorschrift geldt voor één fase. Indien in een andere fase precies dezelfde verificatie wordt uitgevoerd, zijn er twee Verificatievoorschriften.  
 
-| Taalbinding | Kardinaliteit | Datatype                                               |
-| ----------- | ------------- | ------------------------------------------------------ |
-| [cs:isVerificationOf](https://data.crow.nl/contractspecificaties/def/isVerificationOf) | 1:1 t.o.v. een Verificatievoorschrift          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| Taalbinding                                                                            | Kardinaliteit                         | Datatype                                               |
+|----------------------------------------------------------------------------------------|---------------------------------------|--------------------------------------------------------|
+| [cs:isVerificationOf](https://data.crow.nl/contractspecificaties/def/isVerificationOf) | 1:1 t.o.v. een Verificatievoorschrift | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
 
@@ -306,9 +306,9 @@ In deze kolom staat de URI van het Onderwerp van het Verificatievoorschrift. Een
 
 Merk op, dat verwijzing naar de URI de tabel minder makkelijk leesbaar maakt voor de mens. Indien hier ook de naam van het concept zou worden toegevoegd, creëert dit dubbelingen met de onderwerpentabel en daarom mogelijk fouten. Daarom wordt alleen de URI gebruikt.
 
-| Taalbinding                                                                            | Kardinaliteit | Datatype                                               |
-| -------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |
-| [cs:hasAsSubject ](https://data.crow.nl/contractspecificaties/def/hasAsSubject)        | 1:1 t.o.v. een Verificatievoorschrift          | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+| Taalbinding                                                                     | Kardinaliteit                         | Datatype                                               |
+|---------------------------------------------------------------------------------|---------------------------------------|--------------------------------------------------------|
+| [cs:hasAsSubject ](https://data.crow.nl/contractspecificaties/def/hasAsSubject) | 1:1 t.o.v. een Verificatievoorschrift | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def } |
 
 <aside class="note" title="Onderwerp van Eis en Verificatievoorschrift">
@@ -470,9 +470,9 @@ De verificatiemethoden zijn afgeleid uit de volgende standaarden:
 	<dd>Engels: Inspecting [[ISO_IEC_IEEE_29148_2018]] par. 6.5.2
 </dd></dl>
 
-| Taalbinding                                                                                | Kardinaliteit | Datatype                                                |
-| ------------------------------------------------------------------------------------------ | ------------- | ----------------------------------------------------------------------------------------------- |
-| [cs:verificationMethod](https://data.crow.nl/contractspecificaties/def/verificationMethod) | 0:1  t.o.v. een Verificatievoorschrift           | [cs:VerificationMethodeType](https://data.crow.nl/contractspecificaties/def/verificationMethod) |
+| Taalbinding                                                                                | Kardinaliteit                          | Datatype                                                                                        |
+|--------------------------------------------------------------------------------------------|----------------------------------------|-------------------------------------------------------------------------------------------------|
+| [cs:verificationMethod](https://data.crow.nl/contractspecificaties/def/verificationMethod) | 0:1  t.o.v. een Verificatievoorschrift | [cs:VerificationMethodeType](https://data.crow.nl/contractspecificaties/def/verificationMethod) |
 | { .def } |
 
 ### <dfn>verificatieFase</dfn> (enumeratie)
@@ -520,18 +520,18 @@ RIBA Plan of Work 2020. (R. Architecture, Ed.)(RIBA). London: RIBA Architecture.
 	<dd> [Bron: [[LeidraadSE2]], Hoofdstuk 4
 </dl>
 
-| Taalbinding                                                      | Kardinaliteit | Datatype                                                                 |
-| ---------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------ |
-| [cs:phase](https://data.crow.nl/contractspecificaties/def/phase) | 0:1  t.o.v. een Verificatievoorschrift            | [cs:PhaseType](https://data.crow.nl/contractspecificaties/def/PhaseType) |
+| Taalbinding                                                      | Kardinaliteit                          | Datatype                                                                 |
+|------------------------------------------------------------------|----------------------------------------|--------------------------------------------------------------------------|
+| [cs:phase](https://data.crow.nl/contractspecificaties/def/phase) | 0:1  t.o.v. een Verificatievoorschrift | [cs:PhaseType](https://data.crow.nl/contractspecificaties/def/PhaseType) |
 | { .def } |
 
 
 ### <dfn>verificatieMoment
 De opdrachtgever gebruikt deze fase, om vast te leggen wanneer een eis geverifieerd dient te worden. De voorwaarde om een Verificatiemoment te kunnen vastleggen is het bijvoegen van een Verificatievoorschrift.
 
-| Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
-| --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| [cs:verificationMoment](https://data.crow.nl/contractspecificaties/def/verificationMoment) | 0:1   t.o.v. een Verificatievoorschrift          | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255 |
+| Taalbinding                                                                                | Kardinaliteit                           | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|--------------------------------------------------------------------------------------------|-----------------------------------------|--------------------------------------------------------|------------------------------------|
+| [cs:verificationMoment](https://data.crow.nl/contractspecificaties/def/verificationMoment) | 0:1   t.o.v. een Verificatievoorschrift | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255                                |
 | { .def } |
 
 <aside class="note" title="Standaard fasen / momenten">
@@ -549,9 +549,9 @@ In deze kolom staat de toelichting op het Verificatievoorschrift.
 
 In contracten wordt dit gebruikt om nader toe te lichten waarom dit Verificatievoorschrift gevraagd wordt.
 
-| Taalbinding                                                           | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                  |
-| --------------------------------------------------------------------- | ------------- | ------------------------------------------------------ | ------------------------------------------------------ |
-| [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1  t.o.v. een Verificatievoorschrift           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000 |
+| Taalbinding                                                           | Kardinaliteit                          | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|-----------------------------------------------------------------------|----------------------------------------|--------------------------------------------------------|------------------------------------|
+| [skos:note](https://www.w3.org/2009/08/skos-reference/skos.html#note) | 0:1  t.o.v. een Verificatievoorschrift | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000                               |
 | { .def } |
 
 

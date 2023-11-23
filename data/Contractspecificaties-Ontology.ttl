@@ -348,7 +348,7 @@ dcterms:references a owl:ObjectProperty;
   owl:versionInfo "0";
   dcterms:creator "Stichting CROW";
   rdfs:label "Contractspecificaties Ontology";
-  dcterms:description "The informationmodel for the Contractspecificaties from BIM Loket";
+  dcterms:description "The informationmodel for the Contractspecificaties from DigiGo.nu";
   dcterms:date "2023-01-20T13:37:52.319644587" .
 
 <https://data.crow.nl/contractspecificaties/def/626a8e3ed48e5a08e4aa6a83> a sh:NodeShape;

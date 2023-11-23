@@ -82,7 +82,7 @@ De URI is de unieke identifier voor het document binnen het project.Zie [URI vol
 Voor het opstellen van URI's heeft de [[NEN_2660_2_2022]] een URI-strategie die je MOET volgen.
 
 | Taalbinding | Kardinaliteit | Datatype                                               |
-| ----------- | ------------- | ------------------------------------------------------ |
+|-------------|---------------|--------------------------------------------------------|
 | n.v.t.      | 1:1           | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def }
 
@@ -94,54 +94,54 @@ Een URI maakt het meteen "linked data proof"
 
 De DocumentCode is een nummer van het onderwerp in spreektaal, vaak een voor mensen herkenbare code of projectnummer. Deze meestal eenvoudige en soms logisch genummerde Code maakt het mogelijk om in een gesprek naar hetdocument te verwijzen, zonder de volledige URI te hoeven benoemen. Omdat deze code het document identificeert, MOET de code binnen het project uniek zijn.
 
-| Taalbinding                                                                   | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens                                               |
-| ----------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |  ---  |
-| [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |  255  |
+| Taalbinding                                                                   | Kardinaliteit | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|-------------------------------------------------------------------------------|---------------|--------------------------------------------------------|------------------------------------|
+| [skos:notation](https://www.w3.org/2009/08/skos-reference/skos.html#notation) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255                                |
 | { .def } |
 
 ### <dfn>documentNaam
 
 De DocumentNaam is de voor mensen leesbare naam van het document. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.
 
-| Taalbinding                                                                     | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens         |     
-| ------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------ |  ---  |
-| [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |  255  |
+| Taalbinding                                                                     | Kardinaliteit | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|---------------------------------------------------------------------------------|---------------|--------------------------------------------------------|------------------------------------|
+| [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255                                |
 | { .def }
 
 ### <dfn>documentVersie
 
 In deze kolom staat de versie van het document.
 
-| Taalbinding                                                        | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens        |
-| ------------------------------------------------------------------ | ------------- | ------------------------------------------------------ |  ---  |
-| [cs:version](https://data.crow.nl/contractspecificaties/def/version) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |  255  |
+| Taalbinding                                                          | Kardinaliteit | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|----------------------------------------------------------------------|---------------|--------------------------------------------------------|------------------------------------|
+| [cs:version](https://data.crow.nl/contractspecificaties/def/version) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255                                |
 | { .def }
 
 ### <dfn>documentVersieDatum
 
 In deze kolom staat de versiedatum van het document.
 
-| Taalbinding                                                                  | Kardinaliteit | Datatype                                           | 
-| ---------------------------------------------------------------------------- | ------------- | -------------------------------------------------- |
-| [cs:versionDate](https://data.crow.nl/contractspecificaties/def/versionDate) | 0:1           | [xsd:date](https://www.w3.org/2001/XMLSchema#date) |  
+| Taalbinding                                                                  | Kardinaliteit | Datatype                                           |
+|------------------------------------------------------------------------------|---------------|----------------------------------------------------|
+| [cs:versionDate](https://data.crow.nl/contractspecificaties/def/versionDate) | 0:1           | [xsd:date](https://www.w3.org/2001/XMLSchema#date) |
 | { .def }
 
 ### <dfn>documentAuteur
 
 In deze kolom staat de auteur van het document.
 
-| Taalbinding                                     | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens        |
-| ----------------------------------------------- | ------------- | ------------------------------------------------------ |  ---  |
-| [dct:creator](http://purl.org/dc/terms/creator) | 0:n           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |  255  |
+| Taalbinding                                     | Kardinaliteit | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|-------------------------------------------------|---------------|--------------------------------------------------------|------------------------------------|
+| [dct:creator](http://purl.org/dc/terms/creator) | 0:n           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255                                |
 | { .def }
 
 ### <dfn>documentType
 
 In deze kolom staat het documenttype. Voor documenttypen is nog geen nationale afspraak gemaakt.
 
-| Taalbinding                                                                    | Kardinaliteit | Datatype                                               |  Geadviseerd maximaal aantal tekens        |
-| ------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------ |  ---  |
-| [cs:documentType](https://data.crow.nl/contractspecificaties/def/documentType) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |  255  |
+| Taalbinding                                                                    | Kardinaliteit | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|--------------------------------------------------------------------------------|---------------|--------------------------------------------------------|------------------------------------|
+| [cs:documentType](https://data.crow.nl/contractspecificaties/def/documentType) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255                                |
 | { .def }
 
 
@@ -160,17 +160,17 @@ Bij gebruikmaking van deze optie kan eventueel een aparte tabel uitgewisseld wor
 In deze kolom staat de documentsectie. Deze kan gebruikt worden om een document verder op te delen. Middels de 'heeft deel' relatie kunnen net zoveel secties aan een document toegevoegd worden als er nodig zijn.
 
 | Taalbinding                                                        | Kardinaliteit         | Datatype                                               |
-| ------------------------------------------------------------------ | --------------------- | ------------------------------------------------------ |
-| [nen2660:hasPart](https://bimloket.github.io/nen2660/def#hasPart) | 0:n (t.o.v. Document) | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
+|--------------------------------------------------------------------|-----------------------|--------------------------------------------------------|
+| [nen2660:hasPart](https://nl-digigo.github.io/nen2660/def#hasPart) | 0:n (t.o.v. Document) | [xsd:anyURI](https://www.w3.org/2001/XMLSchema#anyURI) |
 | { .def }
 
 ### <dfn>documentSectieNaam
 
 De DocumentSectieNaam is de voor mensen leesbare naam van het onderwerp. Deze naam hoeft niet uniek te zijn in het project, maar dat is natuurlijk wel handig.
 
-| Taalbinding                                                                     | Kardinaliteit               | Datatype                                               |   Geadviseerd maximaal aantal tekens        |
-| ------------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------ |  ---  |
-| [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1 (t.o.v. DocumentSectie) | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |  255  |
+| Taalbinding                                                                     | Kardinaliteit               | Datatype                                               | Geadviseerd maximaal aantal tekens |
+|---------------------------------------------------------------------------------|-----------------------------|--------------------------------------------------------|------------------------------------|
+| [skos:prefLabel](https://www.w3.org/2009/08/skos-reference/skos.html#prefLabel) | 1:1 (t.o.v. DocumentSectie) | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 255                                |
 | { .def }
 
 ### <dfn>documentSectieTekst
@@ -178,6 +178,6 @@ De DocumentSectieNaam is de voor mensen leesbare naam van het onderwerp. Deze na
 In deze kolom staat de paragraaftekst.
 
 | Taalbinding                                                   | Kardinaliteit               | Datatype                                               |
-| ------------------------------------------------------------- | --------------------------- | ------------------------------------------------------ |
+|---------------------------------------------------------------|-----------------------------|--------------------------------------------------------|
 | [rdf:value](http://www.w3.org/1999/02/22-rdf-syntax-ns#value) | 0:1 (t.o.v. DocumentSectie) | [xsd:string](https://www.w3.org/2001/XMLSchema#string) |
 | { .def }
