@@ -1,4 +1,4 @@
-﻿onderwerpURI;onderwerpCode;OoderwerpNaam;onderwerpTypeURI;onderwerpTypeNaam;onderwerpDefinitie;onderwerpHeeftDeel
+﻿onderwerpURI;onderwerpCode;OoderwerpNaam;onderwerpTypeURI;onderwerpTypeNaam;onderwerpDefinitie;onderwerpIsDeelVan
 https://www.example.org/id/Object1;Object1;Systeem Zonneweg;https://data.crow.nl/contractspecificaties/def/PhysicalObject;FysiekObject;Definitie1;https://www.example.org/id/Object3
 https://www.example.org/id/Functie1;Functie1;Systeem Zonneweg: Faciliteren van meervoudig ruimtegebruik door functies te combineren;https://data.crow.nl/contractspecificaties/def/Function;Functie;Definitie2;https://www.example.org/id/Functie2
 https://www.example.org/id/Functie2;Functie2;Dragen van belastingen;https://data.crow.nl/contractspecificaties/def/Function;Functie;Definitie3;

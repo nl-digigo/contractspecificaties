@@ -43,8 +43,8 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td class="example"> Onderwerp van een eis als voorbeeld in de documentatie
 </tr>
 <tr>
-	<td scope="row"> [=onderwerpHeeftDeel=]
-	<td class="def">In deze kolom staat de URI van een onderliggend onderwerp.
+	<td scope="row"> [=onderwerpIsDeelVan=]
+	<td class="def">In deze kolom staat de URI van een bovenliggend onderwerp.
 	<td class="example">`https://www.example.org/id/Voorbeeld-Object2`
 </tr>
 </table>
@@ -150,10 +150,11 @@ De definitie van het onderwerp is een vrij tekstveld die het onderwerp definieer
 | [skos:definition](https://www.w3.org/2009/08/skos-reference/skos.html#defintion) | 0:1           | [xsd:string](https://www.w3.org/2001/XMLSchema#string) | 2000                               |
 | { .def } |
 
-### <dfn>onderwerpHeeftDeel
+### <dfn>onderwerpIsDeelVan
 
-In deze kolom staat de URI van een onderliggend onderwerp.
+In deze kolom staat de URI van een bovenliggend onderwerp.
 Hiermee kan een hiërarchie worden aangegeven zoals een objectenboom of functieboom zoals gebruikelijk in contracten. Een concept kan uit meerdere delen bestaan, er komen dan meerdere regels voor in de Onderwerpentabel.
+De inverse van de `nen2660:hasPart` relatie wordt hier gebruikt: `nen2660:isPartOf`. Deze relatie kan dan transitief gelezen worden.
 
 | Taalbinding                                                        | Kardinaliteit | Datatype                                               |
 |--------------------------------------------------------------------|---------------|--------------------------------------------------------|

@@ -54,10 +54,10 @@
             "propertyUrl": "skos:note"
           },
           {
-            "name": "eisHeeftDeel",
+            "name": "eisIsDeelVan",
             "required": false,
             "datatype": "anyURI",
-            "propertyUrl": "nen2660:hasPart"
+            "propertyUrl": "nen2660:isPartOf"
           },
           {
             "name": "eisBron",
@@ -190,11 +190,11 @@
             "propertyUrl": "skos:definition"
           },
           {
-            "name": "onderwerpHeeftDeel",
+            "name": "onderwerpIsDeelVan",
             "required": false,
             "aboutUrl": "#{onderwerpURI}",
-            "propertyUrl": "nen2660:hasPart",
-            "valueUrl": "#{onderwerpHeeftDeel}"
+            "propertyUrl": "nen2660:isPartOf",
+            "valueUrl": "#{onderwerpIsDeelVan}"
           }
         ],
         "aboutUrl": "#{onderwerpURI}"
@@ -261,7 +261,7 @@
           {
             "name": "documentSectie",
             "required": false,
-            "propertyUrl": "nen2660:hasPart",
+            "propertyUrl": "nen2660:isPartOf",
             "aboutUrl": "#{documentURI}",
             "valueUrl": "#{documentSectie}"
           },
