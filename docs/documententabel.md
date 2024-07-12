@@ -157,7 +157,8 @@ Toepassingsvoorbeelden om teksten uit te wisselen:
 Bij gebruikmaking van deze optie kan eventueel een aparte tabel uitgewisseld worden, waarin de tekst van één document wordt uitgewisseld, om foutopsporing eenvoudiger te maken.
 </aside>
 
-In deze kolom staat de documentsectie. Deze kan gebruikt worden om een document verder op te delen. Middels de 'heeft deel' relatie kunnen net zoveel secties aan een document toegevoegd worden als er nodig zijn.
+In deze kolom staat de documentsectie. Deze kan gebruikt worden om een document verder op te delen. Middels de 'is deel van' relatie kunnen net zoveel secties aan een document toegevoegd worden als er nodig zijn.
+De inverse van de `nen2660:hasPart` relatie wordt hier gebruikt: `nen2660:isPartOf`. Deze relatie kan dan transitief gelezen worden.
 
 | Taalbinding                                                        | Kardinaliteit         | Datatype                                               |
 |--------------------------------------------------------------------|-----------------------|--------------------------------------------------------|

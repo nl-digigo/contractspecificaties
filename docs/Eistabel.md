@@ -40,8 +40,8 @@ Het format wordt rijen getoond in plaats van in kolommen, om de leesbaarheid te 
 	<td class="example">Dit is de toelichting van de voorbeeldeis, om achtergrond / doel en reden van de eis te kunnen verduidelijken
 </tr>
 <tr>
-	<td scope="row"> [=eisHeeftDeel=]
-	<td class="def">In deze kolom staat de URI van een onderliggende eis. 
+	<td scope="row"> [=eisIsDeelVan=]
+	<td class="def">In deze kolom staat de URI van een bovenliggende eis. 
 	<td class="example"> `https://www.example.org/id/Voorbeeld-Eis2`
 </tr>
 <tr>
@@ -194,11 +194,12 @@ In contracten wordt dit gebruikt om nader te onderbouwen waarom deze eis gesteld
 | { .def } |
 
 
-### <dfn>eisHeeftDeel
+### <dfn>eisIsDeelVan
 
 In deze kolom staat de URI van een onderliggende eis.
 
 Hiermee kan een hiërarchie worden aangegeven van de eisenboom zoals gebruikelijk in contracten. Een eis kan meerdere onderliggende eisen hebben, er komen dan meerdere regels met dezelfde eis voor in de eisentabel.
+De inverse van de `nen2660:hasPart` relatie wordt hier gebruikt: `nen2660:isPartOf`. Deze relatie kan dan transitief gelezen worden.
 
 | Taalbinding                                                        | Kardinaliteit | Datatype                                               |
 |--------------------------------------------------------------------|---------------|--------------------------------------------------------|

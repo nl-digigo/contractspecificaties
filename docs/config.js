@@ -6,10 +6,11 @@ var respecConfig = {
   // specType: "handreiking",
   // subtitle: "Hier komt een subtitle",
   shortName: "contractspecificaties/",
-  publishDate: "2023-03-10",
+  publishDate: "2024-07-19",
   reviewDateEnd: "2022-11-01",
-  previousPublishDate: "2022-08-15",
-  previousMaturity: "PR",
+  previousPublishDate: "2023-03-10",
+  previousMaturity: "DEF",
+  prevVersion: "https://nl-digigo.github.io/contractspecificaties/v/contractspecifcaties@V-20230310/index.html",
  license: "cc-by",
   editors: [
     {
